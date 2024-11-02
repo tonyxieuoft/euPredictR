@@ -4,12 +4,14 @@
 \alias{parse_BLAST_json}
 \title{Parse Input Title}
 \usage{
-parse_BLAST_json(filename, species)
+parse_BLAST_json(filename, species, raw_carrier = NULL)
 }
 \arguments{
 \item{filename}{File name of the BLAST XML/json input file to parse}
 
 \item{species}{Species from which the subject genome is from.}
+
+\item{raw_carrier}{}
 }
 \description{
 Parse Input Description

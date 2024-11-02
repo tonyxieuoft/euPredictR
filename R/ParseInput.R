@@ -5,6 +5,7 @@
 #'
 #' @param filename File name of the BLAST XML/json input file to parse
 #' @param species Species from which the subject genome is from.
+#' @param raw_carrier
 #'
 #' @import rjson
 #' @import dplyr
@@ -12,7 +13,7 @@
 #'
 #' @export
 
-parse_BLAST_json <- function(filename, species){
+parse_BLAST_json <- function(filename, species, raw_carrier=NULL){
 
   # reads the json file, removes all newlines, then stores in list format
   json_data <- readr::read_file(filename) %>%
@@ -83,5 +84,32 @@ parse_BLAST_json <- function(filename, species){
 
   species_struct <- list(species = species, genes = genes)
   class(species_struct) <- "species"
-  print(species_struct)
+
+  if (!is.null(raw_carrier)){
+    raw_carrier[[species]] <- genes
+  }
+  else{
+    raw_carrier <- list()
+    raw_carrier[[species]] <- genes
+  }
+
+  return(raw_carrier)
+}
+
+
+#' Parse Multiple BLAST json
+#'
+#' description
+#'
+#' @param dir_path path to directory containing json files from different
+#' species
+#' @param raw_carrier previous raw carrier, if available
+#'
+#' @import tools
+
+parse_multiple_BLAST_json <- function(dir_path, raw_carrier=NULL){
+
+  all_files <- list.files(path = dir_path, full.names = TRUE)
+  # this part should be pretty easy
+  # then I do the DP, heatmap of successful DP, then alignment and phylo
 }
