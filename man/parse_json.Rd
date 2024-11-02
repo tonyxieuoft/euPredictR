@@ -7,7 +7,7 @@
 parse_json(filename)
 }
 \arguments{
-\item{filename}{filename of the BLAST XML/json input file to parse}
+\item{filename}{file name of the BLAST XML/json input file to parse}
 }
 \description{
 Parse Input Description
