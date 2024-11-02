@@ -4,12 +4,14 @@
 \alias{my_function}
 \title{Oxygen tag test (title)}
 \usage{
-my_function(name1, name2)
+my_function(name1, name2, name3)
 }
 \arguments{
 \item{name1}{first item to be printed if we keep typing and typing and}
 
 \item{name2}{second item to be printed}
+
+\item{name3}{test filepath}
 }
 \value{
 nothing!you can also see what specifically they should look like

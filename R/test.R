@@ -5,13 +5,14 @@
 #'
 #' @param name1 first item to be printed if we keep typing and typing and
 #' @param name2 second item to be printed
+#' @param name3 test filepath
 #'
 #' @return nothing!you can also see what specifically they should look like
 #'
 #' @export
 #'
 
-my_function <- function(name1, name2){
+my_function <- function(name1, name2, name3){
   print(name1)
   print(name2)
 
