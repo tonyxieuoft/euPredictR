@@ -96,9 +96,6 @@ parse_BLAST_json <- function(filename, species, raw_carrier=NULL){
     }
   }
 
-  species_struct <- list(species = species, genes = genes)
-  class(species_struct) <- "species"
-
   if (!is.null(raw_carrier)){
     raw_carrier[[species]] <- genes
   }
@@ -124,6 +121,14 @@ parse_BLAST_json <- function(filename, species, raw_carrier=NULL){
 parse_multiple_BLAST_json <- function(dir_path, raw_carrier=NULL){
 
   all_files <- list.files(path = dir_path, full.names = TRUE)
-  # this part should be pretty easy
-  # then I do the DP, heatmap of successful DP, then alignment and phylo
+
+  raw_carrier <- NULL
+  for (filename in all_files){
+    species_name <- tools::file_path_sans_ext(basename(filename))
+    raw_carrier <- parse_BLAST_json(filename, species_name, raw_carrier)
+  }
+  return(raw_carrier)
 }
+
+
+

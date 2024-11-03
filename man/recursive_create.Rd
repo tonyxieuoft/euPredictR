@@ -9,9 +9,9 @@ recursive_create(dp, hsps, i)
 \arguments{
 \item{dp}{The dynamic programming table}
 
-\item{i}{index of the last HSP in the sequence to create}
+\item{hsps}{The table of hsps}
 
-\item{hsp_table}{The table of hsps}
+\item{i}{index of the last HSP in the sequence to create}
 }
 \description{
 Dummy Description

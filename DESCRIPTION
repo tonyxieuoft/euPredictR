@@ -13,7 +13,8 @@ Imports:
     readr,
     rjson,
     dplyr,
-    stringr
+    stringr,
+    tools
 RoxygenNote: 7.3.2
 Suggests: 
     testthat (>= 3.0.0)

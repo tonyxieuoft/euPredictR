@@ -1,5 +1,5 @@
 
-ALLOWED_OVERLAP <- 10
+ALLOWED_OVERLAP <- 50
 MAX_INTRON_LENGTH <- 1000000
 
 
@@ -50,9 +50,9 @@ build_prediction <- function(query_len, hsp_table){
     dp$coverage[i] <- max_coverage
   }
 
-  print(sorted_table)
-  print(dp)
-  create_sequence(dp, sorted_table, query_len)
+  #print(sorted_table)
+  #print(dp)
+  return(create_sequence(dp, sorted_table, query_len))
 }
 
 
@@ -77,14 +77,13 @@ create_sequence <- function(dp, hsp_table, query_len){
 #' Dummy Description
 #'
 #' @param dp The dynamic programming table
-#' @param hsp_table The table of hsps
+#' @param hsps The table of hsps
 #' @param i index of the last HSP in the sequence to create
 #'
 #' @import stringr
 recursive_create <- function(dp, hsps, i){
 
   if (dp$parent[i] == -1){
-    print("at the beginning")
     missing_beginning <- strrep("-", hsps$q_start[i] - 1)
     return(paste(missing_beginning, hsps$s_seq[i], sep = ""))
   }
@@ -95,78 +94,70 @@ recursive_create <- function(dp, hsps, i){
 
     if (hsps$q_end[p] < hsps$q_start[i]){
 
-      ###
-      print("here for some reason")
-      print(p)
-      print(hsps$q_end[p])
-      print(i)
-      print(hsps$q_start[i])
-
-
       gap <- strrep("-", hsps$q_start[i] - hsps$q_end[p] - 1)
-      return(paste(seq, gap, hsps$q_end[i]))
+      return(paste(seq, gap, hsps$s_seq[i], sep = ""))
     }
     else{
-
-      ###
-      print("uh oh overlap")
-
-      overlap_num <- hsps$q_end[p] - hsps$q_start[i] + 1
-
-      ###
-      print(overlap_num)
-
-      num_left <- overlap_num
-      p_seq <- hsps$q_seq[p]
-      j <- nchar(p_seq)
-
-      while (num_left > 0){
-        if (substr(p_seq, j, j) != "-"){
-          num_left <- num_left - 1
-        }
-        else{
-          # continue
-        }
-        j <- j - 1
-      }
-      seq_low_bound <- nchar(seq) - (nchar(p_seq) - j + 1)
-
-      seq_overlap <- substr(seq, seq_low_bound, nchar(seq))
-
-      ###
-      print(j)
-      print(seq_low_bound)
-      print(seq_overlap)
-
-      num_right <- overlap_num
-      i_seq <- hsps$q_seq[i]
-      curr <- 1
-
-      while (num_right > 0){
-        if (substr(i_seq, curr, curr) != "-"){
-          num_right <- num_right - 1
-        }
-        else{
-          # continue
-        }
-        curr <- curr + 1
-      }
-
-      i_bound <- curr - 1
-      i_overlap <- substr(hsps$s_seq[i], 1, i_bound)
-
-      ###
-      print(i_overlap)
-
-      if (stringr::str_count(seq_overlap, "-") == 0){
-        i_to_take <- substr(hsps$s_seq[i], i_bound + 1, nchar(hsps$s_seq[i]))
-        return(paste(seq, i_to_take, sep = ""))
-      }
-      else{
-        seq_to_take <- substr(seq, 1, seq_low_bound-1)
-        return(paste(seq_to_take, hsps$s_seq[i], sep = ""))
-      }
+      return(handle_overlap(hsps, seq, p, i))
     }
+  }
+}
+
+#' Merge Overlap Helper
+#'
+#' Placeholder description
+#'
+#' @param hsps Table of HSPs
+#' @param seq Currently built sequence
+#' @param p Index of parent sequence
+#' @param i Index of current sequence
+#'
+handle_overlap <- function(hsps, seq, p, i){
+
+  overlap_num <- hsps$q_end[p] - hsps$q_start[i] + 1
+
+  num_left <- overlap_num
+  p_seq <- hsps$q_seq[p]
+  j <- nchar(p_seq)
+
+  while (num_left > 0){
+    if (substr(p_seq, j, j) != "-"){
+      num_left <- num_left - 1
+    }
+    else{
+      # continue
+    }
+    j <- j - 1
+  }
+
+  seq_low_bound <- nchar(seq) - (nchar(p_seq) - (j + 1))
+  seq_overlap <- substr(seq, seq_low_bound, nchar(seq))
+
+  num_right <- overlap_num
+  i_seq <- hsps$q_seq[i]
+  curr <- 1
+
+  while (num_right > 0){
+    if (substr(i_seq, curr, curr) != "-"){
+      num_right <- num_right - 1
+    }
+    else{
+      # continue
+    }
+    curr <- curr + 1
+  }
+
+  i_bound <- curr - 1
+  i_overlap <- substr(hsps$s_seq[i], 1, i_bound)
+
+
+  if (stringr::str_count(seq_overlap, "-") == 0){
+    i_to_take <- substr(hsps$s_seq[i], i_bound + 1, nchar(hsps$s_seq[i]))
+    return(paste(seq, i_to_take, sep = ""))
+  }
+  else{
+    seq_to_take <- substr(seq, 1, seq_low_bound-1)
+    return(paste(seq_to_take, hsps$s_seq[i], sep = ""))
   }
 }
 
@@ -210,9 +201,7 @@ is_compatibile <- function(hsp_table, j, i){
   else{
     return(T)
   }
-
 }
-
 
 #' Prediction wrapper
 #'
@@ -224,11 +213,31 @@ is_compatibile <- function(hsp_table, j, i){
 
 build_predictions <- function(raw_carrier){
 
-  for (species in raw_carrier){
-    for (gene in species){
-      print(build_prediction(query_len = gene$query_len, hsp_table = gene$hsp_data))
-    }
-  }
+  #for (species in raw_carrier){
+  #  for (gene in species){
+  #    print(build_prediction(query_len = gene$query_len, hsp_table = gene$hsp_data))
+  #  }
+  #}
+  prediction_carrier <- list()
 
+  species_names <- names(raw_carrier)
+  for (i in seq_along(raw_carrier)){
+    # species -> looking at gene list
+
+    new_gene_list <- list()
+
+    gene_names <- names(raw_carrier[[i]])
+    for (j in seq_along(raw_carrier[[i]])){
+      gene <- raw_carrier[[i]][[j]]#$hsp_data
+      predicted_seq <- build_prediction(query_len = gene$query_len,
+                                        hsp_table = gene$hsp_data)
+
+      new_gene_list[[gene_names[j]]] <- predicted_seq
+    }
+
+    prediction_carrier[[species_names[i]]] <- new_gene_list
+
+  }
+  return(prediction_carrier)
 }
 
