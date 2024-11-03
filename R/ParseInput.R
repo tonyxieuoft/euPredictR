@@ -10,6 +10,7 @@
 #' @import rjson
 #' @import dplyr
 #' @import readr
+#' @import stringr
 #'
 #' @export
 
@@ -26,6 +27,7 @@ parse_BLAST_json <- function(filename, species, raw_carrier=NULL){
   for (query_report in json_data$BlastOutput2){
 
     query_title <- query_report$report$results$search$query_title
+    query_len <- query_report$report$results$search$query_len
 
     # if there is no query title (incorrect file format)
     if (is.null(query_title)){
@@ -61,7 +63,8 @@ parse_BLAST_json <- function(filename, species, raw_carrier=NULL){
                              s_end = numeric(length = L),
                              s_seq = character(length = L),
                              s_strand = character(length = L),
-                             e_val = numeric(length = L))
+                             e_val = numeric(length = L),
+                             seq_len = numeric(length = L))
 
       for (hsp in top_hit$hsps){
 
@@ -69,16 +72,27 @@ parse_BLAST_json <- function(filename, species, raw_carrier=NULL){
 
         hsp_data$q_start[i] <- hsp$query_from
         hsp_data$q_end[i] <- hsp$query_to
-        hsp_data$q_seq[i] <- hsp$qseq
 
         hsp_data$s_start[i] <- hsp$hit_from
         hsp_data$s_end[i] <- hsp$hit_to
-        hsp_data$s_seq[i] <- hsp$hseq
+
+        gaps_q_seq <- stringr::str_count(hsp$qseq, "-")
+        gaps_s_seq <- stringr::str_count(hsp$hseq, "-")
+        if (gaps_q_seq == gaps_s_seq & gaps_q_seq > 0){
+          hsp_data$q_seq[i] <- gsub('-', '', hsp$qseq)
+          hsp_data$s_seq[i] <- gsub('-', '', hsp$hseq)
+        }
+        else{
+          hsp_data$q_seq[i] <- hsp$qseq
+          hsp_data$s_seq[i] <- hsp$hseq
+        }
 
         hsp_data$e_val[i] <- hsp$evalue
         hsp_data$s_strand[i] <- hsp$hit_strand
+
+        hsp_data$seq_len[i] <- (hsp$query_to - hsp$query_from + 1)
       }
-      genes[[query_name]] <- hsp_data
+      genes[[query_name]] <- list(query_len = query_len, hsp_data = hsp_data)
     }
   }
 
