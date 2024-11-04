@@ -14,7 +14,9 @@ Imports:
     rjson,
     dplyr,
     stringr,
-    tools
+    tools,
+    ggplot2,
+    configr
 RoxygenNote: 7.3.2
 Suggests: 
     testthat (>= 3.0.0)
