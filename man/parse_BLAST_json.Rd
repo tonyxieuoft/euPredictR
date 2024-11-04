@@ -4,7 +4,7 @@
 \alias{parse_BLAST_json}
 \title{Parse JSON-format BLAST output data}
 \usage{
-parse_BLAST_json(filename, species, raw_list = NULL)
+parse_BLAST_json(filename, species, raw_blast_list = NULL)
 }
 \arguments{
 \item{filename}{File path of a single BLAST output file in .json format.
@@ -13,17 +13,21 @@ set of genomic sequences from a SINGLE species.}
 
 \item{species}{Name of species (string) represented by the set of subject
 genomic sequences blasted against. Note that for the ease of the user, gene
-names are extracted from query fasta headings rather than provided as a direct argument}
+names are extracted from query fasta headings rather than provided as a
+direct argument}
 
-\item{raw_list}{Nested R list previously created by the
-package, contains raw BLAST output data. Fill in only if you wish to group
-two sets of raw data together for visualization. THe default value is NULL.}
+\item{raw_blast_list}{S3 object of class RawBlastList, which is a nested R list
+previously created by this parsing function. Contains raw BLAST output data.
+Fill in only if you wish to group two sets of raw data together for
+visualization.
+The default value is NULL. See the results section below for more
+information.}
 }
 \value{
-A nested R list data structure storing the raw BLAST output, as
-follows:
+Returns an S3 object of class RawBlastList, which stores the raw
+BLAST output as a nested R list, as follows:
 \itemize{
- \item The outer list is in key-value format where each key is a
+ \item The very outer list is in key-value format where each key is a
  species name and the corresponding value is a "gene list" for the species
  \item Each "gene list" is also in key-value format, where each key is a
  gene name and the  corresponding value is a list containing two attributes:
@@ -32,7 +36,7 @@ follows:
  and 2) \emph{query_len}, the length of the query coding sequence for the
  gene.
  \item Each row in \emph{hsp_data} corresponds to a single high-scoring pair,
- where the columns are as follows:
+ in which the columns are as follows:
  \itemize{
    \item \emph{q_start}: start of the HSP segment on the query side.
    \item \emph{q_end}: end of the HSP segment on the query side.
@@ -45,29 +49,48 @@ follows:
    \item \emph{seq_len}: Length of the HSP
  }
 }
-The list is a concatenation of raw_list with the raw BLAST output pointed to
-by filename.
+If the parameter \emph{raw_blast_list} is not null, then the function adds
+the newly curated data to raw_blast_list.
 }
 \description{
 This function facilitates the conversion of a BLAST output file in .json
-format (in which the quer(ies) are coding sequences and the set of subject
-genomic sequences is from ONE species only) into a nested R list data
-structure. The
-raw data in this format serves as input for the build_predictions
-functions. Assumes that the first word in the fasta heading(s) of the query
-coding sequence(s) is the abbreviated gene name for the query.
+format (in which the querie(s) are coding sequences and the set of subject
+genomic sequences, ie. contigs/scaffolds/chromosomes, are from ONE species
+only) into a nested R list data structure. The raw data in this format
+serves as input for the build_predictions functions. This function assumes
+the following:
+\itemize{
+ \item That the first word in the fasta heading(s) of the query coding
+ sequence(s) is the abbreviated gene name for the query.
+ \item That all exons for a gene are located on one genomic sequence, and not
+ split between multiple contigs/scaffolds/chromosomes. Exons are generally
+ close together and always on the same chromosome, so this should be
+ reasonable.
+}
 }
 \examples{
-json_file1 <- system.file("extdata", "orca_rhfdsafo_BLAST_output.json",
-                           package="euPredictR")
-# Example 1: No raw_list input argument
 
-raw_list1 <- parse_BLAST_json(filename = json_file1, species = "O_orca")
+# "orca_rho_BLAST_output.json" contains BLAST output for a rhodopsin query
+# coding sequence and subject Orca genome
+json_file1 <- system.file("extdata", "orca_rho_BLAST_output.json",
+                           package="euPredictR")
+
+# "dolphin_rho_BLAST_output.json" contains BLAST output for a rhodopsin query
+# coding sequence and subject dolphin (T. truncatus) genome
+json_file2 <- system.file("extdata", "dolphin_rho_BLAST_output.json",
+                           package="euPredictR")
+
+
+# Example 1: No raw_blast_list input argument
+
+raw_blast_list1 <- parse_BLAST_json(filename = json_file1,
+                                     species = "O_orca")
+
 
 # Example 2: Using raw list generated previously as additional input
 
-raw_list2 <- parse_BLAST_json(filename = json_file1, species = "T_truncatus",
-                              raw_list = raw_list1)
-# this list concatenates raw BLAST results for both orca and dolphin RHO into
-# one list
+raw_blast_list2 <- parse_BLAST_json(filename = json_file2,
+                                    species = "T_truncatus",
+                                    raw_blast_list = raw_blast_list1)
+# this list concatenates raw BLAST results for both orca and dolphin RHO
 }

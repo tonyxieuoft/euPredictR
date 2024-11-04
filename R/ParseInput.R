@@ -2,27 +2,37 @@
 #' Parse JSON-format BLAST output data
 #'
 #' This function facilitates the conversion of a BLAST output file in .json
-#' format (in which the quer(ies) are coding sequences and the set of subject
-#' genomic sequences is from ONE species only) into a nested R list data
-#' structure. The
-#' raw data in this format serves as input for the build_predictions
-#' functions. Assumes that the first word in the fasta heading(s) of the query
-#' coding sequence(s) is the abbreviated gene name for the query.
-#'
+#' format (in which the querie(s) are coding sequences and the set of subject
+#' genomic sequences, ie. contigs/scaffolds/chromosomes, are from ONE species
+#' only) into a nested R list data structure. The raw data in this format
+#' serves as input for the build_predictions functions. This function assumes
+#' the following:
+#' \itemize{
+#'  \item That the first word in the fasta heading(s) of the query coding
+#'  sequence(s) is the abbreviated gene name for the query.
+#'  \item That all exons for a gene are located on one genomic sequence, and not
+#'  split between multiple contigs/scaffolds/chromosomes. Exons are generally
+#'  close together and always on the same chromosome, so this should be
+#'  reasonable.
+#' }
 #' @param filename File path of a single BLAST output file in .json format.
 #' Output must be obtained in the context of input query coding sequences and a
 #' set of genomic sequences from a SINGLE species.
 #' @param species Name of species (string) represented by the set of subject
 #' genomic sequences blasted against. Note that for the ease of the user, gene
-#' names are extracted from query fasta headings rather than provided as a direct argument
-#' @param raw_list Nested R list previously created by the
-#' package, contains raw BLAST output data. Fill in only if you wish to group
-#' two sets of raw data together for visualization. THe default value is NULL.
+#' names are extracted from query fasta headings rather than provided as a
+#' direct argument
+#' @param raw_blast_list S3 object of class RawBlastList, which is a nested R list
+#' previously created by this parsing function. Contains raw BLAST output data.
+#' Fill in only if you wish to group two sets of raw data together for
+#' visualization.
+#' The default value is NULL. See the results section below for more
+#' information.
 #'
-#' @return A nested R list data structure storing the raw BLAST output, as
-#' follows:
+#' @return Returns an S3 object of class RawBlastList, which stores the raw
+#' BLAST output as a nested R list, as follows:
 #' \itemize{
-#'  \item The outer list is in key-value format where each key is a
+#'  \item The very outer list is in key-value format where each key is a
 #'  species name and the corresponding value is a "gene list" for the species
 #'  \item Each "gene list" is also in key-value format, where each key is a
 #'  gene name and the  corresponding value is a list containing two attributes:
@@ -31,7 +41,7 @@
 #'  and 2) \emph{query_len}, the length of the query coding sequence for the
 #'  gene.
 #'  \item Each row in \emph{hsp_data} corresponds to a single high-scoring pair,
-#'  where the columns are as follows:
+#'  in which the columns are as follows:
 #'  \itemize{
 #'    \item \emph{q_start}: start of the HSP segment on the query side.
 #'    \item \emph{q_end}: end of the HSP segment on the query side.
@@ -44,10 +54,8 @@
 #'    \item \emph{seq_len}: Length of the HSP
 #'  }
 #' }
-#' The list is a concatenation of raw_list with the raw BLAST output pointed to
-#' by filename.
-#'
-#'
+#' If the parameter \emph{raw_blast_list} is not null, then the function adds
+#' the newly curated data to raw_blast_list.
 #'
 #' @import rjson
 #' @import dplyr
@@ -58,97 +66,237 @@
 #' @export
 #'
 #' @examples
-#' json_file1 <- system.file("extdata", "orca_rhfdsafo_BLAST_output.json",
-#'                            package="euPredictR")
-#' # Example 1: No raw_list input argument
 #'
-#' raw_list1 <- parse_BLAST_json(filename = json_file1, species = "O_orca")
+#' # "orca_rho_BLAST_output.json" contains BLAST output for a rhodopsin query
+#' # coding sequence and subject Orca genome
+#' json_file1 <- system.file("extdata", "orca_rho_BLAST_output.json",
+#'                            package="euPredictR")
+#'
+#' # "dolphin_rho_BLAST_output.json" contains BLAST output for a rhodopsin query
+#' # coding sequence and subject dolphin (T. truncatus) genome
+#' json_file2 <- system.file("extdata", "dolphin_rho_BLAST_output.json",
+#'                            package="euPredictR")
+#'
+#'
+#' # Example 1: No raw_blast_list input argument
+#'
+#' raw_blast_list1 <- parse_BLAST_json(filename = json_file1,
+#'                                      species = "O_orca")
+#'
 #'
 #' # Example 2: Using raw list generated previously as additional input
 #'
-#' raw_list2 <- parse_BLAST_json(filename = json_file1, species = "T_truncatus",
-#'                               raw_list = raw_list1)
-#' # this list concatenates raw BLAST results for both orca and dolphin RHO into
-#' # one list
+#' raw_blast_list2 <- parse_BLAST_json(filename = json_file2,
+#'                                     species = "T_truncatus",
+#'                                     raw_blast_list = raw_blast_list1)
+#' # this list concatenates raw BLAST results for both orca and dolphin RHO
 
-parse_BLAST_json <- function(filename, species, raw_list=NULL){
+parse_BLAST_json <- function(filename, species, raw_blast_list=NULL){
 
+  # # First, check if file is in JSON format
+  # if (! configr::is.json.file(filename)) {
+  #   stop("Inputted file is not in JSON format.")
+  # }
+  # else {} # Continue
+  #
+  # # reads the json file, removes all newlines, then stores in list format
+  # json_data_as_list <- readr::read_file(filename) %>%
+  #   gsub(pattern = "[\r\n]", replacement = "") %>%
+  #   rjson::fromJSON()
+
+  # validate whether the file specified by 'filename' is in the correct format.
+  # Also, convert the raw file into an R list with the exact same
+  # attribute(key) to value structure. Uses a helper function as defiend below.
+  json_data_as_list <- validate_BLAST_JSON_file(filename)
+
+  #instantiate a list to store results for all genes for the species
+  genes <- list()
+
+  # Iterate through reports for the BLAST output that each contain results for
+  # a single query. See validate_BLAST_JSON_file below for more detailed
+  # documentation on the format.
+  for (query_report in json_data_as_list$BlastOutput2){
+
+    # get title of the query (validate_BLAST_JSON_file already checked to if
+    # that this is possible)
+    query_title <- query_report$report$results$search$query_title
+
+    # get query length
+    query_len <- query_report$report$results$search$query_len
+
+    # take the first word in the query heading/title as the gene name
+    # (assumption defined in description)
+    gene_name <- strsplit(query_title, split = " ")[[1]][1]
+
+    # get hits (each a collection of HSPs and represented by an HSP table) for
+    # the query
+    hits <- query_report$report$results$search$hits
+
+    # if the query matches no hits, no HSP table is present to predict from for
+    # the particular species-gene combination
+    if (length(hits) < 1){
+      genes[[gene_name]] <- NULL
+    }
+    else{
+
+      # We assume that all exons for a gene are located on one genomic sequence.
+      # Therefore, the top hit (with the best score) should contain HSPs
+      # representing all of our exons of interest, and we discard the rest.
+      top_hit <- hits[[1]]
+
+      # Get high scoring pairs contained with the hit
+      hsps <- top_hit$hsps
+
+      # Convert the HSPs, which are in a nested list format, into a data frame
+      # where each row is an HSP and the columns are HSP attributes (eg.
+      # query/subject segments, boundaries, etc.). This is done by the following
+      # steps:
+      # 1) lapply converts each individual HSP into a data frame with one row
+      # 2) do.call calls the rbind function to bind together all the individual
+      # hsps into one data frame
+      # 3) Remove the columns from the original dataset that we are not
+      # interested in via select
+      hsp_data <- do.call(rbind, lapply(hsps, data.frame)) %>%
+        dplyr::select(-c(num, bit_score, score, identity, query_strand,
+                           align_len, midline, gaps))
+
+      # rename the columns of our HSP
+      colnames(hsp_data) <- c("e_val", "q_start", "q_end", "s_start", "s_end",
+                              "s_strand", "q_seq", "s_seq")
+
+      # Add a seq_len column corresponding to the length of the HSP segment.
+      # Then remove gaps in the HSP if the number in our query segment and
+      # subject is equal (and therefore, only there for alignment purposes).
+      hsp_data <- dplyr::mutate(hsp_data, seq_len = q_end - q_start + 1) %>%
+        remove_gaps_if_equal() # helper function below
+
+      # store the query length and HSP data from the top hit in our gene list
+      genes[[gene_name]] <- list(query_len = query_len, hsp_data = hsp_data)
+    }
+  }
+
+  # If raw_blast_list is a RawBlastList provided by the user, add the
+  # species -> gene list key-value pair from the BLAST output .json file to it.
+  if (!is.null(raw_blast_list)){
+    raw_blast_list[[species]] <- genes
+  }
+  else{
+    # otherwise, we create a new RawBlastList, and its first entry is the
+    # species -> gene list key-value pair generated from the BLAST output .json
+    # file
+    raw_blast_list <- list()
+    raw_blast_list[[species]] <- genes
+    class(raw_blast_list) <- "RawBlastList"
+  }
+  return(raw_blast_list)
+}
+
+#' Validate BLAST JSON output file (Helper for parse_BLAST_json)
+#'
+#' Checks to see if the provided BLAST output file is 1) in .json format, and
+#' 2) follows the conventions of results from NCBI's BLAST search tool. See the
+#' example BLAST output files in the inst/extdata directory for more
+#' information. In general, each BLAST output file must have the following
+#' attribute structure:
+#' \itemize{
+#'  \item An overarching attribute 'BlastOutput2'. The value of 'BlastOutput2'
+#'  is a list of 'reports', each containing results for a query.
+#'  \item Within a 'report', the query title and length can be accessed by
+#'  traversing the attributes: 'report' -> 'results' -> 'search'.
+#'  Their respective attribute names are 'query_title' and 'query_len'
+#'  \item The 'hits' attribute can also be accessed this way, and contains
+#'  a list of hits each representing a collection of HSPs for a single subject
+#'  sequence.
+#' }
+#'
+#' @param filename File path to the BLAST JSON output file to validate.
+#'
+#' @return Return the contents of the BLAST JSON output file in R list format
+#' as directly translated by the fromJSON() function from the rjson package.
+#' The key-value 'dictionary' format of JSON is preserved in the list.
+#'
+#' @import configr
+#' @import readr
+#' @import rjson
+#' @import dplyr
+#'
+validate_BLAST_JSON_file <- function(filename){
+
+  # First, check if file is in JSON format
   if (! configr::is.json.file(filename)) {
     stop("Inputted file is not in JSON format.")
   }
   else {} # Continue
 
-  # reads the json file, removes all newlines, then stores in list format
-  json_data <- readr::read_file(filename) %>%
+  # reads the json file, removes all newlines, then stores in R list format
+  json_data_as_list <- readr::read_file(filename) %>%
     gsub(pattern = "[\r\n]", replacement = "") %>%
     rjson::fromJSON()
 
-  #instantiate a list to store all genes for the species
-  genes <- list()
+  if (is.null(json_data_as_list$BlastOutput2)){
+    stop("The input file is in the incorrect format: missing 'BlastOutput2'
+         overarching attribute")
+  }
+  else{} # Continue
 
-  for (query_report in json_data$BlastOutput2){
+  # iterates through each report in the nested list to ensure correct structure
+  # Note that each query_report corresponds to results for a single query
+  for (query_report in json_data_as_list$BlastOutput2){
 
-    query_title <- query_report$report$results$search$query_title
-    query_len <- query_report$report$results$search$query_len
+    # fasta heading of the query coding sequence, if format is correct
+    query_title <- tryCatch(
+      # wrapped in try catch because there are many points at which this could
+      # fail, but all mean that the input is incorrect
+      expr = {
+        query_report$report$results$search$query_title
+        },
+      error = function(e){
+        stop("The input file is in the incorrect format: missing BLAST
+             attributes")
+        }
+    )
+
+    # length of query coding sequence, if format is correct
+    query_len <- tryCatch(
+      # see reasoning above for try-catch implementation
+      expr = {
+        query_report$report$results$search$query_len
+      },
+      error = function(e){
+        stop("The input file is in the incorrect format: missing BLAST
+             attributes")
+      }
+    )
 
     # if there is no query title (incorrect file format)
     if (is.null(query_title)){
-      stop("The input file is in the incorrect format")
+      stop("The input file is in the incorrect format: no query title")
     }
-    else {
-      # Continue
+    else if (is.null(query_len)){
+      stop("The input file is in the incorrect format: no query length")
     }
+    else if (length(query_title) > 1 | !is.character(query_title)){
+      stop("The input file is in the incorrect format:
+           query header not a string")
+    }
+    else if (length(query_len) > 1 | !is.numeric(query_len)){
+      stop("The input file is in the incorrect format: query length is not
+           a number")
+    }
+    else{} # continue
 
-    query_name <- strsplit(query_title, split = " ")[[1]][1]
+    # note that each hit is the collection of hsps for a single subject sequence
     hits <- query_report$report$results$search$hits
-
     if (!is.list(hits)){
-      stop("The input file is in the incorrect format")
+      stop("The input file is in the incorrect format: no hits list present")
     }
-    else{
-      # Continue
-    }
+    else {} # Continue
 
-    if (length(hits) < 1){
-      genes[[query_name]] <- NULL
-    }
-    else{
-
-      top_hit <- hits[[1]]
-      hsps <- top_hit$hsps
-      L <- length(hsps)
-
-      hsp_data <- do.call(rbind, lapply(hsps, data.frame)) %>%
-        subset(select = -c(num, bit_score, score, identity, query_strand,
-                           align_len, midline, gaps))
-
-      colnames(hsp_data) <- c("e_val", "q_start", "q_end", "s_start", "s_end",
-                              "s_strand", "q_seq", "s_seq")
-
-      hsp_data <- dplyr::mutate(hsp_data, seq_len = q_end - q_start + 1) %>%
-        remove_gaps_if_equal()
-
-      print(hsp_data)
-      genes[[query_name]] <- list(query_len = query_len, hsp_data = hsp_data)
-    }
+    # Note that we do not check correctness of the HSP tables, as it is
+    # inefficient to do so and it is highly unlikely at this point for user
+    # input to be incorrect, regardless
   }
-
-  if (!is.null(raw_list)){
-    raw_list[[species]] <- genes
-  }
-  else{
-    raw_list <- list()
-    raw_list[[species]] <- genes
-  }
-
-  return(raw_list)
-}
-
-#' Title
-#'
-#' Description
-validate_BLAST_JSON_file <- function(){
-  print(1)
+  return(json_data_as_list)
 }
 
 
@@ -159,20 +307,20 @@ validate_BLAST_JSON_file <- function(){
 #'
 #' @param dir_path path to directory containing json files from different
 #' species
-#' @param raw_list previous raw carrier, if available
+#' @param raw_blast_list previous raw carrier, if available
 #'
 #' @import tools
 
-parse_multiple_BLAST_json <- function(dir_path, raw_list=NULL){
+parse_multiple_BLAST_json <- function(dir_path, raw_blast_list=NULL){
 
   all_files <- list.files(path = dir_path, full.names = TRUE)
 
-  raw_list <- NULL
+  raw_blast_list <- NULL
   for (filename in all_files){
     species_name <- tools::file_path_sans_ext(basename(filename))
-    raw_list <- parse_BLAST_json(filename, species_name, raw_list)
+    raw_blast_list <- parse_BLAST_json(filename, species_name, raw_blast_list)
   }
-  return(raw_list)
+  return(raw_blast_list)
 }
 
 

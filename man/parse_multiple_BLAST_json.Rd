@@ -4,13 +4,13 @@
 \alias{parse_multiple_BLAST_json}
 \title{Parse Multiple BLAST json}
 \usage{
-parse_multiple_BLAST_json(dir_path, raw_list = NULL)
+parse_multiple_BLAST_json(dir_path, raw_blast_list = NULL)
 }
 \arguments{
 \item{dir_path}{path to directory containing json files from different
 species}
 
-\item{raw_list}{previous raw carrier, if available}
+\item{raw_blast_list}{previous raw carrier, if available}
 }
 \description{
 description

@@ -2,10 +2,32 @@
 % Please edit documentation in R/ParseInput.R
 \name{validate_BLAST_JSON_file}
 \alias{validate_BLAST_JSON_file}
-\title{Title}
+\title{Validate BLAST JSON output file (Helper for parse_BLAST_json)}
 \usage{
-validate_BLAST_JSON_file()
+validate_BLAST_JSON_file(filename)
+}
+\arguments{
+\item{filename}{File path to the BLAST JSON output file to validate.}
+}
+\value{
+Return the contents of the BLAST JSON output file in R list format
+as directly translated by the fromJSON() function from the rjson package.
+The key-value 'dictionary' format of JSON is preserved in the list.
 }
 \description{
-Description
+Checks to see if the provided BLAST output file is 1) in .json format, and
+2) follows the conventions of results from NCBI's BLAST search tool. See the
+example BLAST output files in the inst/extdata directory for more
+information. In general, each BLAST output file must have the following
+attribute structure:
+\itemize{
+ \item An overarching attribute 'BlastOutput2'. The value of 'BlastOutput2'
+ is a list of 'reports', each containing results for a query.
+ \item Within a 'report', the query title and length can be accessed by
+ traversing the attributes: 'report' -> 'results' -> 'search'.
+ Their respective attribute names are 'query_title' and 'query_len'
+ \item The 'hits' attribute can also be accessed this way, and contains
+ a list of hits each representing a collection of HSPs for a single subject
+ sequence.
+}
 }

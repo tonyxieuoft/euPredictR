@@ -1,0 +1,213 @@
+{
+"BlastOutput2": [
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/9739/102/GCF_011762595.1_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;",
+        "entrez_query": "txid9739 [ORGN]"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_3012045",
+          "query_title": "RHO NM_001280659.1 Tursiops truncatus, mRNA",
+          "query_len": 1047,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1832237592|ref|NC_047043.1|",
+                  "accession": "NC_047043",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 10, mTurTru1.mat.Y",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 102812509,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 651.401,
+                  "score": 721,
+                  "evalue": 0,
+                  "identity": 362,
+                  "query_from": 1,
+                  "query_to": 363,
+                  "query_strand": "Plus",
+                  "hit_from": 98342371,
+                  "hit_to": 98342733,
+                  "hit_strand": "Plus",
+                  "align_len": 363,
+                  "gaps": 0,
+                  "qseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCTGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCATGCGTACTTCGTCTTCGGGCCCACGGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGT",
+                  "hseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCTGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCACGCGTACTTCGTCTTCGGGCCCACGGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGT",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 437.702,
+                  "score": 484,
+                  "evalue": 4.17877e-120,
+                  "identity": 242,
+                  "query_from": 695,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 98346134,
+                  "hit_to": 98346375,
+                  "hit_strand": "Plus",
+                  "align_len": 242,
+                  "gaps": 0,
+                  "qseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 307.859,
+                  "score": 340,
+                  "evalue": 5.09978e-81,
+                  "identity": 183,
+                  "query_from": 361,
+                  "query_to": 547,
+                  "query_strand": "Plus",
+                  "hit_from": 98344435,
+                  "hit_to": 98344623,
+                  "hit_strand": "Plus",
+                  "align_len": 189,
+                  "gaps": 2,
+                  "qseq": "GGTGAAATTGCCCTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTTGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAACCATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGGCCCCCCTCGTCGGCTGGTCCAGGT-ACATCCCAGAG-GGAA",
+                  "hseq": "GGTGAAATTGCCCTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTGGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAACCATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGCCCCCCCTCGTCGGCTGGTCCAGGTAACATCACCGAGTGGAA",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||| ||||| | ||| ||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 293.432,
+                  "score": 324,
+                  "evalue": 1.1233e-76,
+                  "identity": 169,
+                  "query_from": 528,
+                  "query_to": 697,
+                  "query_strand": "Plus",
+                  "hit_from": 98345861,
+                  "hit_to": 98346030,
+                  "hit_strand": "Plus",
+                  "align_len": 171,
+                  "gaps": 2,
+                  "qseq": "CAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACACG-TCTCGCCAGGAGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAGCTGGTCTTCACAGTCAAGGAGG",
+                  "hseq": "CAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACACGCTCTCGCCA-GAGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAGCTGGTCTTCACAGTCAAGGAGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 5,
+                  "bit_score": 206.87,
+                  "score": 228,
+                  "evalue": 1.28282e-50,
+                  "identity": 114,
+                  "query_from": 934,
+                  "query_to": 1047,
+                  "query_strand": "Plus",
+                  "hit_from": 98347223,
+                  "hit_to": 98347336,
+                  "hit_strand": "Plus",
+                  "align_len": 114,
+                  "gaps": 0,
+                  "qseq": "CAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGGCAGGAACCCACTGGGTGACGATGAGGCCTCCACCACTGCCTCCAAGACAGAGACCAGCCAGGTGGCGCCTGCCTAA",
+                  "hseq": "CAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGGCAGGAACCCACTGGGTGACGATGAGGCCTCCACCACTGCCTCCAAGACAGAGACCAGCCAGGTGGCGCCTGCCTAA",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gi|1832237580|ref|NC_047055.1|",
+                  "accession": "NC_047055",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome X, mTurTru1.mat.Y",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 128693445,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 81.5362,
+                  "score": 89,
+                  "evalue": 1.28509e-12,
+                  "identity": 145,
+                  "query_from": 725,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 1354425,
+                  "hit_to": 1354214,
+                  "hit_strand": "Minus",
+                  "align_len": 212,
+                  "gaps": 0,
+                  "qseq": "CCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "CCACCCGGAAGGCGGAGAAGGAGGTAACCCGCATGGTGATGGTGATGATCTTTGCGTACTGCCTCTGCTGGGGGCCCTACACATTCTTTGCGTGCTTCGCCGCTGCCCACCCTGGCTACGCCTTCCACCCTCTGGTGGCCGCCCTGCCATCCTACTTCGCCAAAAGTGCCACCATCTACAACCCCATTATCTATGTCTTTATGAACCGGCAG",
+                  "midline": "|||| | |||||| ||||||||||| || |||||||| ||  | ||| || |||| | |    ||||||||| ||||||  |   | | |||| || |       ||||||  |||| || |||   |||  |  |     || | || || | ||| ||||| ||| || |||||||||||||| | |||||  || | ||||||  ||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gi|1832237596|ref|NC_047039.1|",
+                  "accession": "NC_047039",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 6, mTurTru1.mat.Y",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 115599616,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 49.9773,
+                  "score": 54,
+                  "evalue": 0.00217616,
+                  "identity": 30,
+                  "query_from": 1005,
+                  "query_to": 1036,
+                  "query_strand": "Plus",
+                  "hit_from": 111796749,
+                  "hit_to": 111796780,
+                  "hit_strand": "Plus",
+                  "align_len": 32,
+                  "gaps": 0,
+                  "qseq": "CACTGCCTCCAAGACAGAGACCAGCCAGGTGG",
+                  "hseq": "CACAGCCTCCAAGACAGAGAGCAGCCAGGTGG",
+                  "midline": "||| |||||||||||||||| |||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 362,
+            "db_len": 2378522213,
+            "hsp_len": 33,
+            "eff_space": 2411809421892,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+]
+}
+
