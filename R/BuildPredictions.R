@@ -141,7 +141,8 @@ build_predictions <- function(raw_blast_list,
   return(predictions)
 }
 
-#' Predict a Single Query Sequence (helper for build_predictions)
+
+#' Predict a Single Coding Sequence (helper for build_predictions)
 #'
 #' Given a data frame of HSPs, length of the query, and various parameters,
 #' predict the coding sequence of a gene for a particular species. On a broad
@@ -249,6 +250,8 @@ build_prediction <- function(query_len,
   return(create_sequence(dp, sorted_table, query_len))
 }
 
+
+
 #' Determines Compatibility Between Two HSPs (helper for build_prediction)
 #'
 #' Determines if two HSPs are compatible, based on the assumptions laid out in
@@ -308,13 +311,18 @@ is_compatibile <- function(hsp_table, j, i, max_overlap, max_intron_length){
   }
 }
 
+
+
 #' Create Sequence from HSP Coverage Dynamic Programming Table (Helper)
 #'
 #' Creates a predicted sequence based on the dynamic programming table produced
 #' earlier. Essentially, the DP table identifies optimal 'sets' of compatible
 #' HSPs, and links the optimal HSPs to each other by the 'parent' attribute to
 #' get their predecessor. See the comments on the the build_prediction
-#' function for more detail.
+#' function for more detail. To create the predicted sequence, this function
+#' identifies the best "last" HSP in an optimal prediction, then traverses
+#' backwards through the predecessors via a recursive helper function to build
+#' the prediction up piece by piece.
 #'
 #' @param dp The dynamic programming table produced earlier by the
 #' build_prediction algorithm.
@@ -381,7 +389,7 @@ recursive_create <- function(dp, hsps, i){
     # get it's parent (predecessor) sequence
     p <- dp$parent[i]
     # create the optimal predicted coding sequence as if the predecessor HSP
-    # is the last one
+    # is the last one in the prediction
     seq <- recursive_create(dp, hsps, p)
 
     # if no overlap exists between HSP i and its predecessor, combine them
@@ -397,6 +405,7 @@ recursive_create <- function(dp, hsps, i){
     }
   }
 }
+
 
 #' HSP Overlap Merger (Helper for recursive_create)
 #'
