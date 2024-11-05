@@ -2,19 +2,29 @@
 % Please edit documentation in R/BuildPredictions.R
 \name{handle_overlap}
 \alias{handle_overlap}
-\title{Merge Overlap Helper}
+\title{HSP Overlap Merger (Helper for recursive_create)}
 \usage{
 handle_overlap(hsps, seq, p, i)
 }
 \arguments{
-\item{hsps}{Table of HSPs}
+\item{hsps}{Dataframe of HSPs, sorted in ascending order by start position of
+query segment}
 
-\item{seq}{Currently built sequence}
+\item{seq}{Currently built sequence by the recursive call in recursive_create}
 
-\item{p}{Index of parent sequence}
+\item{p}{Index of parent HSP}
 
-\item{i}{Index of current sequence}
+\item{i}{Index of current HSP in consideration by recursive_create}
+}
+\value{
+Returns seq and the subject segment of HSP i, merged together as a
+string
 }
 \description{
-Placeholder description
+Minimal algorithm for merging together two overlapping HSPs. If insertions
+or deletions are present in one of the two overlapping segments, use the
+subject sequence for the other one for prediction instead. I note that
+despite assuming that relevant HSPs correspond loosely to exons, they may
+extend extraneously into introns if the intron ends are similar to the
+neighboring exon ends.
 }

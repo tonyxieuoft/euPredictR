@@ -2,17 +2,30 @@
 % Please edit documentation in R/BuildPredictions.R
 \name{recursive_create}
 \alias{recursive_create}
-\title{Recursive Helper}
+\title{Recursive Helper for create_sequence}
 \usage{
 recursive_create(dp, hsps, i)
 }
 \arguments{
-\item{dp}{The dynamic programming table}
+\item{dp}{The dynamic programming table, initially created by
+build_predictions}
 
-\item{hsps}{The table of hsps}
+\item{hsps}{The data frame of high scoring pairs, sorted by increasing index
+for the query segment.}
 
-\item{i}{index of the last HSP in the sequence to create}
+\item{i}{Index of the last HSP in the optimal set of HSPs to predict the
+coding sequence from.}
+}
+\value{
+The predicted coding sequence when HSP i is the last one in the
+optimal set.
 }
 \description{
-Dummy Description
+Outputs a predicted coding sequence ending at HSP i. Recursively calls on
+itself to trace back through the DP table to get the sequence.
+}
+\references{
+Wickham H (2023). _stringr: Simple, Consistent Wrappers for
+Common String Operations_. R package version 1.5.1.
+https://CRAN.R-project.org/package=stringr.
 }

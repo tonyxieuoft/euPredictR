@@ -2,17 +2,36 @@
 % Please edit documentation in R/BuildPredictions.R
 \name{is_compatibile}
 \alias{is_compatibile}
-\title{Helper function for building predictions.}
+\title{Determines Compatibility Between Two HSPs (helper for build_prediction)}
 \usage{
-is_compatibile(hsp_table, j, i)
+is_compatibile(hsp_table, j, i, max_overlap, max_intron_length)
 }
 \arguments{
-\item{hsp_table}{a sorted table of HSPs}
+\item{hsp_table}{A data frame of HSPs, sorted in ascending order by query
+segment start point.}
 
-\item{j}{index of HSP with lower query start}
+\item{j}{Index of HSP with lower query index start point.}
 
-\item{i}{index of HSP with high query start}
+\item{i}{Index of HSP with higher query index start point.}
+
+\item{max_overlap}{Maximum allowed overlap between query segments of two
+compatible HSPs}
+
+\item{max_intron_length}{Maximum allowed distance between subject segments of
+compatible HSPs (boundary on allowed intron size)}
+}
+\value{
+Return True iff HSPs i and j are compatible.
 }
 \description{
-Determines if two HSPs are compatible
+Determines if two HSPs are compatible, based on the assumptions laid out in
+build_predictions. Specifically, assumes that relevant HSPs correspond
+loosely to exons, and therefore must roughly have the same relative
+attributes that exons do. Loosely inspired by the Splign algorithm by
+Kapustin et. al.
+}
+\references{
+Kapustin, Y., Souvorov, A., Tatusova, T. et al. (2008) Splign: algorithms
+for computing spliced alignments with identification of paralogs. Biol
+Direct 3: 20. https://doi.org/10.1186/1745-6150-3-20
 }

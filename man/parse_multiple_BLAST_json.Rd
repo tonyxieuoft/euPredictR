@@ -36,7 +36,7 @@ detailed description). Assumptions are the same as parse_BLAST_json.
 # a subject set of Dolphin genomic sequences (results titled
 # T_truncatus.json)
 
-BLAST_out_directory <- system.dir("extdata", "example_raw_output_directory",
+BLAST_out_directory <- system.file("extdata", "example_raw_output_directory",
                                    package="euPredictR")
 
 # EXAMPLE: Convert data in BLAST_out_directory to RawBlastList format

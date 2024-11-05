@@ -7,7 +7,7 @@
 gene_coverage_heatmap(predictions)
 }
 \arguments{
-\item{melted_coverages}{Melted dataframe of sequence coverage}
+\item{predictions}{Melted dataframe of sequence coverage}
 }
 \description{
 filler description

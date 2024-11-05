@@ -2,17 +2,29 @@
 % Please edit documentation in R/BuildPredictions.R
 \name{create_sequence}
 \alias{create_sequence}
-\title{Create Sequence from DP table}
+\title{Create Sequence from HSP Coverage Dynamic Programming Table (Helper)}
 \usage{
 create_sequence(dp, hsp_table, query_len)
 }
 \arguments{
-\item{dp}{The dynamic programming table}
+\item{dp}{The dynamic programming table produced earlier by the
+build_prediction algorithm.}
 
-\item{hsp_table}{The table of hsps}
+\item{hsp_table}{The table of HSPs in SORTED order by the starting index of
+the query segment.}
 
-\item{query_len}{Length of the query}
+\item{query_len}{Length of the query used to obtain the HSP table. It is
+assumed that the coding sequence contained within the subject genome should
+be the same length, and if they're not present in the prediction, then some
+parts are missing.}
+}
+\value{
+Returns the predicted coding sequence.
 }
 \description{
-Dummy Description
+Creates a predicted sequence based on the dynamic programming table produced
+earlier. Essentially, the DP table identifies optimal 'sets' of compatible
+HSPs, and links the optimal HSPs to each other by the 'parent' attribute to
+get their predecessor. See the comments on the the build_prediction
+function for more detail.
 }

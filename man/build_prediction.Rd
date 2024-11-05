@@ -2,15 +2,37 @@
 % Please edit documentation in R/BuildPredictions.R
 \name{build_prediction}
 \alias{build_prediction}
-\title{Build Predictions with Preprocessed Data Frames}
+\title{Predict a Single Query Sequence (helper for build_predictions)}
 \usage{
 build_prediction(query_len, hsp_table, max_overlap, max_intron_length)
 }
 \arguments{
-\item{query_len}{Length of the Query}
+\item{query_len}{Length of the query used by BLAST to obtain the HSP table.}
 
-\item{hsp_table}{Table of HSP values}
+\item{hsp_table}{Data frame, where each row corresponds to an HSP and each
+column corresponds to the HSP's attributes.}
+
+\item{max_overlap}{Non-negative integer: maximum allowed query segment
+overlap between compatible HSPs}
+
+\item{max_intron_length}{Non-negative integer: maximum allowed subject
+segment distance between compatible HSPs}
+}
+\value{
+Returns the predicted sequence. Missing areas are denoted by "-".
 }
 \description{
-Sample Description
+Given a data frame of HSPs, length of the query, and various parameters,
+predict the coding sequence of a gene for a particular species. On a broad
+level, implements the dynamic programming algorithm (details are in comments)
+and has the same assumptions as stated in build_predictions.
+}
+\references{
+Kapustin, Y., Souvorov, A., Tatusova, T. et al. (2008) Splign: algorithms
+for computing spliced alignments with identification of paralogs. Biol
+Direct 3: 20. https://doi.org/10.1186/1745-6150-3-20
+
+Wickham H, François R, Henry L, Müller K, Vaughan D (2023). _dplyr: A
+Grammar of Data Manipulation_. R package version 1.1.4.
+https://CRAN.R-project.org/package=dplyr.
 }

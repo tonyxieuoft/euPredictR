@@ -67,7 +67,22 @@ The maximum intron length and maximum overlap can be modified in the
 parameter settings of the function.
 }
 \examples{
-# example code
 
+# Generate gene predictions given an input of sample_raw_blast_list
+# (see ?sample_raw_blast_list for more details about the dataset).
+# Max overlap is set to 30, while max intron length is set to 10000 (shorter
+# introns)
+predictions <- build_predictions(raw_blast_list = sample_raw_blast_list,
+                                 max_overlap = 30
+                                 max_intron_length = 10000)
 
+}
+\references{
+Altschul S.F., Gish, W., Miller, W., Myers, E.W. and Lipman, D.J. (1990).
+Basic local alignment search tool. Journal of Molecular Biology 215(3):
+403-410. https://doi.org/10.1016/S0022-2836(05)80360-2
+
+Kapustin, Y., Souvorov, A., Tatusova, T. et al. (2008) Splign: algorithms
+for computing spliced alignments with identification of paralogs. Biol
+Direct 3: 20. https://doi.org/10.1186/1745-6150-3-20
 }
