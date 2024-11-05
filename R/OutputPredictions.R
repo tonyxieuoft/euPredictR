@@ -18,7 +18,9 @@
 #'
 #' # Get gene predictions from sample RawBlastList dataset provided in the
 #' # package
-#' gene_predictions <- build_predictions(sample_raw_blast_list)
+#' gene_predictions <- build_predictions(sample_raw_blast_list,
+#'                                       max_overlap = 30,
+#'                                       max_intron_length = 50000)
 #'
 #' # Example 1: Output gene predictions in FASTA format to console as a string
 #' \dontrun{
@@ -65,6 +67,7 @@ output_predictions <- function(predictions, output_file = NULL){
   # get all species names
   species_names <- names(predictions)
 
+  # todo: use apply functions instead of for loops for greater efficiency
   for (gene_name in total_gene_names){
     for (species in species_names){
 

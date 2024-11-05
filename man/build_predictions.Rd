@@ -58,13 +58,14 @@ observations for compatible HSPs 'A' and 'B':
  overlap minimally with the query segment for 'B'(a higher threshold above
  0 is set for some wiggle room).
  \item \emph{Maximum Intron Length}: The subject segment for 'A' must be
- somewhat close in proximity to 'B', otherwise the presumed intron(s) between
+ somewhat close in proximity to 'B', otherwise the presumed intron between
  them would be massively long.
  \item \emph{Same Strand}: The subject segment for 'A' must be on the strand
  as the subject segment for 'B' (plus/minus).
 }
 The maximum intron length and maximum overlap can be modified in the
-parameter settings of the function.
+parameter settings of the function. These assumptions are loosely inspired
+by the Splign algorithm by Kapustin et. al.
 }
 \examples{
 

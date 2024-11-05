@@ -23,10 +23,11 @@ string
 \description{
 Minimal algorithm for merging together two overlapping HSPs. If insertions
 or deletions are present in one of the two overlapping segments, use the
-subject sequence for the other one for prediction instead. I note that
-despite assuming that relevant HSPs correspond loosely to exons, they may
-extend extraneously into introns if the intron ends are similar to the
-neighboring exon ends.
+subject sequence for the other one for prediction instead. Note that
+despite the assumption that relevant HSPs correspond loosely to exons, they
+may still extend extraneously into introns if the intron ends are similar
+to the neighboring exon ends. This is what likely contributes to the overlaps
+between HSPs (a personal hypothesis based on observation)
 }
 \references{
 Wheeler, D. and Bhagwat, M. Blast QuickStart: Example-Driven Web-Based BLAST

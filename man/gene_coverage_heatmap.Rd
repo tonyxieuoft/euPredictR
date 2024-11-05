@@ -2,13 +2,48 @@
 % Please edit documentation in R/GeneratePredictionStats.R
 \name{gene_coverage_heatmap}
 \alias{gene_coverage_heatmap}
-\title{Create Heatmap}
+\title{Create Gene Coverage Heatmap for Prediction Completeness}
 \usage{
 gene_coverage_heatmap(predictions)
 }
 \arguments{
-\item{predictions}{Melted dataframe of sequence coverage}
+\item{predictions}{S3 object of class GenePredictions produced by an
+iteration of the 'build_predictions' function in this package.}
+}
+\value{
+Returns NULL.
 }
 \description{
-filler description
+Given an input nested list of gene predictions in GenePredictions format
+(see documentation of the function 'build_predictions' for more), output
+a heat map, where:
+\itemize{
+\item the x axis contains species names
+\item the y axis contains gene names
+\item the color gradient is the estimated coding sequence (CDS) coverage of
+the predicted sequence for the given gene and species. Coding
+sequence coverage is a measure of how complete the prediction is, and is
+calculated by dividing the number of present nucleotides in the prediction
+minus the expected length of the new coding sequence. The
+more gaps present, the lower the coverage.
+}
+}
+\examples{
+
+# make gene predictions from sample RawBlastList data provided in package
+predictions <- build_predictions(sample_raw_blast_list,
+                                 max_overlap = 30,
+                                 max_intron_length = 50000)
+
+# Example: Create gene coverage/prediction completeness heatmap
+\dontrun{
+
+gene_coverage_heatmap(predictions = predictions)
+
+}
+
+}
+\references{
+H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
+New York, 2016.
 }

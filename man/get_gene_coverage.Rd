@@ -7,8 +7,25 @@
 get_gene_coverage(predictions)
 }
 \arguments{
-\item{predictions}{Data frame created by Build Predictions}
+\item{predictions}{An S3 object of type GenePredictions, created by a
+previous iteration of the build_predictions function in the package.}
+}
+\value{
+Return a data frame with three columns:
+\itemize{
+ \item species name
+ \item gene name
+ \item coding sequence coverage of the predicted coding sequence for the
+ species and gene
+}
 }
 \description{
-Given an input GenePredictions object containing predicted coding sequences
+Given an input GenePredictions object containing predicted coding sequences,
+calculate gene coverage (ie. prediction completeness) for each predicted
+sequence. Store the calculations in a melted data frame for heatmap
+generation.
+}
+\references{
+Wickham H, Henry L. (2023). purrr: Functional Programming Tools. R package
+version 1.0.2. https://CRAN.R-project.org/package=purrr.
 }

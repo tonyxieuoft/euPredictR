@@ -26,13 +26,14 @@
 #'  overlap minimally with the query segment for 'B'(a higher threshold above
 #'  0 is set for some wiggle room).
 #'  \item \emph{Maximum Intron Length}: The subject segment for 'A' must be
-#'  somewhat close in proximity to 'B', otherwise the presumed intron(s) between
+#'  somewhat close in proximity to 'B', otherwise the presumed intron between
 #'  them would be massively long.
 #'  \item \emph{Same Strand}: The subject segment for 'A' must be on the strand
 #'  as the subject segment for 'B' (plus/minus).
 #' }
 #' The maximum intron length and maximum overlap can be modified in the
-#' parameter settings of the function.
+#' parameter settings of the function. These assumptions are loosely inspired
+#' by the Splign algorithm by Kapustin et. al.
 #'
 #' @param raw_blast_list S3 object of type RawBlastList, containing BLAST output
 #' data generated from query coding sequences and subject genomic sequences.
@@ -311,8 +312,6 @@ is_compatibile <- function(hsp_table, j, i, max_overlap, max_intron_length){
   }
 }
 
-
-
 #' Create Sequence from HSP Coverage Dynamic Programming Table (Helper)
 #'
 #' Creates a predicted sequence based on the dynamic programming table produced
@@ -411,10 +410,11 @@ recursive_create <- function(dp, hsps, i){
 #'
 #' Minimal algorithm for merging together two overlapping HSPs. If insertions
 #' or deletions are present in one of the two overlapping segments, use the
-#' subject sequence for the other one for prediction instead. I note that
-#' despite assuming that relevant HSPs correspond loosely to exons, they may
-#' extend extraneously into introns if the intron ends are similar to the
-#' neighboring exon ends.
+#' subject sequence for the other one for prediction instead. Note that
+#' despite the assumption that relevant HSPs correspond loosely to exons, they
+#' may still extend extraneously into introns if the intron ends are similar
+#' to the neighboring exon ends. This is what likely contributes to the overlaps
+#' between HSPs (a personal hypothesis based on observation)
 #'
 #' @param hsps Dataframe of HSPs, sorted in ascending order by start position of
 #' query segment
