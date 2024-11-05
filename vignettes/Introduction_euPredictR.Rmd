@@ -1,5 +1,5 @@
 ---
-title: "Introduction_euPredictR"
+title: "A tour of euPredictR"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Introduction_euPredictR}
