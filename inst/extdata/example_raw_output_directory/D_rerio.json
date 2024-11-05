@@ -1,0 +1,1810 @@
+{
+"BlastOutput2": [
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/7955/RS_2024_08/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1345419",
+          "query_title": "IL10 T_truncatus",
+          "query_len": 537,
+          "hits": [
+          ],
+          "stat": {
+            "db_num": 1923,
+            "db_len": 1679203469,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          },
+          "message": "No hits found"
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/7955/RS_2024_08/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1345420",
+          "query_title": "SOX2 T_truncatus",
+          "query_len": 981,
+          "query_masking": [
+            {
+              "from": 52,
+              "to": 122
+            },
+            {
+              "from": 779,
+              "to": 785
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1196813931|ref|NC_007133.7|",
+                  "accession": "NC_007133",
+                  "title": "Danio rerio strain Tuebingen chromosome 22, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 39133080,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 901.167,
+                  "score": 998,
+                  "evalue": 0,
+                  "identity": 716,
+                  "query_from": 123,
+                  "query_to": 979,
+                  "query_strand": "Plus",
+                  "hit_from": 37349669,
+                  "hit_to": 37348810,
+                  "hit_strand": "Minus",
+                  "align_len": 860,
+                  "gaps": 3,
+                  "qseq": "CAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGCCCCGGGCGGCAACAGCATGGCGAGCGGGGTCGGGGTGGGCGCCGGCCTCGGCGCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACGGCTGGAGCAACGGCAGCTACAGCATGATGCAGGACCAGCTGGGCTACCCGCAGCACCCGGGCCTCAACGCGCACGGCGCCGCTCAGATGCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCCGACCTACAGCATGTCCTATTCGCAGCAGGGCACCCCTGGCATGGCTCTTGGCTCCATGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGcccccccGTGGTTACCTCTTCTTCCCACTCCAGGGC---GCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCCCGGCGCCGAGGTGCCGGAGCCCGCCGCCCCCAGCAGACTTCACATGTCGCAGCACTACCAGAGCGGCCCGGTGCCCGGCACGGCCATTAACGGCACACTGCCCCTCTCGCACATGT",
+                  "hseq": "CAACCAGAAAAACAGCCCGGACCGCATCAAGAGACCCATGAACGCCTTCATGGTGTGGTCGAGGGGACAGCGGCGGAAAATGGCACAGGAGAACCCCAAAATGCACAATTCGGAAATAAGTAAGCGACTCGGGGCCGAGTGGAAACTTCTGTCCGAGAGCGAGAAGCGACCATTCATCGACGAAGCCAAACGCCTTCGGGCTCTGCACATGAAGGAACACCCGGATTACAAATACAGACCCCGGAGGAAAACCAAGACCCTGATGAAGAAGGACAAGTACACCCTGCCGGGCGGGCTCCTGGCGCCGGGCGGCAACGGCATGGGCGCCGGCGTGGGTGTAGGGGCCGGTTTGGGCGCCGGGGTCAACCAGAGGATGGACAGCTACGCGCATATGAACGGCTGGACCAACGGAGGCTACGGCATGATGCAGGAGCAGCTGGGTTACCCGCAGCACCCGAGTTTGAACGCGCACAACACGGCGCAGATGCAGCCCATGCACCGCTACGACATGAGCGCGCTCCAGTACAACTCCATGACCAACTCGCAGACCTACATGAACGGCTCGCCCACCTACAGCATGTCCTATTCGCAGCAAAGCACGCCGGGAATGACGCTGGGCTCCATGGGCTCGGTGGTCAAGTCCGAGTCTAGTTCGAGTCCGCCGGTGGTCACGTCGTCGTCTCATTCCCGGGCCGGACAGTGCCAAACGGGGGACCTGCGGGACATGATCAGTATGTACCTGCCCGGGGCGGAGGTGCAGGACCAGAGCGCTCAGAGCAGACTGCACATGTCCCAACATTACCAGAGCGCACCTGTGCCCGGTACGACGATTAACGGCACGATTCCCTTATCGCATATGT",
+                  "midline": "||||||||| ||||||||||||||| ||||| | ||||||||||||||||||||||||||  | || |||||||| || ||||| || ||||||||||| |||||||| ||||| || || ||||| || || ||||||||||||||| |||| ||||  |||||||| || ||||||||||| ||||| || || || || |||||||||||||||||||||||||| |||||| | |||||| ||||||||||||| || ||||||||||| |||||||| |||||||| ||||| || || |||||||||||| ||||||    ||| || || || || |||||  | ||||| || || |||||| | ||||||||||||||||| ||||||||||||| ||||||  ||||| ||||||||||||| |||||||| ||||||||||||||| |  | |||||||||  | | || ||||||||||||||||||||||||||| ||||||| || ||||||||||||||||||| ||||||||||||||||||||||||||| ||||||||||||||||||||||||||  |||| || || ||| | || |||||||||||||||||||||||||||||| | || || || || || ||||| || || || || || ||| ||||    |  |||||  | |||||||| |||||||||||||| |||||||| ||||| || ||||||| ||| |    ||| |  |||||||| |||||||| || || ||||||||||  || |||||||| ||| | |||||||||||  | ||| | ||||| ||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 52.6823,
+                  "score": 57,
+                  "evalue": 0.000411937,
+                  "identity": 39,
+                  "query_from": 1,
+                  "query_to": 46,
+                  "query_strand": "Plus",
+                  "hit_from": 37349755,
+                  "hit_to": 37349710,
+                  "hit_strand": "Minus",
+                  "align_len": 46,
+                  "gaps": 0,
+                  "qseq": "ATGTACAACATGATGGAGACGGAGCTGAAGCCGCCGGGCCCGCAGC",
+                  "hseq": "ATGTATAACATGATGGAAACCGAGCTGAAGCCCCCGGCGCCCCAGC",
+                  "midline": "||||| ||||||||||| || ||||||||||| ||||  || ||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gi|1196813939|ref|NC_007125.7|",
+                  "accession": "NC_007125",
+                  "title": "Danio rerio strain Tuebingen chromosome 14, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 52660232,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 352.042,
+                  "score": 389,
+                  "evalue": 3.15301e-94,
+                  "identity": 469,
+                  "query_from": 138,
+                  "query_to": 777,
+                  "query_strand": "Plus",
+                  "hit_from": 32744183,
+                  "hit_to": 32743571,
+                  "hit_strand": "Minus",
+                  "align_len": 653,
+                  "gaps": 53,
+                  "qseq": "CCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGCCCCGGGCGGCAACAGCATGGCGA----GCGGGGTCGGGGTGGGCGCCGGCCTCGGCGCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACGGCTGGAGCAACGGCAGCTACAGCATGATGCAGGACCAGCTGGGCTACCCGCAGCACCCGGGCCTCAACGCGCACGGCGCCGCTCAGATGCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCCGACCTA---CAGCATGT------CCTATTCGCAGCAGGGCACCCCTGGCATGGCTCTTGGCTCCATGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCC",
+                  "hseq": "CCAGGACCGGGTGAAGCGGCCTATGAATGCTTTCATGGTGTGGTCTCGCGGGCAGCGGAGGAAGATGGCTCAGGAGAATCCTAAAATGCACAACTCGGAGATCAGCAAGCGCCTCGGTGCTGACTGGAAACTTTTGACTGACGCCGAGAAGAGACCCTTCATTGACGAGGCCAAGCGGTTACGAGCCATGCACATGAAGGAGCACCCGGATTACAAATACCGTCCCCGCAGGAAGACCAAGACCCTGCTGAAGAAAGACAAGTATTCTTTGCCAGGGGGACTCCTGGCGCCCGGTGCCAAC-GC-TGTCAACAACGCGGTGTC--GGTGGG------------------------CCAGCGGATGGA---CTACACGCACATGAACGGATGGACGAACAGCGCATACTCCCTCATGCAGGACCAGCTGGCCTACCCTCAACATCCCAGCATGAAC--------AGCC-CCCAGATCCAGCAGATGCACCGGTACGACATGGCGGGACTTCAGTACCCAATGATGTCCACGGCTCAGACCTACATGAACGCCGCGTCCACGTACAGCAGCATGTCACCAGCATACACGCAACAAACTTCCAGTGCAATGGGTTTGGGCTCCATGGCTTCGGTGTGCAAGACGGAGCCCAGCTCC",
+                  "midline": "|| |||||| || |||||||| ||||| || |||||||||||||| |||||||||||| | |||||||| || ||||| || || ||||||||||||||||||||||||||||| || || || |||||||||||| | ||  | |||||| | || ||||| ||||||||||||||| | |||||  ||||||||||||| ||||||||||| |||||||| |||||  |||| |||||||| ||  ||||||| || |||||  |  |||| || || || || || || || | |||| || || | |    |||| |||  ||||||                        |||||| |||||   |||| ||||||||||||| ||||  ||| ||   |||  | | |||||||||||||||| |||||| || || ||  || | |||         ||| | ||||| ||||  |||||||| |||||| ||   |  || ||||||      ||| |||   | |||||||||||||||| | || | || ||   ||||||||      | ||  |||| ||     ||  ||  |||| | | ||||||||||  ||||||  |||| | ||| ||||||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gi|1196813953|ref|NC_007112.7|",
+                  "accession": "NC_007112",
+                  "title": "Danio rerio strain Tuebingen chromosome 1, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 59578282,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 301.547,
+                  "score": 333,
+                  "evalue": 5.00072e-79,
+                  "identity": 237,
+                  "query_from": 142,
+                  "query_to": 425,
+                  "query_strand": "Plus",
+                  "hit_from": 46194670,
+                  "hit_to": 46194953,
+                  "hit_strand": "Plus",
+                  "align_len": 284,
+                  "gaps": 0,
+                  "qseq": "GACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGC",
+                  "hseq": "GACCGCGTTAAGAGACCCATGAACGCCTTTATGGTGTGGTCTCGGGGTCAGCGCAGAAAAATGGCTCAGGAGAACCCAAAGATGCACAACTCCGAGATCAGCAAGCGCCTCGGGGCGGAGTGGAAACTCATGTCCGAGGCGGAAAAGCGACCCTTCATCGACGAGGCGAAACGGCTGCGCGCCATGCACATGAAGGAGCATCCGGATTACAAGTACCGGCCCCGGAGGAAGACCAAGACGCTGCTCAAAAAGGACAAGTACTCTTTGGCGGGTGGCCTGCTCGC",
+                  "midline": "|||||||| ||| | |||||||||||||| ||||||||||| || || |||||  | || ||||| || |||||||| |||||||||||||| ||||||||||||||||| || || |||||||||||  |||| ||| |||| ||||| || |||||||||||||| || |||||||| ||  ||||||||||||| || |||||||| || |||||||||||| |||| |||||||||||  | || ||||| |||||| |  || |||| || ||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 59.8958,
+                  "score": 65,
+                  "evalue": 2.77561e-06,
+                  "identity": 61,
+                  "query_from": 610,
+                  "query_to": 689,
+                  "query_strand": "Plus",
+                  "hit_from": 46195219,
+                  "hit_to": 46195298,
+                  "hit_strand": "Plus",
+                  "align_len": 80,
+                  "gaps": 0,
+                  "qseq": "CAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCC",
+                  "hseq": "CAGCCTATGCACCGCTACGAAATGACAGCTCTCCAGTACAGCCCCCTCTCAAACTCTCAGAGTTACATGAGCGCCTCGCC",
+                  "midline": "||||| ||||||||||||||  |||  || || ||||||| | || |  | | ||| ||||  ||||||| || ||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 56.2891,
+                  "score": 61,
+                  "evalue": 3.38138e-05,
+                  "identity": 32,
+                  "query_from": 502,
+                  "query_to": 534,
+                  "query_strand": "Plus",
+                  "hit_from": 46195054,
+                  "hit_to": 46195086,
+                  "hit_strand": "Plus",
+                  "align_len": 33,
+                  "gaps": 0,
+                  "qseq": "AGCTACGCGCACATGAACGGCTGGAGCAACGGC",
+                  "hseq": "AGCTACGCGCACATGAACGGCTGGACCAACGGC",
+                  "midline": "||||||||||||||||||||||||| |||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 52.6823,
+                  "score": 57,
+                  "evalue": 0.000411937,
+                  "identity": 111,
+                  "query_from": 746,
+                  "query_to": 906,
+                  "query_strand": "Plus",
+                  "hit_from": 46195373,
+                  "hit_to": 46195521,
+                  "hit_strand": "Plus",
+                  "align_len": 163,
+                  "gaps": 16,
+                  "qseq": "TGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGcccccccGTGGTTACCTCTTCTTCCCACTCCAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCC--CGGCGCCGAGGTGCCGGAGCCCGCCGCCCCCAGCAGACTTCAC",
+                  "hseq": "TGGGCTCGCTGGTCAAATCGGAGCCAAGCGTAAGCCCTCCCGT---TAACGCG------CACTCTCGAGCCCCCTGTT---CCGGAGACTTGCGAGAGATGATAAGCATGTATTTACCGACGGCG--GAGGCGGGGGATCCGTCCGTCCAGAGCAGACTTCAC",
+                  "midline": "|||||||| ||||||| || ||| | |||   ||||| |||||   || | |       |||||  | || |||||     |||| ||| | || || ||||| ||||||||  | ||  |||||  |||| |  ||| ||  ||| ||  ||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gi|1196813946|ref|NC_007118.7|",
+                  "accession": "NC_007118",
+                  "title": "Danio rerio strain Tuebingen chromosome 7, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 74282399,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 282.612,
+                  "score": 312,
+                  "evalue": 1.34188e-73,
+                  "identity": 213,
+                  "query_from": 148,
+                  "query_to": 398,
+                  "query_strand": "Plus",
+                  "hit_from": 26497533,
+                  "hit_to": 26497283,
+                  "hit_strand": "Minus",
+                  "align_len": 251,
+                  "gaps": 0,
+                  "qseq": "GTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAA",
+                  "hseq": "GTCAAGCGGCCCATGAACGCGTTTATGGTCTGGTCTCGGGGTCAGAGGAGGAAGATGGCCCAGGAGAACCCTAAAATGCACAACTCTGAGATCAGCAAACGGCTCGGCGCGGAGTGGAAACTTTTAACGGACGTGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGGGCGGTGCACATGAAGGAGTACCCCGACTACAAATATAAGCCCCGGCGCAAGACCAAAGCTCTCATGAAGAAGGACAA",
+                  "midline": "|||||||||||||||||||| || ||||| ||||| || || ||| || | ||||||||||| |||||||| || ||||||||||| ||||||||||| || || ||||| ||||||||||||||  ||||   ||||||||||||||||||||||||||||||||||||||| ||| |||||||||||||  |||| || || |||||   ||||||||| || |||||  | |||||||||||||| ||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 58.9941,
+                  "score": 64,
+                  "evalue": 2.77561e-06,
+                  "identity": 71,
+                  "query_from": 149,
+                  "query_to": 245,
+                  "query_strand": "Plus",
+                  "hit_from": 27444861,
+                  "hit_to": 27444957,
+                  "hit_strand": "Plus",
+                  "align_len": 97,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAA",
+                  "hseq": "TCAAACGGCCCATGAACGCCTTCATGGTCTGGGCCAAAGATGAGCGCCGCAAAATCCTTCAGGCCTTCCCAGACATGCACAACTCCAACATCAGCAA",
+                  "midline": "|||| ||||||||||||||||||||||| ||| ||   |   |||| ||||| ||    || |    |||  | |||||||||||  | ||||||||"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gi|1196813944|ref|NC_007120.7|",
+                  "accession": "NC_007120",
+                  "title": "Danio rerio strain Tuebingen chromosome 9, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 56459846,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 271.792,
+                  "score": 300,
+                  "evalue": 2.42617e-70,
+                  "identity": 228,
+                  "query_from": 136,
+                  "query_to": 412,
+                  "query_strand": "Plus",
+                  "hit_from": 53276626,
+                  "hit_to": 53276904,
+                  "hit_strand": "Plus",
+                  "align_len": 279,
+                  "gaps": 2,
+                  "qseq": "AGCCC--GGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGG",
+                  "hseq": "AGCCCATGGATCACGTTAAGCGTCCTATGAACGCGTTCATGGTCTGGTCCCGAGCGCAGCGGCGGAAAATGGCCCAGGAGAACCCGAAAATGCACAATTCCGAAATCAGCAAGCGCCTCGGAGCGGAGTGGAAACTTCTGACGGAGTCTGAAAAGAGGCCGTTCATTGACGAAGCCAAGCGCCTGCGGGCGATGCACATGAAGGAGCACCCCGACTACAAATACAGACCCCGGAGGAAGCCCAAGACTTTAATGAAGAAGGACAAATTCGCGTTCCCGG",
+                  "midline": "|||||  ||| | ||| ||||| || |||||||| |||||||| |||||||| | ||||||||| || |||||||| |||||||| || |||||||| || || |||||||||||||| || || |||||||||||| || ||||| | || ||| |||||||||| ||||| |||||||| ||||| ||| ||||||||||||| ||||| || || |||||| | |||||| ||||  |||||||  | ||||||||||| || | | || | ||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 236.626,
+                  "score": 261,
+                  "evalue": 1.74696e-59,
+                  "identity": 222,
+                  "query_from": 142,
+                  "query_to": 424,
+                  "query_strand": "Plus",
+                  "hit_from": 21723155,
+                  "hit_to": 21723437,
+                  "hit_strand": "Plus",
+                  "align_len": 283,
+                  "gaps": 0,
+                  "qseq": "GACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCG",
+                  "hseq": "GACCGCGTAAAGAGACCCATGAACGCGTTTATGGTCTGGTCTCGGGGCCAGCGCCGAAAAATGGCACAGGAGAACCCCAAAATGCACAACTCTGAAATTAGCAAAAGACTCGGTGCTGAGTGGAAGGTGATGTCAGAGGCTGAAAAGCGGCCCTTTATTGATGAGGCGAAGCGGTTGCGAGCCATGCACATGAAAGAGCATCCGGATTACAAATACAGACCGAGGCGCAAAACCAAGACCCTGCTTAAAAAGGACAAGTACTCGTTGGCGGGTGGCTTGCTCG",
+                  "midline": "|||||||| ||| | ||||||||||| || ||||| ||||| || || ||||| || || ||||| || ||||||||||| ||||||||||| || || |||||  | || || || ||||||||  |  |||| ||| | || |||||||| || || || ||||| |||||| |||||||  |||||||||| || || |||||||| |||||| | ||  |||| ||||||||||| ||  | || ||||| |||||| || || |||| ||  ||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 71.6177,
+                  "score": 78,
+                  "evalue": 4.39827e-10,
+                  "identity": 66,
+                  "query_from": 610,
+                  "query_to": 693,
+                  "query_strand": "Plus",
+                  "hit_from": 21723692,
+                  "hit_to": 21723775,
+                  "hit_strand": "Plus",
+                  "align_len": 84,
+                  "gaps": 0,
+                  "qseq": "CAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCCGACC",
+                  "hseq": "CAGCCCATGCACCGCTACGACATGACTGCACTCCAGTACAGCCCCATCTCGAACTCCCAGAGCTACATGAGCGCGTCCCCGTCC",
+                  "midline": "||||||||||||||||||||| |||  || || ||||||| | ||||  | | ||| |||| |||||||| ||  || ||| ||"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gi|1196813948|ref|NC_007116.7|",
+                  "accession": "NC_007116",
+                  "title": "Danio rerio strain Tuebingen chromosome 5, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 72500376,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 246.544,
+                  "score": 272,
+                  "evalue": 9.66219e-63,
+                  "identity": 205,
+                  "query_from": 148,
+                  "query_to": 398,
+                  "query_strand": "Plus",
+                  "hit_from": 24201021,
+                  "hit_to": 24200771,
+                  "hit_strand": "Minus",
+                  "align_len": 251,
+                  "gaps": 0,
+                  "qseq": "GTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAA",
+                  "hseq": "GTTAAGAGGCCCATGAACGCATTTATGGTGTGGTCTCGGGGTCAGAGGCGCAAAATGGCACAGGAGAACCCCAAAATGCACAACTCTGAAATCAGCAAGCGCCTGGGCGCCGAGTGGAAGCTGTTGACGGACGCGGAGAAACGACCCTTTATTGATGAAGCCAAGCGGCTTCGCGCGCTGCACATGAAGGAGTACCCAGATTACAAATACAAACCCCGTCGTAAGACGAAGCCCGTGCTGAAAAAGGACAA",
+                  "midline": "|| ||| ||||||||||||| || ||||||||||| || || ||| ||||||| ||||| || ||||||||||| ||||||||||| || ||||||||||||||||||||||||||||| || ||| ||||  ||||||| || || || || || || ||||||||||| || |||||||||||||||||  |||| ||||| ||||||   ||||| || || || ||| |  |  |||| ||||| ||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 58.0924,
+                  "score": 63,
+                  "evalue": 9.68783e-06,
+                  "identity": 56,
+                  "query_from": 617,
+                  "query_to": 683,
+                  "query_strand": "Plus",
+                  "hit_from": 24200615,
+                  "hit_to": 24200546,
+                  "hit_strand": "Minus",
+                  "align_len": 70,
+                  "gaps": 3,
+                  "qseq": "TGCACCGCTACGACGTGAGCGCCCTGCAGTA--CA-ACTCCATGACCAGCTCGCAGACCTACATGAACGG",
+                  "hseq": "TGCACCGCTACGATCTGTCCGCCCTGCAGTATCCATCCGCCATGGCCACCGCACAGACCTACATGAATGG",
+                  "midline": "|||||||||||||  ||  ||||||||||||  ||  | ||||| ||| | | |||||||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gi|1196813631|ref|NW_018394575.1|",
+                  "accession": "NW_018394575",
+                  "title": "Danio rerio strain Tuebingen chromosome 5 genomic scaffold, GRCz11 alternate locus group ALT_DRER_TU_1 ALT_CTG5_1_14",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 335323,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 246.544,
+                  "score": 272,
+                  "evalue": 9.66219e-63,
+                  "identity": 205,
+                  "query_from": 148,
+                  "query_to": 398,
+                  "query_strand": "Plus",
+                  "hit_from": 217554,
+                  "hit_to": 217304,
+                  "hit_strand": "Minus",
+                  "align_len": 251,
+                  "gaps": 0,
+                  "qseq": "GTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAA",
+                  "hseq": "GTTAAGAGGCCCATGAACGCATTTATGGTGTGGTCTCGGGGTCAGAGGCGCAAAATGGCACAGGAGAACCCCAAAATGCACAACTCTGAAATCAGCAAGCGCCTGGGCGCCGAGTGGAAGCTGTTGACGGACGCGGAGAAACGACCCTTTATTGATGAAGCCAAGCGGCTTCGCGCGCTGCACATGAAGGAGTACCCAGATTACAAATACAAACCCCGTCGTAAGACGAAGCCCGTGCTGAAAAAGGACAA",
+                  "midline": "|| ||| ||||||||||||| || ||||||||||| || || ||| ||||||| ||||| || ||||||||||| ||||||||||| || ||||||||||||||||||||||||||||| || ||| ||||  ||||||| || || || || || || ||||||||||| || |||||||||||||||||  |||| ||||| ||||||   ||||| || || || ||| |  |  |||| ||||| ||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 49.0756,
+                  "score": 53,
+                  "evalue": 0.00501842,
+                  "identity": 54,
+                  "query_from": 617,
+                  "query_to": 683,
+                  "query_strand": "Plus",
+                  "hit_from": 217148,
+                  "hit_to": 217079,
+                  "hit_strand": "Minus",
+                  "align_len": 70,
+                  "gaps": 3,
+                  "qseq": "TGCACCGCTACGACGTGAGCGCCCTGCAGTA--CAACT-CCATGACCAGCTCGCAGACCTACATGAACGG",
+                  "hseq": "TGCATCGCTACGATCTGTCCGCCTTGCAGTATCCATCCGCCATGGCCACCGCACAGACCTACATGAATGG",
+                  "midline": "|||| ||||||||  ||  |||| |||||||  || |  ||||| ||| | | |||||||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gi|1196813840|ref|NW_018395278.1|",
+                  "accession": "NW_018395278",
+                  "title": "Danio rerio strain Tuebingen chromosome 9 genomic scaffold, GRCz11 alternate locus group ALT_DRER_TU_2 ALT_CTG9_2_3",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 381002,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 236.626,
+                  "score": 261,
+                  "evalue": 1.74696e-59,
+                  "identity": 222,
+                  "query_from": 142,
+                  "query_to": 424,
+                  "query_strand": "Plus",
+                  "hit_from": 50047,
+                  "hit_to": 50329,
+                  "hit_strand": "Plus",
+                  "align_len": 283,
+                  "gaps": 0,
+                  "qseq": "GACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCG",
+                  "hseq": "GACCGCGTAAAGAGACCCATGAACGCGTTTATGGTCTGGTCTCGGGGCCAGCGCCGAAAAATGGCACAGGAGAACCCCAAAATGCACAACTCTGAAATTAGCAAAAGACTCGGTGCTGAGTGGAAGGTGATGTCAGAGGCTGAAAAGCGGCCCTTTATTGATGAGGCGAAGCGGTTGCGAGCCATGCACATGAAAGAGCATCCGGATTACAAATACAGACCGAGGCGCAAAACCAAGACCCTGCTTAAAAAGGACAAGTACTCGTTGGCGGGTGGCTTGCTCG",
+                  "midline": "|||||||| ||| | ||||||||||| || ||||| ||||| || || ||||| || || ||||| || ||||||||||| ||||||||||| || || |||||  | || || || ||||||||  |  |||| ||| | || |||||||| || || || ||||| |||||| |||||||  |||||||||| || || |||||||| |||||| | ||  |||| ||||||||||| ||  | || ||||| |||||| || || |||| ||  ||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 71.6177,
+                  "score": 78,
+                  "evalue": 4.39827e-10,
+                  "identity": 66,
+                  "query_from": 610,
+                  "query_to": 693,
+                  "query_strand": "Plus",
+                  "hit_from": 50584,
+                  "hit_to": 50667,
+                  "hit_strand": "Plus",
+                  "align_len": 84,
+                  "gaps": 0,
+                  "qseq": "CAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCCGACC",
+                  "hseq": "CAGCCCATGCACCGCTACGACATGACTGCACTCCAGTACAGCCCCATCTCGAACTCCCAGAGCTACATGAGCGCGTCCCCGTCC",
+                  "midline": "||||||||||||||||||||| |||  || || ||||||| | ||||  | | ||| |||| |||||||| ||  || ||| ||"
+                }
+              ]
+            },
+            {
+              "num": 9,
+              "description": [
+                {
+                  "id": "gi|1196813456|ref|NW_018394750.1|",
+                  "accession": "NW_018394750",
+                  "title": "Danio rerio strain Tuebingen chromosome 9 genomic scaffold, GRCz11 alternate locus group ALT_DRER_TU_1 ALT_CTG9_1_8",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 361093,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 236.626,
+                  "score": 261,
+                  "evalue": 1.74696e-59,
+                  "identity": 222,
+                  "query_from": 142,
+                  "query_to": 424,
+                  "query_strand": "Plus",
+                  "hit_from": 287626,
+                  "hit_to": 287908,
+                  "hit_strand": "Plus",
+                  "align_len": 283,
+                  "gaps": 0,
+                  "qseq": "GACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCG",
+                  "hseq": "GACCGCGTAAAGAGACCCATGAACGCGTTTATGGTCTGGTCTCGGGGCCAGCGCCGAAAAATGGCACAGGAGAACCCCAAAATGCACAACTCTGAAATTAGCAAAAGACTCGGTGCTGAGTGGAAGGTGATGTCAGAGGCTGAAAAGCGGCCCTTTATTGATGAGGCGAAGCGGTTGCGAGCCATGCACATGAAAGAGCATCCGGATTACAAATACAGACCGAGGCGCAAAACCAAGACCCTGCTTAAAAAGGACAAGTACTCGTTGGCGGGTGGCTTGCTCG",
+                  "midline": "|||||||| ||| | ||||||||||| || ||||| ||||| || || ||||| || || ||||| || ||||||||||| ||||||||||| || || |||||  | || || || ||||||||  |  |||| ||| | || |||||||| || || || ||||| |||||| |||||||  |||||||||| || || |||||||| |||||| | ||  |||| ||||||||||| ||  | || ||||| |||||| || || |||| ||  ||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 71.6177,
+                  "score": 78,
+                  "evalue": 4.39827e-10,
+                  "identity": 66,
+                  "query_from": 610,
+                  "query_to": 693,
+                  "query_strand": "Plus",
+                  "hit_from": 288163,
+                  "hit_to": 288246,
+                  "hit_strand": "Plus",
+                  "align_len": 84,
+                  "gaps": 0,
+                  "qseq": "CAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCCGACC",
+                  "hseq": "CAGCCCATGCACCGCTACGACATGACTGCACTCCAGTACAGCCCCATCTCGAACTCCCAGAGCTACATGAGCGCGTCCCCGTCC",
+                  "midline": "||||||||||||||||||||| |||  || || ||||||| | ||||  | | ||| |||| |||||||| ||  || ||| ||"
+                }
+              ]
+            },
+            {
+              "num": 10,
+              "description": [
+                {
+                  "id": "gi|1196813947|ref|NC_007117.7|",
+                  "accession": "NC_007117",
+                  "title": "Danio rerio strain Tuebingen chromosome 6, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 60270059,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 224.904,
+                  "score": 248,
+                  "evalue": 3.15859e-56,
+                  "identity": 202,
+                  "query_from": 149,
+                  "query_to": 402,
+                  "query_strand": "Plus",
+                  "hit_from": 26559501,
+                  "hit_to": 26559248,
+                  "hit_strand": "Minus",
+                  "align_len": 254,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTAC",
+                  "hseq": "TCAAGAGACCCATGAACGCCTTCATGGTCTGGTCAAGAGGCCAGAGAAGGAAAATGGCTCAAGAGAATCCCAAAATGCACAATTCCGAAATAAGCAAAAGACTCGGCGCCGAGTGGAAGCTGCTGTCTGAATCCGAGAAGCGACCGTACATCGACGAGGCCAAGAGGCTGAGGGCTCAGCACATGAAAGAACACCCAGACTACAAATACAGACCCAGGCGCAAACCCAAGAACCTCCTCAAGAAGGACAGGTAC",
+                  "midline": "||||| | |||||||||||||||||||| |||||  | || ||| |  | || ||||| |||||||| ||||| |||||||| || || || |||||  | || |||||||||||||| ||  |||| ||  | |||||||| |||| |||||||||||||||| ||||| | || | ||||||||| |||||||| || || |||||| | ||| |||| ||| ||||||  ||| | |||||||| | ||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 213.182,
+                  "score": 235,
+                  "evalue": 1.99329e-52,
+                  "identity": 185,
+                  "query_from": 148,
+                  "query_to": 377,
+                  "query_strand": "Plus",
+                  "hit_from": 7414539,
+                  "hit_to": 7414768,
+                  "hit_strand": "Plus",
+                  "align_len": 230,
+                  "gaps": 0,
+                  "qseq": "GTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAA",
+                  "hseq": "GTTAAGCGCCCCATGAACGCTTTTATGGTGTGGTCGAGAGTTCAGAGGCGGAAGATGGCTCTGGACAACCCGAAGATGCACAACTCGGAGATCAGCAAGCGCCTCGGAGGCGAATGGAAACTCCTGTCAGACTCTGAGAAAAGACCTTTCATTGACGAGGCCAAACGACTCCGAGCCGTCCACATGAAGGAGCACCCGGATTACAAATACAGACCGCGGCGAAAGCCCAA",
+                  "midline": "|| ||||| ||||||||||| || |||||||||||  | |  ||| |||| |||||||| |  || ||||| |||||||||||||||||||||||||||||||| || | ||| ||||||||  |||| ||  | |||||  | || ||||| ||||||||||| || || |||||  | ||||||||||| ||||||||||| |||||| | || ||||| ||  ||||"
+                }
+              ]
+            },
+            {
+              "num": 11,
+              "description": [
+                {
+                  "id": "gi|1196813581|ref|NW_018394625.1|",
+                  "accession": "NW_018394625",
+                  "title": "Danio rerio strain Tuebingen chromosome 6 genomic scaffold, GRCz11 alternate locus group ALT_DRER_TU_1 ALT_CTG6_1_3",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 256996,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 213.182,
+                  "score": 235,
+                  "evalue": 1.99329e-52,
+                  "identity": 185,
+                  "query_from": 148,
+                  "query_to": 377,
+                  "query_strand": "Plus",
+                  "hit_from": 199373,
+                  "hit_to": 199602,
+                  "hit_strand": "Plus",
+                  "align_len": 230,
+                  "gaps": 0,
+                  "qseq": "GTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAA",
+                  "hseq": "GTTAAGCGCCCCATGAACGCTTTTATGGTGTGGTCGAGAGTTCAGAGGCGGAAGATGGCTCTGGACAACCCGAAGATGCACAACTCGGAGATCAGCAAGCGCCTCGGAGGCGAATGGAAACTCCTGTCAGACTCTGAGAAAAGACCTTTCATTGACGAGGCCAAACGACTCCGAGCCGTCCACATGAAGGAGCACCCGGATTACAAATACAGACCGCGGCGAAAGCCCAA",
+                  "midline": "|| ||||| ||||||||||| || |||||||||||  | |  ||| |||| |||||||| |  || ||||| |||||||||||||||||||||||||||||||| || | ||| ||||||||  |||| ||  | |||||  | || ||||| ||||||||||| || || |||||  | ||||||||||| ||||||||||| |||||| | || ||||| ||  ||||"
+                }
+              ]
+            },
+            {
+              "num": 12,
+              "description": [
+                {
+                  "id": "gi|1196813952|ref|NC_007113.7|",
+                  "accession": "NC_007113",
+                  "title": "Danio rerio strain Tuebingen chromosome 2, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 59640629,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 179.82,
+                  "score": 198,
+                  "evalue": 1.17814e-42,
+                  "identity": 198,
+                  "query_from": 135,
+                  "query_to": 395,
+                  "query_strand": "Plus",
+                  "hit_from": 22575542,
+                  "hit_to": 22575280,
+                  "hit_strand": "Minus",
+                  "align_len": 263,
+                  "gaps": 2,
+                  "qseq": "CAGCCC--GGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGA",
+                  "hseq": "CAGCCCATGGAGCACATCAAGAGACCAATGAACGCCTTCATGGTTTGGTCTCGAGGTCAGAGAAGACAAATGGCCCTGGAGAACCCAAAGATGCACAACTCGGAGATCAGCAAGAGACTCGGGGCTGAGTGGAAGCGGCTCTCCGACTCTGAAAAAAGACCATACATCGACGAGGCCAAACGACTGCGTGCGCAACACATGAGGGAGCATCCAGACTACAAATACCGACCGAGACGCAAACCTAAAGGGCTCCTGAGAAAGGA",
+                  "midline": "||||||  ||| | | ||||| | || ||||||||||||||||| ||||| || || ||| |  |  | |||||||  |||||||| ||||||||||||||||||||||||||| | || || || |||||||| |   | || ||  | || ||  | || | ||||||||||||||| || ||||| ||||  ||||||| ||| || || || || |||||||| ||  | || ||| | ||   |||| |||  |||||"
+                }
+              ]
+            },
+            {
+              "num": 13,
+              "description": [
+                {
+                  "id": "gi|1196813937|ref|NC_007127.7|",
+                  "accession": "NC_007127",
+                  "title": "Danio rerio strain Tuebingen chromosome 16, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 55266484,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 95.9632,
+                  "score": 105,
+                  "evalue": 3.85475e-17,
+                  "identity": 154,
+                  "query_from": 149,
+                  "query_to": 362,
+                  "query_strand": "Plus",
+                  "hit_from": 68526,
+                  "hit_to": 68739,
+                  "hit_strand": "Plus",
+                  "align_len": 217,
+                  "gaps": 6,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAG--AAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGC-TGCACATGAAGGAACACCCGGATTATAAATACCGGCC",
+                  "hseq": "TCAAGAGACCGATGAACGCCTTCATGGTGTGGTCGCAGATCGAGCGGCGCAAGATCATGGAGCAGTCGCCGGACATGCACAACGCGGAGATCTCCAAGCGGCTGGGCAAACGCTGGAAGCTGCTGAAG--GACGGAGACAAGATCCCGTTCATCCGGGAGGCGGAGCGGCT-CAGGCTCAAGCACATGGCGGATTACCCGGACTACAAGTACCGGCC",
+                  "midline": "||||| | || ||||||||||||||||||||||| |      |||||||||||||     |  ||   ||  | ||||||||| ||||||||  |||||| ||||||      ||||| ||  ||  |  |||||||  |||   |||||||||   |||||  ||||||| |  || |  |||||||  |||  ||||||| || || ||||||||"
+                }
+              ]
+            },
+            {
+              "num": 14,
+              "description": [
+                {
+                  "id": "gi|1196813951|ref|NC_007114.7|",
+                  "accession": "NC_007114",
+                  "title": "Danio rerio strain Tuebingen chromosome 3, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 62628489,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 82.4379,
+                  "score": 90,
+                  "evalue": 2.43261e-13,
+                  "identity": 75,
+                  "query_from": 272,
+                  "query_to": 366,
+                  "query_strand": "Plus",
+                  "hit_from": 62399420,
+                  "hit_to": 62399326,
+                  "hit_strand": "Minus",
+                  "align_len": 95,
+                  "gaps": 0,
+                  "qseq": "TGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGG",
+                  "hseq": "TGACGGAGAGCGAGAAGAGGCCGTTCGTGGAGGAGGCAGAGCGACTGAGGGTTCAGCACAAGAAGGATCATCCGGATTATAAATACCAGCCCAGG",
+                  "midline": "|| ||||||  |||||| |||||||| | || |||||  |||| ||| | |  | ||||| |||||| || |||||||||||||||| |||| ||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 59.8958,
+                  "score": 65,
+                  "evalue": 2.77561e-06,
+                  "identity": 76,
+                  "query_from": 147,
+                  "query_to": 245,
+                  "query_strand": "Plus",
+                  "hit_from": 1494973,
+                  "hit_to": 1495071,
+                  "hit_strand": "Plus",
+                  "align_len": 102,
+                  "gaps": 6,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGA---TGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAA",
+                  "hseq": "CGTCAAGCGGCCGATGAACGCGTTCATGGTGTGG--GCGCAGGCCGC-GCGCAGGAAACTGGCGGATCAATATCCGCACCTGCACAACGCCGAGCTCAGCAA",
+                  "midline": "|||||||||||| |||||||| ||||||||||||   ||| ||| || ||||| ||   ||||  |  |  | ||  |  |||||||| | ||| |||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 58.9941,
+                  "score": 64,
+                  "evalue": 2.77561e-06,
+                  "identity": 68,
+                  "query_from": 277,
+                  "query_to": 368,
+                  "query_strand": "Plus",
+                  "hit_from": 1496956,
+                  "hit_to": 1497047,
+                  "hit_strand": "Plus",
+                  "align_len": 92,
+                  "gaps": 0,
+                  "qseq": "GAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCG",
+                  "hseq": "GAGACGGATAAGCGGCCGTTTATCGAGGAGGCCGAGCGCTTGAGGAAGCAGCATAAGAAAGATTATCCCGAGTACAAGTACCAGCCACGTCG",
+                  "midline": "|||||||| ||||||||||| ||||| |||||| ||||  || |   || ||| | ||| ||  | || || || || |||| ||| || ||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 53.584,
+                  "score": 58,
+                  "evalue": 0.000118022,
+                  "identity": 71,
+                  "query_from": 147,
+                  "query_to": 245,
+                  "query_strand": "Plus",
+                  "hit_from": 62403174,
+                  "hit_to": 62403076,
+                  "hit_strand": "Minus",
+                  "align_len": 99,
+                  "gaps": 0,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAA",
+                  "hseq": "CGTCAAGAGACCCATGAACGCGTTTATGGTTTGGGCTCAAGCCGCGCGGAGGAAACTGGCGGATCAGTACCCGCACCTGCACAACGCGGAGCTCAGCAA",
+                  "midline": "||||||| | ||||||||||| || ||||| ||| | |  |    |||| | ||  ||||  |  || ||||  |  |||||||| ||||| |||||||"
+                },
+                {
+                  "num": 5,
+                  "bit_score": 53.584,
+                  "score": 58,
+                  "evalue": 0.000118022,
+                  "identity": 71,
+                  "query_from": 147,
+                  "query_to": 245,
+                  "query_strand": "Plus",
+                  "hit_from": 62527246,
+                  "hit_to": 62527148,
+                  "hit_strand": "Minus",
+                  "align_len": 99,
+                  "gaps": 0,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAA",
+                  "hseq": "CGTCAAGAGACCCATGAACGCGTTTATGGTTTGGGCTCAAGCCGCGCGGAGGAAACTGGCGGACCAGTACCCGCACCTGCACAACGCGGAGCTCAGCAA",
+                  "midline": "||||||| | ||||||||||| || ||||| ||| | |  |    |||| | ||  ||||  |  || ||||  |  |||||||| ||||| |||||||"
+                }
+              ]
+            },
+            {
+              "num": 15,
+              "description": [
+                {
+                  "id": "gi|1196813662|ref|NW_018394544.1|",
+                  "accession": "NW_018394544",
+                  "title": "Danio rerio strain Tuebingen chromosome 3 genomic scaffold, GRCz11 alternate locus group ALT_DRER_TU_1 ALT_CTG3_1_29",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 227105,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 82.4379,
+                  "score": 90,
+                  "evalue": 2.43261e-13,
+                  "identity": 75,
+                  "query_from": 272,
+                  "query_to": 366,
+                  "query_strand": "Plus",
+                  "hit_from": 225031,
+                  "hit_to": 224937,
+                  "hit_strand": "Minus",
+                  "align_len": 95,
+                  "gaps": 0,
+                  "qseq": "TGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGG",
+                  "hseq": "TGACGGAGAGCGAGAAGAGGCCGTTCGTGGAGGAGGCAGAGCGACTGAGGGTTCAGCACAAGAAGGATCATCCGGATTATAAATACCAGCCCAGG",
+                  "midline": "|| ||||||  |||||| |||||||| | || |||||  |||| ||| | |  | ||||| |||||| || |||||||||||||||| |||| ||"
+                }
+              ]
+            },
+            {
+              "num": 16,
+              "description": [
+                {
+                  "id": "gi|1196813934|ref|NC_007130.7|",
+                  "accession": "NC_007130",
+                  "title": "Danio rerio strain Tuebingen chromosome 19, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 48449771,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 77.9295,
+                  "score": 85,
+                  "evalue": 1.03437e-11,
+                  "identity": 150,
+                  "query_from": 149,
+                  "query_to": 366,
+                  "query_strand": "Plus",
+                  "hit_from": 28788818,
+                  "hit_to": 28788601,
+                  "hit_strand": "Minus",
+                  "align_len": 219,
+                  "gaps": 2,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGC-TGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGG",
+                  "hseq": "TCAAGAGGCCAATGAACGCATTCATGGTCTGGTCGCAGATTGAGAGGCGCAAGATTATGGAGCAGTCGCCGGACATGCACAACGCGGAGATCTCCAAGAGACTCGGCAAGCGCTGGAAACTTTTAAAAGACAGCGACAAGATCCCCTTCATCCGCGAGGCCGAGCGCCTGCG-GCTCAAGCACATGGCAGACTATCCAGACTACAAATATCGACCTCGG",
+                  "midline": "||||| |||| |||||||| |||||||| ||||| |      || ||||||||||     |  ||   ||  | ||||||||| ||||||||  |||| | || |||      |||||||||||    || |  || |||   || ||||||  ||||||| |||| ||||| || |  |||||||   ||  | || || || ||||| || || |||"
+                }
+              ]
+            },
+            {
+              "num": 17,
+              "description": [
+                {
+                  "id": "gi|1196813941|ref|NC_007123.7|",
+                  "accession": "NC_007123",
+                  "title": "Danio rerio strain Tuebingen chromosome 12, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 49182954,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 67.1093,
+                  "score": 73,
+                  "evalue": 1.87019e-08,
+                  "identity": 68,
+                  "query_from": 282,
+                  "query_to": 370,
+                  "query_strand": "Plus",
+                  "hit_from": 1950141,
+                  "hit_to": 1950053,
+                  "hit_strand": "Minus",
+                  "align_len": 89,
+                  "gaps": 0,
+                  "qseq": "GGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGA",
+                  "hseq": "GGAAAAGCGTCCCTTCGTGGAGGAGGCAGAGCGCCTTCGGGTGCAGCACAAGAAAGATCACCCCGACTACAAGTACCAGCCCCGGCGGA",
+                  "midline": "||| ||||| || ||| | || |||||  |||| || || | || ||||| ||| || ||||| || || || |||| |||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 60.7975,
+                  "score": 66,
+                  "evalue": 7.95225e-07,
+                  "identity": 78,
+                  "query_from": 147,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 1084880,
+                  "hit_to": 1084773,
+                  "hit_strand": "Minus",
+                  "align_len": 108,
+                  "gaps": 0,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "CGTGAAGAGACCCATGAACGCGTTTATGGTGTGGGCGCAGGCGGCGCGGAGGAAACTCGCCGATCAGTACCCGCATCTGCACAACGCGGAGCTCAGCAAGACCCTCGG",
+                  "midline": "||| ||| | ||||||||||| || ||||||||| | |  | |  |||| | ||  | ||| |  || ||||  |  |||||||| ||||| ||||||||  ||| ||"
+                }
+              ]
+            },
+            {
+              "num": 18,
+              "description": [
+                {
+                  "id": "gi|1196813933|ref|NC_007131.7|",
+                  "accession": "NC_007131",
+                  "title": "Danio rerio strain Tuebingen chromosome 20, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 55201332,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 57.1907,
+                  "score": 62,
+                  "evalue": 9.68783e-06,
+                  "identity": 55,
+                  "query_from": 301,
+                  "query_to": 371,
+                  "query_strand": "Plus",
+                  "hit_from": 19076661,
+                  "hit_to": 19076731,
+                  "hit_strand": "Plus",
+                  "align_len": 71,
+                  "gaps": 0,
+                  "qseq": "GACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAA",
+                  "hseq": "GAGGAAGCCGAGCGTCTGCGGGTGCAGCACATGCAGGACTACCCCAATTATAAATACCGTCCACGCAGGAA",
+                  "midline": "|| || ||| |||| ||||| | || ||||||| ||||  ||||  ||||||||||||| || ||  ||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 49.0756,
+                  "score": 53,
+                  "evalue": 0.00501842,
+                  "identity": 34,
+                  "query_from": 145,
+                  "query_to": 183,
+                  "query_strand": "Plus",
+                  "hit_from": 19075431,
+                  "hit_to": 19075469,
+                  "hit_strand": "Plus",
+                  "align_len": 39,
+                  "gaps": 0,
+                  "qseq": "CGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCC",
+                  "hseq": "CGCATCAGGAGACCCATGAACGCCTTCATGGTGTGGGCC",
+                  "midline": "||| ||| | | |||||||||||||||||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 19,
+              "description": [
+                {
+                  "id": "gi|1196813942|ref|NC_007122.7|",
+                  "accession": "NC_007122",
+                  "title": "Danio rerio strain Tuebingen chromosome 11, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 45484837,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 50.8789,
+                  "score": 55,
+                  "evalue": 0.0014378,
+                  "identity": 32,
+                  "query_from": 149,
+                  "query_to": 183,
+                  "query_strand": "Plus",
+                  "hit_from": 37821594,
+                  "hit_to": 37821628,
+                  "hit_strand": "Plus",
+                  "align_len": 35,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCC",
+                  "hseq": "TCAAACGTCCCATGAACGCCTTCATGGTGTGGGCC",
+                  "midline": "|||| || |||||||||||||||||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 20,
+              "description": [
+                {
+                  "id": "gi|1196813380|ref|NW_018394826.1|",
+                  "accession": "NW_018394826",
+                  "title": "Danio rerio strain Tuebingen chromosome 11 genomic scaffold, GRCz11 alternate locus group ALT_DRER_TU_1 ALT_CTG11_1_26",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 409943,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 50.8789,
+                  "score": 55,
+                  "evalue": 0.0014378,
+                  "identity": 32,
+                  "query_from": 149,
+                  "query_to": 183,
+                  "query_strand": "Plus",
+                  "hit_from": 36126,
+                  "hit_to": 36160,
+                  "hit_strand": "Plus",
+                  "align_len": 35,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCC",
+                  "hseq": "TCAAACGTCCCATGAACGCCTTCATGGTGTGGGCC",
+                  "midline": "|||| || |||||||||||||||||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 21,
+              "description": [
+                {
+                  "id": "gi|1196813936|ref|NC_007128.7|",
+                  "accession": "NC_007128",
+                  "title": "Danio rerio strain Tuebingen chromosome 17, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 53461100,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 49.9773,
+                  "score": 54,
+                  "evalue": 0.0014378,
+                  "identity": 86,
+                  "query_from": 134,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 35881636,
+                  "hit_to": 35881515,
+                  "hit_strand": "Minus",
+                  "align_len": 123,
+                  "gaps": 3,
+                  "qseq": "ACAGCC--CGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "ACAGCCACCGGACA-CATAAAGCGACCGATGAACGCGTTCATGGTGTGGTCTAAAATCGAGCGGAGAAAGATCATGGAACAGTCTCCAGACATGCACAACGCCGAGATCTCCAAACGCTTGGG",
+                  "midline": "||||||  |||||  | | ||||| || |||||||| ||||||||||||||        ||||| | |||||     || ||   ||  | ||||||||| | ||||||  ||| ||| ||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 1923,
+            "db_len": 1679203469,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/7955/RS_2024_08/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1345421",
+          "query_title": "RHO T_truncatus",
+          "query_len": 1047,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1196813945|ref|NC_007119.7|",
+                  "accession": "NC_007119",
+                  "title": "Danio rerio strain Tuebingen chromosome 8, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 54304671,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 906.577,
+                  "score": 1004,
+                  "evalue": 0,
+                  "identity": 819,
+                  "query_from": 1,
+                  "query_to": 1023,
+                  "query_strand": "Plus",
+                  "hit_from": 54077655,
+                  "hit_to": 54076630,
+                  "hit_strand": "Minus",
+                  "align_len": 1027,
+                  "gaps": 5,
+                  "qseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCTGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCATGCGTACTTCGTCTTCGGGCCCACGGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGTGAAATTGCCCTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTTGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAACCATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGGCCCCCCTCGTCGGCTGGTCCAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACA-CGTCTCGCCAGGAGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAGCTGGTCTTCACAGTCAAGGAGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGGCAGGAACCCACTGGGTGACGATGAG---GCCTCCACCACTGCCTCCAAGACAGAG",
+                  "hseq": "ATGAACGGTACAGAGGGACCGGCATTCTACGTGCCTATGTCCAATGCCACCGGGGTAGTCCGGAGCCCATACGAATACCCACAGTACTACCTGGTGGCGCCCTGGGCATATGGCTTGCTGGCGGCCTACATGTTCTTCCTCATCATCACCGGCTTCCCCGTCAACTTCCTCACGCTGTACGTCACCATCGAGCACAAGAAGCTGCGCACACCCCTCAACTACATCCTGCTGAACCTGGCCATTGCCGACCTCTTCATGGTGTTCGGCGGCTTCACCACCACCATGTACACCTCCTTGCACGGCTACTTCGTGTTCGGCCGCCTGGGCTGCAACCTGGAGGGCTTCTTTGCCACCCTGGGCGGTGAGATGGGGCTATGGTCGCTTGTAGTACTGGCCATTGAGCGCTGGATGGTGGTCTGCAAACCGGTCAGCAACTTCCGTTTCGGGGAGAACCATGCCATCATGGGGGTGGCCTTCACCTGGGTCATGGCCTGCTCCTGTGCCGTGCCGCCACTGGTGGGCTGGTCGCGTTACATCCCCGAGGGCATGCAGTGCTCCTGCGGCGTCGACTACTACACCCGCACTCCCGG-TGTCAACAACGAGTCCTTCGTCATCTACATGTTCATCGTGCACTTCTTCATCCCACTGATAGTCATCTTCTTCTGCTATGGCCGGCTGGTGTGCACTGTGAAGGAGGCGGCAGCGCAGCAGCAGGAGTCCGAGACCACACAGCGGGCCGAGCGCGAGGTCACCCGCATGGTCATCATCATGGTCATCGCCTTCCTCATCTGCTGGTTGCCCTACGCCGGCGTGGCCTGGTACATCTTCACCCACCAGGGCAGCGAGTTCGGGCCCGTCTTCATGACCCTGCCCGCCTTCTTCGCCAAGACGTCCGCCGTCTACAACCCCTGCATCTACATCTGCATGAACAAGCAGTTCCGTCACTGCATGATCACCACCCTGTGCTGCGGCAAGAACCCCTTCGAAGAGGAAGAGGGCGCCTCCACCACCGCCTCCAAGACCGAG",
+                  "midline": "|||||||| || ||||| | |   |||||||||||| | || ||    || || || || || ||||| | ||| ||||| |||||||||||||  | ||| |||   |    | ||||||| |||||||||||| | || ||| |   |||||||||| |||||||||||||||| ||||||||  || ||||||||||||||||||| || ||||||||||||||||| ||||||||| | ||| ||||||||||||| ||||| ||||||||||||||| | ||||||||  |||| |  |||||||| ||||| | |  ||| ||||| |||||||||||||||||||||||||||||||| || |  || |||||  | || || |||||||| ||| | |   |||| || || || ||  | ||||||||||| ||||||||||||||||||||||||||  | ||| |||||||| |||||||     ||||||||| | | || || || ||||||||  | |||||||| ||||| ||||||||||| |||||  | |||||||||| |  | | || ||  |||||||| |||||||||||||||||||||||| | || ||||||  |||||| ||| |  |||| ||||||||||| || | |||||| | ||| || |||||||| || || || ||||||||||| |  ||||| |||  |||||||   |||||||| ||||||||||||||||||||| | || ||||| ||||||||| ||||||| ||| ||||||| |  ||||| |||||||||||||||  ||| || || ||| ||||||||||| | ||  | ||||| |||||||  ||| || |||||||||||  ||||||||||   |||||||||||||||||  |||||||| |||||||||||||||| |||| ||||||  | |  || || |||   ||||||||||| ||||||||||| |||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 167.196,
+                  "score": 184,
+                  "evalue": 7.95192e-39,
+                  "identity": 179,
+                  "query_from": 695,
+                  "query_to": 931,
+                  "query_strand": "Plus",
+                  "hit_from": 54304383,
+                  "hit_to": 54304147,
+                  "hit_strand": "Minus",
+                  "align_len": 237,
+                  "gaps": 0,
+                  "qseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACA",
+                  "hseq": "AGGCCGCCGCTCAGCAGCAGGAGTCGGAGACCACGCAGAGGGCGGAGCGGGAAGTGACGCGGATGGTGGTTGTCATGGTGATTGCATTCTTAGTGTGCTGGGTGCCGTATGCTAGTGTGGCCTGGTACATCTTCGCTAACCAGGGCGCAGAGTTCGGTCCTGTGTTCATGACGGTTCCTGCCTTCTTTGCTAAGAGTGCAGCGCTCTATAACCCCGTCATCTACATCATGCTCAACA",
+                  "midline": "|||| || || || |||||||||||||  |||||||||| ||| |||  ||| || || || |||||  |  |||||||  |||| ||| |  | ||||||||||| ||||| || ||||| |  ||||| ||| |  |||||||| | || || || ||  | ||||||||  | ||  | |||||||| |||||| |  |  |||| ||||||||||||||||||||| | ||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 60.7975,
+                  "score": 66,
+                  "evalue": 8.50531e-07,
+                  "identity": 51,
+                  "query_from": 934,
+                  "query_to": 996,
+                  "query_strand": "Plus",
+                  "hit_from": 54303704,
+                  "hit_to": 54303642,
+                  "hit_strand": "Minus",
+                  "align_len": 63,
+                  "gaps": 0,
+                  "qseq": "CAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGGCAGGAACCCACTGGGTGACGATGAG",
+                  "hseq": "CAGTTCCGGAACTGCATGTTGTCAACGGTGTGCTGTGGGAAGAACCCGCTGGCCGAGGATGAG",
+                  "midline": "|||||||||||||||||| |  | ||  |||||||||| | |||||| ||||  || ||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 47.2722,
+                  "score": 51,
+                  "evalue": 0.0187342,
+                  "identity": 39,
+                  "query_from": 884,
+                  "query_to": 931,
+                  "query_strand": "Plus",
+                  "hit_from": 53544586,
+                  "hit_to": 53544539,
+                  "hit_strand": "Minus",
+                  "align_len": 48,
+                  "gaps": 0,
+                  "qseq": "CCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACA",
+                  "hseq": "CCAAGAGCAGCACCGTCTTCAACCCCATCATCTACATCTTCATGAACA",
+                  "midline": "|||||||   | || ||| ||||||| ||||||||||| | |||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gi|1196813942|ref|NC_007122.7|",
+                  "accession": "NC_007122",
+                  "title": "Danio rerio strain Tuebingen chromosome 11, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 45484837,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 473.769,
+                  "score": 524,
+                  "evalue": 4.10104e-131,
+                  "identity": 692,
+                  "query_from": 1,
+                  "query_to": 971,
+                  "query_strand": "Plus",
+                  "hit_from": 19097727,
+                  "hit_to": 19096757,
+                  "hit_strand": "Minus",
+                  "align_len": 974,
+                  "gaps": 6,
+                  "qseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGC-TGGCTGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCATGCGTACTTCGTCTTCGGGCCCACGGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGTGAAATTGCCCTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTTGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAAC--CATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGGCCCCCCTCGTCGGCTGGTCCAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACACGTCTCGCCAGGAGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAGCTGGTCTTCACAGTCAAGGAGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGG",
+                  "hseq": "ATGAACGGCACAGAGGGACCAGACTTTTACGTTCCCATGTCGAATGAGAGTGGCGTGGTGCGCAGCCCTTATGAATACCCACAATACTACTTGGCATCTCCGTTTGCGTTCTAC-TGCATGGCCGCGTACATGCTGTTCCTCATCGTGACCTGCGTTCCTGTCAACGGTCTCACTTTGTACGTAACCATCGAAAACAAGAAGCTCCGGACGCCTCTGAACTATATCCTTCTGAATTTAGCGGTGGCTGACTTGTTTATGGTGTTCGGTGGATTTACAACGACCTTCTACACCTCCATGCATGGATACTTTGTCCTGGGACGGGCTGGTTGCAACTTAGAGGGTCTTTTTGCAACCGTTGGCGGTGAGATTGCACTTTGGTCTTTGGTTGTTCTGGCTGTTGAGAGATGGGTAGTCGTTTGCAAGCCTTTCACCAAATTTCGCTTCTC--ACAACTTCATGCTACCTTAGGAGTGGCTTTTTCTTGGTCGATGGCCTGTTCGTGTGCCATTCCTCCACTCCTAGGATGGTCCCGGTACATCCCCGAAGGCTTGCAGTGCTCTTGCGGAGTGGACTACTATACGCCGAATCCTGAGACTGAGAACGAGTCGTTTGTCATCTATATGTTCGTGGTTCATTTCTCAATCCCTCTCACCATCATTTCTTTCTGCTATGGGCGCCTGCTTTGCACTGTGAAGGTTGCAGCTGCCCAGCAGCAAGAATCAGAAACTACACAAAGGGCTGAGCGCGAAGTGACCCGAATGGTGATCCTCATGGTCATCGCATTTTTAATATGTTGGCTCCCCTATGCCAGCGTGGCCTGGTACATCTTCACCCACCAGGGGAGTCAATTCGGCCCTGTTTTTATGACGGTCCCGGCTTTTTTTGCCAAGAGCTCAGCTCTCTACAACCCGCTCATTTACGTCTTCATGAATAAGCAGTTTCGACACTCCATGATGATGACGGTGTGTTGTGG",
+                  "midline": "|||||||| || ||||| |   |||| ||||| ||  | || ||  |||  ||||||||||||||||| |  || ||||| || |||||| ||||    ||||    ||||| | ||| |||| || |||||| |  | || ||||||  | || | ||  |||||   |||||  | ||||| ||  || |  |||||||||| || |||||||| ||||| ||||| || ||  | || |||||  || | || ||||| |||||||| || || || ||| ||||||||||  ||||||  ||||| ||| | || |   | || |||||  | |||||  | ||||| ||| | |||||||| ||||| || ||||| ||||| || |||||  | ||||| |  || || || || |||||  | | ||| || ||||||    | |||  ||||| | | | ||  | ||  |  | |||   |||||     | ||||||    | || ||| | || |||||| |||||||||| || ||  |||||||||| |||||  | |||||||| ||| |    |  |||    | || ||||| || |||||||| ||||||||||| || ||| | ||||| ||   |||||| |  |||||||| ||||  ||| | | ||| || ||||  ||||||||||| ||||| || || |  || || || | ||| |||   || || || || ||||| ||| |||||||| | || ||  | || || ||| | ||||||||||||||||| |  ||||| ||||||||||||||     | || |||||  | || |||||  ||||| | || ||||||||||| ||  |  ||||||||||  |||| ||| || | ||||| |||||||| ||  ||| |||| | |  ||  |||| |||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 59.8958,
+                  "score": 65,
+                  "evalue": 2.96864e-06,
+                  "identity": 52,
+                  "query_from": 866,
+                  "query_to": 930,
+                  "query_strand": "Plus",
+                  "hit_from": 25479260,
+                  "hit_to": 25479324,
+                  "hit_strand": "Plus",
+                  "align_len": 65,
+                  "gaps": 0,
+                  "qseq": "CCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAAC",
+                  "hseq": "CCATGCCTGCCTACTTTGCCAAGAGCGCCACCATCTACAACCCCGTCATTTATGTCTTCATGAAC",
+                  "midline": "|||| ||  | | ||||||||||||  || ||||||||||||||||||| ||  || | ||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 55.3874,
+                  "score": 60,
+                  "evalue": 3.61655e-05,
+                  "identity": 51,
+                  "query_from": 866,
+                  "query_to": 930,
+                  "query_strand": "Plus",
+                  "hit_from": 25482541,
+                  "hit_to": 25482605,
+                  "hit_strand": "Plus",
+                  "align_len": 65,
+                  "gaps": 0,
+                  "qseq": "CCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAAC",
+                  "hseq": "CCATGCCTGCCTACTTTGCCAAGAGCGCCACCATCTACAACCCCATCATTTATGTCTTCATGAAC",
+                  "midline": "|||| ||  | | ||||||||||||  || |||||||||||||| |||| ||  || | ||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 53.584,
+                  "score": 58,
+                  "evalue": 0.00012623,
+                  "identity": 63,
+                  "query_from": 702,
+                  "query_to": 783,
+                  "query_strand": "Plus",
+                  "hit_from": 25482374,
+                  "hit_to": 25482458,
+                  "hit_strand": "Plus",
+                  "align_len": 85,
+                  "gaps": 3,
+                  "qseq": "TGCCCAACAGCAGGAG---TCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTC",
+                  "hseq": "TGCCCAGCAGCAGAAGGATTCTGAGTCCACACAGAAGGCCGAGAAGGAAGTGTCCAGAATGGTGGTTGTCATGATCCTTGCTTTC",
+                  "midline": "|||||| |||||| ||   || |   |||| ||||||||||||||||| ||  |  | |||||  |  ||||| || ||||||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gi|312121312|ref|NW_003337228.1|",
+                  "accession": "NW_003337228",
+                  "title": "Danio rerio strain Tuebingen unplaced genomic scaffold, GRCz11 Primary Assembly NA457",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 1639,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 333.106,
+                  "score": 368,
+                  "evalue": 9.04912e-89,
+                  "identity": 277,
+                  "query_from": 27,
+                  "query_to": 365,
+                  "query_strand": "Plus",
+                  "hit_from": 1639,
+                  "hit_to": 1301,
+                  "hit_strand": "Minus",
+                  "align_len": 339,
+                  "gaps": 0,
+                  "qseq": "CTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCTGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCATGCGTACTTCGTCTTCGGGCCCACGGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGTGA",
+                  "hseq": "CTACGTGCCGATGTCCAACCGTACGGGACTGGTGCGCAGCCCGTTCGAGGAGCCGCAGTATTACCTGGCGGAGCCGTGGCAGTTCTCCCTGCTGGCGGCCTACATGCTGTTCCTGATCCTGGGCTCTTTCCCGATCAACGCGCTCACGCTCTACGTCACGGTGCAGCACAAGAAGCTGCGCACGCCGCTCAACTACATCCTGCTGAACCTGGCGGTGGCCGACCTGTTCATGGTGCTCGGAGGCTTCACCGTCACGCTCTACACCGCCCTGCACGGCTACTTCCTGCTGGGGGTCACCGGCTGCAACATCGAGGGCTTCTTCGCCACACTCGGCGGTGA",
+                  "midline": "|||||||||  | || |||   || ||  ||||||||||||| |||||| | |||||||| |||||||| |||||||||||||||||| ||||||| ||||||||| |  | |||||| ||  |   ||||| ||||||   |||||||||||||||||||| ||||||||||||||||||||||| ||||||||||||||||| |||||||| |||||| |||| ||||||||  |||| |||||||||  ||| ||||||||| | ||||| |  |||||| |  | |||  ||| || |||||  | ||||||||||| ||||| || ||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 146.457,
+                  "score": 161,
+                  "evalue": 2.5995e-32,
+                  "identity": 136,
+                  "query_from": 361,
+                  "query_to": 533,
+                  "query_strand": "Plus",
+                  "hit_from": 303,
+                  "hit_to": 131,
+                  "hit_strand": "Minus",
+                  "align_len": 173,
+                  "gaps": 0,
+                  "qseq": "GGTGAAATTGCCCTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTTGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAACCATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGGCCCCCCTCGTCGGCTGGTCCAGGTA",
+                  "hseq": "GGTGAGATTGCGCTCTGGTCTCTGGTGGTTCTGGCCATCGAGCGCTATATAGTGGTCTGTAAACCCATGAGCACGTTCCGCTTCGGGGAGAAACACGCCATCATAGGAGTGGGCTTCACCTGGGTCATGGCCCTCACCTGCGCCGTGCCCCCGCTGCTGGGGTGGTCCAGGTA",
+                  "midline": "||||| ||||| || |||||  ||||||| |||||||||||| | ||  | || || ||||| ||||||||||  ||||||||||||||||| || |||||||| ||  | | | |||||||| |||||||  |  |||| |||| | |||| ||  | || |||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gi|1196813947|ref|NC_007117.7|",
+                  "accession": "NC_007117",
+                  "title": "Danio rerio strain Tuebingen chromosome 6, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 60270059,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 126.62,
+                  "score": 139,
+                  "evalue": 2.43466e-26,
+                  "identity": 249,
+                  "query_from": 1,
+                  "query_to": 365,
+                  "query_strand": "Plus",
+                  "hit_from": 41200574,
+                  "hit_to": 41200938,
+                  "hit_strand": "Plus",
+                  "align_len": 366,
+                  "gaps": 2,
+                  "qseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCTGCCTACATGTTCCTGCTGATCGTGCTC-GGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCATGCGTACTTCGTCTTCGGGCCCACGGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGTGA",
+                  "hseq": "ATGAACGGCACTGAAGGAAACAACTTCTACATCCCCCTGTCCAACAGGACAGGGCTAGCAAGGAGTCCGTATGAATATCCTCAGTATTATCTTGCGGAGCCATGGCAGTTTAAACTGCTCGCCGTCTACATGTTCTTCCTCATC-TGCTTAGGTTTCCCCATCAATGGCCTTACATTGTTGGTAACAGCTCAACACAAAAAGCTGAGGCAACCTCTCAACTTCATTCTGGTCAATCTGGCTGTGGCAGGCACCATCATGGTTTGTTTTGGATTCACGGTCACTTTCTACACAGCCATTAATGGATACTTTGTTCTGGGACCAACTGGCTGTGCGATTGAGGGATTCATGGCCACACTGGGAGGTGA",
+                  "midline": "|||||||| || || ||    ||||||||| | ||  | || |||| ||||||  | |   | || || |  || || || ||||| || || || ||||| ||||||||     |||| || | |||||||||| | || ||| ||||  || |||||||||||   ||| ||  | |  || || |  || ||||| |||||| |    |||||||||| ||| ||| |||| ||||| |||||   |  | ||||||| |    ||| |||||   |||  |||||||  |  |  |||  ||||| ||  | || || || || ||     | ||||| ||| | ||||| ||||| |||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 125.719,
+                  "score": 138,
+                  "evalue": 2.43466e-26,
+                  "identity": 168,
+                  "query_from": 1,
+                  "query_to": 234,
+                  "query_strand": "Plus",
+                  "hit_from": 41181949,
+                  "hit_to": 41182182,
+                  "hit_strand": "Plus",
+                  "align_len": 234,
+                  "gaps": 0,
+                  "qseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCTGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAAC",
+                  "hseq": "ATGAACGGGACAGAAGGGAGCAACTTCTACATCCCCATGTCAAACAGGACTGGGCTTGTGCGAAGCCCTTATGATTACACCCAGTACTATCTGGCAGAACCATGGAAATTCAAGGCTCTGGCTTTCTACATGTTTCTACTGATCATTTTTGGATTTCCCATCAATGTCCTGACTTTGGTGGTTACAGCCCAGCACAAGAAACTCCGACAGCCGCTCAACTACATTTTGGTCAAC",
+                  "midline": "||||||||||| || ||    ||||||||| | ||  | || |||| ||| ||  | ||||| ||||| |  || ||| | |||||||| ||||| || || ||| | |||   |  ||||||  ||||||||| || |||||| |  | || || ||||||||  |||| ||  |    || || | |||||||||||| || ||   ||| |||||||||||  || |||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 87.848,
+                  "score": 96,
+                  "evalue": 6.11883e-15,
+                  "identity": 91,
+                  "query_from": 695,
+                  "query_to": 810,
+                  "query_strand": "Plus",
+                  "hit_from": 41182881,
+                  "hit_to": 41182996,
+                  "hit_strand": "Plus",
+                  "align_len": 117,
+                  "gaps": 2,
+                  "qseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGC-TGGGTGCCCTATGCCAGC",
+                  "hseq": "AGGCTGCAGCTCAACAGCAGGAATCTGAGTCCACTCAGAAGGCTGAGAGGGAAGTGACACGCATGGTCATCCTGATGGTTTTGGGCTTCTTG-TTTGCTTGGGTTCCCTATGCCAGC",
+                  "midline": "|||| || || ||||||||||| || |   |||| |||||||| |||| ||| || || |||||||||||| | |||||  | |  ||| || | ||| ||||| ||||||||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 84.2413,
+                  "score": 92,
+                  "evalue": 7.45426e-14,
+                  "identity": 118,
+                  "query_from": 368,
+                  "query_to": 533,
+                  "query_strand": "Plus",
+                  "hit_from": 41182391,
+                  "hit_to": 41182556,
+                  "hit_strand": "Plus",
+                  "align_len": 166,
+                  "gaps": 0,
+                  "qseq": "TTGCCCTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTTGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAACCATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGGCCCCCCTCGTCGGCTGGTCCAGGTA",
+                  "hseq": "TTGCTCTTTGGTCTTTGGTGGTTCTTGCCATTGAGAGGTACATCGTGGTTTGCAAGCCAATGGGAAGCTTCAAATTCTCCGCAAACCATGCGATGGCTGGCATTGCTTTCACATGGTTCATGGCCTGTAGCTGTGCAGTCCCCCCACTTTTTGGCTGGTCCAGGTA",
+                  "midline": "|||| || ||||| |||||||| || ||||| ||||||||| | || || || ||||| ||| | | ||||   |||   |  |||||||| ||    ||| | ||  |||| ||| |||||||      |||||| |   |||| ||  | ||||||||||||||"
+                },
+                {
+                  "num": 5,
+                  "bit_score": 81.5362,
+                  "score": 89,
+                  "evalue": 9.08115e-13,
+                  "identity": 91,
+                  "query_from": 695,
+                  "query_to": 816,
+                  "query_strand": "Plus",
+                  "hit_from": 41187906,
+                  "hit_to": 41188027,
+                  "hit_strand": "Plus",
+                  "align_len": 122,
+                  "gaps": 0,
+                  "qseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCG",
+                  "hseq": "AGGCTGCAGCTCAACAGCAGGAATCTGAGTCCACTCAAAAGGCTGAGAGGGAAGTAACACGCATGGTCATCCTAATGGTTTTGGGCTTCTTGGTGGCTTGGGTTCCCTATGCCAGCTTTGCG",
+                  "midline": "|||| || || ||||||||||| || |   |||| || ||||| |||| ||| || || |||||||||||| | |||||  | |  ||| || |    ||||| |||||||||||| | |||"
+                },
+                {
+                  "num": 6,
+                  "bit_score": 71.6177,
+                  "score": 78,
+                  "evalue": 4.70415e-10,
+                  "identity": 57,
+                  "query_from": 934,
+                  "query_to": 1002,
+                  "query_strand": "Plus",
+                  "hit_from": 41188799,
+                  "hit_to": 41188867,
+                  "hit_strand": "Plus",
+                  "align_len": 69,
+                  "gaps": 0,
+                  "qseq": "CAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGGCAGGAACCCACTGGGTGACGATGAGGCCTCC",
+                  "hseq": "CAGTTCCGTAGCTGCATGCTCAACACCCTTTTCTGTGGCAAGAGTCCTCTCGGTGATGATGAGTCCTCC",
+                  "midline": "|||||||| | ||||||||||| |||||| | |||||||| ||  || || ||||| |||||| |||||"
+                },
+                {
+                  "num": 7,
+                  "bit_score": 67.1093,
+                  "score": 73,
+                  "evalue": 2.00026e-08,
+                  "identity": 56,
+                  "query_from": 934,
+                  "query_to": 1002,
+                  "query_strand": "Plus",
+                  "hit_from": 41183263,
+                  "hit_to": 41183331,
+                  "hit_strand": "Plus",
+                  "align_len": 69,
+                  "gaps": 0,
+                  "qseq": "CAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGGCAGGAACCCACTGGGTGACGATGAGGCCTCC",
+                  "hseq": "CAGTTCCGTAGCTGCATGCTTAACACCCTTTTCTGTGGCAAGAGTCCTCTTGGTGACGATGAGTCTTCC",
+                  "midline": "|||||||| | ||||||||| | |||||| | |||||||| ||  || || |||||||||||| | |||"
+                },
+                {
+                  "num": 8,
+                  "bit_score": 64.4042,
+                  "score": 70,
+                  "evalue": 6.98158e-08,
+                  "identity": 81,
+                  "query_from": 528,
+                  "query_to": 635,
+                  "query_strand": "Plus",
+                  "hit_from": 41192438,
+                  "hit_to": 41192545,
+                  "hit_strand": "Plus",
+                  "align_len": 109,
+                  "gaps": 2,
+                  "qseq": "CAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACACGTCTCGCCAGGAGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGT-CCACTT",
+                  "hseq": "CAGGTATATTCCAGAGGGAATGCAGTGTTCATGTGGACCAGACTACTACACCTTGAACCCTGACTACAATAATGAATCATATGTCCTCTACATGTTC-TGCTGCCACTT",
+                  "midline": "|||||| || ||||||||||||||||| || || ||    ||||||||||| |    ||  ||   ||| ||||| || |  ||| ||||||||||| || | ||||||"
+                },
+                {
+                  "num": 9,
+                  "bit_score": 64.4042,
+                  "score": 70,
+                  "evalue": 6.98158e-08,
+                  "identity": 76,
+                  "query_from": 695,
+                  "query_to": 796,
+                  "query_strand": "Plus",
+                  "hit_from": 41201849,
+                  "hit_to": 41201949,
+                  "hit_strand": "Plus",
+                  "align_len": 102,
+                  "gaps": 1,
+                  "qseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGG",
+                  "hseq": "AGGCTGCAGCTCAACAGCAGGAATCAGAATCCACTCAGAAGGCTGAGAGAGAAGTGACCAGAATGGTCATCCTGATGGTTCTGGGCTTCCTGAT-TGCTTGG",
+                  "midline": "|||| || || ||||||||||| || |   |||| |||||||| ||||  || || ||  | ||||||||| | |||||  | |  |||||||| |||| ||"
+                },
+                {
+                  "num": 10,
+                  "bit_score": 61.6992,
+                  "score": 67,
+                  "evalue": 8.50531e-07,
+                  "identity": 86,
+                  "query_from": 695,
+                  "query_to": 815,
+                  "query_strand": "Plus",
+                  "hit_from": 41192694,
+                  "hit_to": 41192814,
+                  "hit_strand": "Plus",
+                  "align_len": 121,
+                  "gaps": 0,
+                  "qseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGC",
+                  "hseq": "AGGCTGCAGCTCAACAGCAGGAATCTGAATCCACTCAGAAGGCTGAGAGAGAAGTGACCAGAATGGTCATCCTGATGGTTCTGGGCTTCCTGGTAGCTTGGACTCCTTATGCCAGTGTTGC",
+                  "midline": "|||| || || ||||||||||| || |   |||| |||||||| ||||  || || ||  | ||||||||| | |||||  | |  |||||| |    |||   || |||||||| || ||"
+                },
+                {
+                  "num": 11,
+                  "bit_score": 59.8958,
+                  "score": 65,
+                  "evalue": 2.96864e-06,
+                  "identity": 112,
+                  "query_from": 528,
+                  "query_to": 692,
+                  "query_strand": "Plus",
+                  "hit_from": 41201593,
+                  "hit_to": 41201757,
+                  "hit_strand": "Plus",
+                  "align_len": 165,
+                  "gaps": 0,
+                  "qseq": "CAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACACGTCTCGCCAGGAGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAGCTGGTCTTCACAGTCAA",
+                  "hseq": "CAGGTATATTCCGGAGGGAATGCAGTGTTCATGTGGACCAGACTACTACACCCTGAACCCAGAGTACAACAACGAATCATATGTCCTCTACATGTTCATCTGTCATTTTATACTTCCAGTTACTATAATCTTCTTCACCTATGGGCGACTTGTTTGCACAGTCAA",
+                  "midline": "|||||| || || |||||||||||||| || || ||    |||||||||||      ||  |||  |||||| || || |  ||| ||||||||||| |    || || |   | ||  |    || || ||||||  ||| ||||  || || | |||||||||"
+                },
+                {
+                  "num": 12,
+                  "bit_score": 58.9941,
+                  "score": 64,
+                  "evalue": 2.96864e-06,
+                  "identity": 75,
+                  "query_from": 595,
+                  "query_to": 694,
+                  "query_strand": "Plus",
+                  "hit_from": 41182686,
+                  "hit_to": 41182785,
+                  "hit_strand": "Plus",
+                  "align_len": 101,
+                  "gaps": 2,
+                  "qseq": "AACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAG-CTGGTCTTCACAGTCAAGG",
+                  "hseq": "AACAATGAGTCTTACGTCATGTACATGTTCAGCTGCCACTTTTGCATACCCGTCACCACAATTTTCTTTACCTA-TGGCAGTCTGGTCTGCACAGTCAAGG",
+                  "midline": "||||||||||| | |||||| |||||||||     ||||||   ||| ||| |   ||  || |||||   |||  ||||| ||||||| |||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gi|1196813384|ref|NW_018394822.1|",
+                  "accession": "NW_018394822",
+                  "title": "Danio rerio strain Tuebingen chromosome 11 genomic scaffold, GRCz11 alternate locus group ALT_DRER_TU_1 ALT_CTG11_1_22",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 411340,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 59.8958,
+                  "score": 65,
+                  "evalue": 2.96864e-06,
+                  "identity": 52,
+                  "query_from": 866,
+                  "query_to": 930,
+                  "query_strand": "Plus",
+                  "hit_from": 105144,
+                  "hit_to": 105208,
+                  "hit_strand": "Plus",
+                  "align_len": 65,
+                  "gaps": 0,
+                  "qseq": "CCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAAC",
+                  "hseq": "CCATGCCTGCCTACTTTGCCAAGAGCGCCACCATCTACAACCCCGTCATTTATGTCTTCATGAAC",
+                  "midline": "|||| ||  | | ||||||||||||  || ||||||||||||||||||| ||  || | ||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 55.3874,
+                  "score": 60,
+                  "evalue": 3.61655e-05,
+                  "identity": 51,
+                  "query_from": 866,
+                  "query_to": 930,
+                  "query_strand": "Plus",
+                  "hit_from": 108425,
+                  "hit_to": 108489,
+                  "hit_strand": "Plus",
+                  "align_len": 65,
+                  "gaps": 0,
+                  "qseq": "CCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAAC",
+                  "hseq": "CCATGCCTGCCTACTTTGCCAAGAGCGCCACCATCTACAACCCCATCATTTATGTCTTCATGAAC",
+                  "midline": "|||| ||  | | ||||||||||||  || |||||||||||||| |||| ||  || | ||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 51.7806,
+                  "score": 56,
+                  "evalue": 0.000440586,
+                  "identity": 58,
+                  "query_from": 706,
+                  "query_to": 783,
+                  "query_strand": "Plus",
+                  "hit_from": 108265,
+                  "hit_to": 108342,
+                  "hit_strand": "Plus",
+                  "align_len": 78,
+                  "gaps": 0,
+                  "qseq": "CAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTC",
+                  "hseq": "CAGCAGAAGGATTCTGAGTCCACACAGAAGGCCGAGAAGGAAGTGTCCAGAATGGTGGTTGTCATGATCCTTGCTTTC",
+                  "midline": "|| ||| |||| || |   |||| ||||||||||||||||| ||  |  | |||||  |  ||||| || ||||||||"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gi|1196813943|ref|NC_007121.7|",
+                  "accession": "NC_007121",
+                  "title": "Danio rerio strain Tuebingen chromosome 10, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 45420867,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 48.1739,
+                  "score": 52,
+                  "evalue": 0.00536743,
+                  "identity": 50,
+                  "query_from": 194,
+                  "query_to": 259,
+                  "query_strand": "Plus",
+                  "hit_from": 1309211,
+                  "hit_to": 1309146,
+                  "hit_strand": "Minus",
+                  "align_len": 66,
+                  "gaps": 0,
+                  "qseq": "ACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGG",
+                  "hseq": "ACAAGAAGCTGCGGACGCCTCCAAACTACTTCATCATGAATCTGGCAGTGAGTGACTTCCTCATGG",
+                  "midline": "||||||||||||| |||||||  |||||| || |  | || ||||| |||    || || ||||||"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gi|1196813950|ref|NC_007115.7|",
+                  "accession": "NC_007115",
+                  "title": "Danio rerio strain Tuebingen chromosome 4, GRCz11 Primary Assembly",
+                  "taxid": 7955,
+                  "sciname": "Danio rerio"
+                }
+              ],
+              "len": 78093715,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 46.3705,
+                  "score": 50,
+                  "evalue": 0.0187342,
+                  "identity": 46,
+                  "query_from": 175,
+                  "query_to": 234,
+                  "query_strand": "Plus",
+                  "hit_from": 13580118,
+                  "hit_to": 13580059,
+                  "hit_strand": "Minus",
+                  "align_len": 60,
+                  "gaps": 0,
+                  "qseq": "CTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAAC",
+                  "hseq": "CTCTTCGTCACGATGAAGTACAAGAAACTCAGGCAGCCTCTCAACTACATCTTGGTAAAC",
+                  "midline": "|||| ||||||| |  || ||||||| ||  |   |||||||||||||||| || | |||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 1923,
+            "db_len": 1679203469,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/7955/RS_2024_08/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1345422",
+          "query_title": "IL6 T_truncatus",
+          "query_len": 627,
+          "hits": [
+          ],
+          "stat": {
+            "db_num": 1923,
+            "db_len": 1679203469,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          },
+          "message": "No hits found"
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/7955/RS_2024_08/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1345423",
+          "query_title": "TNF T_truncatus",
+          "query_len": 702,
+          "hits": [
+          ],
+          "stat": {
+            "db_num": 1923,
+            "db_len": 1679203469,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          },
+          "message": "No hits found"
+        }
+      }
+    }
+  }
+]
+}
+

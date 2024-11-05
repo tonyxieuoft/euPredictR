@@ -1,0 +1,1279 @@
+{
+"BlastOutput2": [
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "genomic/9739/GCF_011762595.1"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_708287",
+          "query_title": "IL10 T_truncatus",
+          "query_len": 537,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1832237601|ref|NC_047034.1|",
+                  "accession": "NC_047034",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 1, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 183742880,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 298.842,
+                  "score": 330,
+                  "evalue": 1.31566e-78,
+                  "identity": 165,
+                  "query_from": 1,
+                  "query_to": 165,
+                  "query_strand": "Plus",
+                  "hit_from": 35281859,
+                  "hit_to": 35281695,
+                  "hit_strand": "Minus",
+                  "align_len": 165,
+                  "gaps": 0,
+                  "qseq": "ATGCCCAGCTCAGCACTGCTCTGTTGCCTGATCTTCCTGGCCAGGGTGGCAGCTGGCCAACACCAGGGCACCCAGGCTAAGGACAGCTGCATCCACTTCCCAGACAGCCTGCCCCACATGCTGCGGGAGCTCCGAGCTGCCTTCAGCAGCGTGAAGACTTTCTTT",
+                  "hseq": "ATGCCCAGCTCAGCACTGCTCTGTTGCCTGATCTTCCTGGCCAGGGTGGCAGCTGGCCAACACCAGGGCACCCAGGCTAAGGACAGCTGCATCCACTTCCCAGACAGCCTGCCCCACATGCTGCGGGAGCTCCGAGCTGCCTTCAGCAGCGTGAAGACTTTCTTT",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 280.808,
+                  "score": 310,
+                  "evalue": 3.5304e-73,
+                  "identity": 155,
+                  "query_from": 224,
+                  "query_to": 378,
+                  "query_strand": "Plus",
+                  "hit_from": 35280524,
+                  "hit_to": 35280370,
+                  "hit_strand": "Minus",
+                  "align_len": 155,
+                  "gaps": 0,
+                  "qseq": "AGGGTTACCTGGGTTGCCAAGCCTTGTCGGAGATGATCCAGTTTTACCTGGAGGAGGTGATGCCGAAGGCTGAGGACCATGGCCCCAACATCAAAGAGCACGTGAACTCCCTGGGGGAGAAGCTGAAGACCCTCAGGCTGCAGCTGAGGCGCTGT",
+                  "hseq": "AGGGTTACCTGGGTTGCCAAGCCTTGTCGGAGATGATCCAGTTTTACCTGGAGGAGGTGATGCCGAAGGCTGAGGACCATGGCCCCAACATCAAAGAGCACGTGAACTCCCTGGGGGAGAAGCTGAAGACCCTCAGGCTGCAGCTGAGGCGCTGT",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 172.606,
+                  "score": 190,
+                  "evalue": 1.31799e-40,
+                  "identity": 95,
+                  "query_from": 443,
+                  "query_to": 537,
+                  "query_strand": "Plus",
+                  "hit_from": 35278172,
+                  "hit_to": 35278078,
+                  "hit_strand": "Minus",
+                  "align_len": 95,
+                  "gaps": 0,
+                  "qseq": "AGCTCCAAGAGAAGGGTGTCTACAAAGCCATGAGTGAGTTTGACATCTTCATCAACTACATAGAAGCCTACATGATAACAAAGATGAAAAACTGA",
+                  "hseq": "AGCTCCAAGAGAAGGGTGTCTACAAAGCCATGAGTGAGTTTGACATCTTCATCAACTACATAGAAGCCTACATGATAACAAAGATGAAAAACTGA",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 167.196,
+                  "score": 184,
+                  "evalue": 5.60422e-39,
+                  "identity": 140,
+                  "query_from": 1,
+                  "query_to": 165,
+                  "query_strand": "Plus",
+                  "hit_from": 35135056,
+                  "hit_to": 35135225,
+                  "hit_strand": "Plus",
+                  "align_len": 171,
+                  "gaps": 7,
+                  "qseq": "ATGCCCAGCTCAGCACTGCTCTGTTGCCTGATCTTCCTGGCCAGGGTGGCAGCTGGCCAACACCAGGGCACCCAGGCTAAGGACAGCTGCATCCACTTCCCAGACAGCCTGCCCCACATGCTGCGGGAGCTCCGAGCTGC------CTTCAGCAGCGTGAAGACTTTCTTT",
+                  "hseq": "ATGCCCAGCTCAGCACTGATGTGTTGCCTGGTATTCAGGGATAGG-TGGGTGCCAGCCAAGACCAGAGCACCCAGTCTGAGAACAGCTGCATCCACTTCCCAGCCAGCCTGCCCCACATTCTCTGGGAGCCCTGAGCTGCCCCCTGCTTCAGCAGGGTGAAGACTTTCTTT",
+                  "midline": "|||||||||||||||||| | ||||||||| | |||  ||  ||| |||  ||  ||||| ||||| |||||||| || || ||||||||||||||||||||| ||||||||||||||| ||  |||||| | |||||||      ||||||||| |||||||||||||||"
+                },
+                {
+                  "num": 5,
+                  "bit_score": 120.309,
+                  "score": 132,
+                  "evalue": 7.29601e-25,
+                  "identity": 66,
+                  "query_from": 379,
+                  "query_to": 444,
+                  "query_strand": "Plus",
+                  "hit_from": 35279320,
+                  "hit_to": 35279255,
+                  "hit_strand": "Minus",
+                  "align_len": 66,
+                  "gaps": 0,
+                  "qseq": "CATCGATTTCTGCCCTGTGAAAACAAGAGCAAAGCGGTGGAGCAGGTGAAGAGTGTCTTCAATAAG",
+                  "hseq": "CATCGATTTCTGCCCTGTGAAAACAAGAGCAAAGCGGTGGAGCAGGTGAAGAGTGTCTTCAATAAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 6,
+                  "bit_score": 111.292,
+                  "score": 122,
+                  "evalue": 3.77943e-22,
+                  "identity": 61,
+                  "query_from": 166,
+                  "query_to": 226,
+                  "query_strand": "Plus",
+                  "hit_from": 35280858,
+                  "hit_to": 35280798,
+                  "hit_strand": "Minus",
+                  "align_len": 61,
+                  "gaps": 0,
+                  "qseq": "CAAATGAATGACCAGCTGGACAACTCGTTGTTGAGCCAGTCTCTGCTGGAGGACTTTAAGG",
+                  "hseq": "CAAATGAATGACCAGCTGGACAACTCGTTGTTGAGCCAGTCTCTGCTGGAGGACTTTAAGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 362,
+            "db_len": 2378522223,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "genomic/9739/GCF_011762595.1"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_708288",
+          "query_title": "SOX2 T_truncatus",
+          "query_len": 981,
+          "query_masking": [
+            {
+              "from": 52,
+              "to": 122
+            },
+            {
+              "from": 779,
+              "to": 785
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1832237598|ref|NC_047037.1|",
+                  "accession": "NC_047037",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 4, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 144183200,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 1770.39,
+                  "score": 1962,
+                  "evalue": 0,
+                  "identity": 981,
+                  "query_from": 1,
+                  "query_to": 981,
+                  "query_strand": "Plus",
+                  "hit_from": 58728053,
+                  "hit_to": 58729033,
+                  "hit_strand": "Plus",
+                  "align_len": 981,
+                  "gaps": 0,
+                  "qseq": "ATGTACAACATGATGGAGACGGAGCTGAAGCCGCCGGGCCCGCAGCAAACTTcggggggcggcggcggcggcggcggcggcggtggcggcggcggcaactccaccgcggcggcggcgggcggcAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGCCCCGGGCGGCAACAGCATGGCGAGCGGGGTCGGGGTGGGCGCCGGCCTCGGCGCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACGGCTGGAGCAACGGCAGCTACAGCATGATGCAGGACCAGCTGGGCTACCCGCAGCACCCGGGCCTCAACGCGCACGGCGCCGCTCAGATGCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCCGACCTACAGCATGTCCTATTCGCAGCAGGGCACCCCTGGCATGGCTCTTGGCTCCATGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGcccccccGTGGTTACCTCTTCTTCCCACTCCAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCCCGGCGCCGAGGTGCCGGAGCCCGCCGCCCCCAGCAGACTTCACATGTCGCAGCACTACCAGAGCGGCCCGGTGCCCGGCACGGCCATTAACGGCACACTGCCCCTCTCGCACATGTGA",
+                  "hseq": "ATGTACAACATGATGGAGACGGAGCTGAAGCCGCCGGGCCCGCAGCAAACTTCGGGGGGCGGCGGCGGCGGCGGCGGCGGCGGTGGCGGCGGCGGCAACTCCACCGCGGCGGCGGCGGGCGGCAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGCCCCGGGCGGCAACAGCATGGCGAGCGGGGTCGGGGTGGGCGCCGGCCTCGGCGCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACGGCTGGAGCAACGGCAGCTACAGCATGATGCAGGACCAGCTGGGCTACCCGCAGCACCCGGGCCTCAACGCGCACGGCGCCGCTCAGATGCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCCGACCTACAGCATGTCCTATTCGCAGCAGGGCACCCCTGGCATGGCTCTTGGCTCCATGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGCCCCCCCGTGGTTACCTCTTCTTCCCACTCCAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCCCGGCGCCGAGGTGCCGGAGCCCGCCGCCCCCAGCAGACTTCACATGTCGCAGCACTACCAGAGCGGCCCGGTGCCCGGCACGGCCATTAACGGCACACTGCCCCTCTCGCACATGTGA",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 289.825,
+                  "score": 320,
+                  "evalue": 1.27938e-75,
+                  "identity": 220,
+                  "query_from": 142,
+                  "query_to": 401,
+                  "query_strand": "Plus",
+                  "hit_from": 29253389,
+                  "hit_to": 29253130,
+                  "hit_strand": "Minus",
+                  "align_len": 260,
+                  "gaps": 0,
+                  "qseq": "GACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTA",
+                  "hseq": "GACCACATCAAGCGACCCATGAACGCCTTCATGGTATGGTCCCGAGGCCAGCGGCGCAAGATGGCCCAGGAAAACCCCAAGATGCACAACTCAGAGATCAGCAAACGCCTAGGCGCCGAATGGAAGCTTCTGTCCGAGGCAGAGAAGCGGCCGTACATTGACGAGGCCAAGAGGCTACGCGCCCAGCACATGAAGGAGCACCCTGACTACAAGTACCGGCCGCGGCGCAAGCCCAAGAACCTGCTCAAGAAGGACAGGTA",
+                  "midline": "|||| | ||||||| |||||||||||||||||||| |||||||| || |||||||||||||||||||| || |||||||||||||||||||| ||||||||||| ||||| |||||||| ||||| ||| |||| ||| | ||||||||||||| ||| |||||||||||| |||| || || | |||||||||||| ||||| || || || |||||||| ||||| ||  ||||||  ||  | |||||||| | |||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gi|1832237580|ref|NC_047055.1|",
+                  "accession": "NC_047055",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome X, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 128693445,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 462.047,
+                  "score": 511,
+                  "evalue": 3.42398e-127,
+                  "identity": 491,
+                  "query_from": 61,
+                  "query_to": 682,
+                  "query_strand": "Plus",
+                  "hit_from": 11357453,
+                  "hit_to": 11358074,
+                  "hit_strand": "Plus",
+                  "align_len": 640,
+                  "gaps": 36,
+                  "qseq": "GGCGGCGGCGGCGGCGGCGGCGGTGGCGGCGGCGGCAACTCCACCGCGGCGGCGGCGGGCGGCAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCT-CGCCCCGG----GCGGCAACAGCATGGCGAGCGGGGTCGGGGTGGGCGCCG---GCCTCGGCGCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACGGCTGGAGCAACGGCAGCTACAGCATGATGCAGGACCAGCTGGGCTACCCGCAGCACCCGGGCCT---CAACGCGCACGGCGCCGCTC-AGATGCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGA------CCAGCTCGCAGACCTACATGAACG",
+                  "hseq": "GGCGGCGGCAGCGGCGGTGGCGCGAGCGGCGGCGGCGGCG-----GCGGCGGCGGCGGGGG-----CAGT-GACCAG----GACCGGGTGAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCTCTGGAGAACCCCAAGATGCACAACTCTGAGATCAGCAAGCGCTTGGGCGCCGACTGGAAACTGCTGACCGATGCCGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGCGCCGTGCACATGAAAGAATACCCGGACTACAAGTACCGGCCGCGCCGCAAGACCAAGACGCTGCTCAAGAAGGACAAGTACTCCCTGCCCGGCGGCCTGCTGCCCCCCGGAGCCGCGGCCGCGGC--CGCCGCCGCTGCCGCCGCCGCCGCCGCTAGCAGCCCGGTGGGCGTGGGCCAGCGCCTGGACACGTACACACACGTGAACGGCTGGGCCAACGGCGCGTACTCGCTGGTGCAGGAGCAGCTGGGCTACGCGCAGCCCGCGACCATGAGCAGCCCGC-CGCCGCCGCCCGCGCTGCCGCAGATGCACCGCTACGACATGGCCGGCCTGCAGTACAGCCCCATGATGCCGCCCGGCGCCCAGAGCTACATGAACG",
+                  "midline": "||||||||| ||||||| ||||   |||||||||||  |      |||||||||||||| |     |||  || |||    ||||| || |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |  ||||||||||||||||||||||| ||||||||||||||| |||||||||| ||||||||  || | ||  | |||||||||||||||||||||||||||||||||||||| ||  |||||||||| ||| ||||||| || || |||||||| || || || |||||||||||  | |||||||| |||||| | ||||| || || ||||| | ||||||    |||||  | ||   ||   ||  | ||  |  | |||||   ||  |   | |||||||  ||||||| ||||||  ||| | ||| |||||||||||  |||||||   |||    || ||||||| |||||||||||| |||||| | ||  | |   || | ||| || |||||| |  | ||| ||  ||||||||||||||| ||  || ||||||||||| | ||||||      || || | |||| |||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 68.0109,
+                  "score": 74,
+                  "evalue": 7.58189e-09,
+                  "identity": 95,
+                  "query_from": 736,
+                  "query_to": 863,
+                  "query_strand": "Plus",
+                  "hit_from": 11358203,
+                  "hit_to": 11358321,
+                  "hit_strand": "Plus",
+                  "align_len": 129,
+                  "gaps": 11,
+                  "qseq": "CTTGGCTCCATGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGcccccccGTGGTTACCTCTTCTTCCCACTC-CAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCC",
+                  "hseq": "CTGGGCCCCATGGGCACGGTGGTGAAGACCGAGCCCAGCTCGCCGCCGCCCGC-----CATCG-CGTCGCACTCGCAGCGCGCG-TGCCT---CGGCGACCTGCGCGACATGATCAGCATGTACCTGCC",
+                  "midline": "|| ||| |||||||| ||||||| ||| ||||| |||||||    || ||||      | ||  | || ||||| ||| ||||  ||||    ||| ||||| || |||||||||||||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gi|1832237584|ref|NC_047051.1|",
+                  "accession": "NC_047051",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 18, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 78151963,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 415.159,
+                  "score": 459,
+                  "evalue": 4.45761e-113,
+                  "identity": 385,
+                  "query_from": 34,
+                  "query_to": 504,
+                  "query_strand": "Plus",
+                  "hit_from": 76788686,
+                  "hit_to": 76789151,
+                  "hit_strand": "Plus",
+                  "align_len": 484,
+                  "gaps": 31,
+                  "qseq": "CCGGGCCCGCAGCAAACTTcggggggcggcggcggcgg-cggcggcggcggtggcggcggcggcaactccaccgcggcggcggcgggcggcAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGC------CCCGGGCGGCAACAGCATGGCGAGCGGGG---TCGGGGTGGGCGCCGGCCTCGGCGCG--GGC-GTGAACCAGCGCATGGACAGC",
+                  "hseq": "CCAGGCCCCCACGAACCTGTCGGGCCCGGCCGGGGCGGGCGGGGGCGGCGGTGGCGGCGGCGGC-----------GGCGGCGGCG--CGGGAGCCA--AGGCCAACCAGGACCGGGTGAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGACAGCGGCGCAAGATGGCCCAGGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAGGTCATGTCCGAAGCCGAGAAGCGGCCTTTCATCGACGAGGCCAAGCGGCTGCGCGCGCTGCACATGAAGGAGCACCCGGACTACAAGTACCGGCCGCGCCGCAAGACCAAGACGCTGCTCAAGAAGGACAAGTACTCGCTGGCCGGCGGGCTGCTGGCGGCAGGCGCGGGCGGCGGCGGCACGGC---CGTGGCCATGGGCGTGGGCGTGGGTGTGGGCGCGGCGGCAGTGGGCCAGCGCCTCGAGAGC",
+                  "midline": "|| ||||| ||  || ||   |||  |||| | ||||| ||| |||||||||||||||||||||           ||||||||||  ||| | |||  ||  || || |||||| || |||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||  |  |||| ||  | ||||||||||| |||||||||||||||||||||||||| ||||||||||||||||| |||||||| || || |||||||| || || || |||||||||||  | |||||||| |||||| ||||| | || |||||||| ||      | ||||||||  | ||| |||   || ||   | || |||||||  ||  | ||||||  ||| |||  ||||||| | || |||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 314.171,
+                  "score": 347,
+                  "evalue": 1.12128e-82,
+                  "identity": 276,
+                  "query_from": 68,
+                  "query_to": 400,
+                  "query_strand": "Plus",
+                  "hit_from": 63144143,
+                  "hit_to": 63143817,
+                  "hit_strand": "Minus",
+                  "align_len": 338,
+                  "gaps": 16,
+                  "qseq": "GCGGCGGCGGCGGCGGTGGCGGCGGCGGCAACTCCA-CCGCGGCGGCGGCGGGCGGCAA--CCAGAAGAACAGCCCG--GACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGT",
+                  "hseq": "GCGACGGCGCGGGCGGCGGCGGCGGCGGG--CTGCAGCCGCGGCA-CGGCGAGAG-CATGTCCA-------AGCCGGTGGACCACGTCAAGCGGCCCATGAATGCCTTCATGGTCTGGTCGCGGGCTCAGCGGCGCAAGATGGCCCAGGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAGCTGCTCACCGAATCGGAGAAGCGGCCGTTCATCGACGAGGCGAAGCGCCTGCGCGCCATGCACATGAAGGAGCACCCAGACTACAAGTACCGGCCGAGGCGCAAGCCCAAGACGCTGCTCAAGAAGGACAAGT",
+                  "midline": "||| |||||  ||||| |||||||||||   || || |||||||  ||||| | | ||   |||       |||| |  |||| |||||||||||||||||| ||||||||||| ||||| || |  |||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||  |  | ||  |||||||||||||||||||||||||||| ||||| ||||| ||  ||||||||||||| ||||| || || || ||||||||  |||| ||  ||||||||||  | |||||||| ||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 93.2581,
+                  "score": 102,
+                  "evalue": 1.90381e-16,
+                  "identity": 69,
+                  "query_from": 609,
+                  "query_to": 689,
+                  "query_strand": "Plus",
+                  "hit_from": 76789364,
+                  "hit_to": 76789444,
+                  "hit_strand": "Plus",
+                  "align_len": 81,
+                  "gaps": 0,
+                  "qseq": "GCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCC",
+                  "hseq": "GCAGCCCATGCACCGCTACGACATGGGCGCGCTGCAGTACAGCCCCATCTCCAACTCGCAGGGCTACATGAGCGCCTCGCC",
+                  "midline": "|||||||||||||||||||||| || |||| |||||||||| | ||||  ||| |||||||  |||||||| || ||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 69.8143,
+                  "score": 76,
+                  "evalue": 2.17225e-09,
+                  "identity": 92,
+                  "query_from": 748,
+                  "query_to": 874,
+                  "query_strand": "Plus",
+                  "hit_from": 76789578,
+                  "hit_to": 76789692,
+                  "hit_strand": "Plus",
+                  "align_len": 127,
+                  "gaps": 12,
+                  "qseq": "GGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGcccccccGTGGTTACCTCTTCTTCCCACTCCAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCCCGGCGCCGAGG",
+                  "hseq": "GGCTCGCTCGTCAAGTCCGAGCCGAGCGGCAGCCCGCCGGC-----CC----CGGCGCACTCGCGGGCGCCGTGCC---CCGGGGACCTGCGTGAGATGATCAGCATGTACTTGCCGGCCGGCGAGG",
+                  "midline": "|||||| | |||||||||||| | |||  |||||| || |      ||    |  | |||||  ||||||| ||||   |||||||||| || || ||||||||||||||| | || | || |||||"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gi|1832237582|ref|NC_047053.1|",
+                  "accession": "NC_047053",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 20, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 58467291,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 194.247,
+                  "score": 214,
+                  "evalue": 7.56851e-47,
+                  "identity": 182,
+                  "query_from": 148,
+                  "query_to": 379,
+                  "query_strand": "Plus",
+                  "hit_from": 8746720,
+                  "hit_to": 8746951,
+                  "hit_strand": "Plus",
+                  "align_len": 232,
+                  "gaps": 0,
+                  "qseq": "GTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGA",
+                  "hseq": "GTGAAACGGCCCATGAACGCGTTCATGGTGTGGAGCTCCGCCCAGCGCCGCCAGATGGCGCAGCAGAACCCAAAGATGCACAACTCGGAGATCTCCAAGCGTCTGGGCGCGCAGTGGAAGCTGCTGGGCGAGGACGAGAAGCGGCCCTTCGTGGAAGAGGCTAAGCGGCTCCGGGCCCGGCACCTGCGCGACTACCCCGACTACAAGTACCGGCCCCGGCGCAAGACCAAGA",
+                  "midline": "|| || |||||||||||||| ||||||||||||  |  ||  ||||| ||| ||||||| ||  ||||||| |||||||||||||||||||||  |||||| ||||||||  ||||||| ||  ||   |||   ||||||||||| ||| | || ||||| |||||||| || || | |||| ||   ||  |||| || || || |||||||||||||| || |||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 94.1598,
+                  "score": 103,
+                  "evalue": 1.90381e-16,
+                  "identity": 77,
+                  "query_from": 277,
+                  "query_to": 370,
+                  "query_strand": "Plus",
+                  "hit_from": 53874987,
+                  "hit_to": 53874894,
+                  "hit_strand": "Minus",
+                  "align_len": 94,
+                  "gaps": 0,
+                  "qseq": "GAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGA",
+                  "hseq": "GAGAGCGAGAAGCGGCCCTTCGTGGAGGAGGCGGAGCGGCTGCGCGTGCAGCACAAGAAGGACCACCCGGATTACAAGTACCAGCCGCGGCGGA",
+                  "midline": "||||  ||||||||||| ||| | || |||||  |||||||||| | || ||||| |||||| ||||||||||| || |||| ||| |||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 85.143,
+                  "score": 93,
+                  "evalue": 9.86199e-14,
+                  "identity": 98,
+                  "query_from": 130,
+                  "query_to": 255,
+                  "query_strand": "Plus",
+                  "hit_from": 53876117,
+                  "hit_to": 53875995,
+                  "hit_strand": "Minus",
+                  "align_len": 128,
+                  "gaps": 7,
+                  "qseq": "AAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCG-GC-GCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGC",
+                  "hseq": "AAGAACAAGCCGCAC---GTCAAGCGGCCCATGAACGCCTTCATGGTGTGG--GCGCAGGCGGCGCGCAGGAAGCTCGCCGACCAGTACCCACACCTGCACAACGCCGAGCTCAGCAAGACGCTGGGC",
+                  "midline": "|||||||  ||| ||   |||||||||||||||||||||||||||||||||   ||| ||| ||| || | ||| | ||| |  || ||||  |  |||||||| | ||| ||||||||   ||||||"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gi|1832237556|ref|NW_022983136.1|",
+                  "accession": "NW_022983136",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome Y unlocalized genomic scaffold, mTurTru1.mat.Y SUPER_Y_unloc_1, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 4926226,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 167.196,
+                  "score": 184,
+                  "evalue": 1.05204e-38,
+                  "identity": 185,
+                  "query_from": 131,
+                  "query_to": 377,
+                  "query_strand": "Plus",
+                  "hit_from": 4860774,
+                  "hit_to": 4860528,
+                  "hit_strand": "Minus",
+                  "align_len": 247,
+                  "gaps": 0,
+                  "qseq": "AGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAA",
+                  "hseq": "AGAGCGGCCAGGACCGCGTCAAGCGACCCATGAACGCTTTCATTGTGTGGTCTCGTGATCAAAGGCGAAAGGTGGCTCTAGAGAATCCCCAAATGCAAAACTCAGAGATCAGTAAGCGCCTGGGATACGACTGGAAAATGCTTACAGAAGCCGAAAAGCAGCCATTCTTCGAGGAGGCACAGAGACTACGAGCCATGCACCGAGACAAATACCCGGGCTATAAATATCGACCTCGTCGGAAGGCCAA",
+                  "midline": "||| | ||| ||||||||||||||| ||||||||||| ||||| |||||||| || |  ||  |||| ||| |||| | |||||| ||| | ||||| ||||| |||||||| |||||||||||   ||| |||||| |  |  | ||  | || |||| ||| ||| |||| |||||  || | || |||||  |||||    |  || ||||||  |||||||| || || || |||||  ||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 167.196,
+                  "score": 184,
+                  "evalue": 1.05204e-38,
+                  "identity": 185,
+                  "query_from": 131,
+                  "query_to": 377,
+                  "query_strand": "Plus",
+                  "hit_from": 4878104,
+                  "hit_to": 4878350,
+                  "hit_strand": "Plus",
+                  "align_len": 247,
+                  "gaps": 0,
+                  "qseq": "AGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAA",
+                  "hseq": "AGAGCGGCCAGGACCGCGTCAAGCGACCCATGAACGCTTTCATTGTGTGGTCTCGTGATCAAAGGCGAAAGGTGGCTCTAGAGAATCCCCAAATGCAAAACTCAGAGATCAGTAAGCGCCTGGGATACGACTGGAAAATGCTTACAGAAGCCGAAAAGCAGCCATTCTTCGAGGAGGCACAGAGACTACGAGCCATGCACCGAGACAAATACCCGGGCTATAAATATCGACCTCGTCGGAAGGCCAA",
+                  "midline": "||| | ||| ||||||||||||||| ||||||||||| ||||| |||||||| || |  ||  |||| ||| |||| | |||||| ||| | ||||| ||||| |||||||| |||||||||||   ||| |||||| |  |  | ||  | || |||| ||| ||| |||| |||||  || | || |||||  |||||    |  || ||||||  |||||||| || || || |||||  ||||"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gi|1832237587|ref|NC_047048.1|",
+                  "accession": "NC_047048",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 15, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 86293990,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 100.472,
+                  "score": 110,
+                  "evalue": 1.28278e-18,
+                  "identity": 158,
+                  "query_from": 151,
+                  "query_to": 365,
+                  "query_strand": "Plus",
+                  "hit_from": 59325767,
+                  "hit_to": 59325553,
+                  "hit_strand": "Minus",
+                  "align_len": 220,
+                  "gaps": 10,
+                  "qseq": "AAGCGGCCCATGAACGCCTTCATGGTGTGGTCCC-GCGGGCAGCGGCGCAAGAT---GGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG-CGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCG",
+                  "hseq": "AAGAGACCGATGAACGCGTTCATGGTGTGGTCGCAGCACGAA-CGGCGGAAGATCATGGACCAGTGG---CCCGACATGCACAACGCCGAGATCTCCAAGCGCCTGGGCCGCCG-CTGGCAGCTGCTGCAGGACTCGGAGAAGATCCCGTTCGTGCGGGAGGCGGAGCGGCTGCGCCTCAAGCACATGGCGGATTACCCGGACTACAAGTACCGGCCGCG",
+                  "midline": "||| | || |||||||| |||||||||||||| | ||  | | ||||| |||||   || |||   |   ||| | ||||||||| | ||||||  |||||||||||| |||||  ||| | ||  ||  |||  ||||||||   |||||| |    |||||  ||||||||||      |||||||  |||  ||||||| || || |||||||| ||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 83.3396,
+                  "score": 91,
+                  "evalue": 3.44217e-13,
+                  "identity": 86,
+                  "query_from": 147,
+                  "query_to": 255,
+                  "query_strand": "Plus",
+                  "hit_from": 37412439,
+                  "hit_to": 37412331,
+                  "hit_strand": "Minus",
+                  "align_len": 111,
+                  "gaps": 4,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCA--GCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGC",
+                  "hseq": "CGTGAAGCGGCCCATGAACGCCTTCATGGTGTGG--GCGCAAGCAGCGCGCCGCAAGCTGGCGGATCAGTACCCGCACCTGCACAACGCGGAACTCAGCAAGACGCTGGGC",
+                  "midline": "||| ||||||||||||||||||||||||||||||   |||  |||  ||| |||||| ||||  |  || ||||  |  |||||||| ||||  ||||||||   ||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 61.6992,
+                  "score": 67,
+                  "evalue": 1.12525e-06,
+                  "identity": 83,
+                  "query_from": 145,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 86158706,
+                  "hit_to": 86158597,
+                  "hit_strand": "Minus",
+                  "align_len": 113,
+                  "gaps": 6,
+                  "qseq": "CGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAA---GATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "CGCATCCGGCGGCCCATGAATGCCTTCATGGTGTGG--GCGAAGG-ACGAGCGCAAGCGGCTGGCGCAGCAGAACCCAGACCTGCACAACGCGGTGCTCAGCAAGATGCTGGG",
+                  "midline": "||| ||  |||||||||||| |||||||||||||||   ||  || |   ||||||   | |||| ||  |||||||  |  |||||||| ||| | ||||||||   |||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 52.6823,
+                  "score": 57,
+                  "evalue": 0.000582895,
+                  "identity": 66,
+                  "query_from": 281,
+                  "query_to": 371,
+                  "query_strand": "Plus",
+                  "hit_from": 86158425,
+                  "hit_to": 86158335,
+                  "hit_strand": "Minus",
+                  "align_len": 91,
+                  "gaps": 0,
+                  "qseq": "CGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAA",
+                  "hseq": "CGGAGAAGCGGCCCTTTGTGGAGGAGGCGGAGCGCCTACGCGTGCAGCACTTGCGCGACCACCCCAACTACAAGTACCGGCCGCGCCGCAA",
+                  "midline": "||||||||||||| ||  | || |||||  |||| || || | || |||| ||   || |||||  | || || |||||||| || || ||"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gi|1832237585|ref|NC_047050.1|",
+                  "accession": "NC_047050",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 17, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 78442772,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 94.1598,
+                  "score": 103,
+                  "evalue": 1.90381e-16,
+                  "identity": 74,
+                  "query_from": 281,
+                  "query_to": 369,
+                  "query_strand": "Plus",
+                  "hit_from": 3546196,
+                  "hit_to": 3546284,
+                  "hit_strand": "Plus",
+                  "align_len": 89,
+                  "gaps": 0,
+                  "qseq": "CGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGG",
+                  "hseq": "CGGAGAAGCGGCCCTTCGTGGAGGAGGCCGAGCGGCTGCGCGTGCAGCACATGCAGGACCACCCGAACTACAAGTACCGGCCGCGGCGG",
+                  "midline": "||||||||||||| ||| | || |||||| |||||||||| | || ||||||| |||| |||||| | || || |||||||| ||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 52.6823,
+                  "score": 57,
+                  "evalue": 0.000582895,
+                  "identity": 81,
+                  "query_from": 145,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 3545474,
+                  "hit_to": 3545583,
+                  "hit_strand": "Plus",
+                  "align_len": 113,
+                  "gaps": 6,
+                  "qseq": "CGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAG---ATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "CGCATCCGGCGGCCGATGAACGCCTTCATGGTGTGG--GCGAAGG-ACGAACGCAAGCGCCTGGCGCAGCAGAACCCGGACCTGCACAACGCCGAGCTGAGCAAGATGCTGGG",
+                  "midline": "||| ||  |||||| |||||||||||||||||||||   ||  || |    ||||||    |||| ||  |||||||  |  |||||||| | ||| | ||||||   |||||"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gi|1832237588|ref|NC_047047.1|",
+                  "accession": "NC_047047",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 14, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 88483154,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 89.6514,
+                  "score": 98,
+                  "evalue": 2.31932e-15,
+                  "identity": 158,
+                  "query_from": 140,
+                  "query_to": 366,
+                  "query_strand": "Plus",
+                  "hit_from": 84976489,
+                  "hit_to": 84976263,
+                  "hit_strand": "Minus",
+                  "align_len": 228,
+                  "gaps": 2,
+                  "qseq": "CGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCT-GCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGG",
+                  "hseq": "CGGGCCACATCAAGAGGCCGATGAACGCCTTCATGGTGTGGTCCAAGATCGAGCGCAGGAAGATCATGGAGCAGTCTCCGGACATGCATAACGCCGAGATCTCCAAGAGGCTGGGGAAGCGGTGGAAAATGCTGAAGGACAGCGAGAAGATCCCGTTCATCCGGGAGGCGGAGCGGCTGCG-GCTCAAGCACATGGCCGACTACCCCGACTACAAGTACCGGCCCCGG",
+                  "midline": "||| || | ||||| |||| ||||||||||||||||||||||||       ||||  | |||||     |  ||   ||  | ||||| ||| | ||||||  |||| | |||||      ||||||| |  ||  ||| |  ||||||   |||||||||   |||||  |||||||||| || |  |||||||   ||  |||| || || || ||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 9,
+              "description": [
+                {
+                  "id": "gi|1832237592|ref|NC_047043.1|",
+                  "accession": "NC_047043",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 10, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 102812509,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 87.848,
+                  "score": 96,
+                  "evalue": 8.09521e-15,
+                  "identity": 150,
+                  "query_from": 149,
+                  "query_to": 366,
+                  "query_strand": "Plus",
+                  "hit_from": 17045405,
+                  "hit_to": 17045622,
+                  "hit_strand": "Plus",
+                  "align_len": 218,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGG",
+                  "hseq": "TCAAAAGGCCCATGAACGCCTTCATGGTGTGGTCGCAGATCGAGCGGCGCAAGATTATGGAGCAGTCGCCCGACATGCACAACGCCGAGATCTCCAAGCGGCTGGGCAAACGCTGGAAACTGCTCAAAGACAGCGACAAGATCCCTTTCATTCGGGAGGCGGAGCGGCTGCGTCTCAAGCACATGGCTGACTACCCCGACTACAAGTACCGGCCCAGG",
+                  "midline": "||||  |||||||||||||||||||||||||||| |      |||||||||||||     |  ||   ||| | ||||||||| | ||||||  |||||| ||||||      ||||||||  |    || |  || |||   || |||||    |||||  ||||||||||      |||||||   ||  |||| || || || ||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 10,
+              "description": [
+                {
+                  "id": "gi|1832237591|ref|NC_047044.1|",
+                  "accession": "NC_047044",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 11, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 102167733,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 87.848,
+                  "score": 96,
+                  "evalue": 8.09521e-15,
+                  "identity": 88,
+                  "query_from": 147,
+                  "query_to": 255,
+                  "query_strand": "Plus",
+                  "hit_from": 10160191,
+                  "hit_to": 10160299,
+                  "hit_strand": "Plus",
+                  "align_len": 111,
+                  "gaps": 4,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCG-GC-GCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGC",
+                  "hseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGG--GCGCAGGCAGCGCGCAGGAAGCTGGCGGACCAGTACCCGCACCTGCACAACGCCGAGCTCAGCAAGACGCTGGGC",
+                  "midline": "||||||||||||||||||||||||||||||||||   ||| ||||||| || | ||| ||||  |  || ||||  |  |||||||| | ||| ||||||||   ||||||"
+                }
+              ]
+            },
+            {
+              "num": 11,
+              "description": [
+                {
+                  "id": "gi|1832237596|ref|NC_047039.1|",
+                  "accession": "NC_047039",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 6, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 115599616,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 54.4857,
+                  "score": 59,
+                  "evalue": 0.000167002,
+                  "identity": 73,
+                  "query_from": 153,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 9086769,
+                  "hit_to": 9086870,
+                  "hit_strand": "Plus",
+                  "align_len": 102,
+                  "gaps": 0,
+                  "qseq": "GCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "GCGGCCCATGAACGCCTTCATGGTGTGGGCCAAGGACGAGAGGAAACGTCTGGCGGTGCAGAACCCGGACCTGCACAACGCGGAGCTCAGCAAGATGCTGGG",
+                  "midline": "|||||||||||||||||||||||||||| ||   |   || ||       ||||     |||||||  |  |||||||| ||||| ||||||||   |||||"
+                }
+              ]
+            },
+            {
+              "num": 12,
+              "description": [
+                {
+                  "id": "gi|1832237601|ref|NC_047034.1|",
+                  "accession": "NC_047034",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 1, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 183742880,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 48.1739,
+                  "score": 52,
+                  "evalue": 0.00710112,
+                  "identity": 74,
+                  "query_from": 149,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 32944807,
+                  "hit_to": 32944912,
+                  "hit_strand": "Plus",
+                  "align_len": 106,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "TCAAAAGGCCCATGAATGCCTTCATGGTGTGGGCCAAGGATGAGAGGAGGAAGATCCTCCAGGCCTTCCCAGACATGCACAATTCCAGCATCAGCAAGATCCTTGG",
+                  "midline": "||||  |||||||||| ||||||||||||||| ||   |   || || | |||||   ||| |    |||  | |||||||| ||    |||||||||  ||| ||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 362,
+            "db_len": 2378522223,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "genomic/9739/GCF_011762595.1"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_708289",
+          "query_title": "RHO T_truncatus",
+          "query_len": 1047,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1832237592|ref|NC_047043.1|",
+                  "accession": "NC_047043",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 10, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 102812509,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 651.401,
+                  "score": 721,
+                  "evalue": 0,
+                  "identity": 362,
+                  "query_from": 1,
+                  "query_to": 363,
+                  "query_strand": "Plus",
+                  "hit_from": 98342371,
+                  "hit_to": 98342733,
+                  "hit_strand": "Plus",
+                  "align_len": 363,
+                  "gaps": 0,
+                  "qseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCTGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCATGCGTACTTCGTCTTCGGGCCCACGGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGT",
+                  "hseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCTGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCACGCGTACTTCGTCTTCGGGCCCACGGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGT",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 437.702,
+                  "score": 484,
+                  "evalue": 4.17875e-120,
+                  "identity": 242,
+                  "query_from": 695,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 98346134,
+                  "hit_to": 98346375,
+                  "hit_strand": "Plus",
+                  "align_len": 242,
+                  "gaps": 0,
+                  "qseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 307.859,
+                  "score": 340,
+                  "evalue": 5.09976e-81,
+                  "identity": 183,
+                  "query_from": 361,
+                  "query_to": 547,
+                  "query_strand": "Plus",
+                  "hit_from": 98344435,
+                  "hit_to": 98344623,
+                  "hit_strand": "Plus",
+                  "align_len": 189,
+                  "gaps": 2,
+                  "qseq": "GGTGAAATTGCCCTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTTGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAACCATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGGCCCCCCTCGTCGGCTGGTCCAGGT-ACATCCCAGAG-GGAA",
+                  "hseq": "GGTGAAATTGCCCTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTGGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAACCATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGCCCCCCCTCGTCGGCTGGTCCAGGTAACATCACCGAGTGGAA",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||| ||||| | ||| ||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 293.432,
+                  "score": 324,
+                  "evalue": 1.1233e-76,
+                  "identity": 169,
+                  "query_from": 528,
+                  "query_to": 697,
+                  "query_strand": "Plus",
+                  "hit_from": 98345861,
+                  "hit_to": 98346030,
+                  "hit_strand": "Plus",
+                  "align_len": 171,
+                  "gaps": 2,
+                  "qseq": "CAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACACG-TCTCGCCAGGAGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAGCTGGTCTTCACAGTCAAGGAGG",
+                  "hseq": "CAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACACGCTCTCGCCA-GAGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAGCTGGTCTTCACAGTCAAGGAGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 5,
+                  "bit_score": 206.87,
+                  "score": 228,
+                  "evalue": 1.28281e-50,
+                  "identity": 114,
+                  "query_from": 934,
+                  "query_to": 1047,
+                  "query_strand": "Plus",
+                  "hit_from": 98347223,
+                  "hit_to": 98347336,
+                  "hit_strand": "Plus",
+                  "align_len": 114,
+                  "gaps": 0,
+                  "qseq": "CAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGGCAGGAACCCACTGGGTGACGATGAGGCCTCCACCACTGCCTCCAAGACAGAGACCAGCCAGGTGGCGCCTGCCTAA",
+                  "hseq": "CAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGGCAGGAACCCACTGGGTGACGATGAGGCCTCCACCACTGCCTCCAAGACAGAGACCAGCCAGGTGGCGCCTGCCTAA",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gi|1832237580|ref|NC_047055.1|",
+                  "accession": "NC_047055",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome X, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 128693445,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 81.5362,
+                  "score": 89,
+                  "evalue": 1.28508e-12,
+                  "identity": 145,
+                  "query_from": 725,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 1354425,
+                  "hit_to": 1354214,
+                  "hit_strand": "Minus",
+                  "align_len": 212,
+                  "gaps": 0,
+                  "qseq": "CCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "CCACCCGGAAGGCGGAGAAGGAGGTAACCCGCATGGTGATGGTGATGATCTTTGCGTACTGCCTCTGCTGGGGGCCCTACACATTCTTTGCGTGCTTCGCCGCTGCCCACCCTGGCTACGCCTTCCACCCTCTGGTGGCCGCCCTGCCATCCTACTTCGCCAAAAGTGCCACCATCTACAACCCCATTATCTATGTCTTTATGAACCGGCAG",
+                  "midline": "|||| | |||||| ||||||||||| || |||||||| ||  | ||| || |||| | |    ||||||||| ||||||  |   | | |||| || |       ||||||  |||| || |||   |||  |  |     || | || || | ||| ||||| ||| || |||||||||||||| | |||||  || | ||||||  ||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gi|1832237596|ref|NC_047039.1|",
+                  "accession": "NC_047039",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 6, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 115599616,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 49.9773,
+                  "score": 54,
+                  "evalue": 0.00217615,
+                  "identity": 30,
+                  "query_from": 1005,
+                  "query_to": 1036,
+                  "query_strand": "Plus",
+                  "hit_from": 111796749,
+                  "hit_to": 111796780,
+                  "hit_strand": "Plus",
+                  "align_len": 32,
+                  "gaps": 0,
+                  "qseq": "CACTGCCTCCAAGACAGAGACCAGCCAGGTGG",
+                  "hseq": "CACAGCCTCCAAGACAGAGAGCAGCCAGGTGG",
+                  "midline": "||| |||||||||||||||| |||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 362,
+            "db_len": 2378522223,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "genomic/9739/GCF_011762595.1"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_708290",
+          "query_title": "IL6 T_truncatus",
+          "query_len": 627,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1832237593|ref|NC_047042.1|",
+                  "accession": "NC_047042",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 9, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 105335178,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 323.188,
+                  "score": 357,
+                  "evalue": 1.35858e-85,
+                  "identity": 180,
+                  "query_from": 15,
+                  "query_to": 195,
+                  "query_strand": "Plus",
+                  "hit_from": 31070877,
+                  "hit_to": 31070697,
+                  "hit_strand": "Minus",
+                  "align_len": 181,
+                  "gaps": 0,
+                  "qseq": "CACAATCGCCTTCTCCCTGGGGCTGCTCCTGGTGACGGCTACTGCTTTCCCTACCCCGGGACCCCTGGGAGAAGATTTCAAAGATGATACCACTTCAGACAGACTACTCCTCACCTCTCCAGACAAAACTGAAGCTCTCATTAAGTACATCCTCGGCAAAATCTCCGCAATGAGAAAGGAG",
+                  "hseq": "CACAGTCGCCTTCTCCCTGGGGCTGCTCCTGGTGACGGCTACTGCTTTCCCTACCCCGGGACCCCTGGGAGAAGATTTCAAAGATGATACCACTTCAGACAGACTACTCCTCACCTCTCCAGACAAAACTGAAGCTCTCATTAAGTACATCCTCGGCAAAATCTCCGCAATGAGAAAGGAG",
+                  "midline": "|||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 313.269,
+                  "score": 346,
+                  "evalue": 7.03759e-83,
+                  "identity": 173,
+                  "query_from": 455,
+                  "query_to": 627,
+                  "query_strand": "Plus",
+                  "hit_from": 31067217,
+                  "hit_to": 31067045,
+                  "hit_strand": "Minus",
+                  "align_len": 173,
+                  "gaps": 0,
+                  "qseq": "AGGTCAAGAATCCAGATGAAGTAACCACCCCTGACCCAACCACAAATGCCAGCCTGATGAATAATCTGCAGTCGCAGAATGATGACTGGATGAAGAACACAAAGATTATCCTCATCCTGCGAAGCCTTGAGAACTTCCTGCAGTTCAGCCTGAGGGCTATTCGGATCAAGTAG",
+                  "hseq": "AGGTCAAGAATCCAGATGAAGTAACCACCCCTGACCCAACCACAAATGCCAGCCTGATGAATAATCTGCAGTCGCAGAATGATGACTGGATGAAGAACACAAAGATTATCCTCATCCTGCGAAGCCTTGAGAACTTCCTGCAGTTCAGCCTGAGGGCTATTCGGATCAAGTAG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 273.595,
+                  "score": 302,
+                  "evalue": 6.17337e-71,
+                  "identity": 151,
+                  "query_from": 308,
+                  "query_to": 458,
+                  "query_strand": "Plus",
+                  "hit_from": 31068641,
+                  "hit_to": 31068491,
+                  "hit_strand": "Minus",
+                  "align_len": 151,
+                  "gaps": 0,
+                  "qseq": "AGGAGACTTGCTTGATGAGAATCACCACCGGCCTTCTGGAGTATCAGATCTACCTGGACTACCTCCAGAATGAGTATGAGGGTGATAAGGGAAGCATCGAGGCTGTGCAGATTAGCAGCAAAGCACTGGCCCAGATCCTGAGGCAAAAGGT",
+                  "hseq": "AGGAGACTTGCTTGATGAGAATCACCACCGGCCTTCTGGAGTATCAGATCTACCTGGACTACCTCCAGAATGAGTATGAGGGTGATAAGGGAAGCATCGAGGCTGTGCAGATTAGCAGCAAAGCACTGGCCCAGATCCTGAGGCAAAAGGT",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 212.28,
+                  "score": 234,
+                  "evalue": 1.77026e-52,
+                  "identity": 117,
+                  "query_from": 194,
+                  "query_to": 310,
+                  "query_strand": "Plus",
+                  "hit_from": 31069593,
+                  "hit_to": 31069477,
+                  "hit_strand": "Minus",
+                  "align_len": 117,
+                  "gaps": 0,
+                  "qseq": "AGATGTGTGAGAAGTATGACAAGTGTGAAAACAGCAAGGAGGCACTGGCAGAAAACAACCTGAACCTTCCAAAAATGGCAGAAAAAGACGGATGCTTCCAATCTGGGTTCAATCAGG",
+                  "hseq": "AGATGTGTGAGAAGTATGACAAGTGTGAAAACAGCAAGGAGGCACTGGCAGAAAACAACCTGAACCTTCCAAAAATGGCAGAAAAAGACGGATGCTTCCAATCTGGGTTCAATCAGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 362,
+            "db_len": 2378522223,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "genomic/9739/GCF_011762595.1"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_708291",
+          "query_title": "TNF T_truncatus",
+          "query_len": 702,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1832237592|ref|NC_047043.1|",
+                  "accession": "NC_047043",
+                  "title": "Tursiops truncatus isolate mTurTru1 chromosome 10, mTurTru1.mat.Y, whole genome shotgun sequence",
+                  "taxid": 9739,
+                  "sciname": "Tursiops truncatus"
+                }
+              ],
+              "len": 102812509,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 756.898,
+                  "score": 838,
+                  "evalue": 0,
+                  "identity": 422,
+                  "query_from": 279,
+                  "query_to": 702,
+                  "query_strand": "Plus",
+                  "hit_from": 23231977,
+                  "hit_to": 23232400,
+                  "hit_strand": "Plus",
+                  "align_len": 424,
+                  "gaps": 0,
+                  "qseq": "AGCCAACCTCAGTACTCAGGGGCAGCTCCGGTGGCTGAACACATATGCCAACACCCTCCTGGCCAACAGCGTGAAGCTGGAAGACAACCAGCTGGTGGTGCCGACGGATGGGCTGTACCTCATCTACTCCCAGGTCCTCTTCAGGGGCCAAGGCTGCCCTTCCACCCACTTGTTCCTCACCCACACCATCAGCCGCATCGCTGTCTCCTACCCGTCCAAGGTCAACCTCCTCTCTGCCATCAAGAGCCCTTGCCAGAGGGAGACGCCAGAGGGGGCTGAGGCCAAGCCCTGGTACGAGCCCATCTACCAGGGAGGGGTCTTCCAGCTGGAGAAGGGTGATCGACTCAGTGCTGAGATCAACCTGCCCGACTATCTGGACTTTGCTAAGTCTGGGCAGGTCTACTTTGGGATCATTGCCCTGTGA",
+                  "hseq": "AGCCAACCTCAGTACTCAGGGGCAGCTCCGGTGGCTGAACACATATGCCAACACCCTCCTGGCCAACAGCGTGAAGCTGGAAGACAACCAGCTGGTGGTGCCGACGGATGGGCTGTACCTCATCTACTCCCAGGTCCTCTTCAGGGGCCAAGGCTGCCCTTCCACCCACTTGTTCCTCACCCACACCATCAGCCGCATCGCTGTCTCCTACCCGACCAAGGTCAACCTCCTCTCTGCCATCAAGAGCCCTTGCCAGAGGGAGACGCCAGAGGGGGCTGAGGCCAAGCCCTGGTACGAGCCCATCTACCAGGGAGGGGTCTTCCAGCTGGAGAAGGGTGATCGACTCAGTGCTGAGATCAACCTGCCCGACTATCTGGACTTTGCTGAGTCTGGGCAGGTCTACTTTGGGATCATTGCCCTGTGA",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 336.713,
+                  "score": 372,
+                  "evalue": 6.94539e-90,
+                  "identity": 186,
+                  "query_from": 1,
+                  "query_to": 186,
+                  "query_strand": "Plus",
+                  "hit_from": 23230631,
+                  "hit_to": 23230816,
+                  "hit_strand": "Plus",
+                  "align_len": 186,
+                  "gaps": 0,
+                  "qseq": "ATGAGCACTGAAAGCATGATCCGGGATGTGGAGCTGGCAGAGGAGGCGCTCTCCAAGACGGCAGGGGGCTCCCAGGGTTCCGGAAGGTGCTTGTGTCTCAGCCTCTTCTCCTTCTTCCTGGTCGCAGGAGGCACCACGCTCTTCTGCCTGCTGCACTTCGGGGTAATCGGCCCCCAGAGGGAAGAG",
+                  "hseq": "ATGAGCACTGAAAGCATGATCCGGGATGTGGAGCTGGCAGAGGAGGCGCTCTCCAAGACGGCAGGGGGCTCCCAGGGTTCCGGAAGGTGCTTGTGTCTCAGCCTCTTCTCCTTCTTCCTGGTCGCAGGAGGCACCACGCTCTTCTGCCTGCTGCACTTCGGGGTAATCGGCCCCCAGAGGGAAGAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 90.5531,
+                  "score": 99,
+                  "evalue": 1.63918e-15,
+                  "identity": 51,
+                  "query_from": 182,
+                  "query_to": 233,
+                  "query_strand": "Plus",
+                  "hit_from": 23231361,
+                  "hit_to": 23231412,
+                  "hit_strand": "Plus",
+                  "align_len": 52,
+                  "gaps": 0,
+                  "qseq": "AAGAGTTCCCAACTGGCTACTCCATCATCAGCCCTCTGGCTCAGACACTCAG",
+                  "hseq": "AACAGTTCCCAACTGGCTACTCCATCATCAGCCCTCTGGCTCAGACACTCAG",
+                  "midline": "|| |||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 87.848,
+                  "score": 96,
+                  "evalue": 5.7213e-15,
+                  "identity": 48,
+                  "query_from": 233,
+                  "query_to": 280,
+                  "query_strand": "Plus",
+                  "hit_from": 23231601,
+                  "hit_to": 23231648,
+                  "hit_strand": "Plus",
+                  "align_len": 48,
+                  "gaps": 0,
+                  "qseq": "GATCATCTTCTAAAACCTCAAGTAACAAGCCCGTAGCCCATGTTGTAG",
+                  "hseq": "GATCATCTTCTAAAACCTCAAGTAACAAGCCCGTAGCCCATGTTGTAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 362,
+            "db_len": 2378522223,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+]
+}
+

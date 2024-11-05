@@ -1,0 +1,1261 @@
+{
+"BlastOutput2": [
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/9733/RS_2023_02/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_490457",
+          "query_title": "IL10 T_truncatus",
+          "query_len": 537,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|2264203517|ref|NC_064559.1|",
+                  "accession": "NC_064559",
+                  "title": "Orcinus orca chromosome 1, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 212697510,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 294.334,
+                  "score": 325,
+                  "evalue": 6.22661e-77,
+                  "identity": 164,
+                  "query_from": 1,
+                  "query_to": 165,
+                  "query_strand": "Plus",
+                  "hit_from": 36524366,
+                  "hit_to": 36524202,
+                  "hit_strand": "Minus",
+                  "align_len": 165,
+                  "gaps": 0,
+                  "qseq": "ATGCCCAGCTCAGCACTGCTCTGTTGCCTGATCTTCCTGGCCAGGGTGGCAGCTGGCCAACACCAGGGCACCCAGGCTAAGGACAGCTGCATCCACTTCCCAGACAGCCTGCCCCACATGCTGCGGGAGCTCCGAGCTGCCTTCAGCAGCGTGAAGACTTTCTTT",
+                  "hseq": "ATGCCCAGCTCAGCACTGCTCTGTTGCCTGATCTTCCTGGCCAGGGTGGCAGCTGGCCAACACCAGGGCACCCAGGCTAAGGACAGCTGCATCCACTTCCCAGACAGCCTGCCCCACATGCTGCGGGAGCTCCGAGCTGCCTTCAGCAACGTGAAGACTTTCTTT",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 262.775,
+                  "score": 290,
+                  "evalue": 1.05441e-67,
+                  "identity": 151,
+                  "query_from": 224,
+                  "query_to": 378,
+                  "query_strand": "Plus",
+                  "hit_from": 36523031,
+                  "hit_to": 36522877,
+                  "hit_strand": "Minus",
+                  "align_len": 155,
+                  "gaps": 0,
+                  "qseq": "AGGGTTACCTGGGTTGCCAAGCCTTGTCGGAGATGATCCAGTTTTACCTGGAGGAGGTGATGCCGAAGGCTGAGGACCATGGCCCCAACATCAAAGAGCACGTGAACTCCCTGGGGGAGAAGCTGAAGACCCTCAGGCTGCAGCTGAGGCGCTGT",
+                  "hseq": "AGGGTTACCTGGGTTGCCAAGCCTTGTCGGAGATGATCCAGTTTTACCTAGAGGAGGTGATGCCGAAGGCTGAGGACCATGGCCCCAACATCAAAGAGCACGTGAACTCCCTGGGGGAGAAGCTGAAGACCCTCAGGCTGAGGCTGAGGCGTTGT",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||  ||||||||| |||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 171.705,
+                  "score": 189,
+                  "evalue": 5.12015e-40,
+                  "identity": 141,
+                  "query_from": 1,
+                  "query_to": 165,
+                  "query_strand": "Plus",
+                  "hit_from": 36377639,
+                  "hit_to": 36377808,
+                  "hit_strand": "Plus",
+                  "align_len": 171,
+                  "gaps": 7,
+                  "qseq": "ATGCCCAGCTCAGCACTGCTCTGTTGCCTGATCTTCCTGGCCAGGGTGGCAGCTGGCCAACACCAGGGCACCCAGGCTAAGGACAGCTGCATCCACTTCCCAGACAGCCTGCCCCACATGCTGCGGGAGCTCCGAGCTGC------CTTCAGCAGCGTGAAGACTTTCTTT",
+                  "hseq": "ATGCCCAGCTCAGCACTGATGTGTTGCCTGGTATTCAGGGATAGG-TGGGTGCCAGCCAAGACCAGAGCACCCAGTCTGAGAACAGCTGCATCCACTTCCCAGCCAGCCTGCCCCACATGCTCTGGGAGCCCTGAGCTGCCCCCTGCTTCAGCAGGGTGAAGACTTTCTTT",
+                  "midline": "|||||||||||||||||| | ||||||||| | |||  ||  ||| |||  ||  ||||| ||||| |||||||| || || ||||||||||||||||||||| ||||||||||||||||||  |||||| | |||||||      ||||||||| |||||||||||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 168.098,
+                  "score": 185,
+                  "evalue": 6.23762e-39,
+                  "identity": 94,
+                  "query_from": 443,
+                  "query_to": 537,
+                  "query_strand": "Plus",
+                  "hit_from": 36520679,
+                  "hit_to": 36520585,
+                  "hit_strand": "Minus",
+                  "align_len": 95,
+                  "gaps": 0,
+                  "qseq": "AGCTCCAAGAGAAGGGTGTCTACAAAGCCATGAGTGAGTTTGACATCTTCATCAACTACATAGAAGCCTACATGATAACAAAGATGAAAAACTGA",
+                  "hseq": "AGCTCCAAGAGAAGGGTGTCTACAAAGCCATGAGTGAGTTTGACATCTTCATCAACTACATAGAAGCCTACATGACAACAAAGATGAAAAACTGA",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||"
+                },
+                {
+                  "num": 5,
+                  "bit_score": 120.309,
+                  "score": 132,
+                  "evalue": 8.12063e-25,
+                  "identity": 66,
+                  "query_from": 379,
+                  "query_to": 444,
+                  "query_strand": "Plus",
+                  "hit_from": 36521827,
+                  "hit_to": 36521762,
+                  "hit_strand": "Minus",
+                  "align_len": 66,
+                  "gaps": 0,
+                  "qseq": "CATCGATTTCTGCCCTGTGAAAACAAGAGCAAAGCGGTGGAGCAGGTGAAGAGTGTCTTCAATAAG",
+                  "hseq": "CATCGATTTCTGCCCTGTGAAAACAAGAGCAAAGCGGTGGAGCAGGTGAAGAGTGTCTTCAATAAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 6,
+                  "bit_score": 111.292,
+                  "score": 122,
+                  "evalue": 4.20659e-22,
+                  "identity": 61,
+                  "query_from": 166,
+                  "query_to": 226,
+                  "query_strand": "Plus",
+                  "hit_from": 36523365,
+                  "hit_to": 36523305,
+                  "hit_strand": "Minus",
+                  "align_len": 61,
+                  "gaps": 0,
+                  "qseq": "CAAATGAATGACCAGCTGGACAACTCGTTGTTGAGCCAGTCTCTGCTGGAGGACTTTAAGG",
+                  "hseq": "CAAATGAATGACCAGCTGGACAACTCGTTGTTGAGCCAGTCTCTGCTGGAGGACTTTAAGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 448,
+            "db_len": 2647351467,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/9733/RS_2023_02/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_490458",
+          "query_title": "SOX2 T_truncatus",
+          "query_len": 981,
+          "query_masking": [
+            {
+              "from": 52,
+              "to": 122
+            },
+            {
+              "from": 779,
+              "to": 785
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|2264203513|ref|NC_064563.1|",
+                  "accession": "NC_064563",
+                  "title": "Orcinus orca chromosome 5, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 149304827,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 1765.88,
+                  "score": 1957,
+                  "evalue": 0,
+                  "identity": 980,
+                  "query_from": 1,
+                  "query_to": 981,
+                  "query_strand": "Plus",
+                  "hit_from": 64007474,
+                  "hit_to": 64008454,
+                  "hit_strand": "Plus",
+                  "align_len": 981,
+                  "gaps": 0,
+                  "qseq": "ATGTACAACATGATGGAGACGGAGCTGAAGCCGCCGGGCCCGCAGCAAACTTcggggggcggcggcggcggcggcggcggcggtggcggcggcggcaactccaccgcggcggcggcgggcggcAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGCCCCGGGCGGCAACAGCATGGCGAGCGGGGTCGGGGTGGGCGCCGGCCTCGGCGCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACGGCTGGAGCAACGGCAGCTACAGCATGATGCAGGACCAGCTGGGCTACCCGCAGCACCCGGGCCTCAACGCGCACGGCGCCGCTCAGATGCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCCGACCTACAGCATGTCCTATTCGCAGCAGGGCACCCCTGGCATGGCTCTTGGCTCCATGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGcccccccGTGGTTACCTCTTCTTCCCACTCCAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCCCGGCGCCGAGGTGCCGGAGCCCGCCGCCCCCAGCAGACTTCACATGTCGCAGCACTACCAGAGCGGCCCGGTGCCCGGCACGGCCATTAACGGCACACTGCCCCTCTCGCACATGTGA",
+                  "hseq": "ATGTACAACATGATGGAGACGGAGCTGAAGCCGCCGGGCCCGCAGCAAACTTCGGGGGGCGGCGGCGGCGGCGGCGGCGGCGGCGGCGGCGGCGGCAACTCCACCGCGGCGGCGGCGGGCGGCAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGCCCCGGGCGGCAACAGCATGGCGAGCGGGGTCGGGGTGGGCGCCGGCCTCGGCGCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACGGCTGGAGCAACGGCAGCTACAGCATGATGCAGGACCAGCTGGGCTACCCGCAGCACCCGGGCCTCAACGCGCACGGCGCCGCTCAGATGCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCCGACCTACAGCATGTCCTATTCGCAGCAGGGCACCCCTGGCATGGCTCTTGGCTCCATGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGCCCCCCCGTGGTTACCTCTTCTTCCCACTCCAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCCCGGCGCCGAGGTGCCGGAGCCCGCCGCCCCCAGCAGACTTCACATGTCGCAGCACTACCAGAGCGGCCCGGTGCCCGGCACGGCCATTAACGGCACACTGCCCCTCTCGCACATGTGA",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 294.334,
+                  "score": 325,
+                  "evalue": 1.16888e-76,
+                  "identity": 221,
+                  "query_from": 142,
+                  "query_to": 401,
+                  "query_strand": "Plus",
+                  "hit_from": 31156122,
+                  "hit_to": 31155863,
+                  "hit_strand": "Minus",
+                  "align_len": 260,
+                  "gaps": 0,
+                  "qseq": "GACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTA",
+                  "hseq": "GACCACATCAAGCGACCCATGAACGCCTTCATGGTATGGTCCCGAGGCCAGCGGCGCAAGATGGCCCAGGAAAACCCCAAGATGCACAACTCAGAGATCAGCAAACGCCTAGGCGCCGAATGGAAGCTTCTGTCCGAGGCAGAGAAGCGGCCGTACATTGACGAGGCCAAGAGGCTACGCGCGCAGCACATGAAGGAGCACCCTGACTACAAGTACCGGCCGCGGCGCAAGCCCAAGAACCTGCTCAAGAAGGACAGGTA",
+                  "midline": "|||| | ||||||| |||||||||||||||||||| |||||||| || |||||||||||||||||||| || |||||||||||||||||||| ||||||||||| ||||| |||||||| ||||| ||| |||| ||| | ||||||||||||| ||| |||||||||||| |||| || |||| |||||||||||| ||||| || || || |||||||| ||||| ||  ||||||  ||  | |||||||| | |||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gi|2264203496|ref|NC_064580.1|",
+                  "accession": "NC_064580",
+                  "title": "Orcinus orca chromosome X, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 132499998,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 460.244,
+                  "score": 509,
+                  "evalue": 1.33016e-126,
+                  "identity": 490,
+                  "query_from": 61,
+                  "query_to": 682,
+                  "query_strand": "Plus",
+                  "hit_from": 120968417,
+                  "hit_to": 120967799,
+                  "hit_strand": "Minus",
+                  "align_len": 640,
+                  "gaps": 39,
+                  "qseq": "GGCGGCGGCGGCGGCGGCGGCGGTGGCGGCGGCGGCAACTCCACCGCGGCGGCGGCGGGCGGCAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCT-CGCCCCGG----GCGGCAACAGCATGGCGAGCGGGGTCGGGGTGGGCGCCG---GCCTCGGCGCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACGGCTGGAGCAACGGCAGCTACAGCATGATGCAGGACCAGCTGGGCTACCCGCAGCACCCGGGCCT---CAACGCGCACGGCGCCGCTC-AGATGCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGA------CCAGCTCGCAGACCTACATGAACG",
+                  "hseq": "GGCGGCGGCAGCGGCGGTGGCGCGAGCGGCGGCGGCG--------GCGGCGGTGGCGGGGG-----CAGT-GACCAG----GACCGGGTGAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCTCTGGAGAACCCCAAGATGCACAACTCTGAGATCAGCAAGCGCTTGGGCGCCGACTGGAAACTGCTGACCGATGCCGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGCGCCGTGCACATGAAAGAATACCCGGACTACAAGTACCGGCCGCGCCGCAAGACCAAGACGCTGCTCAAGAAGGACAAGTACTCCCTGCCCGGCGGCCTGCTGCCCCCCGGAGCCGCGGCCGCCGC--CGCCGCCGCTGCCGCCGCCGCCGCCGCTAGCAGCCCGGTGGGCGTGGGCCAGCGCCTGGACACGTACACACACGTGAACGGCTGGGCCAACGGCGCGTACTCCCTGGTGCAGGAGCAGCTGGGCTACGCGCAGCCCGCGACCATGAGCAGCCCGC-CGCCGCCGCCCGCGCTGCCGCAGATGCACCGCTACGACATGGCCGGCCTGCAGTACAGCCCCATGATGCCGCCCGGCGCCCAGAGCTACATGAACG",
+                  "midline": "||||||||| ||||||| ||||   |||||||||||         ||||||| |||||| |     |||  || |||    ||||| || |||||||||||||||||||||||||||||||||||||||||||||||||||||||| |  ||||||||||||||||||||||| ||||||||||||||| |||||||||| ||||||||  || | ||  | |||||||||||||||||||||||||||||||||||||| ||  |||||||||| ||| ||||||| || || |||||||| || || || |||||||||||  | |||||||| |||||| | ||||| || || ||||| | ||||||    |||||  | ||   ||   ||  | ||  |  | |||||   ||  |   | |||||||  ||||||| ||||||  ||| | ||| |||||||||||  |||||||   |||  | || ||||||| |||||||||||| |||||| | ||  | |   || | ||| || |||||| |  | ||| ||  ||||||||||||||| ||  || ||||||||||| | ||||||      || || | |||| |||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 68.0109,
+                  "score": 74,
+                  "evalue": 8.43882e-09,
+                  "identity": 95,
+                  "query_from": 736,
+                  "query_to": 863,
+                  "query_strand": "Plus",
+                  "hit_from": 120967670,
+                  "hit_to": 120967552,
+                  "hit_strand": "Minus",
+                  "align_len": 129,
+                  "gaps": 11,
+                  "qseq": "CTTGGCTCCATGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGcccccccGTGGTTACCTCTTCTTCCCACTC-CAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCC",
+                  "hseq": "CTGGGCCCCATGGGCACGGTGGTGAAGACCGAGCCCAGCTCGCCGCCGCCCGC-----CATCG-CGTCGCACTCGCAGCGCGCG-TGCCT---CGGCGACCTGCGCGACATGATCAGCATGTACCTGCC",
+                  "midline": "|| ||| |||||||| ||||||| ||| ||||| |||||||    || ||||      | ||  | || ||||| ||| ||||  ||||    ||| ||||| || |||||||||||||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gi|2264203500|ref|NC_064576.1|",
+                  "accession": "NC_064576",
+                  "title": "Orcinus orca chromosome 18, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 78603316,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 399.831,
+                  "score": 442,
+                  "evalue": 1.09283e-108,
+                  "identity": 339,
+                  "query_from": 106,
+                  "query_to": 504,
+                  "query_strand": "Plus",
+                  "hit_from": 1341382,
+                  "hit_to": 1340976,
+                  "hit_strand": "Minus",
+                  "align_len": 412,
+                  "gaps": 18,
+                  "qseq": "GCGGCGGCGGCGG-GCGGCAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGC------CCCGGGCGGCAACAGCATGGCGAGCGGGG---TCGGGGTGGGCGCCGGCCTCGGCGCG--GGC-GTGAACCAGCGCATGGACAGC",
+                  "hseq": "GCGGCGGCGGCGGCGCGGGAGCCA--AGGCCAACCAGGACCGGGTGAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGACAGCGGCGCAAGATGGCCCAGGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAGGTCATGTCTGAAGCCGAGAAGCGGCCTTTCATCGACGAGGCCAAGCGGCTGCGCGCGCTGCACATGAAGGAGCACCCGGACTACAAGTACCGGCCGCGCCGCAAGACCAAGACGCTGCTCAAGAAGGACAAGTACTCGCTGGCCGGCGGGCTGCTGGCGGCAGGCGCGGGCGGCGGCGGCACGGC---CGTGGCCATGGGCGTGGGCGTGGGTGTGGGCGCGGCGGCAGTGGGCCAGCGCCTCGAGAGC",
+                  "midline": "||||||||||||| |||| | |||  ||  || || |||||| || |||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||  |  |||| ||  | ||||||||||| |||||||||||||||||||||||||| ||||||||||||||||| |||||||| || || |||||||| || || || |||||||||||  | |||||||| |||||| ||||| | || |||||||| ||      | ||||||||  | ||| |||   || ||   | || |||||||  ||  | ||||||  ||| |||  ||||||| | || |||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 307.859,
+                  "score": 340,
+                  "evalue": 5.30669e-81,
+                  "identity": 224,
+                  "query_from": 141,
+                  "query_to": 400,
+                  "query_strand": "Plus",
+                  "hit_from": 14999153,
+                  "hit_to": 14999412,
+                  "hit_strand": "Plus",
+                  "align_len": 260,
+                  "gaps": 0,
+                  "qseq": "GGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGT",
+                  "hseq": "GGACCACGTCAAGCGGCCCATGAATGCCTTCATGGTCTGGTCGCGGGCTCAGCGGCGCAAGATGGCCCAGGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAGCTGCTCACCGAATCGGAGAAGCGGCCGTTCATCGACGAGGCGAAGCGCCTGCGCGCCATGCACATGAAGGAGCACCCAGACTACAAGTATCGGCCGAGGCGCAAGCCCAAGACGCTGCTCAAGAAGGACAAGT",
+                  "midline": "||||| |||||||||||||||||| ||||||||||| ||||| || |  |||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||  |  | ||  |||||||||||||||||||||||||||| ||||| ||||| ||  ||||||||||||| ||||| || || || || |||||  |||| ||  ||||||||||  | |||||||| ||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 93.2581,
+                  "score": 102,
+                  "evalue": 2.11899e-16,
+                  "identity": 69,
+                  "query_from": 609,
+                  "query_to": 689,
+                  "query_strand": "Plus",
+                  "hit_from": 1340763,
+                  "hit_to": 1340683,
+                  "hit_strand": "Minus",
+                  "align_len": 81,
+                  "gaps": 0,
+                  "qseq": "GCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCC",
+                  "hseq": "GCAGCCCATGCACCGCTACGACATGGGCGCGCTGCAGTACAGCCCCATCTCCAACTCGCAGGGCTACATGAGCGCCTCGCC",
+                  "midline": "|||||||||||||||||||||| || |||| |||||||||| | ||||  ||| |||||||  |||||||| || ||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 65.3059,
+                  "score": 71,
+                  "evalue": 1.02806e-07,
+                  "identity": 91,
+                  "query_from": 748,
+                  "query_to": 874,
+                  "query_strand": "Plus",
+                  "hit_from": 1340549,
+                  "hit_to": 1340435,
+                  "hit_strand": "Minus",
+                  "align_len": 127,
+                  "gaps": 12,
+                  "qseq": "GGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGcccccccGTGGTTACCTCTTCTTCCCACTCCAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCCCGGCGCCGAGG",
+                  "hseq": "GGCTCGCTCGTCAAGTCGGAGCCGAGCGGCAGCCCGCCGGC-----CC----CGGCGCACTCGCGGGCGCCGTGCC---CCGGGGACCTGCGTGAGATGATCAGCATGTACTTGCCGGCCGGCGAGG",
+                  "midline": "|||||| | |||||||| ||| | |||  |||||| || |      ||    |  | |||||  ||||||| ||||   |||||||||| || || ||||||||||||||| | || | || |||||"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gi|2264203499|ref|NC_064577.1|",
+                  "accession": "NC_064577",
+                  "title": "Orcinus orca chromosome 19, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 61273037,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 203.264,
+                  "score": 224,
+                  "evalue": 1.6262e-49,
+                  "identity": 184,
+                  "query_from": 148,
+                  "query_to": 379,
+                  "query_strand": "Plus",
+                  "hit_from": 12009057,
+                  "hit_to": 12008826,
+                  "hit_strand": "Minus",
+                  "align_len": 232,
+                  "gaps": 0,
+                  "qseq": "GTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGA",
+                  "hseq": "GTGAAACGGCCCATGAACGCGTTCATGGTGTGGAGCTCCGCCCAGCGCCGCCAGATGGCGCAGCAGAACCCAAAGATGCACAACTCGGAGATCTCCAAGCGCCTGGGCGCGCAGTGGAAGCTGCTGGGGGAGGACGAGAAGCGGCCCTTCGTGGAAGAGGCTAAGCGGCTCCGGGCCCGGCACCTGCGCGACTACCCCGACTACAAGTACCGGCCCCGGCGCAAGACCAAGA",
+                  "midline": "|| || |||||||||||||| ||||||||||||  |  ||  ||||| ||| ||||||| ||  ||||||| |||||||||||||||||||||  |||||||||||||||  ||||||| ||  ||  ||||   ||||||||||| ||| | || ||||| |||||||| || || | |||| ||   ||  |||| || || || |||||||||||||| || |||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 94.1598,
+                  "score": 103,
+                  "evalue": 2.11899e-16,
+                  "identity": 77,
+                  "query_from": 277,
+                  "query_to": 370,
+                  "query_strand": "Plus",
+                  "hit_from": 26088613,
+                  "hit_to": 26088706,
+                  "hit_strand": "Plus",
+                  "align_len": 94,
+                  "gaps": 0,
+                  "qseq": "GAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGA",
+                  "hseq": "GAGAGCGAGAAGCGGCCCTTCGTGGAGGAGGCGGAGCGGCTGCGCGTGCAGCACAAGAAGGACCACCCGGATTACAAGTACCAGCCGCGGCGGA",
+                  "midline": "||||  ||||||||||| ||| | || |||||  |||||||||| | || ||||| |||||| ||||||||||| || |||| ||| |||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 85.143,
+                  "score": 93,
+                  "evalue": 1.09766e-13,
+                  "identity": 98,
+                  "query_from": 130,
+                  "query_to": 255,
+                  "query_strand": "Plus",
+                  "hit_from": 26087474,
+                  "hit_to": 26087596,
+                  "hit_strand": "Plus",
+                  "align_len": 128,
+                  "gaps": 7,
+                  "qseq": "AAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCG-GC-GCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGC",
+                  "hseq": "AAGAACAAGCCGCAC---GTCAAGCGGCCCATGAACGCCTTCATGGTGTGG--GCGCAGGCGGCGCGCAGGAAGCTCGCCGACCAGTACCCACACCTGCACAACGCCGAGCTCAGCAAGACGCTGGGC",
+                  "midline": "|||||||  ||| ||   |||||||||||||||||||||||||||||||||   ||| ||| ||| || | ||| | ||| |  || ||||  |  |||||||| | ||| ||||||||   ||||||"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gi|2264203502|ref|NC_064574.1|",
+                  "accession": "NC_064574",
+                  "title": "Orcinus orca chromosome 16, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 87999559,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 100.472,
+                  "score": 110,
+                  "evalue": 1.42776e-18,
+                  "identity": 158,
+                  "query_from": 151,
+                  "query_to": 365,
+                  "query_strand": "Plus",
+                  "hit_from": 28007187,
+                  "hit_to": 28007401,
+                  "hit_strand": "Plus",
+                  "align_len": 220,
+                  "gaps": 10,
+                  "qseq": "AAGCGGCCCATGAACGCCTTCATGGTGTGGTCCC-GCGGGCAGCGGCGCAAGAT---GGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG-CGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCG",
+                  "hseq": "AAGAGACCGATGAACGCGTTCATGGTGTGGTCGCAGCACGAA-CGGCGGAAGATCATGGACCAGTGG---CCCGACATGCACAACGCCGAGATCTCCAAGCGCCTGGGCCGCCG-CTGGCAGCTGCTGCAGGACTCGGAGAAGATCCCGTTCGTGCGGGAGGCGGAGCGGCTGCGCCTCAAGCACATGGCGGATTACCCGGACTACAAGTACCGGCCGCG",
+                  "midline": "||| | || |||||||| |||||||||||||| | ||  | | ||||| |||||   || |||   |   ||| | ||||||||| | ||||||  |||||||||||| |||||  ||| | ||  ||  |||  ||||||||   |||||| |    |||||  ||||||||||      |||||||  |||  ||||||| || || |||||||| ||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 83.3396,
+                  "score": 91,
+                  "evalue": 3.83122e-13,
+                  "identity": 86,
+                  "query_from": 147,
+                  "query_to": 255,
+                  "query_strand": "Plus",
+                  "hit_from": 50206356,
+                  "hit_to": 50206464,
+                  "hit_strand": "Plus",
+                  "align_len": 111,
+                  "gaps": 4,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCA--GCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGC",
+                  "hseq": "CGTGAAGCGGCCCATGAACGCCTTCATGGTGTGG--GCGCAAGCAGCGCGCCGCAAGCTGGCGGATCAGTACCCGCACCTGCACAACGCGGAACTCAGCAAGACGCTGGGC",
+                  "midline": "||| ||||||||||||||||||||||||||||||   |||  |||  ||| |||||| ||||  |  || ||||  |  |||||||| ||||  ||||||||   ||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 61.6992,
+                  "score": 67,
+                  "evalue": 1.25243e-06,
+                  "identity": 83,
+                  "query_from": 145,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 1040365,
+                  "hit_to": 1040474,
+                  "hit_strand": "Plus",
+                  "align_len": 113,
+                  "gaps": 6,
+                  "qseq": "CGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAA---GATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "CGCATCCGGCGGCCCATGAATGCCTTCATGGTGTGG--GCGAAGG-ACGAGCGCAAGCGGCTGGCGCAGCAGAACCCAGACCTGCACAACGCGGTGCTCAGCAAGATGCTGGG",
+                  "midline": "||| ||  |||||||||||| |||||||||||||||   ||  || |   ||||||   | |||| ||  |||||||  |  |||||||| ||| | ||||||||   |||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 52.6823,
+                  "score": 57,
+                  "evalue": 0.000648776,
+                  "identity": 66,
+                  "query_from": 281,
+                  "query_to": 371,
+                  "query_strand": "Plus",
+                  "hit_from": 1040646,
+                  "hit_to": 1040736,
+                  "hit_strand": "Plus",
+                  "align_len": 91,
+                  "gaps": 0,
+                  "qseq": "CGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAA",
+                  "hseq": "CGGAGAAGCGGCCCTTTGTGGAGGAGGCGGAGCGCCTACGCGTGCAGCACCTGCGCGACCACCCCAACTACAAGTACCGGCCGCGCCGCAA",
+                  "midline": "||||||||||||| ||  | || |||||  |||| || || | || |||| ||   || |||||  | || || |||||||| || || ||"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gi|2264203501|ref|NC_064575.1|",
+                  "accession": "NC_064575",
+                  "title": "Orcinus orca chromosome 17, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 87542868,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 94.1598,
+                  "score": 103,
+                  "evalue": 2.11899e-16,
+                  "identity": 74,
+                  "query_from": 281,
+                  "query_to": 369,
+                  "query_strand": "Plus",
+                  "hit_from": 3616513,
+                  "hit_to": 3616601,
+                  "hit_strand": "Plus",
+                  "align_len": 89,
+                  "gaps": 0,
+                  "qseq": "CGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGG",
+                  "hseq": "CGGAGAAGCGGCCCTTCGTGGAGGAGGCCGAGCGGCTGCGCGTGCAGCACATGCAGGACCACCCGAACTACAAGTACCGGCCGCGGCGG",
+                  "midline": "||||||||||||| ||| | || |||||| |||||||||| | || ||||||| |||| |||||| | || || |||||||| ||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 52.6823,
+                  "score": 57,
+                  "evalue": 0.000648776,
+                  "identity": 81,
+                  "query_from": 145,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 3615791,
+                  "hit_to": 3615900,
+                  "hit_strand": "Plus",
+                  "align_len": 113,
+                  "gaps": 6,
+                  "qseq": "CGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAG---ATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "CGCATCCGGCGGCCGATGAACGCCTTCATGGTGTGG--GCGAAGG-ACGAACGCAAGCGCCTGGCGCAGCAGAACCCGGACCTGCACAACGCCGAGCTGAGCAAGATGCTGGG",
+                  "midline": "||| ||  |||||| |||||||||||||||||||||   ||  || |    ||||||    |||| ||  |||||||  |  |||||||| | ||| | ||||||   |||||"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gi|2264203508|ref|NC_064568.1|",
+                  "accession": "NC_064568",
+                  "title": "Orcinus orca chromosome 10, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 105965762,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 87.848,
+                  "score": 96,
+                  "evalue": 9.01016e-15,
+                  "identity": 150,
+                  "query_from": 149,
+                  "query_to": 366,
+                  "query_strand": "Plus",
+                  "hit_from": 88946504,
+                  "hit_to": 88946287,
+                  "hit_strand": "Minus",
+                  "align_len": 218,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGG",
+                  "hseq": "TCAAAAGGCCCATGAACGCCTTCATGGTGTGGTCGCAGATCGAGCGGCGCAAGATTATGGAGCAGTCGCCCGACATGCACAACGCCGAGATCTCCAAGCGGCTGGGCAAACGTTGGAAACTGCTCAAAGACAGCGACAAGATCCCTTTCATTCGGGAGGCGGAGCGGCTGCGTCTCAAGCACATGGCTGACTACCCCGACTACAAGTACCGGCCCAGG",
+                  "midline": "||||  |||||||||||||||||||||||||||| |      |||||||||||||     |  ||   ||| | ||||||||| | ||||||  |||||| ||||||      ||||||||  |    || |  || |||   || |||||    |||||  ||||||||||      |||||||   ||  |||| || || || ||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gi|2264203507|ref|NC_064569.1|",
+                  "accession": "NC_064569",
+                  "title": "Orcinus orca chromosome 11, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 102994062,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 87.848,
+                  "score": 96,
+                  "evalue": 9.01016e-15,
+                  "identity": 88,
+                  "query_from": 147,
+                  "query_to": 255,
+                  "query_strand": "Plus",
+                  "hit_from": 92873248,
+                  "hit_to": 92873140,
+                  "hit_strand": "Minus",
+                  "align_len": 111,
+                  "gaps": 4,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCG-GC-GCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGC",
+                  "hseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGG--GCGCAGGCAGCGCGCAGGAAGCTGGCGGACCAGTACCCGCACCTGCACAACGCCGAGCTCAGCAAGACGCTGGGC",
+                  "midline": "||||||||||||||||||||||||||||||||||   ||| ||||||| || | ||| ||||  |  || ||||  |  |||||||| | ||| ||||||||   ||||||"
+                }
+              ]
+            },
+            {
+              "num": 9,
+              "description": [
+                {
+                  "id": "gi|2264203505|ref|NC_064571.1|",
+                  "accession": "NC_064571",
+                  "title": "Orcinus orca chromosome 13, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 91537726,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 85.143,
+                  "score": 93,
+                  "evalue": 1.09766e-13,
+                  "identity": 157,
+                  "query_from": 140,
+                  "query_to": 366,
+                  "query_strand": "Plus",
+                  "hit_from": 87902593,
+                  "hit_to": 87902367,
+                  "hit_strand": "Minus",
+                  "align_len": 228,
+                  "gaps": 2,
+                  "qseq": "CGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCT-GCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGG",
+                  "hseq": "CGGGCCACATCAAGAGGCCGATGAACGCGTTCATGGTGTGGTCCAAGATCGAGCGCAGGAAGATCATGGAGCAGTCTCCGGACATGCATAACGCCGAGATCTCCAAGAGGCTGGGGAAGCGGTGGAAAATGCTGAAGGACAGCGAGAAGATCCCGTTCATCCGGGAGGCGGAGCGGCTGCG-GCTCAAGCACATGGCCGACTACCCCGACTACAAGTACCGGCCCCGG",
+                  "midline": "||| || | ||||| |||| |||||||| |||||||||||||||       ||||  | |||||     |  ||   ||  | ||||| ||| | ||||||  |||| | |||||      ||||||| |  ||  ||| |  ||||||   |||||||||   |||||  |||||||||| || |  |||||||   ||  |||| || || || ||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 10,
+              "description": [
+                {
+                  "id": "gi|2264203512|ref|NC_064564.1|",
+                  "accession": "NC_064564",
+                  "title": "Orcinus orca chromosome 6, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 120877333,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 54.4857,
+                  "score": 59,
+                  "evalue": 0.000185877,
+                  "identity": 73,
+                  "query_from": 153,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 13474933,
+                  "hit_to": 13475034,
+                  "hit_strand": "Plus",
+                  "align_len": 102,
+                  "gaps": 0,
+                  "qseq": "GCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "GCGGCCCATGAACGCCTTCATGGTGTGGGCCAAGGACGAGAGGAAACGTCTGGCGGTGCAGAACCCGGACCTGCACAACGCGGAGCTCAGCAAGATGCTGGG",
+                  "midline": "|||||||||||||||||||||||||||| ||   |   || ||       ||||     |||||||  |  |||||||| ||||| ||||||||   |||||"
+                }
+              ]
+            },
+            {
+              "num": 11,
+              "description": [
+                {
+                  "id": "gi|2264203517|ref|NC_064559.1|",
+                  "accession": "NC_064559",
+                  "title": "Orcinus orca chromosome 1, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 212697510,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 52.6823,
+                  "score": 57,
+                  "evalue": 0.000648776,
+                  "identity": 75,
+                  "query_from": 149,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 34177121,
+                  "hit_to": 34177226,
+                  "hit_strand": "Plus",
+                  "align_len": 106,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "TCAAGAGGCCCATGAATGCCTTCATGGTGTGGGCCAAGGATGAGAGGAGGAAGATCCTCCAGGCCTTCCCAGACATGCACAATTCCAGCATCAGCAAGATCCTTGG",
+                  "midline": "||||| |||||||||| ||||||||||||||| ||   |   || || | |||||   ||| |    |||  | |||||||| ||    |||||||||  ||| ||"
+                }
+              ]
+            },
+            {
+              "num": 12,
+              "description": [
+                {
+                  "id": "gi|2264203516|ref|NC_064560.1|",
+                  "accession": "NC_064560",
+                  "title": "Orcinus orca chromosome 2, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 201926916,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 49.0756,
+                  "score": 53,
+                  "evalue": 0.0079037,
+                  "identity": 49,
+                  "query_from": 26,
+                  "query_to": 87,
+                  "query_strand": "Plus",
+                  "hit_from": 197212180,
+                  "hit_to": 197212237,
+                  "hit_strand": "Plus",
+                  "align_len": 62,
+                  "gaps": 4,
+                  "qseq": "TGAAGCCGCCGGGCCCGCAGCAAACTTcggggggcggcggcggcggcggcggcggcggtggc",
+                  "hseq": "TGAAGCCGCCGGG--CGAGGC--GCGGCCGGGGGCGGCGGCGGCGGCGGCCGCAGCGGCGGC",
+                  "midline": "|||||||||||||  ||  ||   |  | ||||||||||||||||||||| || |||| |||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 448,
+            "db_len": 2647351467,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/9733/RS_2023_02/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_490459",
+          "query_title": "RHO T_truncatus",
+          "query_len": 1047,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|2264203508|ref|NC_064568.1|",
+                  "accession": "NC_064568",
+                  "title": "Orcinus orca chromosome 10, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 105965762,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 637.875,
+                  "score": 706,
+                  "evalue": 2.56561e-180,
+                  "identity": 359,
+                  "query_from": 1,
+                  "query_to": 363,
+                  "query_strand": "Plus",
+                  "hit_from": 4537912,
+                  "hit_to": 4537550,
+                  "hit_strand": "Minus",
+                  "align_len": 363,
+                  "gaps": 0,
+                  "qseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCTGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCATGCGTACTTCGTCTTCGGGCCCACGGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGT",
+                  "hseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCCGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCACGCGTACTTCATCTTCGGGCCCACAGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGT",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||| ||||||||||||| |||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 437.702,
+                  "score": 484,
+                  "evalue": 4.65104e-120,
+                  "identity": 242,
+                  "query_from": 695,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 4534162,
+                  "hit_to": 4533921,
+                  "hit_strand": "Minus",
+                  "align_len": 242,
+                  "gaps": 0,
+                  "qseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 299.744,
+                  "score": 331,
+                  "evalue": 2.94032e-78,
+                  "identity": 170,
+                  "query_from": 361,
+                  "query_to": 533,
+                  "query_strand": "Plus",
+                  "hit_from": 4535865,
+                  "hit_to": 4535693,
+                  "hit_strand": "Minus",
+                  "align_len": 173,
+                  "gaps": 0,
+                  "qseq": "GGTGAAATTGCCCTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTTGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAACCATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGGCCCCCCTCGTCGGCTGGTCCAGGTA",
+                  "hseq": "GGTGAAATTGCCCTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTGGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAACCATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGCCCCCGCTCGTCGGCTGGTCCAGGTA",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||| ||||||||||||||||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 293.432,
+                  "score": 324,
+                  "evalue": 1.25025e-76,
+                  "identity": 169,
+                  "query_from": 528,
+                  "query_to": 697,
+                  "query_strand": "Plus",
+                  "hit_from": 4534435,
+                  "hit_to": 4534266,
+                  "hit_strand": "Minus",
+                  "align_len": 171,
+                  "gaps": 2,
+                  "qseq": "CAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACACG-TCTCGCCAGGAGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAGCTGGTCTTCACAGTCAAGGAGG",
+                  "hseq": "CAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACACGCTCTCGCCAG-AGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAGCTGGTCTTCACAGTCAAGGAGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 5,
+                  "bit_score": 206.87,
+                  "score": 228,
+                  "evalue": 1.4278e-50,
+                  "identity": 114,
+                  "query_from": 934,
+                  "query_to": 1047,
+                  "query_strand": "Plus",
+                  "hit_from": 4533070,
+                  "hit_to": 4532957,
+                  "hit_strand": "Minus",
+                  "align_len": 114,
+                  "gaps": 0,
+                  "qseq": "CAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGGCAGGAACCCACTGGGTGACGATGAGGCCTCCACCACTGCCTCCAAGACAGAGACCAGCCAGGTGGCGCCTGCCTAA",
+                  "hseq": "CAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGGCAGGAACCCACTGGGTGACGATGAGGCCTCCACCACTGCCTCCAAGACAGAGACCAGCCAGGTGGCGCCTGCCTAA",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gi|2264203496|ref|NC_064580.1|",
+                  "accession": "NC_064580",
+                  "title": "Orcinus orca chromosome X, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 132499998,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 77.0278,
+                  "score": 84,
+                  "evalue": 1.74249e-11,
+                  "identity": 144,
+                  "query_from": 725,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 131117944,
+                  "hit_to": 131118155,
+                  "hit_strand": "Plus",
+                  "align_len": 212,
+                  "gaps": 0,
+                  "qseq": "CCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "CCACCCGGAAGGCGGAGAAGGAGGTAACCCGCATGGTGATGGTGATGATCTTTGCGTACTGCCTCTGCTGGGGGCCCTACACATTCTTTGCATGCTTCGCCGCTGCCCACCCTGGCTACGCCTTCCACCCTCTGGTGGCCGCCCTGCCATCCTACTTCGCCAAAAGTGCCACCATCTACAACCCCATTATCTATGTCTTTATGAACCGGCAG",
+                  "midline": "|||| | |||||| ||||||||||| || |||||||| ||  | ||| || |||| | |    ||||||||| ||||||  |   | | || | || |       ||||||  |||| || |||   |||  |  |     || | || || | ||| ||||| ||| || |||||||||||||| | |||||  || | ||||||  ||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gi|2264203512|ref|NC_064564.1|",
+                  "accession": "NC_064564",
+                  "title": "Orcinus orca chromosome 6, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 120877333,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 49.9773,
+                  "score": 54,
+                  "evalue": 0.0024221,
+                  "identity": 30,
+                  "query_from": 1005,
+                  "query_to": 1036,
+                  "query_strand": "Plus",
+                  "hit_from": 116958528,
+                  "hit_to": 116958559,
+                  "hit_strand": "Plus",
+                  "align_len": 32,
+                  "gaps": 0,
+                  "qseq": "CACTGCCTCCAAGACAGAGACCAGCCAGGTGG",
+                  "hseq": "CACAGCCTCCAAGACAGAGAGCAGCCAGGTGG",
+                  "midline": "||| |||||||||||||||| |||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 448,
+            "db_len": 2647351467,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/9733/RS_2023_02/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_490460",
+          "query_title": "IL6 T_truncatus",
+          "query_len": 627,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|2264203509|ref|NC_064567.1|",
+                  "accession": "NC_064567",
+                  "title": "Orcinus orca chromosome 9, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 105981142,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 323.188,
+                  "score": 357,
+                  "evalue": 1.51213e-85,
+                  "identity": 180,
+                  "query_from": 15,
+                  "query_to": 195,
+                  "query_strand": "Plus",
+                  "hit_from": 74627281,
+                  "hit_to": 74627461,
+                  "hit_strand": "Plus",
+                  "align_len": 181,
+                  "gaps": 0,
+                  "qseq": "CACAATCGCCTTCTCCCTGGGGCTGCTCCTGGTGACGGCTACTGCTTTCCCTACCCCGGGACCCCTGGGAGAAGATTTCAAAGATGATACCACTTCAGACAGACTACTCCTCACCTCTCCAGACAAAACTGAAGCTCTCATTAAGTACATCCTCGGCAAAATCTCCGCAATGAGAAAGGAG",
+                  "hseq": "CACAGTCGCCTTCTCCCTGGGGCTGCTCCTGGTGACGGCTACTGCTTTCCCTACCCCGGGACCCCTGGGAGAAGATTTCAAAGATGATACCACTTCAGACAGACTACTCCTCACCTCTCCAGACAAAACTGAAGCTCTCATTAAGTACATCCTCGGCAAAATCTCCGCAATGAGAAAGGAG",
+                  "midline": "|||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 308.761,
+                  "score": 341,
+                  "evalue": 3.33068e-81,
+                  "identity": 172,
+                  "query_from": 455,
+                  "query_to": 627,
+                  "query_strand": "Plus",
+                  "hit_from": 74630941,
+                  "hit_to": 74631113,
+                  "hit_strand": "Plus",
+                  "align_len": 173,
+                  "gaps": 0,
+                  "qseq": "AGGTCAAGAATCCAGATGAAGTAACCACCCCTGACCCAACCACAAATGCCAGCCTGATGAATAATCTGCAGTCGCAGAATGATGACTGGATGAAGAACACAAAGATTATCCTCATCCTGCGAAGCCTTGAGAACTTCCTGCAGTTCAGCCTGAGGGCTATTCGGATCAAGTAG",
+                  "hseq": "AGGTCAAGAATCCAGATGAAGTAACCACCCCTGACCCAACCACAAATGCCAGCCTGATGAATAATCTGCAGTCGCAGAACGATGACTGGATGAAGAACACAAAGATTATCCTCATCCTGCGAAGCCTTGAGAACTTCCTGCAGTTCAGCCTGAGGGCTATTCGGATCAAGTAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 264.578,
+                  "score": 292,
+                  "evalue": 3.55932e-68,
+                  "identity": 149,
+                  "query_from": 308,
+                  "query_to": 458,
+                  "query_strand": "Plus",
+                  "hit_from": 74629517,
+                  "hit_to": 74629667,
+                  "hit_strand": "Plus",
+                  "align_len": 151,
+                  "gaps": 0,
+                  "qseq": "AGGAGACTTGCTTGATGAGAATCACCACCGGCCTTCTGGAGTATCAGATCTACCTGGACTACCTCCAGAATGAGTATGAGGGTGATAAGGGAAGCATCGAGGCTGTGCAGATTAGCAGCAAAGCACTGGCCCAGATCCTGAGGCAAAAGGT",
+                  "hseq": "AGGAGACTTGCTTGATGAGAATCACCACCGGTCTTCTGGAGTATCAGATATACCTGGACTACCTCCAGAATGAGTATGAGGGTGATAAGGGAAGCATCGAGGCTGTGCAGATTAGCAGCAAAGCACTGGCCCAGATCCTGAGGCAAAAGGT",
+                  "midline": "||||||||||||||||||||||||||||||| ||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 212.28,
+                  "score": 234,
+                  "evalue": 1.97034e-52,
+                  "identity": 117,
+                  "query_from": 194,
+                  "query_to": 310,
+                  "query_strand": "Plus",
+                  "hit_from": 74628565,
+                  "hit_to": 74628681,
+                  "hit_strand": "Plus",
+                  "align_len": 117,
+                  "gaps": 0,
+                  "qseq": "AGATGTGTGAGAAGTATGACAAGTGTGAAAACAGCAAGGAGGCACTGGCAGAAAACAACCTGAACCTTCCAAAAATGGCAGAAAAAGACGGATGCTTCCAATCTGGGTTCAATCAGG",
+                  "hseq": "AGATGTGTGAGAAGTATGACAAGTGTGAAAACAGCAAGGAGGCACTGGCAGAAAACAACCTGAACCTTCCAAAAATGGCAGAAAAAGACGGATGCTTCCAATCTGGGTTCAATCAGG",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 448,
+            "db_len": 2647351467,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/9733/RS_2023_02/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_490461",
+          "query_title": "TNF T_truncatus",
+          "query_len": 702,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|2264203508|ref|NC_064568.1|",
+                  "accession": "NC_064568",
+                  "title": "Orcinus orca chromosome 10, mOrcOrc1.1",
+                  "taxid": 9733,
+                  "sciname": "Orcinus orca"
+                }
+              ],
+              "len": 105965762,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 743.373,
+                  "score": 823,
+                  "evalue": 0,
+                  "identity": 419,
+                  "query_from": 279,
+                  "query_to": 702,
+                  "query_strand": "Plus",
+                  "hit_from": 82783485,
+                  "hit_to": 82783062,
+                  "hit_strand": "Minus",
+                  "align_len": 424,
+                  "gaps": 0,
+                  "qseq": "AGCCAACCTCAGTACTCAGGGGCAGCTCCGGTGGCTGAACACATATGCCAACACCCTCCTGGCCAACAGCGTGAAGCTGGAAGACAACCAGCTGGTGGTGCCGACGGATGGGCTGTACCTCATCTACTCCCAGGTCCTCTTCAGGGGCCAAGGCTGCCCTTCCACCCACTTGTTCCTCACCCACACCATCAGCCGCATCGCTGTCTCCTACCCGTCCAAGGTCAACCTCCTCTCTGCCATCAAGAGCCCTTGCCAGAGGGAGACGCCAGAGGGGGCTGAGGCCAAGCCCTGGTACGAGCCCATCTACCAGGGAGGGGTCTTCCAGCTGGAGAAGGGTGATCGACTCAGTGCTGAGATCAACCTGCCCGACTATCTGGACTTTGCTAAGTCTGGGCAGGTCTACTTTGGGATCATTGCCCTGTGA",
+                  "hseq": "AGCCAACCTCAGTACTCAGGGGCAGCTCCGGTGGCTGAACACATATGCCAACACCCTCCTGGCCAACAGCGTGAAGCTGGAAGACAACCAGCTGGTGGTGCCAACGGACGGGCTGTACCTCATCTACTCCCAGGTCCTCTTCAGGGGCCAAGGCTGCCCTTCCACCCACTTGTTCCTCACCCACACCATCAGCCGCATCGCTGTCTCCTACCCGACCAAGGTCAACCTCCTCTCTGCCATCAAGAGCCCTTGCCAGAGGGAGACGCCAGAGGGGGCTGAGGCCAAGCCCTGGTATGAGCCCATCTACCAGGGAGGGGTCTTCCAGCTGGAGAAGGGTGATCGACTCAGTGCTGAGATCAACCTGCCCGACTATCTGGACTTTGCTGAGTCTGGGCAGGTCTACTTTGGGATCATTGCCCTGTGA",
+                  "midline": "|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 336.713,
+                  "score": 372,
+                  "evalue": 7.73038e-90,
+                  "identity": 186,
+                  "query_from": 1,
+                  "query_to": 186,
+                  "query_strand": "Plus",
+                  "hit_from": 82784840,
+                  "hit_to": 82784655,
+                  "hit_strand": "Minus",
+                  "align_len": 186,
+                  "gaps": 0,
+                  "qseq": "ATGAGCACTGAAAGCATGATCCGGGATGTGGAGCTGGCAGAGGAGGCGCTCTCCAAGACGGCAGGGGGCTCCCAGGGTTCCGGAAGGTGCTTGTGTCTCAGCCTCTTCTCCTTCTTCCTGGTCGCAGGAGGCACCACGCTCTTCTGCCTGCTGCACTTCGGGGTAATCGGCCCCCAGAGGGAAGAG",
+                  "hseq": "ATGAGCACTGAAAGCATGATCCGGGATGTGGAGCTGGCAGAGGAGGCGCTCTCCAAGACGGCAGGGGGCTCCCAGGGTTCCGGAAGGTGCTTGTGTCTCAGCCTCTTCTCCTTCTTCCTGGTCGCAGGAGGCACCACGCTCTTCTGCCTGCTGCACTTCGGGGTAATCGGCCCCCAGAGGGAAGAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 90.5531,
+                  "score": 99,
+                  "evalue": 1.82445e-15,
+                  "identity": 51,
+                  "query_from": 182,
+                  "query_to": 233,
+                  "query_strand": "Plus",
+                  "hit_from": 82784101,
+                  "hit_to": 82784050,
+                  "hit_strand": "Minus",
+                  "align_len": 52,
+                  "gaps": 0,
+                  "qseq": "AAGAGTTCCCAACTGGCTACTCCATCATCAGCCCTCTGGCTCAGACACTCAG",
+                  "hseq": "AACAGTTCCCAACTGGCTACTCCATCATCAGCCCTCTGGCTCAGACACTCAG",
+                  "midline": "|| |||||||||||||||||||||||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 87.848,
+                  "score": 96,
+                  "evalue": 6.36794e-15,
+                  "identity": 48,
+                  "query_from": 233,
+                  "query_to": 280,
+                  "query_strand": "Plus",
+                  "hit_from": 82783861,
+                  "hit_to": 82783814,
+                  "hit_strand": "Minus",
+                  "align_len": 48,
+                  "gaps": 0,
+                  "qseq": "GATCATCTTCTAAAACCTCAAGTAACAAGCCCGTAGCCCATGTTGTAG",
+                  "hseq": "GATCATCTTCTAAAACCTCAAGTAACAAGCCCGTAGCCCATGTTGTAG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 448,
+            "db_len": 2647351467,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+]
+}
+

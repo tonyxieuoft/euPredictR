@@ -1,0 +1,76 @@
+
+#' Sample BLAST Output Data in RawBlastList Format
+#'
+#' Results obtained when query coding sequences from the common
+#' bottlenose dolphin (T. truncatus) for the genes IL10, Il6, TNF, SOX2,
+#' and RHO were used to blast all subject genomic sequences from a lamprey
+#' (P. marinus), zebrafish (D. rerio), common mouse (M. musculus), orca
+#' (O. orca) and the bottlenose dolphin itself as a control. NCBI's blastn was
+#' the type of BLAST used, along with the default parameters.
+#'
+#' @source NCBI resources. The transcript codes for the query coding sequences
+#' are XM_004312229.3, XM_004330286, NM_001280615.1, XM_004311784.3 and
+#' NM_001280659.1. The subject genomic sequences used were the respective
+#' reference genome assemblies for each of the above species. See references
+#' list for in-depth citation.
+#'
+#' @references
+#' Fasick, J.I and Robsinson, O.R. (1998). Mechanism of spectral tuning in the
+#' dolphin visual pigments. Biochemistry 37(2): 433-438.
+#'
+#' Maloney, B., Clayton, L., Arnold, J., et al. (2020). Tursiops truncatus
+#' (bottlenose dolphin) genome, mTurTru1, maternal haplotype with Y.
+#' Unpublished.
+#'
+#' Okendo, J., Koren, S., Tapias, A.T., et al. (2023). Telomere-to-telmore
+#' genome assemblies for commonly used zebreafish laboratory strains.
+#' Unpublished.
+#'
+#' Sitt, T., Bowen, L., Blanchard, M.T., et al. (2008). Molecular cloning and
+#' functional characterization of bottlenose dolphin (Tursiops truncatus) tumor
+#' necrosis factor alpha. Vet Immunol Immunopathol 82(3-4): 183-192.
+#'
+#' Smith, J., Fedrigo, O., Timoshevskaya, N., et al. (2020). Petromyzon marinus
+#' (Sea Lamprey) genome, kPetMar1, primary haplotype. Unpublished.
+#'
+#' NCBI. (2024). Gnomon: The NCBI eukaryotic gene prediction tool.
+#' https://www.ncbi.nlm.nih.gov/refseq/annotation_euk/gnomon/
+#'
+#' Wellcome Sanger Tree of Life Programme. (2022). Orcinus orca, whole genome
+#' shotgun sequencing project. Unpublished.
+#'
+#'
+#' @format An S3 object in RawBlastList format, as follows:
+#' \itemize{
+#'  \item The outer list is in key-value format, where each key is
+#'  the name of a species (one of P_marinus, D_rerio, M_musculus, O_orca and
+#'  or T_truncatus), and each value is a 'gene list' corresponding to all data
+#'  generated obtained from blasting against the particular species' genome.
+#'  \item Each 'gene list' is also in key-value format, where each key is a gene
+#'  name (one of IL10, IL6, TNF, SOX2 and RHO) and each value is a list
+#'  containing the length of the query coding sequence (in this case, from the
+#'  bottlenose dolphin), and the HSP table produced by blasting the query
+#'  sequence against the subject genome.
+#'  \item Each HSP table is a data frame, with rows corresponding to single HSP
+#'  entries and columns representing attributes of the HSPs. There are 9
+#'  columns:
+#'  \describe{
+#'    \item{e_val}{E-value of the HSP}
+#'    \item{q_start}{starting index of the query segment}
+#'    \item{q_end}{ending index of the query segment}
+#'    \item{s_start}{starting index of the subject segment}
+#'    \item{s_end}{ending index of the subject segment}
+#'    \item{s_strand}{strand that the subject segment is on}
+#'    \item{q_seq}{sequence for the query segment}
+#'    \item{s_seq}{sequence for the subject segment}
+#'    \item{seq_length}{Length of each HSP segment.}
+#'  }
+#' }
+#'
+#' @examples
+#' \dontrun{
+#'  sample_raw_blast_list
+#' }
+"sample_raw_blast_list"
+
+# [END]

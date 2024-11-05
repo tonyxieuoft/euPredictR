@@ -423,12 +423,13 @@ remove_gaps_if_equal <- function(hsp_data){
 #' # a subject set of Dolphin genomic sequences (results titled
 #' # T_truncatus.json)
 #'
-#' BLAST_out_directory <- system.dir("extdata", "sample_BLAST_output_dir",
-#'                                       package="euPredictR")
+#' BLAST_out_directory <- system.dir("extdata", "example_raw_output_directory",
+#'                                    package="euPredictR")
 #'
 #' # EXAMPLE: Convert data in BLAST_out_directory to RawBlastList format
 #'
-#' raw_blast_list1 <- parse_multiple_BLAST_json(dir_path = BLAST_out_directory)
+#' raw_blast_list1 <- parse_multiple_BLAST_json(dir_path = BLAST_out_directory,
+#'                                              raw_blast_list = NULL)
 #'
 parse_multiple_BLAST_json <- function(dir_path, raw_blast_list=NULL){
 
@@ -447,5 +448,4 @@ parse_multiple_BLAST_json <- function(dir_path, raw_blast_list=NULL){
 
 
 
-
-
+# [END]

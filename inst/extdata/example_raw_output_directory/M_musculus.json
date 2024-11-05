@@ -1,0 +1,1225 @@
+{
+"BlastOutput2": [
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/10090/RS_2024_02/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1150555",
+          "query_title": "IL10 T_truncatus",
+          "query_len": 537,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1877089968|ref|NC_000067.7|",
+                  "accession": "NC_000067",
+                  "title": "Mus musculus strain C57BL/6J chromosome 1, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 195154279,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 186.132,
+                  "score": 205,
+                  "evalue": 2.39557e-44,
+                  "identity": 134,
+                  "query_from": 224,
+                  "query_to": 378,
+                  "query_strand": "Plus",
+                  "hit_from": 130949064,
+                  "hit_to": 130949218,
+                  "hit_strand": "Plus",
+                  "align_len": 155,
+                  "gaps": 0,
+                  "qseq": "AGGGTTACCTGGGTTGCCAAGCCTTGTCGGAGATGATCCAGTTTTACCTGGAGGAGGTGATGCCGAAGGCTGAGGACCATGGCCCCAACATCAAAGAGCACGTGAACTCCCTGGGGGAGAAGCTGAAGACCCTCAGGCTGCAGCTGAGGCGCTGT",
+                  "hseq": "AGGGTTACTTGGGTTGCCAAGCCTTATCGGAAATGATCCAGTTTTACCTGGTAGAAGTGATGCCCCAGGCAGAGAAGCATGGCCCAGAAATCAAGGAGCATTTGAATTCCCTGGGTGAGAAGCTGAAGACCCTCAGGATGCGGCTGAGGCGCTGT",
+                  "midline": "|||||||| |||||||||||||||| ||||| |||||||||||||||||||  || ||||||||  |||| ||| | ||||||||  | ||||| |||||  |||| |||||||| ||||||||||||||||||||| ||| |||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 110.39,
+                  "score": 121,
+                  "evalue": 1.5131e-21,
+                  "identity": 80,
+                  "query_from": 443,
+                  "query_to": 535,
+                  "query_strand": "Plus",
+                  "hit_from": 130951911,
+                  "hit_to": 130952003,
+                  "hit_strand": "Plus",
+                  "align_len": 93,
+                  "gaps": 0,
+                  "qseq": "AGCTCCAAGAGAAGGGTGTCTACAAAGCCATGAGTGAGTTTGACATCTTCATCAACTACATAGAAGCCTACATGATAACAAAGATGAAAAACT",
+                  "hseq": "AGCTCCAAGACCAAGGTGTCTACAAGGCCATGAATGAATTTGACATCTTCATCAACTGCATAGAAGCATACATGATGATCAAAATGAAAAGCT",
+                  "midline": "||||||||||  | ||||||||||| ||||||| ||| ||||||||||||||||||| ||||||||| |||||||| |  || ||||||| ||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 88.7497,
+                  "score": 97,
+                  "evalue": 4.94636e-15,
+                  "identity": 59,
+                  "query_from": 379,
+                  "query_to": 444,
+                  "query_strand": "Plus",
+                  "hit_from": 130950226,
+                  "hit_to": 130950291,
+                  "hit_strand": "Plus",
+                  "align_len": 66,
+                  "gaps": 0,
+                  "qseq": "CATCGATTTCTGCCCTGTGAAAACAAGAGCAAAGCGGTGGAGCAGGTGAAGAGTGTCTTCAATAAG",
+                  "hseq": "CATCGATTTCTCCCCTGTGAAAATAAGAGCAAGGCAGTGGAGCAGGTGAAGAGTGATTTTAATAAG",
+                  "midline": "||||||||||| ||||||||||| |||||||| || |||||||||||||||||||  || ||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 86.9463,
+                  "score": 95,
+                  "evalue": 1.72645e-14,
+                  "identity": 122,
+                  "query_from": 1,
+                  "query_to": 165,
+                  "query_strand": "Plus",
+                  "hit_from": 130947649,
+                  "hit_to": 130947813,
+                  "hit_strand": "Plus",
+                  "align_len": 170,
+                  "gaps": 10,
+                  "qseq": "ATGCCCAGCTCAGCACTGCTCTGTTGCCTGATCTTCCTGGCCAGGGTGGCAGCTGGC-CAACA----CCAGGGCACCCAGGCTAAGGACAGCTGCATCCACTTCCCAGACAGCCTGCCCCACATGCTGCGGGAGCTCCGAGCTGCCTTCAGCAGCGTGAAGACTTTCTTT",
+                  "hseq": "ATGCCTGGCTCAGCACTGCTATGCTGCCTGCTCTTACTGAC-----TGGCATGAGGATCAGCAGGGGCCAGTACAGCCGGGAAGACAATAACTGCACCCACTTCCCAGTCGGCCAGAGCCACATGCTCCTAGAGCTGCGGACTGCCTTCAGCCAGGTGAAGACTTTCTTT",
+                  "midline": "|||||  ||||||||||||| || |||||| |||| ||| |     |||||   ||  || ||    ||||  || || ||   |  | | ||||| ||||||||||| | ||| |  ||||||||| |  ||||| ||  |||||||||||   |||||||||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 61,
+            "db_len": 2728222451,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/10090/RS_2024_02/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1150556",
+          "query_title": "SOX2 T_truncatus",
+          "query_len": 981,
+          "query_masking": [
+            {
+              "from": 52,
+              "to": 122
+            },
+            {
+              "from": 779,
+              "to": 785
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1877089966|ref|NC_000069.7|",
+                  "accession": "NC_000069",
+                  "title": "Mus musculus strain C57BL/6J chromosome 3, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 159745316,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 1455.7,
+                  "score": 1613,
+                  "evalue": 0,
+                  "identity": 908,
+                  "query_from": 1,
+                  "query_to": 981,
+                  "query_strand": "Plus",
+                  "hit_from": 34704565,
+                  "hit_to": 34705524,
+                  "hit_strand": "Plus",
+                  "align_len": 981,
+                  "gaps": 21,
+                  "qseq": "ATGTACAACATGATGGAGACGGAGCTGAAGCCGCCGGGCCCGCAGCAAACTTcggggggcggcggcggcggcggcggcggcggtggcggcggcggcaactccaccgcggcggcggcgggcggcAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGCCCCGGGCGGCAACAGCATGGCGAGCGGGGTCGGGGTGGGCGCCGGCCTCGGCGCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACGGCTGGAGCAACGGCAGCTACAGCATGATGCAGGACCAGCTGGGCTACCCGCAGCACCCGGGCCTCAACGCGCACGGCGCCGCTCAGATGCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCCGACCTACAGCATGTCCTATTCGCAGCAGGGCACCCCTGGCATGGCTCTTGGCTCCATGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGcccccccGTGGTTACCTCTTCTTCCCACTCCAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCCCGGCGCCGAGGTGCCGGAGCCCGCCGCCCCCAGCAGACTTCACATGTCGCAGCACTACCAGAGCGGCCCGGTGCCCGGCACGGCCATTAACGGCACACTGCCCCTCTCGCACATGTGA",
+                  "hseq": "ATGTATAACATGATGGAGACGGAGCTGAAGCCGCCGGGCCCGCAGCAAGCTTCGGGGGGCGGC---------------------GGCGGAGGAGGCAACGCCACGGCGGCGGCGACCGGCGGCAACCAGAAGAACAGCCCGGACCGCGTCAAGAGGCCCATGAACGCCTTCATGGTATGGTCCCGGGGGCAGCGGCGTAAGATGGCCCAGGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCGGAGTGGAAACTTTTGTCCGAGACCGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGCGCTCTGCACATGAAGGAGCACCCGGATTATAAATACCGGCCGCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTTCCCGGAGGCTTGCTGGCCCCCGGCGGGAACAGCATGGCGAGCGGGGTTGGGGTGGGCGCCGGCCTGGGTGCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACGGCTGGAGCAACGGCAGCTACAGCATGATGCAGGAGCAGCTGGGCTACCCGCAGCACCCGGGCCTCAACGCTCACGGCGCGGCACAGATGCAACCGATGCACCGCTACGACGTCAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCCCACCTACAGCATGTCCTACTCGCAGCAGGGCACCCCCGGTATGGCGCTGGGCTCCATGGGCTCTGTGGTCAAGTCCGAGGCCAGCTCCAGCCCCCCCGTGGTTACCTCTTCCTCCCACTCCAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCCCGGCGCCGAGGTGCCGGAGCCCGCTGCGCCCAGTAGACTGCACATGGCCCAGCACTACCAGAGCGGCCCGGTGCCCGGCACGGCCATTAACGGCACACTGCCCCTGTCGCACATGTGA",
+                  "midline": "||||| |||||||||||||||||||||||||||||||||||||||||| ||||||||||||||                     ||||| || |||||| |||| ||||||||| | |||||||||||||||||||||||||||||||||||| |||||||||||||||||||||| |||||||| ||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||| ||||| |||||||||||||||||||||||||||||||||||||| || |||||||||||||| ||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||| || |||||  |||| ||||| ||||| |||||||||||||||||||| ||||||||||||||||| || ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||| || |||||||| || ||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||| ||||||||||||||||| || ||||| || |||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| || ||||| ||||| |||||| | |||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gi|1877089949|ref|NC_000086.8|",
+                  "accession": "NC_000086",
+                  "title": "Mus musculus strain C57BL/6J chromosome X, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 169476592,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 468.359,
+                  "score": 518,
+                  "evalue": 2.64626e-129,
+                  "identity": 446,
+                  "query_from": 138,
+                  "query_to": 682,
+                  "query_strand": "Plus",
+                  "hit_from": 59936617,
+                  "hit_to": 59936058,
+                  "hit_strand": "Minus",
+                  "align_len": 562,
+                  "gaps": 19,
+                  "qseq": "CCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGCCCCGGGCG--GCAACAGCATGGCG-AGC-GGGGTCGGGGTGGGCGCCGGCCTCGGC---GCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACGGCTGGAGCAACGGCAGCTACAGCATGATGCAGGACCAGCTGGGCTACCCGCAGCACCCGGGCCT---CAACGCGCACGGCGCCGCTC-AGATGCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGA------CCAGCTCGCAGACCTACATGAACG",
+                  "hseq": "CCAGGACCGCGTCAAGCGACCCATGAACGCGTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCTGGAGAACCCCAAGATGCACAACTCCGAGATCAGCAAGCGCTTGGGCGCCGACTGGAAACTGCTGACCGATGCGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGACTGCGTGCGGTGCACATGAAGGAGTACCCGGACTACAAGTACCGGCCCCGCCGCAAGACCAAGACGCTGCTCAAGAAGGACAAGTACTCGCTGCCCGGCGGCCTCCTGCCCCCGGGCGCCGCCGCAGC-CGCCGCCGCTGCCGCCGCAGCCGCCGCCGCCAGCAGCCCGGTGGGCGTGGGCCAGCGCCTGGACACGTACACGCACGTGAACGGCTGGGCCAACGGCGCCTACTCGCTCGTGCAGGAGCAGCTGGGCTACGCGCAGCCCCCGAGCATGAGCAGCCCGC-CGCCGCCACCCGCGCTGCCTCAGATGCACCGCTACGACATGGCCGGCCTGCAGTACAGCCCCATGATGCCACCCGGCGCCCAGAGCTACATGAACG",
+                  "midline": "|| ||||||||||||||| ||||||||||| ||||||||||||||||||||||||||||||||||||||||  ||||||||||||||||||||||| ||||||||||||||| |||||||||| ||||||||  || | ||  |||||||||||||||||||||||||||||||||| ||||| ||| |||||||||||||  ||||||| || || ||||||||||| || || |||||||||||  | |||||||| |||||| ||||||| || || || ||  |||||||||  ||  ||||  | ||  || |  | ||  |  | ||||| |  | ||   | |||||||  ||||||| ||||||  ||| ||||| |||||||||||  |||||||  ||||    |  ||||||| |||||||||||| |||||| |||| || |   || | ||| || |||| | |  | |||  |  ||||||||||||||| ||  || ||||||||||| | ||||||      || || | |||| |||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 72.5194,
+                  "score": 79,
+                  "evalue": 7.13864e-10,
+                  "identity": 96,
+                  "query_from": 736,
+                  "query_to": 863,
+                  "query_strand": "Plus",
+                  "hit_from": 59935926,
+                  "hit_to": 59935808,
+                  "hit_strand": "Minus",
+                  "align_len": 129,
+                  "gaps": 11,
+                  "qseq": "CTTGGCTCCATGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGcccccccGTGGTTACCTCTTCTTCCCACTC-CAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCC",
+                  "hseq": "CTGGGCCCCATGGGCTCCGTGGTGAAGTCGGAGCCCAGCTCTCCGCCGCCCGC-----CATCG-CTTCGCACTCGCAGCGCGCG-TGCCT---CGGCGACCTGCGCGACATGATCAGCATGTACCTGCC",
+                  "midline": "|| ||| |||||||||| ||||| ||||| ||| |||||||    || ||||      | ||  |||| ||||| ||| ||||  ||||    ||| ||||| || |||||||||||||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gi|1877089961|ref|NC_000074.7|",
+                  "accession": "NC_000074",
+                  "title": "Mus musculus strain C57BL/6J chromosome 8, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 130127694,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 410.651,
+                  "score": 454,
+                  "evalue": 6.22892e-112,
+                  "identity": 369,
+                  "query_from": 60,
+                  "query_to": 504,
+                  "query_strand": "Plus",
+                  "hit_from": 12446434,
+                  "hit_to": 12446876,
+                  "hit_strand": "Plus",
+                  "align_len": 458,
+                  "gaps": 28,
+                  "qseq": "CGGCGGCGGCGG-CGGCGGCGGCGGTGGCGGCGGCGGCAACTCCACCGCGGCGGCGGCGGGCGGCAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCT------CGCCCCGGGCGGCAACAGCATGGCGAGCGGGG---TCGGGGTGGGCGCCGGCCTCGGCGCG--GGC-GTGAACCAGCGCATGGACAGC",
+                  "hseq": "CGGCCGGGGCGGGCGGGGGCGGCGGTGGGGGCGGGGGCG--------GCGGCGGCGGCGGG-GGCACC---AAGGCCAACCAGGATCGGGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGACAGCGGCGCAAGATGGCCCAGGAAAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTCGGGGCCGAGTGGAAGGTCATGTCCGAGGCCGAGAAGCGGCCGTTCATCGACGAGGCCAAGAGACTGCGCGCGCTGCACATGAAGGAACACCCGGATTACAAGTACCGGCCGCGCCGCAAGACCAAGACGCTGCTCAAGAAGGACAAGTACTCGCTGGCCGGCGGGCTGCTAGCGGCCGGCGCGGGTGGCGGCGGC---GCGGCCGTGGCCATGGGTGTGGGCGTGGGCGTCGGGGCGGCGGCGGTGGGCCAGCGCTTGGAGAGC",
+                  "midline": "|||| | ||||| ||| ||||||||||| ||||| |||         |||||||||||||| |||| |   |||  || || ||| || ||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| || |||||||||||||||||||||||||||||||||||||| || |||||||||||  |  |||| ||| | |||||||||||||||||||||||||||||| | ||||| ||||||||||||||||||||||||||||| || |||||||| || || || |||||||||||  | |||||||| |||||| ||||| | || ||||||||      || | |||| |||  | ||   |||  || ||   | || |||||||  ||| |||| |||  ||| |||  ||||||| |||| |||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 84.2413,
+                  "score": 92,
+                  "evalue": 1.1312e-13,
+                  "identity": 67,
+                  "query_from": 609,
+                  "query_to": 689,
+                  "query_strand": "Plus",
+                  "hit_from": 12447089,
+                  "hit_to": 12447169,
+                  "hit_strand": "Plus",
+                  "align_len": 81,
+                  "gaps": 0,
+                  "qseq": "GCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGGCTCGCC",
+                  "hseq": "GCAGCCCATGCACCGCTACGACATGGGCGCGCTGCAGTACAGCCCCATCTCCAACTCTCAGGGCTACATGAGCGCGTCGCC",
+                  "midline": "|||||||||||||||||||||| || |||| |||||||||| | ||||  ||| ||| |||  |||||||| ||  |||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 67.1093,
+                  "score": 73,
+                  "evalue": 3.03543e-08,
+                  "identity": 101,
+                  "query_from": 732,
+                  "query_to": 874,
+                  "query_strand": "Plus",
+                  "hit_from": 12447287,
+                  "hit_to": 12447417,
+                  "hit_strand": "Plus",
+                  "align_len": 143,
+                  "gaps": 12,
+                  "qseq": "GGCTCTTGGCTCCATGGGCTCGGTGGTCAAGTCCGAGGCCAGCTCCAGcccccccGTGGTTACCTCTTCTTCCCACTCCAGGGCGCCCTGCCAGGCCGGGGACCTCCGGGACATGATCAGCATGTACCTCCCCGGCGCCGAGG",
+                  "hseq": "GGCCCTGGGCGCCCTCGGATCTCTGGTCAAGTCGGAGCCGAGCGGCAGTCCGCCGG------CCCCGGCT---CACTCACGGGCACCGTGTC---CCGGGGACCTGCGCGAGATGATCAGCATGTACCTGCCCGCCGGCGAGG",
+                  "midline": "||| || ||| || | || ||  |||||||||| ||| | |||  ||| || || |      || |  ||   |||||  |||| || || |   |||||||||| || || ||||||||||||||||| |||| || |||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 56.2891,
+                  "score": 61,
+                  "evalue": 5.48818e-05,
+                  "identity": 44,
+                  "query_from": 39,
+                  "query_to": 91,
+                  "query_strand": "Plus",
+                  "hit_from": 47742083,
+                  "hit_to": 47742135,
+                  "hit_strand": "Plus",
+                  "align_len": 53,
+                  "gaps": 0,
+                  "qseq": "CCCGCAGCAAACTTcggggggcggcggcggcggcggcggcggcggtggcggcg",
+                  "hseq": "CCCGCAGCAAAGCCCCAGCGGCGACGGCGACGGCGGCGGCGGCGGCGGCGGCG",
+                  "midline": "|||||||||||   |  | |||| ||||| ||||||||||||||| |||||||"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gi|1877089955|ref|NC_000080.7|",
+                  "accession": "NC_000080",
+                  "title": "Mus musculus strain C57BL/6J chromosome 14, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 125139656,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 316.876,
+                  "score": 350,
+                  "evalue": 1.05573e-83,
+                  "identity": 226,
+                  "query_from": 141,
+                  "query_to": 400,
+                  "query_strand": "Plus",
+                  "hit_from": 118473033,
+                  "hit_to": 118472774,
+                  "hit_strand": "Minus",
+                  "align_len": 260,
+                  "gaps": 0,
+                  "qseq": "GGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGT",
+                  "hseq": "GGACCACGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCGCGGGCTCAGCGGCGGAAGATGGCCCAGGAGAACCCTAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAGCTGCTCACCGAGTCGGAGAAGCGGCCGTTCATCGACGAGGCGAAGCGCCTGCGAGCCATGCACATGAAGGAGCATCCCGACTACAAGTACCGGCCGCGGCGCAAGCCCAAGACGCTGCTCAAAAAGGACAAGT",
+                  "midline": "||||| |||||||||||||||||||||||||||||||||||| || |  |||||||| ||||||||||| |||||||| ||||||||||||||||||||||||||||||||||||||||||||||| ||  |  | ||| |||||||||||||||||||||||||||| ||||| ||||||||  ||||||||||||| || || || || || |||||||| ||||| ||  ||||||||||  | || ||||| ||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 54.4857,
+                  "score": 59,
+                  "evalue": 0.000191556,
+                  "identity": 60,
+                  "query_from": 301,
+                  "query_to": 378,
+                  "query_strand": "Plus",
+                  "hit_from": 64185251,
+                  "hit_to": 64185329,
+                  "hit_strand": "Plus",
+                  "align_len": 79,
+                  "gaps": 1,
+                  "qseq": "GACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAA-AACCAAG",
+                  "hseq": "GATGAGGCAGAGCGGCTGCGCCTGCAGCACATGCAGGATTACCCCAACTACAAGTACCGGCCCCGCAGGAAGAAACAAG",
+                  "midline": "|| |||||  ||||||||||   || ||||||| ||||  ||||  | || || |||||||||||  |||| || ||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 49.9773,
+                  "score": 54,
+                  "evalue": 0.00233363,
+                  "identity": 72,
+                  "query_from": 153,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 64181342,
+                  "hit_to": 64181443,
+                  "hit_strand": "Plus",
+                  "align_len": 102,
+                  "gaps": 0,
+                  "qseq": "GCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "GCGGCCCATGAATGCCTTCATGGTGTGGGCCAAGGATGAGAGGAAACGTCTGGCAGTGCAGAACCCGGACCTGCACAACGCGGAGCTCAGCAAGATGCTGGG",
+                  "midline": "|||||||||||| ||||||||||||||| ||   |   || ||       ||||     |||||||  |  |||||||| ||||| ||||||||   |||||"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gi|1877089960|ref|NC_000075.7|",
+                  "accession": "NC_000075",
+                  "title": "Mus musculus strain C57BL/6J chromosome 9, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 124359700,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 271.792,
+                  "score": 300,
+                  "evalue": 3.93782e-70,
+                  "identity": 216,
+                  "query_from": 142,
+                  "query_to": 401,
+                  "query_strand": "Plus",
+                  "hit_from": 99757722,
+                  "hit_to": 99757463,
+                  "hit_strand": "Minus",
+                  "align_len": 260,
+                  "gaps": 0,
+                  "qseq": "GACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTA",
+                  "hseq": "GACCACATCAAGCGGCCCATGAATGCCTTCATGGTATGGTCCCGGGGCCAGCGGCGCAAGATGGCCCAGGAAAATCCCAAGATGCACAACTCGGAGATCAGCAAACGCCTGGGCGCCGAATGGAAGCTCCTGTCCGAGGCAGAGAAGCGGCCTTACATCGATGAAGCCAAAAGGCTGCGCGCCCAACACATGAAGGAGCACCCTGACTACAAGTACCGGCCGCGGCGCAAGCCGAAGAACCTGCTCAAGAAGGACAGGTA",
+                  "midline": "|||| | |||||||||||||||| ||||||||||| |||||||| || |||||||||||||||||||| || || ||||||||||||||||||||||||||||| |||||||||||||| ||||| ||  |||| ||| | ||||||||||| | |||||| || |||||  ||||||| || |  ||||||||||| ||||| || || || |||||||| ||||| ||  | ||||  ||  | |||||||| | |||"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gi|1877089958|ref|NC_000077.7|",
+                  "accession": "NC_000077",
+                  "title": "Mus musculus strain C57BL/6J chromosome 11, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 121973369,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 161.786,
+                  "score": 178,
+                  "evalue": 5.1311e-37,
+                  "identity": 176,
+                  "query_from": 148,
+                  "query_to": 377,
+                  "query_strand": "Plus",
+                  "hit_from": 69546337,
+                  "hit_to": 69546566,
+                  "hit_strand": "Plus",
+                  "align_len": 232,
+                  "gaps": 4,
+                  "qseq": "GTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACG--GAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAA",
+                  "hseq": "GTGAAGCGGCCCATGAACGCCTTCATGGTGTGGAGCTCTGTTCAGCGCCGCCAGATGGCGCAGCAGAACCCCAAGATGCACAACTCTGAGATCTCCAAGCGCTTGGGCGCTCAGTGGAAGCTGCTG--GGCGATGAAGAGAAGCGACCCTTCGTGGAGGAGGCTAAGCGTCTTCGTGCCCGCCACCTCCGCGACTATCCCGACTACAAGTACCGACCCCGGCGTAAGAGCAA",
+                  "midline": "|| ||||||||||||||||||||||||||||||  |   |  ||||| ||| ||||||| ||  |||||||||||||||||||||| ||||||  ||||||| |||||||  ||||||| ||  ||  || || |  |||||||| || ||| | || ||||| ||||| || || || |  ||| |    ||  | || || || || ||||| |||||||| || | |||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 83.3396,
+                  "score": 91,
+                  "evalue": 3.94827e-13,
+                  "identity": 87,
+                  "query_from": 147,
+                  "query_to": 255,
+                  "query_strand": "Plus",
+                  "hit_from": 112673722,
+                  "hit_to": 112673830,
+                  "hit_strand": "Plus",
+                  "align_len": 111,
+                  "gaps": 4,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCG-GC-GCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGC",
+                  "hseq": "CGTCAAGCGACCCATGAACGCCTTCATGGTGTGG--GCGCAGGCTGCGCGCAGGAAGCTGGCAGACCAGTACCCGCATCTGCACAACGCGGAGCTCAGCAAGACTCTGGGC",
+                  "midline": "||||||||| ||||||||||||||||||||||||   ||| ||| ||| || | ||| ||||  |  || ||||  |  |||||||| ||||| ||||||||   ||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 80.6345,
+                  "score": 88,
+                  "evalue": 1.37808e-12,
+                  "identity": 74,
+                  "query_from": 277,
+                  "query_to": 370,
+                  "query_strand": "Plus",
+                  "hit_from": 112674645,
+                  "hit_to": 112674738,
+                  "hit_strand": "Plus",
+                  "align_len": 94,
+                  "gaps": 0,
+                  "qseq": "GAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGA",
+                  "hseq": "GAGAGCGAGAAGAGACCCTTCGTGGAGGAGGCGGAGCGGCTGCGCGTGCAGCACAAGAAAGACCACCCCGATTACAAGTACCAGCCCCGGCGGA",
+                  "midline": "||||  |||||| | || ||| | || |||||  |||||||||| | || ||||| ||| || ||||| ||||| || |||| |||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gi|1877089967|ref|NC_000068.8|",
+                  "accession": "NC_000068",
+                  "title": "Mus musculus strain C57BL/6J chromosome 2, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 181755017,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 105.882,
+                  "score": 116,
+                  "evalue": 3.46036e-20,
+                  "identity": 167,
+                  "query_from": 151,
+                  "query_to": 378,
+                  "query_strand": "Plus",
+                  "hit_from": 152239498,
+                  "hit_to": 152239271,
+                  "hit_strand": "Minus",
+                  "align_len": 233,
+                  "gaps": 10,
+                  "qseq": "AAGCGGCCCATGAACGCCTTCATGGTGTGGTCCC-GCGGGCAGCGGCGCAAGAT---GGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG-CGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAG",
+                  "hseq": "AAGCGGCCGATGAACGCGTTCATGGTGTGGTCGCAGCACG-AGCGGAGAAAAATCATGGACCAGTGG---CCCGACATGCACAACGCTGAGATCTCCAAGCGCCTGGGCCGCCG-CTGGCAGCTGCTGCAGGACTCGGAGAAGATCCCGTTCGTGCGGGAGGCGGAGCGGCTGCGCCTCAAGCACATGGCGGACTACCCGGACTACAAGTACCGGCCTCGCAAGAAGAGCAAG",
+                  "midline": "|||||||| |||||||| |||||||||||||| | ||  | ||||| | || ||   || |||   |   ||| | ||||||||| | ||||||  |||||||||||| |||||  ||| | ||  ||  |||  ||||||||   |||||| |    |||||  ||||||||||      |||||||  |||  ||||||| || || |||||||| ||   ||| | ||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 65.3059,
+                  "score": 71,
+                  "evalue": 1.05947e-07,
+                  "identity": 70,
+                  "query_from": 281,
+                  "query_to": 373,
+                  "query_strand": "Plus",
+                  "hit_from": 181312762,
+                  "hit_to": 181312670,
+                  "hit_strand": "Minus",
+                  "align_len": 93,
+                  "gaps": 0,
+                  "qseq": "CGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAA",
+                  "hseq": "CGGAGAAGCGGCCCTTCGTGGAAGAGGCCGAACGGCTGCGTGTGCAGCACTTGCGCGACCATCCCAACTACAAGTACCGGCCTCGCCGCAAAA",
+                  "midline": "||||||||||||| ||| | || |||||| | |||||||| | || |||| ||   || || ||  | || || |||||||| || || ||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 51.7806,
+                  "score": 56,
+                  "evalue": 0.000668598,
+                  "identity": 28,
+                  "query_from": 153,
+                  "query_to": 180,
+                  "query_strand": "Plus",
+                  "hit_from": 181313075,
+                  "hit_to": 181313048,
+                  "hit_strand": "Minus",
+                  "align_len": 28,
+                  "gaps": 0,
+                  "qseq": "GCGGCCCATGAACGCCTTCATGGTGTGG",
+                  "hseq": "GCGGCCCATGAACGCCTTCATGGTGTGG",
+                  "midline": "||||||||||||||||||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gi|1877089948|ref|NC_000087.8|",
+                  "accession": "NC_000087",
+                  "title": "Mus musculus strain C57BL/6J chromosome Y, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 91455967,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 100.472,
+                  "score": 110,
+                  "evalue": 1.47138e-18,
+                  "identity": 94,
+                  "query_from": 148,
+                  "query_to": 267,
+                  "query_strand": "Plus",
+                  "hit_from": 2663646,
+                  "hit_to": 2663527,
+                  "hit_strand": "Minus",
+                  "align_len": 120,
+                  "gaps": 0,
+                  "qseq": "GTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAA",
+                  "hseq": "GTCAAGCGCCCCATGAATGCATTTATGGTGTGGTCCCGTGGTGAGAGGCACAAGTTGGCCCAGCAGAATCCCAGCATGCAAAATACAGAGATCAGCAAGCAGCTGGGATGCAGGTGGAAA",
+                  "midline": "|||||||| |||||||| || || |||||||||||||| ||  || ||| |||| |||||||  |||| ||||  ||||| ||  | |||||||||||||  |||||   |  |||||||"
+                }
+              ]
+            },
+            {
+              "num": 9,
+              "description": [
+                {
+                  "id": "gi|1877089956|ref|NC_000079.7|",
+                  "accession": "NC_000079",
+                  "title": "Mus musculus strain C57BL/6J chromosome 13, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 120883175,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 99.5699,
+                  "score": 109,
+                  "evalue": 5.13563e-18,
+                  "identity": 152,
+                  "query_from": 149,
+                  "query_to": 365,
+                  "query_strand": "Plus",
+                  "hit_from": 29136829,
+                  "hit_to": 29136613,
+                  "hit_strand": "Minus",
+                  "align_len": 217,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCG",
+                  "hseq": "TCAAGCGGCCCATGAACGCCTTTATGGTGTGGTCGCAGATCGAGCGGCGCAAGATCATGGAGCAGTCGCCCGACATGCACAACGCCGAGATCTCCAAGCGGCTAGGCAAACGCTGGAAGCTGCTCAAGGACAGCGACAAGATTCCGTTCATCCAGGAGGCGGAGCGGCTGCGCCTCAAGCACATGGCTGACTACCCTGACTACAAGTACCGGCCGCG",
+                  "midline": "|||||||||||||||||||||| ||||||||||| |      |||||||||||||     |  ||   ||| | ||||||||| | ||||||  |||||| || |||      ||||| ||  |   ||| |  || |||   ||||||||| | |||||  ||||||||||      |||||||   ||  |||| || || || |||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 10,
+              "description": [
+                {
+                  "id": "gi|1877089957|ref|NC_000078.7|",
+                  "accession": "NC_000078",
+                  "title": "Mus musculus strain C57BL/6J chromosome 12, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 120092757,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 83.3396,
+                  "score": 91,
+                  "evalue": 3.94827e-13,
+                  "identity": 166,
+                  "query_from": 140,
+                  "query_to": 381,
+                  "query_strand": "Plus",
+                  "hit_from": 27392271,
+                  "hit_to": 27392030,
+                  "hit_strand": "Minus",
+                  "align_len": 245,
+                  "gaps": 6,
+                  "qseq": "CGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAA---CCAAGACG",
+                  "hseq": "CGGGCCACATCAAACGGCCCATGAACGCCTTCATGGTGTGGTCCAAGATCGAGCGCAGGAAGATCATGGAGCAGTCGCCCGACATGCACAACGCCGAGATCTCCAAGAGGCTGGGCAAGCGCTGGAAGATGCTGAAGGACAGCGAGAAGATCCCGTTCATCAGGGAGGCGGAGCGCCTGCGCCTCAAGCACATGGCTGATTATCCCGACTACAAGTACCGGCC---GCGCAAAAAGCCCAAGACG",
+                  "midline": "||| || | |||| ||||||||||||||||||||||||||||||       ||||  | |||||     |  ||   ||| | ||||||||| | ||||||  |||| | ||||||      |||||  |  ||  ||| |  ||||||   |||||||||   |||||  |||| |||||      |||||||   ||  | || || || || ||||||||   ||| ||||   ||||||||"
+                }
+              ]
+            },
+            {
+              "num": 11,
+              "description": [
+                {
+                  "id": "gi|1877089968|ref|NC_000067.7|",
+                  "accession": "NC_000067",
+                  "title": "Mus musculus strain C57BL/6J chromosome 1, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 195154279,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 81.5362,
+                  "score": 89,
+                  "evalue": 1.37808e-12,
+                  "identity": 70,
+                  "query_from": 283,
+                  "query_to": 369,
+                  "query_strand": "Plus",
+                  "hit_from": 4562862,
+                  "hit_to": 4562776,
+                  "hit_strand": "Minus",
+                  "align_len": 87,
+                  "gaps": 0,
+                  "qseq": "GAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGG",
+                  "hseq": "GAGAAGCGGCCCTTCGTGGAAGAGGCCGAGCGGCTGCGCGTGCAGCATATGCAGGACCACCCCAACTACAAGTACCGGCCGCGGCGG",
+                  "midline": "||||||||||| ||| | || |||||| |||||||||| | || ||| ||| |||| |||||  | || || |||||||| ||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 47.2722,
+                  "score": 51,
+                  "evalue": 0.0284295,
+                  "identity": 74,
+                  "query_from": 145,
+                  "query_to": 246,
+                  "query_strand": "Plus",
+                  "hit_from": 4563431,
+                  "hit_to": 4563330,
+                  "hit_strand": "Minus",
+                  "align_len": 105,
+                  "gaps": 6,
+                  "qseq": "CGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCG---GCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAG",
+                  "hseq": "CGCATCCGGCGGCCGATGAACGCCTTTATGGTGTGGGCCAAAGACGAACGCAAGCG---GTTGGCACAGCAGAACCCAGATCTGCACAACGCAGAGCTAAGCAAG",
+                  "midline": "||| ||  |||||| ||||||||||| ||||||||| ||   |   | ||   |||   | |||| ||  |||||||  |  |||||||| | ||| | ||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 46.3705,
+                  "score": 50,
+                  "evalue": 0.0284295,
+                  "identity": 31,
+                  "query_from": 149,
+                  "query_to": 183,
+                  "query_strand": "Plus",
+                  "hit_from": 133313308,
+                  "hit_to": 133313274,
+                  "hit_strand": "Minus",
+                  "align_len": 35,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCC",
+                  "hseq": "TCAAGAGACCCATGAATGCCTTCATGGTGTGGGCC",
+                  "midline": "||||| | |||||||| ||||||||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 12,
+              "description": [
+                {
+                  "id": "gi|1877089952|ref|NC_000083.7|",
+                  "accession": "NC_000083",
+                  "title": "Mus musculus strain C57BL/6J chromosome 17, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 95294699,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 74.3227,
+                  "score": 81,
+                  "evalue": 2.04526e-10,
+                  "identity": 108,
+                  "query_from": 105,
+                  "query_to": 255,
+                  "query_strand": "Plus",
+                  "hit_from": 25789241,
+                  "hit_to": 25789095,
+                  "hit_strand": "Minus",
+                  "align_len": 151,
+                  "gaps": 4,
+                  "qseq": "CGCGGCGGCGGCGGGCGGCAACCAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGC",
+                  "hseq": "CGCGGCGGCGGTGG-CGGCACGCTCAAGGCCAAGCCACAC---GTGAAGCGGCCCATGAATGCCTTCATGGTGTGGGCACAGGCGGCGCGCCGCAAGCTGGCGGACCAGTACCCGCATCTCCATAACGCAGAGCTCAGCAAGACCCTAGGC",
+                  "midline": "||||||||||| || |||||  |  |||  ||  ||  ||   || |||||||||||||| ||||||||||||||| | |  | |  ||| |||||| ||||  |  || ||||  |  | || ||| | ||| ||||||||  ||| |||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 47.2722,
+                  "score": 51,
+                  "evalue": 0.0284295,
+                  "identity": 47,
+                  "query_from": 922,
+                  "query_to": 981,
+                  "query_strand": "Plus",
+                  "hit_from": 64245000,
+                  "hit_to": 64244947,
+                  "hit_strand": "Minus",
+                  "align_len": 60,
+                  "gaps": 6,
+                  "qseq": "CAGAGCGGCCCGGTGCCCGGCACGGCCATTAACGGCACACTGCCCCTCTCGCACATGTGA",
+                  "hseq": "CAGAGCAGCCAG----CCTGCACGGCCATTAACGGTACACTG--CCTCAGGCACGTGTGA",
+                  "midline": "|||||| ||| |    || |||||||||||||||| ||||||  ||||  |||| |||||"
+                }
+              ]
+            },
+            {
+              "num": 13,
+              "description": [
+                {
+                  "id": "gi|1877089954|ref|NC_000081.7|",
+                  "accession": "NC_000081",
+                  "title": "Mus musculus strain C57BL/6J chromosome 15, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 104073951,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 63.5025,
+                  "score": 69,
+                  "evalue": 3.69791e-07,
+                  "identity": 76,
+                  "query_from": 147,
+                  "query_to": 246,
+                  "query_strand": "Plus",
+                  "hit_from": 79047608,
+                  "hit_to": 79047509,
+                  "hit_strand": "Minus",
+                  "align_len": 101,
+                  "gaps": 2,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTC-CCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAG",
+                  "hseq": "CGTCAAGAGGCCCATGAACGCCTTCATGGTGTGGGCACAGGCGGCA-CGCAGAAAGCTAGCCGACCAGTACCCTCACCTCCACAATGCTGAGCTCAGCAAG",
+                  "midline": "||||||| |||||||||||||||||||||||||| | | |  |||| ||  | ||| | ||| |  || ||||  |  | |||||  | ||| ||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 61,
+            "db_len": 2728222451,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/10090/RS_2024_02/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1150557",
+          "query_title": "RHO T_truncatus",
+          "query_len": 1047,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1877089963|ref|NC_000072.7|",
+                  "accession": "NC_000072",
+                  "title": "Mus musculus strain C57BL/6J chromosome 6, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 149588044,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 453.03,
+                  "score": 501,
+                  "evalue": 2.17608e-124,
+                  "identity": 318,
+                  "query_from": 1,
+                  "query_to": 363,
+                  "query_strand": "Plus",
+                  "hit_from": 115908966,
+                  "hit_to": 115909328,
+                  "hit_strand": "Plus",
+                  "align_len": 363,
+                  "gaps": 0,
+                  "qseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCTGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCATGCGTACTTCGTCTTCGGGCCCACGGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGT",
+                  "hseq": "ATGAACGGCACAGAGGGCCCCAATTTTTATGTGCCCTTCTCCAACGTCACAGGCGTGGTGCGGAGCCCCTTCGAGCAGCCGCAGTACTACCTGGCGGAACCATGGCAGTTCTCCATGCTGGCAGCGTACATGTTCCTGCTCATCGTGCTGGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACCGTACAGCACAAGAAGCTGCGCACACCCCTCAACTACATCCTGCTCAACTTGGCCGTGGCTGACCTCTTCATGGTCTTCGGAGGATTCACCACCACCCTCTACACATCACTCCATGGCTACTTCGTCTTTGGGCCCACAGGCTGTAATCTCGAGGGCTTCTTTGCCACACTTGGAGGT",
+                  "midline": "|||||||| || |||||||  || || || ||||| ||||| |||   |||||||||||||| |||||||||||| | ||||||||||||||||| || || |||||||||||| ||||||| || |||||||||||||| |||||||| ||||||||||||||||||||||||||||||||||| || |||||||||||||||||||| || ||||||||||||||||||||| ||||||||||  ||||||||||||||||||| || |||||||||||||||||||| || || ||||  ||||||||||| |||||||| || || ||||| ||||||||||||||||| || || |||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 288.924,
+                  "score": 319,
+                  "evalue": 5.47864e-75,
+                  "identity": 209,
+                  "query_from": 695,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 115912355,
+                  "hit_to": 115912596,
+                  "hit_strand": "Plus",
+                  "align_len": 242,
+                  "gaps": 0,
+                  "qseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "AGGCGGCTGCCCAGCAGCAGGAGTCAGCCACCACTCAGAAGGCAGAGAAGGAAGTCACCCGCATGGTTATCATCATGGTCATCTTCTTCCTGATCTGCTGGCTTCCCTACGCCAGTGTGGCCTTCTACATCTTCACCCACCAGGGCTCCAACTTCGGCCCCATCTTCATGACTCTGCCAGCTTTCTTTGCTAAGAGCTCTTCCATCTATAACCCGGTCATCTACATCATGTTGAACAAGCAG",
+                  "midline": "|||| |||||||| ||||||||||| |||||||| |||||||| |||||||| ||||| |||||||| |||||||||||| |    ||||||||||||||| | ||||| ||||| ||||| |||||||| |||||||||||||||||| |||| |||||||||||||||||  | ||  | |||||||| ||||| || |||||||| ||||| ||||||||||||||| |||||||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 207.772,
+                  "score": 229,
+                  "evalue": 1.47142e-50,
+                  "identity": 150,
+                  "query_from": 528,
+                  "query_to": 697,
+                  "query_strand": "Plus",
+                  "hit_from": 115912067,
+                  "hit_to": 115912236,
+                  "hit_strand": "Plus",
+                  "align_len": 171,
+                  "gaps": 2,
+                  "qseq": "CAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACACG-TCTCGCCAGGAGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAGCTGGTCTTCACAGTCAAGGAGG",
+                  "hseq": "CAGGTACATCCCTGAGGGCATGCAATGTTCATGCGGGATTGACTACTACACACTCAAGCCTG-AGGTCAACAACGAATCCTTTGTCATCTACATGTTCGTGGTCCACTTCACCATTCCTATGATCGTCATCTTCTTCTGCTATGGGCAGCTGGTCTTCACAGTCAAGGAGG",
+                  "midline": "|||||||||||| ||||| ||||| || || ||||||||||||||||||||  ||  ||| | |||||||||| || ||||| |||||||||||||||||||||||||||||||| ||  || || |||| ||||||||||| ||||||||||||||||||||||||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 205.067,
+                  "score": 226,
+                  "evalue": 5.13577e-50,
+                  "identity": 149,
+                  "query_from": 361,
+                  "query_to": 533,
+                  "query_strand": "Plus",
+                  "hit_from": 115910817,
+                  "hit_to": 115910989,
+                  "hit_strand": "Plus",
+                  "align_len": 173,
+                  "gaps": 0,
+                  "qseq": "GGTGAAATTGCCCTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTTGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAACCATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGGCCCCCCTCGTCGGCTGGTCCAGGTA",
+                  "hseq": "GGTGAAATCGCCCTGTGGTCCCTGGTGGTCCTGGCCATTGAGCGCTACGTGGTGGTCTGCAAGCCGATGAGCAACTTCCGCTTCGGGGAGAATCACGCTATCATGGGTGTGGTCTTCACCTGGATCATGGCGTTGGCCTGTGCTGCTCCCCCACTCGTTGGCTGGTCCAGGTA",
+                  "midline": "|||||||| |||||||||||| |||||||||||||||| ||| | |||||||| || || ||||| |||||||||||||||||||||||||| || || ||||||||  | | | ||||||||||||||||  |||||||||| ||  |||| ||||| ||||||||||||||"
+                },
+                {
+                  "num": 5,
+                  "bit_score": 134.736,
+                  "score": 148,
+                  "evalue": 7.6289e-29,
+                  "identity": 98,
+                  "query_from": 934,
+                  "query_to": 1047,
+                  "query_strand": "Plus",
+                  "hit_from": 115913567,
+                  "hit_to": 115913680,
+                  "hit_strand": "Plus",
+                  "align_len": 114,
+                  "gaps": 0,
+                  "qseq": "CAGTTCCGGAACTGCATGCTCACCACCCTGTGCTGTGGCAGGAACCCACTGGGTGACGATGAGGCCTCCACCACTGCCTCCAAGACAGAGACCAGCCAGGTGGCGCCTGCCTAA",
+                  "hseq": "CAGTTCCGGAACTGTATGCTCACCACGCTGTGCTGCGGCAAGAATCCACTGGGAGATGACGACGCCTCTGCCACCGCTTCCAAGACGGAGACCAGCCAGGTGGCTCCAGCCTAA",
+                  "midline": "|||||||||||||| ||||||||||| |||||||| |||| ||| |||||||| || || || |||||  |||| || |||||||| ||||||||||||||||| || ||||||"
+                },
+                {
+                  "num": 6,
+                  "bit_score": 84.2413,
+                  "score": 92,
+                  "evalue": 1.20995e-13,
+                  "identity": 173,
+                  "query_from": 689,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 29378974,
+                  "hit_to": 29378730,
+                  "hit_strand": "Minus",
+                  "align_len": 255,
+                  "gaps": 17,
+                  "qseq": "TCAAGGAGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCA------CCA-GGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "TCCAGGTGGCAGCT---CAGCAGCAAGAGTCTGCTACGACACAAAAGGCTGAACGGGAGGTGAGTCATATGGTGGTGGTGATGGTGGGATCCTTCTGTCTCTGCTACGTGCCCTATGCTGCCCTGGCCATGTACATGGTCAACAATCGGAACCACGGGCTG-GACTTACGGCTTGTC------ACCATCCCCGCCTTCTTTTCCAAGAGCTCCTGTGTCTACAACCCCATCATCTACTGCTTCATGAATAAGCAG",
+                  "midline": "|| ||| |||||||   || ||||| ||||| || || || || ||||| ||   |||||| | ||  |||||  |  | ||||| |   | |||    ||||||  |||||||||||   | ||||  | |||||  ||| | |      ||| |||||  |||||  | |   ||      ||||||||  | |||||| ||||||| ||||   ||||||||||| ||||||||  | | ||||| ||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gi|1877089949|ref|NC_000086.8|",
+                  "accession": "NC_000086",
+                  "title": "Mus musculus strain C57BL/6J chromosome X, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 169476592,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 82.4379,
+                  "score": 90,
+                  "evalue": 4.22315e-13,
+                  "identity": 159,
+                  "query_from": 706,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 73187061,
+                  "hit_to": 73187291,
+                  "hit_strand": "Plus",
+                  "align_len": 233,
+                  "gaps": 4,
+                  "qseq": "CAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATG--ACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "CAACAGAAAGAATCTGAGTCCACTCAGAAGGCCGAGAAGGAGGTGACACGCATGGTGGTGGTGATGGTCTTCGCATACTGCCTCTGCTGGGGACCCTATACTTTCTTTGCATGCTTTGCTACTGCCCACCCTGGCTATGCCTT--CCACCCTCTTGTGGCCTCCCTACCATCCTACTTTGCCAAAAGTGCCACTATCTACAACCCCATTATCTATGTCTTTATGAACCGGCAG",
+                  "midline": "|||||| | || || |   |||| |||||||||||||||||||| || ||||||||  |  | |||||| | || | |    |||||||||  |||||| |   | | || | ||    |    ||||||  ||||  | |||   | || ||||   |   || | || || | ||||||||| ||| || | |||||||||||| | |||||  || | ||||||  ||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 61,
+            "db_len": 2728222451,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/10090/RS_2024_02/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1150558",
+          "query_title": "IL6 T_truncatus",
+          "query_len": 627,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1877089964|ref|NC_000071.7|",
+                  "accession": "NC_000071",
+                  "title": "Mus musculus strain C57BL/6J chromosome 5, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 151758149,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 65.3059,
+                  "score": 71,
+                  "evalue": 6.64962e-08,
+                  "identity": 67,
+                  "query_from": 223,
+                  "query_to": 310,
+                  "query_strand": "Plus",
+                  "hit_from": 30219857,
+                  "hit_to": 30219944,
+                  "hit_strand": "Plus",
+                  "align_len": 88,
+                  "gaps": 0,
+                  "qseq": "AACAGCAAGGAGGCACTGGCAGAAAACAACCTGAACCTTCCAAAAATGGCAGAAAAAGACGGATGCTTCCAATCTGGGTTCAATCAGG",
+                  "hseq": "AACAACGATGATGCACTTGCAGAAAACAATCTGAAACTTCCAGAGATACAAAGAAATGATGGATGCTACCAAACTGGATATAATCAGG",
+                  "midline": "|||| | | || ||||| ||||||||||| ||||| |||||| | ||   |  ||| || ||||||| |||| |||| |  |||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 46.3705,
+                  "score": 50,
+                  "evalue": 0.0178434,
+                  "identity": 52,
+                  "query_from": 308,
+                  "query_to": 377,
+                  "query_strand": "Plus",
+                  "hit_from": 30223001,
+                  "hit_to": 30223070,
+                  "hit_strand": "Plus",
+                  "align_len": 70,
+                  "gaps": 0,
+                  "qseq": "AGGAGACTTGCTTGATGAGAATCACCACCGGCCTTCTGGAGTATCAGATCTACCTGGACTACCTCCAGAA",
+                  "hseq": "AGGAAATTTGCCTATTGAAAATTTCCTCTGGTCTTCTGGAGTACCATAGCTACCTGGAGTACATGAAGAA",
+                  "midline": "|||| | |||| |  ||| |||  || | || ||||||||||| || | ||||||||| ||| |  ||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 61,
+            "db_len": 2728222451,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "GPIPE/10090/RS_2024_02/ref_top_level"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1150559",
+          "query_title": "TNF T_truncatus",
+          "query_len": 702,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1877089952|ref|NC_000083.7|",
+                  "accession": "NC_000083",
+                  "title": "Mus musculus strain C57BL/6J chromosome 17, GRCm39",
+                  "taxid": 10090,
+                  "sciname": "Mus musculus"
+                }
+              ],
+              "len": 95294699,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 372.78,
+                  "score": 412,
+                  "evalue": 1.10639e-100,
+                  "identity": 327,
+                  "query_from": 296,
+                  "query_to": 702,
+                  "query_strand": "Plus",
+                  "hit_from": 35419524,
+                  "hit_to": 35419121,
+                  "hit_strand": "Minus",
+                  "align_len": 407,
+                  "gaps": 3,
+                  "qseq": "AGGGGCAGCTCCGGTGGCTGAACACATATGCCAACACCCTCCTGGCCAACAGCGTGAAGCTGGAAGACAACCAGCTGGTGGTGCCGACGGATGGGCTGTACCTCATCTACTCCCAGGTCCTCTTCAGGGGCCAAGGCTGCCCTTCCACCCACTTGTTCCTCACCCACACCATCAGCCGCATCGCTGTCTCCTACCCGTCCAAGGTCAACCTCCTCTCTGCCATCAAGAGCCCTTGCCAGAGGGAGACGCCAGAGGGGGCTGAGGCCAAGCCCTGGTACGAGCCCATCTACCAGGGAGGGGTCTTCCAGCTGGAGAAGGGTGATCGACTCAGTGCTGAGATCAACCTGCCCGACTATCTGGACTTTGCTAAGTCTGGGCAGGTCTACTTTGGGATCATTGCCCTGTGA",
+                  "hseq": "AGGAGCAGCTGGAGTGGCTGAGCCAGCGCGCCAACGCCCTCCTGGCCAACGGCATGGATCTCAAAGACAACCAACTAGTGGTGCCAGCCGATGGGTTGTACCTTGTCTACTCCCAGGTTCTCTTCAAGGGACAAGGCTGCCC---CGACTACGTGCTCCTCACCCACACCGTCAGCCGATTTGCTATCTCATACCAGGAGAAAGTCAACCTCCTCTCTGCCGTCAAGAGCCCCTGCCCCAAGGACACCCCTGAGGGGGCTGAGCTCAAACCCTGGTATGAGCCCATATACCTGGGAGGAGTCTTCCAGCTGGAGAAGGGGGACCAACTCAGCGCTGAGGTCAATCTGCCCAAGTACTTAGACTTTGCGGAGTCCGGGCAGGTCTACTTTGGAGTCATTGCTCTGTGA",
+                  "midline": "||| ||||||   |||||||| |      |||||| |||||||||||||| || || | ||  |||||||||| || ||||||||  | |||||| |||||||  ||||||||||||| ||||||| ||| |||||||||||   |  | || || |||||||||||||| |||||||  | ||| |||| |||| |   || |||||||||||||||||| |||||||||| ||||  | ||| || || ||||||||||||  ||| |||||||| |||||||| |||| |||||| |||||||||||||||||||| || | |||||| |||||| |||| |||||| | ||  | ||||||||  |||| |||||||||||||||||  ||||||| ||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 174.41,
+                  "score": 192,
+                  "evalue": 5.74646e-41,
+                  "identity": 150,
+                  "query_from": 1,
+                  "query_to": 186,
+                  "query_strand": "Plus",
+                  "hit_from": 35420816,
+                  "hit_to": 35420631,
+                  "hit_strand": "Minus",
+                  "align_len": 186,
+                  "gaps": 0,
+                  "qseq": "ATGAGCACTGAAAGCATGATCCGGGATGTGGAGCTGGCAGAGGAGGCGCTCTCCAAGACGGCAGGGGGCTCCCAGGGTTCCGGAAGGTGCTTGTGTCTCAGCCTCTTCTCCTTCTTCCTGGTCGCAGGAGGCACCACGCTCTTCTGCCTGCTGCACTTCGGGGTAATCGGCCCCCAGAGGGAAGAG",
+                  "hseq": "ATGAGCACAGAAAGCATGATCCGCGACGTGGAACTGGCAGAAGAGGCACTCCCCCAAAAGATGGGGGGCTTCCAGAACTCCAGGCGGTGCCTATGTCTCAGCCTCTTCTCATTCCTGCTTGTGGCAGGGGCCACCACGCTCTTCTGTCTACTGAACTTCGGGGTGATCGGTCCCCAAAGGGATGAG",
+                  "midline": "|||||||| |||||||||||||| || ||||| |||||||| ||||| ||| || | | |   ||||||| ||||   ||| |  ||||| | ||||||||||||||||| ||| | || || ||||| | ||||||||||||||| || ||| |||||||||| ||||| ||||| ||||| |||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 51.7806,
+                  "score": 56,
+                  "evalue": 0.000472532,
+                  "identity": 40,
+                  "query_from": 233,
+                  "query_to": 280,
+                  "query_strand": "Plus",
+                  "hit_from": 35419881,
+                  "hit_to": 35419834,
+                  "hit_strand": "Minus",
+                  "align_len": 48,
+                  "gaps": 0,
+                  "qseq": "GATCATCTTCTAAAACCTCAAGTAACAAGCCCGTAGCCCATGTTGTAG",
+                  "hseq": "GATCATCTTCTCAAAATTCGAGTGACAAGCCTGTAGCCCACGTCGTAG",
+                  "midline": "||||||||||| |||  || ||| ||||||| |||||||| || ||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 61,
+            "db_len": 2728222451,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+]
+}
+

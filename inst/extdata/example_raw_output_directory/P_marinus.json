@@ -1,0 +1,1093 @@
+{
+"BlastOutput2": [
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "genomic/7757/GCF_010993605.1"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1225989",
+          "query_title": "IL10 T_truncatus",
+          "query_len": 537,
+          "hits": [
+          ],
+          "stat": {
+            "db_num": 1434,
+            "db_len": 1089050475,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          },
+          "message": "No hits found"
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "genomic/7757/GCF_010993605.1"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1225990",
+          "query_title": "SOX2 T_truncatus",
+          "query_len": 981,
+          "query_masking": [
+            {
+              "from": 52,
+              "to": 122
+            },
+            {
+              "from": 779,
+              "to": 785
+            }
+          ],
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1820171906|ref|NC_046132.1|",
+                  "accession": "NC_046132",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 64, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 7879911,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 380.895,
+                  "score": 421,
+                  "evalue": 4.21481e-103,
+                  "identity": 427,
+                  "query_from": 142,
+                  "query_to": 683,
+                  "query_strand": "Plus",
+                  "hit_from": 2746959,
+                  "hit_to": 2746406,
+                  "hit_strand": "Minus",
+                  "align_len": 573,
+                  "gaps": 50,
+                  "qseq": "GACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCCGGGAGGGCTGCTCGCC-CCGGGCGGCAACAGCATGGCGAGCGGGGTCGGGGTGGGCGCCGGCCTCGGCGCGGGCGTGAACCAGCGCATGGACAGCTACGCGCACATGAACG---GCTGGAGCAACGGCAG---CTAC---------------AGCATGATGCAGGACCAGCTG------GGCTACCCGCAGCACCCGGGCCTCAAC---GCGCACGGCGCCGCTCAGATGCAGCCCATGCACCGCTACGACGTGAGCGCCCTGCAGTACAACTCCATGACCAGCTCGCAGACCTACATGAACGG",
+                  "hseq": "GACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCGCGCGGCCAGCGGAGGAAGATGGCCCAGGAGAACCCCAAGATGCACAACTCTGAGATCTCCAAGCGGCTCGGCGCCGAGTGGAAGCTCCTCACCGAGGCCGAGAAGAGGCCCTTCATCGACGAGGCGAAGCGGCTGCGCGCGCTGCACATGAAGGAACACCCGGACTACAAGTACCGGCCCCGTCGCAAGACCAAGACCCTGCTCAAGAAGGATAAGTTCTCTCTGCAGGGCGGCCTCTTGGCCTCCGGGGGGCCCCCGGGCAGCG-CCGCGGCCGCCGCGGCCGCCGGCCTCGG------------CCAGCGCCTGGACCCCTACCCGCAGCTCAACGGCTGCTGGCCCAACGGCAGCGCCTACGCAGCGGCCGCCGCGGGCCTGCAGCAGGAGCCGCTGGCCCACGCCTACTCGCAGCACGCCGCGCTCAGCGCAGCGCACGGGGCTGCGCAGTTGCAGGGCCTGCACCGATACGACATGAGCGGCCTGCAGTA------CCTGCCCGGCGGGCAGGGCTACCTGAACGG",
+                  "midline": "||||||||||||||||||||||||||||||||||||||||| ||||| |||||| | ||||||||||| ||||||||||||||||||||||| ||||||  |||||| || |||||||||||||| ||  |  | ||| | |||||| |||| |||||||||||||| ||||||||||| |||||||||||||||||||||||||| || || ||||||||||| || || |||||||| ||  | ||||||||||||| | | |||| ||| || ||  | ||| ||||| |||  | |    |||  || || ||  | || ||||||||||||            ||||||| |||||  |||| ||||  | ||||   |||||  |||||||||   ||||                || ||  |||||| | ||||      | |||| |||||||| | |  |||| |   |||||||| || || ||| |||||  | ||||||| |||||| |||||| |||||||||      | || || ||  ||||  |||| |||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gi|1820171916|ref|NC_046123.1|",
+                  "accession": "NC_046123",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 55, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 9937950,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 316.876,
+                  "score": 350,
+                  "evalue": 4.21854e-84,
+                  "identity": 289,
+                  "query_from": 55,
+                  "query_to": 410,
+                  "query_strand": "Plus",
+                  "hit_from": 5656235,
+                  "hit_to": 5656590,
+                  "hit_strand": "Plus",
+                  "align_len": 363,
+                  "gaps": 14,
+                  "qseq": "GGGGGCGGCGGCGGCGGCGGCGGCGGCGGTGGCGGCGGCGG-CAACTCCACCGCGGCGGCGGCGGGCGG-CAAC-----CAGAAGAACAGCCCGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGATAAGTACACGCTGCC",
+                  "hseq": "GGAGGTGGCGGTGGCGGTGGTGGCGTCGGTGGAGGTGGTGGACAA-------GCGGGCAAGGTTGGCGGGCAACAGAGTCAGCAGATGTGCAACGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCACGAGGCCAGCGGAGGAAGATGGCCCAGGAGAACCCCAAGATGCACAACTCTGAGATCTCCAAGCGTCTCGGCGCCGAGTGGAAGCTCCTCACCGAGGCGGAGAAGAGGCCCTTCATCGACGAGGCCAAGCGGCTGCGCGCCCTGCACATGAAGGAGCACCCCGACTACAAGTACCGACCGCGCCGCAAGACCAAAACCCTCCTGAAGAAGGACAAGTACTCTCTGCC",
+                  "midline": "|| || ||||| ||||| || |||| |||||| || || || |||       ||||    ||  ||||| ||||     ||| |||   ||   ||||||||||||||||||||||||||||||||||||||||| || || |||||| | ||||||||||| ||||||||||||||||||||||| ||||||  |||||| || |||||||||||||| ||  |  | ||| |||||||| |||| |||||||||||||||||||||||||| || |||||||||||||| ||||| || || || ||||| || || || || ||||| || ||| |||||||||| |||||| | |||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gi|1820170895|ref|NW_022638981.1|",
+                  "accession": "NW_022638981",
+                  "title": "Petromyzon marinus isolate kPetMar1 unplaced genomic scaffold, kPetMar1.pri scaffold_503_arrow_ctg1, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 191249,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 282.612,
+                  "score": 312,
+                  "evalue": 8.70274e-74,
+                  "identity": 216,
+                  "query_from": 140,
+                  "query_to": 395,
+                  "query_strand": "Plus",
+                  "hit_from": 79246,
+                  "hit_to": 78991,
+                  "hit_strand": "Minus",
+                  "align_len": 256,
+                  "gaps": 0,
+                  "qseq": "CGGACCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGACGCTCATGAAGAAGGA",
+                  "hseq": "CGGACCACGTGAAGCGGCCCATGAACGCCTTCATGGTGTGGTCGCGAGGCCAGCGGAGGAAGATGGCCCAGGAGAACCCCAAGATGCACAACTCTGAGATCTCCAAGCGTCTCGGCGCCGAGTGGAAGCTCCTCACCGAGGCCGAGAAGAGGCCCTTCATCGACGAGGCCAAGCGGCTGCGCGCCCTGCACATGAAGGAGCACCCCGACTACAAGTACCGGCCGCGCCGCAAGCCCAAGTCCCTGCTCAAGAAGGA",
+                  "midline": "|||||| ||| |||||||||||||||||||||||||||||||| || || |||||| | ||||||||||| ||||||||||||||||||||||| ||||||  |||||| || |||||||||||||| ||  |  | ||| | |||||| |||| |||||||||||||||||||||||||| || |||||||||||||| ||||| || || || |||||||| || || ||  ||||| | ||  | ||||||||"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gi|1820171924|ref|NC_046115.1|",
+                  "accession": "NC_046115",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 47, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 11181220,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 243.839,
+                  "score": 269,
+                  "evalue": 7.63403e-62,
+                  "identity": 193,
+                  "query_from": 147,
+                  "query_to": 378,
+                  "query_strand": "Plus",
+                  "hit_from": 2698726,
+                  "hit_to": 2698957,
+                  "hit_strand": "Plus",
+                  "align_len": 232,
+                  "gaps": 0,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGCGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAG",
+                  "hseq": "CGTGAAGCGCCCCATGAACGCGTTCATGGTCTGGTCGAAGGGCGAACGCCGCAAGTTGGCGCAGGACAACCCCAAGATGCACAACTCGGAGATCTCCAAGCGGCTCGGCGCCGAGTGGAAGCTCCTGAGCGAGGCCGAGAAGAGGCCCTTCATCGACGAGGCCAAGCGGCTGCGCGCGCAGCACATGAAGGAGCACCCGGACTATAAATACCGACCACGCCGCAAACCCAAG",
+                  "midline": "||| ||||| ||||||||||| |||||||| |||||    ||  | || |||||| |||| || || |||||||||||||||||||||||||||  |||||| || |||||||||||||| ||  ||   ||| | |||||| |||| |||||||||||||||||||||||||| |||| |||||||||||| |||||||| ||||||||||| || || || ||| |||||"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gi|1820172034|ref|NC_046071.1|",
+                  "accession": "NC_046071",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 3, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 25627751,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 122.112,
+                  "score": 134,
+                  "evalue": 1.79853e-25,
+                  "identity": 167,
+                  "query_from": 149,
+                  "query_to": 378,
+                  "query_strand": "Plus",
+                  "hit_from": 1434157,
+                  "hit_to": 1434386,
+                  "hit_strand": "Plus",
+                  "align_len": 231,
+                  "gaps": 2,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG-CGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAG",
+                  "hseq": "TCAAGCGGCCAATGAACGCCTTCATGGTGTGGTCGCAGATCGAGCGGCGCAAGATCATGGAGCAGTCGCCCGACATGCACAACGCGGAGATCTCCAAGCGGCTGGGCCGCCG-CTGGAAGCAGCTGAAGGAGAGCGAGAAGGTGCCCTTCATCCGAGAGGCGGAGCGCTTGCGCCTCAAGCACATGGCCGACTACCCGGACTACAAGTACCGGCCGCGCAAGAAAGCCAAG",
+                  "midline": "|||||||||| ||||||||||||||||||||||| |      |||||||||||||     |  ||   ||| | ||||||||| ||||||||  |||||| ||||| |||||  ||||| |   ||  |||||  ||||||  ||| ||||||   |||||  ||||  ||||      |||||||   ||  ||||||| || || |||||||| ||   |||| |||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 62.6008,
+                  "score": 68,
+                  "evalue": 1.47763e-07,
+                  "identity": 79,
+                  "query_from": 147,
+                  "query_to": 255,
+                  "query_strand": "Plus",
+                  "hit_from": 12930164,
+                  "hit_to": 12930056,
+                  "hit_strand": "Minus",
+                  "align_len": 109,
+                  "gaps": 0,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGC",
+                  "hseq": "CGTGAAGAGGCCCATGAACGCGTTTATGGTCTGGGCGCAGGCGGCGCGTCGCAAGCTCGCCGACCAGTACCCGCACCTGCACAACGCCGAGCTGAGCAAGACTCTGGGC",
+                  "midline": "||| ||| ||||||||||||| || ||||| ||| | |  | |  ||| |||||| | ||| |  || ||||  |  |||||||| | ||| | ||||||   ||||||"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gi|1820172011|ref|NC_046080.1|",
+                  "accession": "NC_046080",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 12, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 15977020,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 98.6682,
+                  "score": 108,
+                  "evalue": 2.05212e-18,
+                  "identity": 154,
+                  "query_from": 149,
+                  "query_to": 365,
+                  "query_strand": "Plus",
+                  "hit_from": 15135797,
+                  "hit_to": 15135581,
+                  "hit_strand": "Minus",
+                  "align_len": 218,
+                  "gaps": 2,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG-CGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCG",
+                  "hseq": "TCAAGAGGCCCATGAACGCCTTCATGGTGTGGTCGCAGATCGAGCGGCGCAAGATCATGGAGGAGTCTCCGGACGTGCACAACGCGGAGATCTCCAAGCGGCTGGGCCGCCG-CTGGAAGCAGCTCAAGGACGGCGAGAAGGTTCCCTTCCTCCGGGAGGCCGAGCGCCTGCGCCTCAAGCACATGGCCGACTACCCGGACTACAAGTACCGGCCACG",
+                  "midline": "||||| |||||||||||||||||||||||||||| |      |||||||||||||     | |||   ||  |  |||||||| ||||||||  |||||| ||||| |||||  ||||| |   |   |||    ||||||   || ||| ||   |||||| |||| |||||      |||||||   ||  ||||||| || || |||||||| ||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 52.6823,
+                  "score": 57,
+                  "evalue": 0.000267161,
+                  "identity": 100,
+                  "query_from": 106,
+                  "query_to": 246,
+                  "query_strand": "Plus",
+                  "hit_from": 3101932,
+                  "hit_to": 3101790,
+                  "hit_strand": "Minus",
+                  "align_len": 144,
+                  "gaps": 4,
+                  "qseq": "GCGGCGGCGGCGGGCGGCAACCAGAAG-AACAGCCCGGACCGCG--TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAG",
+                  "hseq": "GCGGCGGCAGCAG-CAGCAAGACGCAGCAACAGGGAGAACCGCGCATCCCGCGACCCATGAACGCGTTCATGGTCTGGGCCAAGGATGAGAGGAGGCGTCTGGCCAAACAGAACCCAGATCTGCACAATGCTGAGCTCAGCAAG",
+                  "midline": "|||||||| || | | ||||   | || |||||   | ||||||  ||  ||| ||||||||||| |||||||| ||| ||   |   || || |     ||||| || |||||||  |  |||||||  | ||| ||||||||"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gi|1820171962|ref|NC_046095.1|",
+                  "accession": "NC_046095",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 27, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 13631014,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 95.0615,
+                  "score": 104,
+                  "evalue": 2.49999e-17,
+                  "identity": 166,
+                  "query_from": 149,
+                  "query_to": 380,
+                  "query_strand": "Plus",
+                  "hit_from": 2725918,
+                  "hit_to": 2725687,
+                  "hit_strand": "Minus",
+                  "align_len": 237,
+                  "gaps": 10,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGA--GAACCCCAAGA--TGCACAACTCGGAGATCAGCAAGCGCCTGGG-CGCCGAGTGGAAACTTTTGTCGGAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGGAAAACCAAGAC",
+                  "hseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCGCAGATAGAGCGGCGCAAGAT----CATGATGGAGTCGCCGGACGTGCACAACGCGGAGATCTCCAAGAGGCTGGGCCGCCG-TTGGAAGCAGCTCAAGGACTGCGAGAAGGTCCCCTTCATGCGGGAGGCGGAACGCCTGCGCCTCAAGCACATGGCCGACTACCCGGACTATAAGTACCGGCCGCGCAAAAAAGCCAAGAC",
+                  "midline": "|||||||||||||||||||||||||||||||||| |      |||||||||||||    || ||  ||  | |  ||  |||||||| ||||||||  |||| | ||||| |||||  ||||| |   |   |||    ||||||   || |||||    |||||  | || |||||      |||||||   ||  ||||||| ||||| |||||||| ||    ||| |||||||"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gi|1820171963|ref|NC_046094.1|",
+                  "accession": "NC_046094",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 26, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 13661365,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 92.3564,
+                  "score": 101,
+                  "evalue": 3.04561e-16,
+                  "identity": 80,
+                  "query_from": 277,
+                  "query_to": 372,
+                  "query_strand": "Plus",
+                  "hit_from": 7529474,
+                  "hit_to": 7529572,
+                  "hit_strand": "Plus",
+                  "align_len": 99,
+                  "gaps": 3,
+                  "qseq": "GAGACGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCC---CCGGCGGAAA",
+                  "hseq": "GAGAACGAGAAGAGACCGTTCATCGAGGAGGCCGAGCGGCTGCGCGTGCAGCACAAGAAGGACCACCCAGACTACAAATACCAACCACGCCGGCGGAAA",
+                  "midline": "||||  |||||| | ||||||||||| |||||| |||||||||| | || ||||| |||||| ||||| || || |||||||  ||   ||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 67.1093,
+                  "score": 73,
+                  "evalue": 1.21291e-08,
+                  "identity": 80,
+                  "query_from": 147,
+                  "query_to": 255,
+                  "query_strand": "Plus",
+                  "hit_from": 7525998,
+                  "hit_to": 7526106,
+                  "hit_strand": "Plus",
+                  "align_len": 109,
+                  "gaps": 0,
+                  "qseq": "CGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGC",
+                  "hseq": "CGTGAAGAGGCCCATGAACGCGTTCATGGTATGGGCGCAGGCGGCGCGTCGCAAGCTCGCCGATCAGTACCCGCACCTGCACAACGCCGAGCTGAGCAAGACTCTGGGC",
+                  "midline": "||| ||| ||||||||||||| |||||||| ||| | |  | |  ||| |||||| | ||| |  || ||||  |  |||||||| | ||| | ||||||   ||||||"
+                }
+              ]
+            },
+            {
+              "num": 9,
+              "description": [
+                {
+                  "id": "gi|1820171966|ref|NC_046091.1|",
+                  "accession": "NC_046091",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 23, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 14098332,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 89.6514,
+                  "score": 98,
+                  "evalue": 1.06302e-15,
+                  "identity": 157,
+                  "query_from": 151,
+                  "query_to": 365,
+                  "query_strand": "Plus",
+                  "hit_from": 1372953,
+                  "hit_to": 1373167,
+                  "hit_strand": "Plus",
+                  "align_len": 222,
+                  "gaps": 14,
+                  "qseq": "AAGCGGCCCATGAACGCCTTCATGGTGTGGTCCC---GCGGGCAGCGGCGCAAGATGGCCCAAGAGAAC-CCCAAGATGCACAACTCGGAGATCAGCAAGCGCCT-GGGCGCCGAGTGGAAACTTTTGTCGGAGA--CGGAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCG",
+                  "hseq": "AAGAGGCCCATGAACGCGTTCATGGTGTGGGCTCAGATCGAGAGGCGGCGGCTGATGG----AGCTCTCTCCCGAGATGCACAACGCCGAGATCTCCAGGCGGCTCGGACGCC-TCTGGAGGCTGCTG--GGAGACGCGGAGAAGAAGCCCTTCGTTCGCGAGGCGGAGCGGCTTCGCGCTCAGCACATGGCCGACCACCCCGACTACAAATACCGACCACG",
+                  "midline": "||| ||||||||||||| |||||||||||| | |    || |  ||||||   |||||    ||    | ||| ||||||||||| | ||||||  || ||| || || ||||   ||||  ||  ||  |||||  ||||||||  ||| ||| |   ||||||  ||||||| || || | |||||||   || ||||| || || |||||||| || ||"
+                }
+              ]
+            },
+            {
+              "num": 10,
+              "description": [
+                {
+                  "id": "gi|1820171928|ref|NC_046111.1|",
+                  "accession": "NC_046111",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 43, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 11523553,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 68.9126,
+                  "score": 75,
+                  "evalue": 3.47504e-09,
+                  "identity": 81,
+                  "query_from": 145,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 9789195,
+                  "hit_to": 9789304,
+                  "hit_strand": "Plus",
+                  "align_len": 110,
+                  "gaps": 0,
+                  "qseq": "CGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "CGCATCAGGCGGCCTATGAACGCCTTCATGGTGTGGGCCAAGGACGAGAGGAAGAGGCTGGCACAGCAGAACCCGGACCTGCACAACGCGGAGCTGAGCAAGATCCTCGG",
+                  "midline": "||| ||| |||||| ||||||||||||||||||||| ||   |   || ||   | | |||| ||  |||||||  |  |||||||| ||||| | ||||||  ||| ||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 63.5025,
+                  "score": 69,
+                  "evalue": 1.47763e-07,
+                  "identity": 66,
+                  "query_from": 283,
+                  "query_to": 369,
+                  "query_strand": "Plus",
+                  "hit_from": 3246878,
+                  "hit_to": 3246964,
+                  "hit_strand": "Plus",
+                  "align_len": 87,
+                  "gaps": 0,
+                  "qseq": "GAGAAGCGGCCGTTCATCGACGAGGCCAAGCGGCTGCGAGCGCTGCACATGAAGGAACACCCGGATTATAAATACCGGCCCCGGCGG",
+                  "hseq": "GAGAAGCGGCCGTTCGTGGAGGAGGCGGAACGCCTGCGCATGCAGCATAAGAAGGACCACCCCGACTACAAGTACCAGCCGCGGAGG",
+                  "midline": "||||||||||||||| | || |||||  | || |||||   || ||| | |||||| ||||| || || || |||| ||| ||| ||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 52.6823,
+                  "score": 57,
+                  "evalue": 0.000267161,
+                  "identity": 81,
+                  "query_from": 144,
+                  "query_to": 255,
+                  "query_strand": "Plus",
+                  "hit_from": 3242768,
+                  "hit_to": 3242879,
+                  "hit_strand": "Plus",
+                  "align_len": 114,
+                  "gaps": 4,
+                  "qseq": "CCGCGTCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAG--CGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGGC",
+                  "hseq": "CCACGTGAAGAGGCCCATGAACGCGTTCATGGTCTGG--GCACAGGCTGCTCGCAGGAAGCTGTCCGACCAATACCCGCAGCTTCACAACGCCGAGCTCAGCAAGACGCTGGGC",
+                  "midline": "|| ||| ||| ||||||||||||| |||||||| |||   | | ||| |  ||  | ||| || || |  |  ||||  || | |||||| | ||| ||||||||   ||||||"
+                }
+              ]
+            },
+            {
+              "num": 11,
+              "description": [
+                {
+                  "id": "gi|1820171968|ref|NC_046089.1|",
+                  "accession": "NC_046089",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 21, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 14191315,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 66.2076,
+                  "score": 72,
+                  "evalue": 1.21291e-08,
+                  "identity": 78,
+                  "query_from": 149,
+                  "query_to": 254,
+                  "query_strand": "Plus",
+                  "hit_from": 5475057,
+                  "hit_to": 5474952,
+                  "hit_strand": "Minus",
+                  "align_len": 106,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAGCGCCTGGG",
+                  "hseq": "TCAAGCGCCCGATGAACGCGTTCATGGTCTGGGCCAAGGACGAGCGGCGCAAGATCCTGCAGGCCTTCCCCGACATGCACAACTCAAGCATCAGCAAGATCCTGGG",
+                  "midline": "||||||| || |||||||| |||||||| ||| ||   |   |||||||||||||    || |    |||| | |||||||||||    |||||||||  ||||||"
+                }
+              ]
+            },
+            {
+              "num": 12,
+              "description": [
+                {
+                  "id": "gi|1820172012|ref|NC_046079.1|",
+                  "accession": "NC_046079",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 11, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 16036253,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 59.8958,
+                  "score": 65,
+                  "evalue": 1.80012e-06,
+                  "identity": 46,
+                  "query_from": 149,
+                  "query_to": 203,
+                  "query_strand": "Plus",
+                  "hit_from": 2631048,
+                  "hit_to": 2630994,
+                  "hit_strand": "Minus",
+                  "align_len": 55,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGAT",
+                  "hseq": "TCAAGCGTCCCATGAACGCCTTCATGGTGTGGGCGCAGATGGAGCGTCGCAAGAT",
+                  "midline": "||||||| |||||||||||||||||||||||| | |    | |||| ||||||||"
+                }
+              ]
+            },
+            {
+              "num": 13,
+              "description": [
+                {
+                  "id": "gi|1820172016|ref|NC_046075.1|",
+                  "accession": "NC_046075",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 7, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 16782645,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 47.2722,
+                  "score": 51,
+                  "evalue": 0.01136,
+                  "identity": 69,
+                  "query_from": 149,
+                  "query_to": 246,
+                  "query_strand": "Plus",
+                  "hit_from": 612292,
+                  "hit_to": 612195,
+                  "hit_strand": "Minus",
+                  "align_len": 98,
+                  "gaps": 0,
+                  "qseq": "TCAAGCGGCCCATGAACGCCTTCATGGTGTGGTCCCGCGGGCAGCGGCGCAAGATGGCCCAAGAGAACCCCAAGATGCACAACTCGGAGATCAGCAAG",
+                  "hseq": "TCAAGCGGCCGATGAACGCGTTCATGGTCTGGGCAAAGGACGAGAGGCGGAAAATCCTTCAAGCTTTCCCGGACATGCACAACTCAAACATAAGCAAG",
+                  "midline": "|||||||||| |||||||| |||||||| ||| |    |   || |||| || ||    ||||    |||  | |||||||||||  | || ||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 1434,
+            "db_len": 1089050475,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "genomic/7757/GCF_010993605.1"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1225991",
+          "query_title": "RHO T_truncatus",
+          "query_len": 1047,
+          "hits": [
+            {
+              "num": 1,
+              "description": [
+                {
+                  "id": "gi|1820171925|ref|NC_046114.1|",
+                  "accession": "NC_046114",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 46, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 11243752,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 330.401,
+                  "score": 365,
+                  "evalue": 7.14965e-88,
+                  "identity": 292,
+                  "query_from": 1,
+                  "query_to": 365,
+                  "query_strand": "Plus",
+                  "hit_from": 4479657,
+                  "hit_to": 4480021,
+                  "hit_strand": "Plus",
+                  "align_len": 365,
+                  "gaps": 0,
+                  "qseq": "ATGAACGGGACGGAGGGCCTGAACTTCTACGTGCCTTTCTCTAACAAGACAGGCGTGGTGCGCAGCCCCTTCGAGTACCCGCAGTACTACCTGGCTGAGCCGTGGCAGTTCTCCGTGCTGGCTGCCTACATGTTCCTGCTGATCGTGCTCGGCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACCACCACCCTCTACACCTCTCTGCATGCGTACTTCGTCTTCGGGCCCACGGGATGCAATCTGGAGGGCTTCTTTGCCACCCTGGGCGGTGA",
+                  "hseq": "ATGAACGGCACAGAGGGAGAAAACTTCTACATTCCCTTCTCGAACAAGACGGGCCTTGCCCGCAGTCCGTTCGAATACCCCCAGTACTACCTCGCCGAGCCATGGAAATACTCGGTCCTGGCCGCCTACATGTTTTTCCTCATCCTCGTGGGCTTCCCGGTCAACTTCCTCACGCTGTTCGTCACGGTGCAACACAAGAAGCTGAGGACGCCGCTCAACTACATCCTGCTCAACCTGGCAGTGGCCAACCTCTTTATGGTCCTCTTCGGCTTCACCCTCACCATGTACTCCTCCATGAACGGCTACTTCGTCTTCGGCCCCACCATGTGCAACTTCGAGGGCTTCTTCGCTACTCTGGGCGGTGA",
+                  "midline": "|||||||| || |||||    ||||||||| | || ||||| |||||||| ||| | |  ||||| || ||||| ||||| ||||||||||| || ||||| ||| | | ||| || ||||| |||||||||||  | || ||| |  | ||||||||  |||||||||||||||| | ||||||||| || |||||||||||| | ||||| |||||||||||||||||||||||||| |||||||||||||| |||||| ||   |||||||||  |||| | ||| ||||  || | |  |||||||||||||| |||||    |||||  | ||||||||||| || || |||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 216.789,
+                  "score": 239,
+                  "evalue": 1.13495e-53,
+                  "identity": 193,
+                  "query_from": 695,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 4499031,
+                  "hit_to": 4499272,
+                  "hit_strand": "Plus",
+                  "align_len": 242,
+                  "gaps": 0,
+                  "qseq": "AGGCAGCTGCCCAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "AGGCGGCCGCCGCCCAGCAAGAGTCTGCGTCCACGCAGAAGGCCGAGAAGGAGGTGACACGCATGGTGGTGCTCATGGTGATCGGCTTCCTCGTGTGCTGGGTGCCGTACGCCTCGGTGGCCTTCTACATCTTCACCCACCAGGGCTCCGACTTCGGCGCTACGTTCATGACCGTGCCGGCCTTCTTCGCCAAGACCTCGGCCCTCTACAACCCGATCATCTACATCCTCATGAACAAGCAG",
+                  "midline": "|||| || |||   ||||| ||||| ||  ||||||||||||||||||||||||| || ||||||||  |  |||||||  | |  |||||  | ||||||||||| || |||   ||||| |||||||| ||||||||||||||||||||||| ||| | |  ||||||||| | ||| | ||||| |||||||  ||  || ||||||||||  ||||||||||| | ||||||||||||"
+                },
+                {
+                  "num": 3,
+                  "bit_score": 138.342,
+                  "score": 152,
+                  "evalue": 2.5021e-30,
+                  "identity": 136,
+                  "query_from": 528,
+                  "query_to": 697,
+                  "query_strand": "Plus",
+                  "hit_from": 4492454,
+                  "hit_to": 4492623,
+                  "hit_strand": "Plus",
+                  "align_len": 173,
+                  "gaps": 6,
+                  "qseq": "CAGGTACATCCCAGAGGGAATGCAGTGCTCGTGCGGGATTGACTACTACACGTCT---CGCCAGGAGGTCAACAATGAGTCCTTCGTCATCTACATGTTCGTGGTCCACTTCACCATCCCCCTGGTCATCATATTCTTCTGCTACGGGCAGCTGGTCTTCACAGTCAAGGAGG",
+                  "hseq": "CAGGTACTTACCGGAAGGAATGCAGTGCTCCTGTGGGCCTGACTACTACACG-CTGAACCCCA--ACTTCAACAACGAGTCGTTCGTGATCTACATGTTCCTCGTTCACTTCATCATTCCCTTCATAGTCATCTTCTTCTGCTACGGGCGTCTGCTGTGCACAGTGAAGGAGG",
+                  "midline": "||||||| | || || |||||||||||||| || |||  ||||||||||||| ||   | |||  |  ||||||| ||||| ||||| |||||||||||| | || ||||||| ||| ||| |  |  |||| ||||||||||||||||  ||| | | |||||| |||||||"
+                },
+                {
+                  "num": 4,
+                  "bit_score": 118.505,
+                  "score": 130,
+                  "evalue": 2.34344e-24,
+                  "identity": 122,
+                  "query_from": 373,
+                  "query_to": 532,
+                  "query_strand": "Plus",
+                  "hit_from": 4482505,
+                  "hit_to": 4482664,
+                  "hit_strand": "Plus",
+                  "align_len": 160,
+                  "gaps": 0,
+                  "qseq": "CTGTGGTCCTTGGTGGTCCTGGCCATCGAGAGGTACGTGGTTGTGTGTAAGCCCATGAGCAACTTCCGCTTCGGGGAGAACCATGCCATCATGGGCCTCGCCCTCACCTGGATCATGGCAATGGCCTGTGCCGCGGCCCCCCTCGTCGGCTGGTCCAGGT",
+                  "hseq": "CTCTGGTCGCTCGTGGTCCTCGCCATTGAGCGCTACATCGTCATCTGCAAACCCATGGGCAACTTTCGCTTCGGCAGCACCCACGCCTACATGGGGGTGGCCTTCACCTGGTTCATGGCCTTGTCCTGCGCGGCTCCACCCCTCGTCGGCTGGTCCAGGT",
+                  "midline": "|| |||||  | |||||||| ||||| ||| | ||| | ||  | || || |||||| ||||||| ||||||||    | ||| |||  ||||||  | ||| |||||||| |||||||  || |||| || ||  | ||||||||||||||||||||||"
+                },
+                {
+                  "num": 5,
+                  "bit_score": 62.6008,
+                  "score": 68,
+                  "evalue": 1.58039e-07,
+                  "identity": 152,
+                  "query_from": 706,
+                  "query_to": 931,
+                  "query_strand": "Plus",
+                  "hit_from": 4521175,
+                  "hit_to": 4521400,
+                  "hit_strand": "Plus",
+                  "align_len": 230,
+                  "gaps": 8,
+                  "qseq": "CAACAGCAGGAGTCGGCCACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCTACATTTTCACCC----ACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACA",
+                  "hseq": "CAGCAGAAGGAGTCGGAGACGACGCAGAAGGCAGAGCGCGACGTCTCCCGCATGGTGGTGGTCATGATCTTAGCCTACGTCTTCTGCTGGGGACCCTACACATTCTTCGCGTGC----TTTGCGGCCGCGAACCCGGGCTACTCGTTCCACCCGATCGCCGCCGCCCTGCCGGCTTACTTCGCCAAAGGCGCCACCATCTACAATCCCATAATCTACGTGTTCATGAACA",
+                  "midline": "|| ||| |||||||||  || ||||||||||| |||   || ||| | ||||||||  |  ||||| || | || | | |  |||||||||  |||||  |   | | |||| |    ||| |  ||    ||| ||||| |   ||   ||| |||  |    || | ||| | | ||| |||||  |  || |||||||||| ||| | |||||| |  | |||||||"
+                },
+                {
+                  "num": 6,
+                  "bit_score": 45.4688,
+                  "score": 49,
+                  "evalue": 0.0424077,
+                  "identity": 29,
+                  "query_from": 899,
+                  "query_to": 930,
+                  "query_strand": "Plus",
+                  "hit_from": 748919,
+                  "hit_to": 748888,
+                  "hit_strand": "Minus",
+                  "align_len": 32,
+                  "gaps": 0,
+                  "qseq": "TCTACAACCCCGTCATCTACATCATGATGAAC",
+                  "hseq": "TCTACAACCCCATCATCTACATCTTCATGAAC",
+                  "midline": "||||||||||| ||||||||||| | ||||||"
+                }
+              ]
+            },
+            {
+              "num": 2,
+              "description": [
+                {
+                  "id": "gi|1820171923|ref|NC_046116.1|",
+                  "accession": "NC_046116",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 48, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 11040504,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 77.9295,
+                  "score": 85,
+                  "evalue": 7.17496e-12,
+                  "identity": 94,
+                  "query_from": 151,
+                  "query_to": 276,
+                  "query_strand": "Plus",
+                  "hit_from": 6465713,
+                  "hit_to": 6465839,
+                  "hit_strand": "Plus",
+                  "align_len": 127,
+                  "gaps": 1,
+                  "qseq": "GGCTTCCCCA-TCAACTTCCTCACGCTCTACGTCACGGTCCAGCACAAGAAGCTGCGCACGCCTCTCAACTACATCCTGCTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTCGGTGGCTTCACC",
+                  "hseq": "GGTTTCCCCGCTCAATTTCCTCACCATCTTCCTCGCCTTCCAGTACAAGAAGTTCCGCTCCCACCTCAACTACATTCTGGTCAACCTCGCCATCGCCAATCTCGTCGTCGTTTGCTTTGGGTCCACC",
+                  "midline": "|| ||||||  |||| ||||||||  ||| | || |  ||||| |||||||| | ||| | |  ||||||||||| ||| ||||||| ||| | ||||| ||| || | || | |  ||| | ||||"
+                }
+              ]
+            },
+            {
+              "num": 3,
+              "description": [
+                {
+                  "id": "gi|1820171960|ref|NC_046097.1|",
+                  "accession": "NC_046097",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 29, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 13445430,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 70.716,
+                  "score": 77,
+                  "evalue": 1.06486e-09,
+                  "identity": 140,
+                  "query_from": 736,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 4197571,
+                  "hit_to": 4197371,
+                  "hit_strand": "Minus",
+                  "align_len": 206,
+                  "gaps": 10,
+                  "qseq": "GCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCCTATGCCAGCGTGGCGTTCT-----ACATTTTCACCCACCAGGGCTCCGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "GCCGAGCAGCAGGTGACGCGCATGGTGGTGGTGATGATCCTGGCGTTCCTCGTGTGCTGGATGCCCTACGCCACCTTCTCCATCGTGGTCACCGCGTGCCCCACCA----TCC-ACCTCGACCCGCTCCTGGCGGCCGTGCCGGCCTTTTTCTCCAAGACGGCCACCGTCTACAATCCCGTCATCTACATCTTCATGAACAAGCAG",
+                  "midline": "|||||| || |||| || ||||||||  |  | ||| || | || |||||  | |||||| ||||||| |||| | |  |  ||      ||    |  |||||||    ||| || | | |||  || |   | || | ||| | || ||  ||||||   || || ||||||| ||||||||||||||| | ||||||||||||"
+                },
+                {
+                  "num": 2,
+                  "bit_score": 45.4688,
+                  "score": 49,
+                  "evalue": 0.0424077,
+                  "identity": 40,
+                  "query_from": 216,
+                  "query_to": 261,
+                  "query_strand": "Plus",
+                  "hit_from": 5011461,
+                  "hit_to": 5011416,
+                  "hit_strand": "Minus",
+                  "align_len": 49,
+                  "gaps": 6,
+                  "qseq": "CAACTACATCCTGCTCAACCTGGCCGTGGCCAAC---CTCTTCATGGTC",
+                  "hseq": "CATCTACATCCT---CAACCTGGCCGTGGCCGACGAGCTCTTCATGCTC",
+                  "midline": "|| |||||||||   |||||||||||||||| ||   ||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 4,
+              "description": [
+                {
+                  "id": "gi|1820172033|ref|NC_046072.1|",
+                  "accession": "NC_046072",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 4, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 25147651,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 52.6823,
+                  "score": 57,
+                  "evalue": 0.000285741,
+                  "identity": 33,
+                  "query_from": 229,
+                  "query_to": 264,
+                  "query_strand": "Plus",
+                  "hit_from": 8656828,
+                  "hit_to": 8656793,
+                  "hit_strand": "Minus",
+                  "align_len": 36,
+                  "gaps": 0,
+                  "qseq": "CTCAACCTGGCCGTGGCCAACCTCTTCATGGTCTTC",
+                  "hseq": "CTCAACCTGGCCGTGGCCGACCTCTTCGTGGTCCTC",
+                  "midline": "|||||||||||||||||| |||||||| ||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 5,
+              "description": [
+                {
+                  "id": "gi|1820172016|ref|NC_046075.1|",
+                  "accession": "NC_046075",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 7, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 16782645,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 49.9773,
+                  "score": 54,
+                  "evalue": 0.000997335,
+                  "identity": 152,
+                  "query_from": 710,
+                  "query_to": 936,
+                  "query_strand": "Plus",
+                  "hit_from": 10594055,
+                  "hit_to": 10593827,
+                  "hit_strand": "Minus",
+                  "align_len": 230,
+                  "gaps": 4,
+                  "qseq": "AGCAGGAGTCGGCC-ACCACGCAGAAGGCCGAGAAGGAGGTCACTCGCATGGTCATCATCATGGTCGTTGCTTTCCTGATCTGCTGGGTGCCC-TATGCCAGCGTGGCGTTCTACATTTTCACCCACCAGGGCTC-CGACTTTGGCCCCATCTTCATGACCATCCCGTCATTCTTTGCCAAGAGTTCCTCCATCTACAACCCCGTCATCTACATCATGATGAACAAGCAG",
+                  "hseq": "AGCAGGAGTCTTTCGAGCACTCAGAAGGCCGAGCGAGAAATGTCGCGGATGGTGATCGTGATGGTGGGCTCCTTCTGTACGTGCTATGTGCCCCTAAGCCGCATTGGCCCTCTACGTAGTTACCAACC-GCGATCACAACATCGACCTGCGCTTCGTCACGGTGCCCGCGTTCTTCTCCAAGGCGTCATGCGTCTACAACCCCTTGATCTACTCGTTCATGAACAAGCAG",
+                  "midline": "||||||||||   | | ||| ||||||||||||   ||  |  | || ||||| ||| | ||||| |   | |||   |  ||||  |||||| || |||    ||||  ||||| |  | ||| ||| | | || | || | | ||    |||| | ||  | ||  | |||||  |||||   || | | ||||||||||| | ||||||    | ||||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 6,
+              "description": [
+                {
+                  "id": "gi|1820172006|ref|NC_046085.1|",
+                  "accession": "NC_046085",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 17, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 14784765,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 45.4688,
+                  "score": 49,
+                  "evalue": 0.0424077,
+                  "identity": 40,
+                  "query_from": 216,
+                  "query_to": 261,
+                  "query_strand": "Plus",
+                  "hit_from": 6022428,
+                  "hit_to": 6022383,
+                  "hit_strand": "Minus",
+                  "align_len": 49,
+                  "gaps": 6,
+                  "qseq": "CAACTACATCCTGCTCAACCTGGCCGTGGCCAAC---CTCTTCATGGTC",
+                  "hseq": "CATCTACATCCT---CAACCTGGCCGTGGCCGACGAGCTCTTCATGCTC",
+                  "midline": "|| |||||||||   |||||||||||||||| ||   ||||||||| ||"
+                }
+              ]
+            },
+            {
+              "num": 7,
+              "description": [
+                {
+                  "id": "gi|1820171964|ref|NC_046093.1|",
+                  "accession": "NC_046093",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 25, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 13704003,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 44.5672,
+                  "score": 48,
+                  "evalue": 0.0424077,
+                  "identity": 33,
+                  "query_from": 152,
+                  "query_to": 190,
+                  "query_strand": "Plus",
+                  "hit_from": 2975488,
+                  "hit_to": 2975450,
+                  "hit_strand": "Minus",
+                  "align_len": 39,
+                  "gaps": 0,
+                  "qseq": "GCTTCCCCATCAACTTCCTCACGCTCTACGTCACGGTCC",
+                  "hseq": "GCTTCCGCGTCAACTTCCCCGCGCTCGGCGTCACGGTCC",
+                  "midline": "|||||| | ||||||||| | |||||  |||||||||||"
+                }
+              ]
+            },
+            {
+              "num": 8,
+              "description": [
+                {
+                  "id": "gi|1820171956|ref|NC_046101.1|",
+                  "accession": "NC_046101",
+                  "title": "Petromyzon marinus isolate kPetMar1 chromosome 33, kPetMar1.pri, whole genome shotgun sequence",
+                  "taxid": 7757,
+                  "sciname": "Petromyzon marinus"
+                }
+              ],
+              "len": 12997950,
+              "hsps": [
+                {
+                  "num": 1,
+                  "bit_score": 44.5672,
+                  "score": 48,
+                  "evalue": 0.0424077,
+                  "identity": 38,
+                  "query_from": 216,
+                  "query_to": 258,
+                  "query_strand": "Plus",
+                  "hit_from": 5864278,
+                  "hit_to": 5864320,
+                  "hit_strand": "Plus",
+                  "align_len": 46,
+                  "gaps": 6,
+                  "qseq": "CAACTACATCCTGCTCAACCTGGCCGTGGCCAAC---CTCTTCATG",
+                  "hseq": "CATCTACATCCT---CAACCTGGCCGTGGCCGACGAGCTCTTCATG",
+                  "midline": "|| |||||||||   |||||||||||||||| ||   |||||||||"
+                }
+              ]
+            }
+          ],
+          "stat": {
+            "db_num": 1434,
+            "db_len": 1089050475,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          }
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "genomic/7757/GCF_010993605.1"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1225992",
+          "query_title": "IL6 T_truncatus",
+          "query_len": 627,
+          "hits": [
+          ],
+          "stat": {
+            "db_num": 1434,
+            "db_len": 1089050475,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          },
+          "message": "No hits found"
+        }
+      }
+    }
+  }
+,
+{
+    "report": {
+      "program": "blastn",
+      "version": "BLASTN 2.16.0+",
+      "reference": "Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), \"Gapped BLAST and PSI-BLAST: a new generation of protein database search programs\", Nucleic Acids Res. 25:3389-3402.",
+      "search_target": {
+        "db": "genomic/7757/GCF_010993605.1"
+      },
+      "params": {
+        "expect": 0.05,
+        "sc_match": 2,
+        "sc_mismatch": -3,
+        "gap_open": 5,
+        "gap_extend": 2,
+        "filter": "L;m;"
+      },
+      "results": {
+        "search": {
+          "query_id": "Query_1225993",
+          "query_title": "TNF T_truncatus",
+          "query_len": 702,
+          "hits": [
+          ],
+          "stat": {
+            "db_num": 1434,
+            "db_len": 1089050475,
+            "hsp_len": 0,
+            "eff_space": 0,
+            "kappa": 0.41,
+            "lambda": 0.625,
+            "entropy": 0.78
+          },
+          "message": "No hits found"
+        }
+      }
+    }
+  }
+]
+}
+

@@ -8,8 +8,10 @@
 #' (elaborated further in the results section). On a high level, for each gene,
 #' the prediction algorithm identifies compatible HSPs with the greatest
 #' gene coverage, sorts out overlaps between them, and finally stitches them
-#' together to create a new coding sequence (complete or incomplete). Note that
-#' previous assumptions stated for the functions that parse input hold here as
+#' together to create a new coding sequence (complete or incomplete). Any
+#' missing sections of the coding sequence that are unable to be predicted are
+#' notated with gaps ("-"). Note that
+#' previous assumptions stated for the BLAST-parsing functions hold here as
 #' well (the one that states all relevant HSPs are on the same genomic subject
 #' sequence is especially relevant).
 #' HSP compatibility (whether two HSPs can fit into the same gene
@@ -47,9 +49,11 @@
 #' \item The outer list follows the key-value format,
 #' where species names are the keys and each value is a 'gene list' for the
 #' species. (just like RawBlastList)
-#' \item Each 'gene list' is also a list in key-value format, where each key is
-#' a gene name and each value is a predicted sequence in string format. Missing
-#' sections of the predicted coding sequence are denoted "-".
+#' \item Each 'gene list' is also a list in key-value format in which each key
+#' is a gene name, but differs from the gene lists of RawBlastList in that
+#' each value is a predicted sequence in string format. Missing
+#' sections of the predicted coding sequence are denoted "-", and are used to
+#' visualize gene completeness in later functions.
 #' }
 #'
 #' @examples
