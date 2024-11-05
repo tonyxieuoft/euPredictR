@@ -81,16 +81,31 @@ json_file2 <- system.file("extdata", "dolphin_rho_BLAST_output.json",
                            package="euPredictR")
 
 
-# Example 1: No raw_blast_list input argument
+# Example 1: Parse BLAST output data with no raw_blast_list input argument
 
 raw_blast_list1 <- parse_BLAST_json(filename = json_file1,
                                      species = "O_orca")
 
 
-# Example 2: Using raw list generated previously as additional input
+# Example 2: Parse BLAST output data and combine with raw blast list
+# generated previously
 
 raw_blast_list2 <- parse_BLAST_json(filename = json_file2,
                                     species = "T_truncatus",
                                     raw_blast_list = raw_blast_list1)
 # this list concatenates raw BLAST results for both orca and dolphin RHO
+}
+\references{
+Altschul S.F., Gish, W., Miller, W., Myers, E.W. and Lipman, D.J. (1990). Basic local alignment
+search tool. Journal of Molecular Biology 215(3): 403-410.
+https://doi.org/10.1016/S0022-2836(05)80360-2
+
+Wickham H, François R, Henry L, Müller K, Vaughan D (2023). _dplyr: A
+Grammar of Data Manipulation_. R package version 1.1.4.
+https://CRAN.R-project.org/package=dplyr.
+
+Wheeler, D. and Bhagwat, M. Blast QuickStart: Example-Driven Web-Based BLAST
+Tutorial. In: Bergman NH, editor. Comparative Genomics: Volumes 1 and 2.
+Totowa (NJ): Humana Press; 2007. Chapter 9.
+https://www.ncbi.nlm.nih.gov/books/NBK1734/
 }

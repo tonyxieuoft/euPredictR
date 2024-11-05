@@ -61,6 +61,21 @@
 #'
 #' @export
 #'
+#' @references
+#'
+#' Altschul S.F., Gish, W., Miller, W., Myers, E.W. and Lipman, D.J. (1990). Basic local alignment
+#' search tool. Journal of Molecular Biology 215(3): 403-410.
+#' https://doi.org/10.1016/S0022-2836(05)80360-2
+#'
+#' Wickham H, François R, Henry L, Müller K, Vaughan D (2023). _dplyr: A
+#' Grammar of Data Manipulation_. R package version 1.1.4.
+#' https://CRAN.R-project.org/package=dplyr.
+#'
+#' Wheeler, D. and Bhagwat, M. Blast QuickStart: Example-Driven Web-Based BLAST
+#' Tutorial. In: Bergman NH, editor. Comparative Genomics: Volumes 1 and 2.
+#' Totowa (NJ): Humana Press; 2007. Chapter 9.
+#' https://www.ncbi.nlm.nih.gov/books/NBK1734/
+#'
 #' @examples
 #'
 #' # "orca_rho_BLAST_output.json" contains BLAST output for a rhodopsin query
@@ -74,13 +89,14 @@
 #'                            package="euPredictR")
 #'
 #'
-#' # Example 1: No raw_blast_list input argument
+#' # Example 1: Parse BLAST output data with no raw_blast_list input argument
 #'
 #' raw_blast_list1 <- parse_BLAST_json(filename = json_file1,
 #'                                      species = "O_orca")
 #'
 #'
-#' # Example 2: Using raw list generated previously as additional input
+#' # Example 2: Parse BLAST output data and combine with raw blast list
+#' # generated previously
 #'
 #' raw_blast_list2 <- parse_BLAST_json(filename = json_file2,
 #'                                     species = "T_truncatus",
@@ -217,6 +233,31 @@ parse_BLAST_json <- function(filename, species, raw_blast_list=NULL){
 #' @import rjson
 #' @import dplyr
 #'
+#' @references
+#'
+#' Couture-Beil A (2024). rjson: JSON for R. R package
+#' version 0.2.23.
+#' https://CRAN.R-project.org/package=rjson.
+#'
+#' Li J. (2020). _configr: An Implementation of Parsing and
+#' Writing Configuration File (JSON/INI/YAML/TOML)_. R
+#' package version 0.3.5,
+#' https://CRAN.R-project.org/package=configr.
+#'
+#' Wheeler, D. and Bhagwat, M. Blast QuickStart: Example-Driven Web-Based BLAST
+#' Tutorial. In: Bergman NH, editor. Comparative Genomics: Volumes 1 and 2.
+#' Totowa (NJ): Humana Press; 2007. Chapter 9.
+#' https://www.ncbi.nlm.nih.gov/books/NBK1734/
+#'
+#' Wickham H, François R, Henry L, Müller K, Vaughan D. (2023). _dplyr: A
+#' Grammar of Data Manipulation_. R package version 1.1.4.
+#' https://CRAN.R-project.org/package=dplyr.
+#'
+#' Wickham H, Hester J, Bryan J. (2024). _readr: Read
+#' Rectangular Text Data_. R package version 2.1.5.
+#' https://CRAN.R-project.org/package=readr.
+#'
+#'
 validate_BLAST_JSON_file <- function(filename){
 
   # First, check if file is in JSON format
@@ -315,6 +356,17 @@ validate_BLAST_JSON_file <- function(filename){
 #'
 #' @import stringr
 #'
+#' @references
+#'
+#' Wheeler, D. and Bhagwat, M. Blast QuickStart: Example-Driven Web-Based BLAST
+#' Tutorial. In: Bergman NH, editor. Comparative Genomics: Volumes 1 and 2.
+#' Totowa (NJ): Humana Press; 2007. Chapter 9.
+#' https://www.ncbi.nlm.nih.gov/books/NBK1734/
+#'
+#' Wickham H. (2023). stringr: Simple, Consistent Wrappers for Common String
+#' Operations. R package version 1.5.1,
+#' <https://CRAN.R-project.org/package=stringr>.
+#'
 remove_gaps_if_equal <- function(hsp_data){
 
   # iterates through each row of hsp_data
@@ -356,6 +408,12 @@ remove_gaps_if_equal <- function(hsp_data){
 #' @import tools
 #'
 #' @export
+#'
+#' @references
+#'
+#' R Core Team. (2024). R: A Language and Environment for Statistical Computing.
+#' R Foundation for Statistical Computing,
+#' Vienna, Austria. https://www.R-project.org/.
 #'
 #' @examples
 #'

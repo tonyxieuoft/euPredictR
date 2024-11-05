@@ -23,3 +23,13 @@ have an equal number of gaps, removing them only shifts the alignment (there
 aren't any "missing" or "extra" nucleotides), and helps remove any
 frameshifting that might otherwise occur in the final gene prediction.
 }
+\references{
+Wheeler, D. and Bhagwat, M. Blast QuickStart: Example-Driven Web-Based BLAST
+Tutorial. In: Bergman NH, editor. Comparative Genomics: Volumes 1 and 2.
+Totowa (NJ): Humana Press; 2007. Chapter 9.
+https://www.ncbi.nlm.nih.gov/books/NBK1734/
+
+Wickham H. (2023). stringr: Simple, Consistent Wrappers for Common String
+Operations. R package version 1.5.1,
+<https://CRAN.R-project.org/package=stringr>.
+}

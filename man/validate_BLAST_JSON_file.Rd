@@ -31,3 +31,26 @@ attribute structure:
  sequence.
 }
 }
+\references{
+Couture-Beil A (2024). rjson: JSON for R. R package
+version 0.2.23.
+https://CRAN.R-project.org/package=rjson.
+
+Li J. (2020). _configr: An Implementation of Parsing and
+Writing Configuration File (JSON/INI/YAML/TOML)_. R
+package version 0.3.5,
+https://CRAN.R-project.org/package=configr.
+
+Wheeler, D. and Bhagwat, M. Blast QuickStart: Example-Driven Web-Based BLAST
+Tutorial. In: Bergman NH, editor. Comparative Genomics: Volumes 1 and 2.
+Totowa (NJ): Humana Press; 2007. Chapter 9.
+https://www.ncbi.nlm.nih.gov/books/NBK1734/
+
+Wickham H, François R, Henry L, Müller K, Vaughan D. (2023). _dplyr: A
+Grammar of Data Manipulation_. R package version 1.1.4.
+https://CRAN.R-project.org/package=dplyr.
+
+Wickham H, Hester J, Bryan J. (2024). _readr: Read
+Rectangular Text Data_. R package version 2.1.5.
+https://CRAN.R-project.org/package=readr.
+}

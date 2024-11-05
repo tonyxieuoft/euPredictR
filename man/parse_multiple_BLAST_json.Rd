@@ -44,3 +44,8 @@ BLAST_out_directory <- system.dir("extdata", "sample_BLAST_output_dir",
 raw_blast_list1 <- parse_multiple_BLAST_json(dir_path = BLAST_out_directory)
 
 }
+\references{
+R Core Team. (2024). R: A Language and Environment for Statistical Computing.
+R Foundation for Statistical Computing,
+Vienna, Austria. https://www.R-project.org/.
+}
