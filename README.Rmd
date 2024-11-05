@@ -31,8 +31,7 @@ rather than running the algorithm itself. After constructing gene predictions,
 the tool allows users to assess the quality of the genes it predicts by 
 providing gene completeness estimates as visual output. There currently lacks a 
 unified interface or package for users to conduct downstream analyses of BLAST results in eukaryotic gene prediction contexts, nor any that help directly visualize the results; this is 
-the gap that `euPredictR` fills. The package was developed using `R version 4.4.1 (2024-06-14)`, 
-`Platform: x86_64-w64-mingw32/x64` and `Running under: Windows 10 x64 (build 19045)`.
+the gap that `euPredictR` fills. The package was developed using `R version 4.4.1 (2024-06-14)`, `Platform: x86_64-w64-mingw32/x64` and `Running under: Windows 10 x64 (build 19045)`.
 
 The biological context of the package and the specific terminology that the 
 documentation uses is elaborated upon more in the `Biological Context` 
@@ -63,7 +62,7 @@ browseVignettes("euPredictR")
 in .json format. The function stores the parsed results in a nested list and 
 data frame format for ease of access.
 
-2.   ***parse__multiple_BLAST_json*** for parsing multiple raw BLAST output 
+2.   ***parse_multiple_BLAST_json*** for parsing multiple raw BLAST output 
 .json files in a given directory.
 
 3.   ***build_predictions*** for creating protein-coding sequence (a.k.a coding 
@@ -78,8 +77,10 @@ format.
 
 The package also contains a raw blast output dataset in RawBlastList format, 
 called sample_raw_blast_list. Refer to package vignette for more details. An 
-overview of the package is illustrated below. 
+overview of the package is illustrated below. (User input requirements are 
+elaborated more in the biological context section). 
 
+![](.inst/extdata/euPredictR_workflow.PNG)
 
 Planned for the future: A function that conducts phylogenetic analysis on the 
 predicted coding sequences of the same gene for different species. This can be 
@@ -98,7 +99,7 @@ This package was developed as part of an assessment for 2024 BCB410H: Applied Bi
 ## Biological Context and Specific Terminology Used
 
 This section is adapted from assessment 3, defining the biological context and 
-specific terminology used by the tools.  
+specific terminology used by `euPredictR`.  
 
 The Basic Local Alignment Search Tool (BLAST) identifies high-similarity regions between a
 “query” and a “subject” sequence. (Altschul et al. 1990) Each shared region of high similarity

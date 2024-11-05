@@ -57,8 +57,8 @@ browseVignettes("euPredictR")
     provided in .json format. The function stores the parsed results in
     a nested list and data frame format for ease of access.
 
-2.  \*\*\*parse\_\_multiple_BLAST_json\*\*\* for parsing multiple raw
-    BLAST output .json files in a given directory.
+2.  ***parse_multiple_BLAST_json*** for parsing multiple raw BLAST
+    output .json files in a given directory.
 
 3.  ***build_predictions*** for creating protein-coding sequence (a.k.a
     coding sequence or CDS) prediction models for genes of particular
@@ -72,7 +72,10 @@ browseVignettes("euPredictR")
 
 The package also contains a raw blast output dataset in RawBlastList
 format, called sample_raw_blast_list. Refer to package vignette for more
-details. An overview of the package is illustrated below.
+details. An overview of the package is illustrated below. (User input
+requirements are elaborated more in the biological context section).
+
+![](.inst/extdata/euPredictR_workflow.PNG)
 
 Planned for the future: A function that conducts phylogenetic analysis
 on the predicted coding sequences of the same gene for different
@@ -97,7 +100,7 @@ to those who provided feedback to improve this package.
 ## Biological Context and Specific Terminology Used
 
 This section is adapted from assessment 3, defining the biological
-context and specific terminology used by the tools.
+context and specific terminology used by `euPredictR`.
 
 The Basic Local Alignment Search Tool (BLAST) identifies high-similarity
 regions between a “query” and a “subject” sequence. (Altschul et
