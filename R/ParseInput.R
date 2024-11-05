@@ -430,7 +430,6 @@ remove_gaps_if_equal <- function(hsp_data){
 #'
 #' raw_blast_list1 <- parse_multiple_BLAST_json(dir_path = BLAST_out_directory)
 #'
-
 parse_multiple_BLAST_json <- function(dir_path, raw_blast_list=NULL){
 
   # get the list of files in the directory

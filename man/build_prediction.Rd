@@ -4,7 +4,7 @@
 \alias{build_prediction}
 \title{Build Predictions with Preprocessed Data Frames}
 \usage{
-build_prediction(query_len, hsp_table)
+build_prediction(query_len, hsp_table, max_overlap, max_intron_length)
 }
 \arguments{
 \item{query_len}{Length of the Query}

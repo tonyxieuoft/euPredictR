@@ -1,6 +1,108 @@
 
-ALLOWED_OVERLAP <- 50
-MAX_INTRON_LENGTH <- 1000000
+#' Build Gene Predictions from BLAST output data.
+#'
+#' Given that BLAST output data has been pre-processed by the parse_BLAST_json
+#' or parse_multiple_BLAST_json functions, this function takes in data in
+#' RawBlastList format, predicts protein-coding sequences via dynamic
+#' programming algorithms and outputs their sequences in a nested list
+#' (elaborated further in the results section). On a high level, for each gene,
+#' the prediction algorithm identifies compatible HSPs with the greatest
+#' gene coverage, sorts out overlaps between them, and finally stitches them
+#' together to create a new coding sequence (complete or incomplete). Note that
+#' previous assumptions stated for the functions that parse input hold here as
+#' well (the one that states all relevant HSPs are on the same genomic subject
+#' sequence is especially relevant).
+#' HSP compatibility (whether two HSPs can fit into the same gene
+#' model) is based on the additional assumption that relevant HSPs each loosely
+#' correspond to an exon in the gene. From this, we draw the following
+#' observations for compatible HSPs 'A' and 'B':
+#' \itemize{
+#'  \item \emph{Location Linearity}: If the subject segment of 'A' is
+#'  before 'B' in the genomic sequence, the query segment of 'A' must
+#'  also be before the query segment of 'B'.
+#'  \item \emph{Maximum Overlap Restriction}: The query segment for 'A' must
+#'  overlap minimally with the query segment for 'B'(a higher threshold above
+#'  0 is set for some wiggle room).
+#'  \item \emph{Maximum Intron Length}: The subject segment for 'A' must be
+#'  somewhat close in proximity to 'B', otherwise the presumed intron(s) between
+#'  them would be massively long.
+#'  \item \emph{Same Strand}: The subject segment for 'A' must be on the strand
+#'  as the subject segment for 'B' (plus/minus).
+#' }
+#' The maximum intron length and maximum overlap can be modified in the
+#' parameter settings of the function.
+#'
+#' @param raw_blast_list S3 object of type RawBlastList, containing BLAST output
+#' data generated from query coding sequences and subject genomic sequences.
+#' @param max_overlap A non-negative integer representing the maximum overlap
+#' between the query segments of two compatible HSPs. The default is set to 30.
+#' @param max_intron_length A non-negative integer representing the maximum
+#' distance between the subject segments of two adjacent, compatible HSPs. The
+#' default is set to 50000.
+#'
+#' @returns Returns an S3 object of type GenePredictions, which is a
+#' nested list containing predicted protein-coding sequences with the following
+#' structure:
+#' \itemize{
+#' \item The outer list follows the key-value format,
+#' where species names are the keys and each value is a 'gene list' for the
+#' species. (just like RawBlastList)
+#' \item Each 'gene list' is also a list in key-value format, where each key is
+#' a gene name and each value is a predicted sequence in string format. Missing
+#' sections of the predicted coding sequence are denoted "-".
+#' }
+#'
+#' @examples
+#' # example code
+#'
+#'
+#' @export
+build_predictions <- function(raw_blast_list,
+                              max_overlap=30,
+                              max_intron_length=50000){
+
+  # instantiate a list that will be defined as a GenePredictions object later
+  predictions <- list()
+
+  # names of represented species to predict sequences for
+  species_names <- names(raw_blast_list)
+
+  # iterates along indices corresponding to items where the key is a species
+  # name and value is a gene list
+  for (i in seq_along(raw_blast_list)){
+
+    # instantiate a new gene list that will hold gene name -> sequence
+    # key-value pairs as items
+    new_gene_list <- list()
+
+    # list of genes to predict for a particular species
+    gene_names <- names(raw_blast_list[[i]])
+
+    # iterates along indices corresponding to items where the key is a gene name
+    # and value is a list containing a query's length and its HSP table
+    for (j in seq_along(raw_blast_list[[i]])){
+
+      gene <- raw_blast_list[[i]][[j]] # the hsp_table/query_len list
+
+      # Predict a single coding sequence based on the HSP table, for the given
+      # gene and species
+      predicted_seq <- build_prediction(query_len = gene$query_len,
+                                        hsp_table = gene$hsp_data,
+                                        max_overlap = max_overlap,
+                                        max_intron_length = max_intron_length)
+
+      # add the sequence to our growing gene prediction list (for one species)
+      new_gene_list[[gene_names[j]]] <- predicted_seq
+    }
+
+    # add the new gene list containing predicted sequences for one species to
+    # the overarching predictions list
+    predictions[[species_names[i]]] <- new_gene_list
+
+  }
+  class(predictions) <- "GenePredictions"
+  return(predictions)
+}
 
 
 #' Build Predictions with Preprocessed Data Frames
@@ -12,7 +114,10 @@ MAX_INTRON_LENGTH <- 1000000
 #'
 #' @import dplyr
 
-build_prediction <- function(query_len, hsp_table){
+build_prediction <- function(query_len,
+                             hsp_table,
+                             max_overlap,
+                             max_intron_length){
 
   if (is.null(hsp_table)){
     return(NULL)
@@ -201,43 +306,5 @@ is_compatibile <- function(hsp_table, j, i){
   else{
     return(T)
   }
-}
-
-#' Prediction wrapper
-#'
-#' sample description
-#'
-#' @param raw_carrier raw carrier preprocessed from before
-#'
-#' @export
-
-build_predictions <- function(raw_carrier){
-
-  #for (species in raw_carrier){
-  #  for (gene in species){
-  #    print(build_prediction(query_len = gene$query_len, hsp_table = gene$hsp_data))
-  #  }
-  #}
-  prediction_carrier <- list()
-
-  species_names <- names(raw_carrier)
-  for (i in seq_along(raw_carrier)){
-    # species -> looking at gene list
-
-    new_gene_list <- list()
-
-    gene_names <- names(raw_carrier[[i]])
-    for (j in seq_along(raw_carrier[[i]])){
-      gene <- raw_carrier[[i]][[j]]#$hsp_data
-      predicted_seq <- build_prediction(query_len = gene$query_len,
-                                        hsp_table = gene$hsp_data)
-
-      new_gene_list[[gene_names[j]]] <- predicted_seq
-    }
-
-    prediction_carrier[[species_names[i]]] <- new_gene_list
-
-  }
-  return(prediction_carrier)
 }
 

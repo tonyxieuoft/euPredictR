@@ -6,62 +6,73 @@
 #'
 #' filler description
 #'
-#' @param seq_gaps_melted Melted dataframe of sequence coverage
+#' @param melted_coverages Melted dataframe of sequence coverage
 #'
 #' @import ggplot2
-create_seq_gap_heatmap <- function(seq_gaps_melted){
-  ggplot2::ggplot(seq_gaps_melted, aes(x = species_name,
+gene_coverage_heatmap <- function(predictions){
+
+  melted_coverages <- get_gene_coverage(predictions)
+
+  ggplot2::ggplot(melted_coverages, aes(x = species_name,
                                        y = gene_name,
-                                       fill = coverage)) +
-    geom_tile()
+                                       fill = coverage,
+                                       width = 0.9,
+                                       height = 0.9)) +
+    ggplot2::geom_tile() +
+    ggplot2::scale_fill_gradient(high = "blue4", low = "cornsilk3")+
+    ggplot2::theme(panel.background = element_blank()) +
+    ggplot2::xlab("Species Name") +
+    ggplot2::ylab("Gene Name") +
+    ggplot2::guides(fill=guide_legend(title="CDS coverage"),
+                    x = guide_axis(angle = 270))
 }
 
-
-#' HeatMap Generator Helper
+#' Augment Dataset for Heatmap Generation (helper for gene_coverage_heatmap)
 #'
-#' Filler Description
+#' Given an input GenePredictions object containing predicted coding sequences
 #'
-#' @param prediction_df Dataframe created by Build Predictions
-get_seq_gaps <- function(prediction_df){
+#'
+#' @param predictions Data frame created by Build Predictions
+#'
+#' @import purrr
+get_gene_coverage <- function(predictions){
 
-  total_gene_names <- get_unique_genes(prediction_df)
-  print(total_gene_names)
-  species_names <- names(prediction_df)
+  # We get the total, unique gene names by the following:
+  # 1) lapply applies the names function to each item in 'predictions'
+  # to get the gene names present for each species
+  # 2) reduce applies the union operator on the gene names until all
+  # are concatenated into a single vector
+  total_gene_names <- reduce(lapply(predictions, names), dplyr::union)
+
+  # get species names
+  species_names <- names(predictions)
+
+  #
   L <- length(total_gene_names)*length(species_names)
-  print(L)
 
-  seq_gaps_melted <- data.frame(species_name = character(length = L),
+  melted_coverages <- data.frame(species_name = character(length = L),
                                 gene_name = character(length = L),
                                 coverage = numeric(length = L))
 
   curr_index <- 1
+  for (species in species_names){
+    for (gene in total_gene_names){
 
-  for (i in seq_along(prediction_df)){
+      seq <- predictions[[species]][[gene]]
 
-    gene_names <- names(prediction_df[[i]])
-
-    for (j in seq_along(prediction_df[[i]])){
-      seq_gaps_melted$species_name[curr_index] <- species_names[i]
-      seq_gaps_melted$gene_name[curr_index] <- gene_names[j]
-      seq_gaps_melted$coverage[curr_index] <-
-        get_coverage(prediction_df[[i]][[j]])
-
-
-
-      curr_index = curr_index + 1
-    }
-
-    non_included_genes <- dplyr::setdiff(gene_names, total_gene_names)
-    for (gene in non_included_genes){
-
-      seq_gaps_melted$species_name[curr_index] <- species_names[i]
-      seq_gaps_melted$gene_name[curr_index] <- gene_names[j]
-      seq_gaps_melted$coverage[curr_index] <- NA
+      melted_coverages$species_name[curr_index] <- species
+      melted_coverages$gene_name[curr_index] <- gene
+      if (!is.null(seq)){
+        melted_coverages$coverage[curr_index] <- get_coverage(seq)
+      }
+      else{
+        melted_coverages$coverage[curr_index] <- 0
+      }
       curr_index = curr_index + 1
     }
   }
 
-  return(seq_gaps_melted)
+  return(melted_coverages)
 }
 
 
@@ -79,22 +90,3 @@ get_coverage <- function(seq){
 }
 
 
-#' Get Unique Genes
-#'
-#' filler description
-#'
-#' @param prediction_df Database containing predictions, created by BuildPredictions
-#'
-get_unique_genes <- function(prediction_df){
-
-  total_gene_list = new.env()
-  for (genes in prediction_df){
-    curr_gene_list <- names(genes)
-    for (gene in curr_gene_list){
-      if (is.null(total_gene_list[[gene]])){
-        total_gene_list[[gene]] <- T
-      }
-    }
-  }
-  return(names(total_gene_list))
-}

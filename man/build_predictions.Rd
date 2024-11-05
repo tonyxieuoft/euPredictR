@@ -2,13 +2,68 @@
 % Please edit documentation in R/BuildPredictions.R
 \name{build_predictions}
 \alias{build_predictions}
-\title{Prediction wrapper}
+\title{Build Gene Predictions from BLAST output data.}
 \usage{
-build_predictions(raw_carrier)
+build_predictions(raw_blast_list, max_overlap = 30, max_intron_length = 50000)
 }
 \arguments{
-\item{raw_carrier}{raw carrier preprocessed from before}
+\item{raw_blast_list}{S3 object of type RawBlastList, containing BLAST output
+data generated from query coding sequences and subject genomic sequences.}
+
+\item{max_overlap}{A non-negative integer representing the maximum overlap
+between the query segments of two compatible HSPs. The default is set to 30.}
+
+\item{max_intron_length}{A non-negative integer representing the maximum
+distance between the subject segments of two adjacent, compatible HSPs. The
+default is set to 50000.}
+}
+\value{
+Returns an S3 object of type GenePredictions, which is a
+nested list containing predicted protein-coding sequences with the following
+structure:
+\itemize{
+\item The outer list follows the key-value format,
+where species names are the keys and each value is a 'gene list' for the
+species. (just like RawBlastList)
+\item Each 'gene list' is also a list in key-value format, where each key is
+a gene name and each value is a predicted sequence in string format. Missing
+sections of the predicted coding sequence are denoted "-".
+}
 }
 \description{
-sample description
+Given that BLAST output data has been pre-processed by the parse_BLAST_json
+or parse_multiple_BLAST_json functions, this function takes in data in
+RawBlastList format, predicts protein-coding sequences via dynamic
+programming algorithms and outputs their sequences in a nested list
+(elaborated further in the results section). On a high level, for each gene,
+the prediction algorithm identifies compatible HSPs with the greatest
+gene coverage, sorts out overlaps between them, and finally stitches them
+together to create a new coding sequence (complete or incomplete). Note that
+previous assumptions stated for the functions that parse input hold here as
+well (the one that states all relevant HSPs are on the same genomic subject
+sequence is especially relevant).
+HSP compatibility (whether two HSPs can fit into the same gene
+model) is based on the additional assumption that relevant HSPs each loosely
+correspond to an exon in the gene. From this, we draw the following
+observations for compatible HSPs 'A' and 'B':
+\itemize{
+ \item \emph{Location Linearity}: If the subject segment of 'A' is
+ before 'B' in the genomic sequence, the query segment of 'A' must
+ also be before the query segment of 'B'.
+ \item \emph{Maximum Overlap Restriction}: The query segment for 'A' must
+ overlap minimally with the query segment for 'B'(a higher threshold above
+ 0 is set for some wiggle room).
+ \item \emph{Maximum Intron Length}: The subject segment for 'A' must be
+ somewhat close in proximity to 'B', otherwise the presumed intron(s) between
+ them would be massively long.
+ \item \emph{Same Strand}: The subject segment for 'A' must be on the strand
+ as the subject segment for 'B' (plus/minus).
+}
+The maximum intron length and maximum overlap can be modified in the
+parameter settings of the function.
+}
+\examples{
+# example code
+
+
 }
