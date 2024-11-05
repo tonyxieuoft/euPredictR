@@ -1,0 +1,14 @@
+citHeader("To cite euPredictR in publications use:")
+
+citEntry(
+  entry    = "Unpublished",
+  title    = "euPredictR: A Package for Predicting Eukaryotic Genes by Sequence                 Homology",
+  author   = "Tony Xie",
+  note     = "Unpublished",
+  year     = "2024",
+
+
+  textVersion =
+  paste("Xie, T. (2024) euPredictR: A Package for Predicting Eukaryotic Genes by    Sequence Homology. Unpublished. URL
+  https://github.com/tonyxieuoft/euPredictR.")
+)

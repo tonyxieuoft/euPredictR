@@ -3,6 +3,7 @@
 export(build_predictions)
 export(my_function)
 export(parse_BLAST_json)
+export(parse_multiple_BLAST_json)
 import(configr)
 import(dplyr)
 import(ggplot2)

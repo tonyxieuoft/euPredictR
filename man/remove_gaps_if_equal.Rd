@@ -2,13 +2,24 @@
 % Please edit documentation in R/ParseInput.R
 \name{remove_gaps_if_equal}
 \alias{remove_gaps_if_equal}
-\title{Check if number of gaps is equal and remove if so}
+\title{Remove Gaps in HSP Segment (Helper for parse_BLAST_json)}
 \usage{
 remove_gaps_if_equal(hsp_data)
 }
 \arguments{
-\item{hsp_data}{Table containing HSP data}
+\item{hsp_data}{Data frame containing HSP data. Each row is an HSP, and the
+columns are HSP attributes.}
+}
+\value{
+Returns the altered HSP data frame, now with gaps removed if both
+both the query and subject have an equal number of them.
 }
 \description{
-Dummy Description
+Sometimes, high-scoring pairs (composed of a query segment and a subject
+segment) contain gaps from alignment. When conducting predictions, it is
+often useful to preserve these gaps to easily track 'missing' or 'extra'
+nucleotides in the subject segment. However, if both the query and subject
+have an equal number of gaps, removing them only shifts the alignment (there
+aren't any "missing" or "extra" nucleotides), and helps remove any
+frameshifting that might otherwise occur in the final gene prediction.
 }
