@@ -26,5 +26,8 @@ Creates a predicted sequence based on the dynamic programming table produced
 earlier. Essentially, the DP table identifies optimal 'sets' of compatible
 HSPs, and links the optimal HSPs to each other by the 'parent' attribute to
 get their predecessor. See the comments on the the build_prediction
-function for more detail.
+function for more detail. To create the predicted sequence, this function
+identifies the best "last" HSP in an optimal prediction, then traverses
+backwards through the predecessors via a recursive helper function to build
+the prediction up piece by piece.
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/BuildPredictions.R
 \name{build_prediction}
 \alias{build_prediction}
-\title{Predict a Single Query Sequence (helper for build_predictions)}
+\title{Predict a Single Coding Sequence (helper for build_predictions)}
 \usage{
 build_prediction(query_len, hsp_table, max_overlap, max_intron_length)
 }

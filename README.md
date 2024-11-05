@@ -20,22 +20,25 @@ of parsing and analyzing raw BLAST output to construct protein-coding
 sequence predictions for novel species, rather than running the
 algorithm itself. After constructing gene predictions, the tool allows
 users to assess the quality of the genes it predicts by providing gene
-completeness estimates as visual output. There currently lacks a unified
-interface or package for users to conduct downstream analyses of BLAST
-results in eukaryotic gene prediction contexts, nor any that help
-directly visualize the results; this is the gap that `euPredictR` fills.
-The package was developed using `R version 4.4.1 (2024-06-14)`,
-`Platform: x86_64-w64-mingw32/x64` and
+completeness estimates as visual output. Understanding the mechanisms by
+which the package achieves the aims requires specific biological
+terminology, which is elaborated more in the `Context` section. There
+currently lacks a unified interface or package for users to conduct
+downstream analyses of BLAST results in eukaryotic gene prediction
+contexts, nor any that help directly visualize the results; this is the
+gap that `euPredictR` fills. The package was developed using
+`R version 4.4.1 (2024-06-14)`, `Platform: x86_64-w64-mingw32/x64` and
 `Running under: Windows 10 x64 (build 19045)`.
 
 ## Installation
 
-You can install the development version of euPredictR from
-[GitHub](https://github.com/) with:
+To install the latest version of the package:
 
 ``` r
-# install.packages("pak")
-pak::pak("tonyxieuoft/euPredictR")
+install.packages("devtools")
+library("devtools")
+devtools::install_github("tonyxieuoft/euPredictR", build_vignettes = TRUE)
+library("TestingPackage")
 ```
 
 ## Example
