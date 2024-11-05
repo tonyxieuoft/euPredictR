@@ -35,8 +35,8 @@ visualize gene completeness in later functions.
 \description{
 Given that BLAST output data has been pre-processed by the parse_BLAST_json
 or parse_multiple_BLAST_json functions, this function takes in data in
-RawBlastList format, predicts protein-coding sequences via dynamic
-programming algorithms and outputs their sequences in a nested list
+RawBlastList format, predicts protein-coding sequences via a dynamic
+programming algorithm and outputs their sequences in a nested list
 (elaborated further in the results section). On a high level, for each gene,
 the prediction algorithm identifies compatible HSPs with the greatest
 gene coverage, sorts out overlaps between them, and finally stitches them
@@ -73,7 +73,7 @@ parameter settings of the function.
 # Max overlap is set to 30, while max intron length is set to 10000 (shorter
 # introns)
 predictions <- build_predictions(raw_blast_list = sample_raw_blast_list,
-                                 max_overlap = 30
+                                 max_overlap = 30,
                                  max_intron_length = 10000)
 
 }

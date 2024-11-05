@@ -28,3 +28,9 @@ despite assuming that relevant HSPs correspond loosely to exons, they may
 extend extraneously into introns if the intron ends are similar to the
 neighboring exon ends.
 }
+\references{
+Wheeler, D. and Bhagwat, M. Blast QuickStart: Example-Driven Web-Based BLAST
+Tutorial. In: Bergman NH, editor. Comparative Genomics: Volumes 1 and 2.
+Totowa (NJ): Humana Press; 2007. Chapter 9.
+https://www.ncbi.nlm.nih.gov/books/NBK1734/
+}

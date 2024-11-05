@@ -3,8 +3,8 @@
 #'
 #' Given that BLAST output data has been pre-processed by the parse_BLAST_json
 #' or parse_multiple_BLAST_json functions, this function takes in data in
-#' RawBlastList format, predicts protein-coding sequences via dynamic
-#' programming algorithms and outputs their sequences in a nested list
+#' RawBlastList format, predicts protein-coding sequences via a dynamic
+#' programming algorithm and outputs their sequences in a nested list
 #' (elaborated further in the results section). On a high level, for each gene,
 #' the prediction algorithm identifies compatible HSPs with the greatest
 #' gene coverage, sorts out overlaps between them, and finally stitches them
@@ -88,7 +88,7 @@ build_predictions <- function(raw_blast_list,
   }
   else {} # Continue
 
-  if (!is.numerc(max_overlap) | length(max_overlap) > 1 | max_overlap < 0){
+  if (!is.numeric(max_overlap) | length(max_overlap) > 1 | max_overlap < 0){
     stop("Invalid input: max_overlap must be a non-negative integer")
   }
   else {} # Continue
