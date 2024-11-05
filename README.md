@@ -108,11 +108,11 @@ merging algorithm without any external inspiration.
 The `gene_coverage_heatmap()` function makes use of the ggplot2 package
 to create heatmap plots of the gene coverage for the predicted coding
 sequences. Otherwise, the calculations of gene coverage and creation of
-the melted data frame was based on the author’s own logic.
+the melted data frame were based on the author’s own logic.
 
 The `output_predictions()` function makes use of the purrr package for
-vector manipulation. The logic and code implementation of the rest of
-the function is the author’s own.
+vector manipulation. The logic and code implementation is the author’s
+own.
 
 No generative AI was used in the creation of the package. All
 documentation was written by the author themselves.
