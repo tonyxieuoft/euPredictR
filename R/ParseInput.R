@@ -102,7 +102,6 @@
 #'                                     species = "T_truncatus",
 #'                                     raw_blast_list = raw_blast_list1)
 #' # this list concatenates raw BLAST results for both orca and dolphin RHO
-
 parse_BLAST_json <- function(filename, species, raw_blast_list=NULL){
 
   if (!is.character(species) | length(species) > 1){

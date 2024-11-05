@@ -86,6 +86,37 @@ gene quality.
 
 The author of the package is Tony Xie.
 
+The `parse_BLAST_json()` function and associated helpers made use of
+various packages. `dplyr` helped with data frame manipulation,
+`configr`, `readr`, and `rjson` helped with converting a .json input
+file into a nested R list, and `stringr` and `tools` helped with
+miscellaneous string manipulation tasks. The structure of BLAST .json
+output was elucidated in the BLAST tutorial by Wheeler et al. Otherwise,
+the author came up with the rest of the logic and wrote the function
+code and documentation themselves.
+
+The algorithms in the `build_predictions()` function and associated
+helpers are partially inspired by the software Splign, developed by
+Kapustin et al. in the late 2000s. More specifically. the assumptions of
+the `is_compatible()` helper function are directly derived from the
+assumptions in their paper. However, the author came up with the dynamic
+programming sub problems, devised an O(n^2) bottom-up implementation,
+and implemented recursive traceback to get the resultant prediction by
+themselves. Additionally, the author alone came up with the naive HSP
+merging algorithm without any external inspiration.
+
+The `gene_coverage_heatmap()` function makes use of the ggplot2 package
+to create heatmap plots of the gene coverage for the predicted coding
+sequences. Otherwise, the calculations of gene coverage and creation of
+the melted data frame was based on the author’s own logic.
+
+The `output_predictions()` function makes use of the purrr package for
+vector manipulation. The logic and code implementation of the rest of
+the function is the author’s own.
+
+No generative AI was used in the creation of the package. All
+documentation was written by the author themselves.
+
 ## References
 
 - Altschul S.F., Gish, W., Miller, W., Myers, E.W. and Lipman, D.J.
@@ -132,9 +163,8 @@ The author of the package is Tony Xie.
 
 - Wheeler, D. and Bhagwat, M. Blast QuickStart: Example-Driven Web-Based
   BLAST Tutorial. In: Bergman NH, editor. Comparative Genomics: Volumes
-  1 and 2. Totowa (NJ): Humana Press;
-
-2007. Chapter 9. <https://www.ncbi.nlm.nih.gov/books/NBK1734/>
+  1 and 2. Totowa (NJ): Humana Press; 2007. Chapter 9.
+  <https://www.ncbi.nlm.nih.gov/books/NBK1734/>
 
 ## Acknowledgements
 
