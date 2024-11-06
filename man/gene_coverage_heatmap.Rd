@@ -11,7 +11,7 @@ gene_coverage_heatmap(predictions)
 iteration of the 'build_predictions' function in this package.}
 }
 \value{
-Returns NULL.
+Returns a ggplot object representing the heatmap created.
 }
 \description{
 Given an input nested list of gene predictions in GenePredictions format

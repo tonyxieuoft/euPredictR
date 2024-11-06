@@ -19,7 +19,7 @@
 #' @param predictions S3 object of class GenePredictions produced by an
 #' iteration of the 'build_predictions' function in this package.
 #'
-#' @returns Returns NULL.
+#' @returns Returns a ggplot object representing the heatmap created.
 #'
 #' @import ggplot2
 #'
@@ -54,7 +54,7 @@ gene_coverage_heatmap <- function(predictions){
   melted_coverages <- get_gene_coverage(predictions)
 
   # plot using ggplot
-  ggplot2::ggplot(melted_coverages, aes(x = species_name,
+  coverage_heatmap <- ggplot2::ggplot(melted_coverages, aes(x = species_name,
                                        y = gene_name,
                                        fill = coverage,
                                        width = 0.9,
@@ -68,7 +68,7 @@ gene_coverage_heatmap <- function(predictions){
     ggplot2::guides(fill=guide_legend(title="CDS coverage"),
                     x = guide_axis(angle = 270))
 
-  return(invisible(NULL))
+  return(coverage_heatmap)
 }
 
 #' Augment Dataset for Heatmap Generation (helper for gene_coverage_heatmap)

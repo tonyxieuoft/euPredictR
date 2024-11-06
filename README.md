@@ -71,9 +71,10 @@ browseVignettes("euPredictR")
     FASTA format.
 
 The package also contains a raw blast output dataset in RawBlastList
-format, called sample_raw_blast_list. Refer to package vignette for more
-details. An overview of the package is illustrated below. (User input
-requirements are elaborated more in the biological context section).
+format, called sample_raw_blast_list. Refer to documentation in data.R
+for more details. An overview of the package is illustrated below. (User
+input requirements are elaborated more in the biological context
+section).
 
 ![](./inst/extdata/euPredictR_workflow.PNG)
 
