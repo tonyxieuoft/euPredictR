@@ -2,7 +2,6 @@
 
 export(build_predictions)
 export(gene_coverage_heatmap)
-export(my_function)
 export(output_predictions)
 export(parse_BLAST_json)
 export(parse_multiple_BLAST_json)

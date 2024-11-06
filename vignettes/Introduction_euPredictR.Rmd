@@ -86,7 +86,7 @@ Suppose that we have experimentally obtained protein-coding sequences from the b
 
 Luckily, let's suppose we have access to the genome assemblies of each species. Then, even though we don't actually have access to the coding sequences, we can predict them via sequence homology and extract them from the genome assemblies via BLAST. Since we only have coding sequences for the dolphin, we use them as queries to BLAST each subject genome assembly separately, and obtain raw BLAST output files in .json format, one per species. We also decide to BLAST the dolphin query coding sequences against the dolphin genome as a control (theoretically, the predicted coding sequences should be exactly the same as the query). Each raw BLAST output file contains a ton of data though, with HSPs that might not be relevant. Here's where *euPredictR* comes to the rescue.
 
-Suppose all of our raw BLAST output files are in one directory. First, we want to name each file based on the species that the data represents. As a result, we get an identical directory to the "example_raw_output_directory" directory in the `./inst/extdata` folder. Then, we can run the `parse_multiple_blast_json()` via the following:
+Suppose all of our raw BLAST output files are in one directory. First, we want to name each file based on the species that the data represents. As a result, we get an identical directory to the "example_raw_output_directory" directory in the `./inst/extdata` folder. (See details in the documentation of data.R). Then, we can run the `parse_multiple_blast_json()` via the following:
 
 ```r
 dir_path <- "/path/to/blast/output/dir"
@@ -114,26 +114,30 @@ predictions <- euPredictR::build_predictions(raw_blast_list = parsed_output,
                                              max_overlap = 30,
                                              max_intron_length = 50000)
 ```
-The `max_overlap` attribute is the maximum possible overlap between the query segments of two compatible HSPs, whereas the `max_intron_length` attribute is the maximum distance between the subject segments of two compatible HSPs.Read the help documentation for more. Checking the type of our predictions, we see:
+The `max_overlap` attribute is the maximum possible overlap between the query segments of two compatible HSPs, whereas the `max_intron_length` attribute is the maximum distance between the subject segments of two compatible HSPs. Read the help documentation of `build_predictions` for more. Checking the type of our predictions, we see:
 ```r
 class(predictions)
 ```
-that it is of type GenePredictions. To access the predicted sequence for Orca rhodopsin now (just like before), we see:
+that it is of type GenePredictions. See more details about the GenePredictions class by visiting the help documentation of `build_predictions`. To access the predicted sequence for Orca rhodopsin now, we see:
+```r
+predictions$O_orca$RHO
+```
+is a sequence. As it turns out, it is exactly the predicted sequence. We can visualize how much of the coding sequence for each gene-species combination we were able to predict (ie. the gene coverage) by the following:
+```r
+euPredictR::gene_coverage_heatmap(predictions)
+```
+which produces the following output:
 
+(issue preventing this fron loading, for now)
 
-
-
-
-
+Finally, we can output the gene predictions in fasta format to the R console by calling the following function:
 
 ```r
-#devtools::load_all(.)
+euPredictR::output_predictions(predictions)
 ```
+which also takes in a `GenePredictions` object produced by `build_predictions`. 
 
-```{r}
-#sample_raw_blast_list
-
-```
+That's it for examples for now! I've deliberately chosen well-annotated and researched species in this example. However, for less-studied organisms, only their (unannotated) genomes are available a lot of the time, and tools just like euPredictR must be used to predict gene sequences from them. 
 
 
 ## References
