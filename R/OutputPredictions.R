@@ -11,8 +11,8 @@
 #' that anything in the output_file, if it exists will be OVERWRITTEN by this
 #' function.
 #'
-#' @returns Returns NULL. Output is either printed to the console or redirected
-#' to the file path if provided.
+#' @returns If an output file is provided, returns NULL. Otherwise, returns a
+#' string of the sequences in .fasta format.
 #'
 #' @examples
 #'
@@ -67,7 +67,15 @@ output_predictions <- function(predictions, output_file = NULL){
   # get all species names
   species_names <- names(predictions)
 
-  # todo: use apply functions instead of for loops for greater efficiency
+  num_sequences <- length(total_gene_names) * length(species_names)
+  seq_dataframe <- data.frame("Gene" = rep(NA, times=num_sequences),
+                              "Species" = rep(NA, times=num_sequences),
+                              "Sequence" = rep(NA, times=num_sequences))
+
+  seq_vector <- rep(NA, times = num_sequences*2)
+  i <- 1
+  j <- 1
+
   for (gene_name in total_gene_names){
     for (species in species_names){
 
@@ -86,6 +94,16 @@ output_predictions <- function(predictions, output_file = NULL){
                               seq,
                               "\n\n",
                               sep = "")
+
+        seq_vector[i] <- fasta_heading
+        i = i+1
+        seq_vector[i] <- seq
+        i = i+1
+
+        seq_dataframe$Gene[j] <- gene_name
+        seq_dataframe$Species[j] <- species
+        seq_dataframe$Sequence[j] <- seq
+        j = j+1
       }
       else{} # Continue (don't print anything for this)
     }
@@ -93,7 +111,7 @@ output_predictions <- function(predictions, output_file = NULL){
 
   # if no output file specified, print it out to the console
   if (is.null(output_file)){
-    print(output_fasta)
+    return(na.omit(seq_dataframe))
   }
   else{
     # otherwise, write to specified file path
@@ -101,6 +119,7 @@ output_predictions <- function(predictions, output_file = NULL){
   }
 
   return(invisible(NULL))
+
 }
 
 # [END]

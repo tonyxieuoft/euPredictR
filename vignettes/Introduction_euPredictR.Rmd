@@ -10,12 +10,18 @@ vignette: >
 ---
 
 ```{r, include = FALSE}
+
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
+```{r setup, message=FALSE, warning=FALSE}
+# Load the package
+library(euPredictR)
+library(dplyr)
+```
 
 
 ## Introduction
@@ -109,10 +115,11 @@ and to find the length of the query used to obtain the data, we see:
 parsed_output$O_orca$RHO$query_len
 ```
 Now, with our parsed output, we can create gene predictions with the following:
-```r
-predictions <- euPredictR::build_predictions(raw_blast_list = parsed_output,
+```{r message = FALSE}
+predictions <- euPredictR::build_predictions(raw_blast_list = sample_raw_blast_list,
                                              max_overlap = 30,
                                              max_intron_length = 50000)
+predictions
 ```
 The `max_overlap` attribute is the maximum possible overlap between the query segments of two compatible HSPs, whereas the `max_intron_length` attribute is the maximum distance between the subject segments of two compatible HSPs. Read the help documentation of `build_predictions` for more. Checking the type of our predictions, we see:
 ```r

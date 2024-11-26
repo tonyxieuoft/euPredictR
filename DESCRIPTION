@@ -10,6 +10,8 @@ Description: An R package for predicting protein-coding gene sequences in novel
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+BiocViews:
+    Software
 Imports: 
     readr,
     rjson,
@@ -18,7 +20,12 @@ Imports:
     tools,
     ggplot2,
     configr,
-    purrr
+    purrr,
+    shiny,
+    msa,
+    phangorn,
+    Biostrings,
+    shinycssloaders
 RoxygenNote: 7.3.2
 Suggests: 
     knitr,

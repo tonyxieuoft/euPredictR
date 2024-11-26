@@ -15,8 +15,8 @@ that anything in the output_file, if it exists will be OVERWRITTEN by this
 function.}
 }
 \value{
-Returns NULL. Output is either printed to the console or redirected
-to the file path if provided.
+If an output file is provided, returns NULL. Otherwise, returns a
+string of the sequences in .fasta format.
 }
 \description{
 Given an input nested list of gene predictions in GenePrediction format,
