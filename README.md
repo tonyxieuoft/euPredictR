@@ -156,6 +156,10 @@ documentation was written by the author themselves.
   phylogenetic trees and networks. Methods in Ecology and Evolution, 8:
   1212–1220. <doi:10.1111/2041-210X.12760>
 
+- Sokal, R., Michener, C.D. (1958). A Statistical Method for Evaluating
+  Systematic Relationships. University of Kansas Scientific Bulletin
+  28:1409-1438.
+
 - Wickham, H. ggplot2: Elegant Graphics for Data Analysis.
   Springer-Verlag New York, 2016.
 
