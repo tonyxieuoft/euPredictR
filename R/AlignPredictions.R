@@ -38,7 +38,7 @@ display_phylogeny <- function(predictions, gene_name){
          parameter.")
   }
 
-  # instantiates an emtpy vector to carry the sequences to be used in the
+  # instantiates an empty vector to carry the sequences to be used in the
   # phylogeny (at most, there is one sequence for a gene per species)
   phylo_seqs <- rep(NA, times = length(predictions))
 
@@ -60,15 +60,14 @@ display_phylogeny <- function(predictions, gene_name){
 
   dna_set <- Biostrings::DNAStringSet(phylo_seqs)
 
-  message("Aligning sequences and constructing phylogeny...
-          (ignore messages below, if any are present)")
-
-  phylo_plot <- suppressMessages(msa::msa(dna_set, "ClustalOmega")) %>%
+  sink(file = base::nullfile())
+  phylo_plot <- suppressMessages(msa::msa(dna_set, "ClustalW")) %>%
     msaConvert("phangorn::phyDat") %>%
     dist.ml() %>%
     phangorn::upgma() %>%
     plot(main=paste("UPGMA phylogeny based on predicted", gene_name, sep = " "))
 
+  sink()
 
   return(phylo_plot)
 }

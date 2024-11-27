@@ -25,7 +25,8 @@ Imports:
     msa,
     phangorn,
     Biostrings,
-    shinycssloaders
+    shinycssloaders,
+    shinyFiles
 RoxygenNote: 7.3.2
 Suggests: 
     knitr,
