@@ -26,7 +26,8 @@ Imports:
     phangorn,
     Biostrings,
     shinycssloaders,
-    shinyFiles
+    shinyFiles,
+    shinyalert
 RoxygenNote: 7.3.2
 Suggests: 
     knitr,

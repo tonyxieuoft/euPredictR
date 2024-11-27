@@ -1,10 +1,12 @@
 
 
 library(shiny)
-library(purrr)
-library(dplyr)
-library(shinycssloaders)
-library(shinyFiles)
+library(shinyalert)
+library(purrr) # used in this script for its reduce function
+library(dplyr) # misc. tools
+library(shinycssloaders) # adds a loading button for plots that take longer to
+# load
+library(shinyFiles) # so that users can select directories instead of files
 
 
 # Define UI for random distribution app ----
@@ -66,38 +68,71 @@ ui <- fluidPage(
 
           br(),
 
-          tags$p("Before beginning, make sure that you have ran the BLAST
-                 algorithm on query coding sequence(s) and subject genomic
-                 sequence(s)."),
+          tags$p("Before we begin, make sure to run the BLAST
+                 algorithm using queries that are coding sequence(s) and subject
+                 genomic sequence(s) that are all from a SINGLE species. Do so
+                 once for each species you wish to predict
+                 coding sequences for. The first word in the fasta heading of
+                 each query sequence is assumed to be its gene name."),
+          tags$p("Additionally, make
+                 sure that all BLAST output files are in", em(".json"),
+                 "format, named based on the species that the", em("subject"),
+                 "genome represents, and all placed in a", em("single"), "
+                 directory that contains no other files or directories."),
 
-          fileInput(inputId = "raw_output_file",
-                    label = "Select the BLAST output file here. It must be in
-                    .json format.",
-                    accept = c(".json")),
+          uiOutput("example1"),
 
-          shinyDirButton('folder', "Select a folder", "Please select", FALSE),
+          br(),
+
+          uiOutput("example1_drive"),
+
+          br(),
+
+          shinyalert::useShinyalert(force = TRUE),
+
+          tags$p("Here is a detailed explanation of the example dataset: "),
+
+          actionButton(inputId = "data1",
+                       label = "Example Dataset Details"),
+
+          br(),
+
+          br(),
+
+          tags$p(tags$b("After making sure the above criteria is met,
+                        select the BLAST output directory here:")),
+          shinyDirButton('folder', "Directory Upload",
+                         "Please select",
+                         FALSE,
+                         style="background-color:powderblue"),
 
           verbatimTextOutput("selected_directory") %>%
             withSpinner(color="#0dc5c1",
-                        size = 0.5)
+                        size = 0.5),
+
+          br(),
+
+          tags$p("After selecting a valid directory, click on the ",
+                 tags$b("Step 2"), "tab.")
         ),
 
         tabPanel(
 
-          "Step 1: ",
+          "Step 2",
 
-          fileInput(inputId = "raw_output_file2",
-                    label = "To begin, select a BLAST output file to predict
-                sequences from. File must be in .json format.",
-                    accept = c(".json")),
+          br(),
 
+          tags$p("In this section, select custom parameters for the prediction
+          algorithm, or stick to the defaults provided. As mentioned in the
+          introductory section, the prediction algorithm first identifies relevant",
+          em("high scoring pairs,"), " then merges overlaps between them."),
+
+          br(),
 
           # Input: maximum intron length
           numericInput(inputId = "max_intron_length",
                        label = "Enter the maximum allowed intron length between
-                   exons in a coding sequence predicted by the program. For
-                   reference, the median intron length in the human genome is
-                   around 1,500 base pairs. (Dvorak et al, 2023)",
+                   exons in a coding sequence predicted by the program:",
                        value = 3000,
                        min = 1),
 
@@ -105,19 +140,51 @@ ui <- fluidPage(
           numericInput(inputId = "max_overlap",
                        label = "Enter the maximum allowed overlap between query
                    segments of high scoring pairs (HSPs) used for gene
-                   prediction. Although HSPs correspond loosely to an ",
+                   prediction.",
                        value = 30,
                        min = 0
           ),
 
-          # remember to include sample datasets for this (and upload their own
-          # data) SPecify the type of data, in extdata
-
-          # br() element to introduce extra vertical spacing ----
           br(),
 
+          tags$p("Now, click on", tags$b("Step 3.")),
+
+        ),
+
+        tabPanel(
+          "Step 3",
+
+          br(),
+
+          tags$p("If you wish for the predicted sequences to be outputted in a
+                 fasta file, select the path to the", tags$b("output fasta file"),
+                 "here:"),
+
+          shinySaveButton("save", "Select Output Path", "Save file as ...",
+                          filetype=list(fasta=c("fasta", "fas"), text="txt")),
+
+          verbatimTextOutput("output_path") %>%
+            withSpinner(color="#0dc5c1",
+                        size = 0.5),
+
+
+          br(),
+
+          tags$p("Otherwise, the program will display the predicted
+                 sequences only in a panel to the right."),
+
+          br(),
+
+
+          tags$p(tags$b("Finally, click the button to run the prediction
+                        algorithm.")),
+
           actionButton(inputId = "run_button",
-                       label = "Run")
+                       label = "Run"),
+
+          br(),
+
+          verbatimTextOutput("fasta_success")
 
         )
 
@@ -131,9 +198,17 @@ ui <- fluidPage(
       # Output: Tabset w/ plot, summary, and table ----
       tabsetPanel(type = "tabs",
                   tabPanel("Predicted sequence display",
-                           tableOutput("predicted_seqs")),
+
+
+
+                           tableOutput("predicted_seqs") %>%
+                             withSpinner(color="#0dc5c1"))
+                    ,
 
                   tabPanel("Gene Coverage Heatmap",
+
+
+
                            plotOutput("gene_coverage_heatmap") %>%
                              withSpinner(color="#0dc5c1")),
 
@@ -161,14 +236,22 @@ server <- function(input, output, session) {
 
   # get the root directory
   volumes <- shinyFiles::getVolumes()()
-  # linked to shinyDirButton, selects a file
+  # linked to shinyDirButton, selects an input directory of raw BLAST output
   shinyFiles::shinyDirChoose(input, 'folder',
                              roots=volumes,
                              filetypes=c('','json'),
                              session=session)
 
-  # converts the directory path into string format
+  # linked to shinyFileSave, chooses an output path location for a fasta file
+  shinyFiles::shinyFileSave(input, 'save',
+                            roots=volumes,
+                            session=session)
+
+  # converts the input directory path into string format
   dirname <- reactive({shinyFiles::parseDirPath(volumes, input$folder)})
+
+  # converts the chosen output fasta path intro string format
+  output_path <- reactive({shinyFiles::parseSavePath(volumes, input$save)})
 
   # updates the displayed directory path when it changes
   observe({
@@ -177,10 +260,19 @@ server <- function(input, output, session) {
     }
   })
 
+  # updates the displayed output filepath when it changes
+  observe({
+    if (!is.null(output_path)){
+      output$output_path <- renderText(output_path()$datapath)
+    }
+  })
+
   # reactive value for if input directory is valid
   rv <- reactiveValues(valid_input = TRUE)
+  rv2 <- reactiveValues(output_success = FALSE)
 
-  # run the json parsing and prediction algorithm if the run button is pressed
+  # instantiate a function running the json parsing and prediction algorithm if
+  # the run button is pressed
   start_prediction <- eventReactive(eventExpr = input$run_button, {
 
     # catches errors in case the user-inputted directory is in the wrong format
@@ -189,9 +281,12 @@ server <- function(input, output, session) {
       raw_blast_list <- euPredictR::parse_multiple_BLAST_json(dirname())
 
       # build predictions based on parsed data
-      predictions <- euPredictR::build_predictions(raw_blast_list = raw_blast_list,
-                                    max_intron_length = input$max_intron_length,
-                                    max_overlap = input$max_overlap)
+      predictions <- euPredictR::build_predictions(raw_blast_list =
+                                                     raw_blast_list,
+                                                   max_intron_length =
+                                                     input$max_intron_length,
+                                                   max_overlap =
+                                                     input$max_overlap)
 
       # if the program has gotten to this point, no errors
       rv$valid_input = TRUE
@@ -211,19 +306,35 @@ server <- function(input, output, session) {
     )
   })
 
-  # if the run button has been pressed and the input is valid, change the
+  # every time the run button is pressed, make sure start_prediction() is
+  # called so that 'rv$valid_input' is refreshed to indicate whether the
+  # current inputted directory is valid or not.
+  observeEvent(eventExpr = input$run_button, {
+    if (!is.null(start_prediction)){
+      start_prediction()
+    }
+  })
+
+  # if the run button has been pressed, change the
   # available gene options in 'Phylogeny Display'
   observeEvent(input$run_button, {
-    if (!is.null(start_prediction) & rv$valid_input){
+    if (!is.null(start_prediction)){
 
-      # get available genes
-      total_gene_names <- purrr::reduce(base::lapply(start_prediction(), names),
-                                        base::union)
+      if (rv$valid_input){
+        # get available genes
+        total_gene_names <- purrr::reduce(base::lapply(start_prediction(), names),
+                                          base::union)
 
-      # update the gene selection input in 'Phylogeny Display
-      updateSelectInput(session, inputId = "gene_selection",
-                        label = "Select a gene",
-                        choices = total_gene_names)
+        # update the gene selection input in 'Phylogeny Display
+        updateSelectInput(session, inputId = "gene_selection",
+                          label = "Select a gene",
+                          choices = total_gene_names)
+      }
+      else{
+        updateSelectInput(session, inputId = "gene_selection",
+                          label = "Select a gene",
+                          choices = c("None detected"))
+      }
     }
   })
 
@@ -245,6 +356,53 @@ server <- function(input, output, session) {
   output$predicted_seqs <- renderTable({
     if (! is.null(start_prediction) & rv$valid_input)
       euPredictR::output_predictions_df(predictions = start_prediction())
+  })
+
+  observeEvent(input$run_button, {
+    if (!is.null(start_prediction) & rv$valid_input &
+        length(output_path()$datapath) == 1){
+      euPredictR::output_predictions_fasta(predictions = start_prediction(),
+                                           output_file = output_path()$datapath)
+      output$fasta_success <- renderText("Successfully outputted fasta data!")
+    }
+    else{
+      output$fasta_success <- renderText("")
+    }
+  })
+
+  # generate a URL to the example dataset
+  url1 <- a("Example Dataset 1 (GitHub)", href="https://github.com/tonyxieuoft/euPredictR/blob/master/inst/extdata/example_BLAST_raw_output.zip")
+  output$example1 <- renderUI({
+    tagList("Here is an example that can be downloaded:", url1)
+  })
+
+  # generate another URL (this time to the same file but
+  # stored in Google Drive)
+  url2 <- a("Example Dataset 2 (Google Drive)", href="https://drive.google.com/file/d/1tdlDX_c1ksVwon42ircb3dCEH-k3uGmy/view?usp=sharing")
+  output$example1_drive <- renderUI({
+    tagList("If the above link doesn't work, try clicking here:", url2)
+  })
+
+  observeEvent(input$data1, {
+    shinyalert(title = "Example Dataset",
+               text = "A zip file for a directory containing BLAST output .json
+               files. The input queries were coding sequences from the
+               bottlenose dolphin (T. truncatus) for the genes IL10, IL6,
+               TNF, SOX2 and RHO. The subject genomes were from a lamprey (P.
+               marinus), zebrafish (D. rerio), common mouse (M. musculus), orca
+               (O. orca), and the bottlenose dolphin itself as a control.
+               NCBI's blastn was used with the default parameters to obtain the
+               results. All sequences are publically available on NCBI; see the
+               readME for more details.
+
+               To save the file, click on link, then click Download on the
+               top right. Please unzip the file, and select the lowest level
+               directory containing the .json files as sample input for the
+               program.
+               "
+               ,
+               type = "info",
+               html = TRUE)
   })
 
 }
