@@ -31,7 +31,7 @@ gene_predictions <- build_predictions(sample_raw_blast_list,
                                       max_intron_length = 50000)
 
 # Convert the output to a data frame containing the predicted coding
-sequences
+# sequences
 output_predictions_data <- output_predictions_df(predictions)
 
 }

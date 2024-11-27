@@ -436,11 +436,13 @@ parse_multiple_BLAST_json <- function(dir_path, raw_blast_list=NULL){
     stop("Invalid input: The path provided to 'dir_path' must be a single
          string.")
   }
+  else{} # Continue
 
   if (! base::dir.exists(dir_path)){
     stop("Invalid input: The path provided to 'dir_path' must be to a
          directory.")
   }
+  else{} # Continue
 
   if (!is.null(raw_blast_list) & !inherits(raw_blast_list, "RawBlastList")){
     stop("Invalid input: raw_blast_list must be in RawBlastList format and
@@ -452,11 +454,18 @@ parse_multiple_BLAST_json <- function(dir_path, raw_blast_list=NULL){
   all_files <- list.files(path = dir_path, full.names = TRUE)
 
   for (filename in all_files){
-    # get only the name of the file (no path), minus the extension
-    species_name <- tools::file_path_sans_ext(basename(filename))
-    # call parse_BLAST_json (essentially, parse_multiple_BLAST_json is just
-    # a wrapper)
-    raw_blast_list <- parse_BLAST_json(filename, species_name, raw_blast_list)
+
+    # cannot have subdirectories in the parent directory
+    if (dir.exists(filename)){
+      stop("Invalid input: Input directory must only contain .json files. ")
+    }
+    else{
+      # get only the name of the file (no path), minus the extension
+      species_name <- tools::file_path_sans_ext(basename(filename))
+      # call parse_BLAST_json (essentially, parse_multiple_BLAST_json is just
+      # a wrapper)
+      raw_blast_list <- parse_BLAST_json(filename, species_name, raw_blast_list)
+    }
   }
   return(raw_blast_list)
 }

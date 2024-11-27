@@ -125,6 +125,10 @@ documentation was written by the author themselves.
   Biology 215(3): 403-410.
   <https://doi.org/10.1016/S0022-2836(05)80360-2>
 
+- Bodenhofer U, Bonatesta E, Horejs-Kainrath C, and Hochreiter S.
+  (2015). msa: an R package for multiple sequence alignment.
+  Bioinformatics 31(24):3997-9999. DOI: 10.1093/bioinformatics/btv176.
+
 - Couture-Beil, A. (2024). rjson: JSON for R. R package version 0.2.23.
   <https://CRAN.R-project.org/package=rjson>.
 
@@ -136,6 +140,10 @@ documentation was written by the author themselves.
   Configuration File (JSON/INI/YAML/TOML). R package version 0.3.5.
   <https://CRAN.R-project.org/package=configr>.
 
+- Pagès H, Aboyoun P, Gentleman R, DebRoy S (2024). Biostrings:
+  Efficient manipulation of biological strings.
+  <doi:10.18129/B9.bioc.Biostrings>.
+
 - R Core Team (2024). R: A Language and Environment for Statistical
   Computing. R Foundation for Statistical Computing, Vienna, Austria.
   <https://www.R-project.org/>.
@@ -143,6 +151,10 @@ documentation was written by the author themselves.
 - She, R., Chu, J.S., Uyar, B., Wang, J., Wang, K., Chen, N.S. (2011).
   genBlastG: using BLAST searches to build homologous gene models.
   <https://doi.org/10.1093/bioinformatics/btz714>
+
+- Schlie K, Potts AJ, Morrison DA, Grimm, GW. (2017), Intertwining
+  phylogenetic trees and networks. Methods in Ecology and Evolution, 8:
+  1212–1220. <doi:10.1111/2041-210X.12760>
 
 - Wickham, H. ggplot2: Elegant Graphics for Data Analysis.
   Springer-Verlag New York, 2016.

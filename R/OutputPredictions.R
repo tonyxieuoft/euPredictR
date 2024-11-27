@@ -128,7 +128,7 @@ output_predictions_fasta <- function(predictions, output_file = NULL){
 #'                                       max_intron_length = 50000)
 #'
 #' # Convert the output to a data frame containing the predicted coding
-#' sequences
+#' # sequences
 #' output_predictions_data <- output_predictions_df(predictions)
 #'
 #' @import purrr

@@ -2,15 +2,40 @@
 % Please edit documentation in R/AlignPredictions.R
 \name{display_phylogeny}
 \alias{display_phylogeny}
-\title{Display a phylogeny of a gene set}
+\title{Display Phylogeny for a Single Gene}
 \usage{
 display_phylogeny(predictions, gene_name)
 }
 \arguments{
-\item{predictions}{description}
+\item{predictions}{S3 object of class GenePredictions produced by an
+iteration of the 'build_predictions' function in this package.}
 
-\item{gene_name}{description}
+\item{gene_name}{Name of gene to construct phylogeny from. As a requirement,
+there must be at least coding sequence for the specified gene in
+'predictions'.}
+}
+\value{
+Return a
 }
 \description{
-Sample description
+Given an input nested list of predicted coding sequences in GenePredictions
+format and an user-specified gene, construct a phylogeny from
+predicted coding sequences for that single gene. After isolating the
+relevant coding sequences for the gene from the
+GenePredictions object, the sequences are then aligned with ClustalW,
+a multiple-sequence alignment algorithm. Finally, a phylogeny is
+inferred via the unweighted pair group method with arithmetic mean (UPGMA)
+algorithm. UPGMA assumes that:
+\itemize{
+\item all taxa evolve at a constant rate, and that
+\item all species also have the same mutation rate
+}
+Note that these assumptions are breached quite often in reality. Still,
+although other methods like maximum-likelihood-based approaches have greater
+accuracy, they take far longer to execute. The user should therefore treat
+this function as a quick way to visually discern similarity between the
+predicted coding sequences, rather than a real reflection of phylogenetic
+relationships. If species appear closely related in the phylogenies produced,
+the user should merely assume that their predicted sequences are closest to
+each other in comparison to the sequences predicted for other species.
 }
