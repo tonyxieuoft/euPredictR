@@ -96,7 +96,8 @@ raw_blast_list2 <- parse_BLAST_json(filename = json_file2,
 # this list concatenates raw BLAST results for both orca and dolphin RHO
 }
 \references{
-Altschul S.F., Gish, W., Miller, W., Myers, E.W. and Lipman, D.J. (1990). Basic local alignment
+Altschul S.F., Gish, W., Miller, W., Myers, E.W. and Lipman, D.J. (1990).
+Basic local alignment
 search tool. Journal of Molecular Biology 215(3): 403-410.
 https://doi.org/10.1016/S0022-2836(05)80360-2
 

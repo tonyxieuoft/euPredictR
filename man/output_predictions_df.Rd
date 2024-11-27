@@ -14,8 +14,8 @@ package's build_predictions function.}
 Returns a data frame containing the predicted coding sequences. The
 data frame has three string-containing columns: 'Gene', 'Species' and
 'Sequence', corresponding to the gene name, species and sequence for a given
-prediction. If no coding sequence prediction is available for a gene of a
-particular species, no row for the gene-species combination is present.
+prediction. If no coding sequence prediction is available for a gene-species
+combination, no row for it is present.
 }
 \description{
 Given an input nested list of gene predictions in GenePrediction format,
@@ -32,7 +32,7 @@ gene_predictions <- build_predictions(sample_raw_blast_list,
 
 # Convert the output to a data frame containing the predicted coding
 # sequences
-output_predictions_data <- output_predictions_df(predictions)
+output_predictions_data <- output_predictions_df(gene_predictions)
 
 }
 \references{

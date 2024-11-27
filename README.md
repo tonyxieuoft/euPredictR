@@ -43,6 +43,12 @@ devtools::install_github("tonyxieuoft/euPredictR", build_vignettes = TRUE)
 library("euPredictR")
 ```
 
+To run the Shiny app:
+
+``` r
+runEuPredictR()
+```
+
 ## Overview
 
 ``` r
@@ -51,7 +57,7 @@ data(package = "euPredictR")
 browseVignettes("euPredictR")
 ```
 
-`euPredictR` currently contains 5 functions.
+`euPredictR` currently contains 7 functions.
 
 1.  ***parse_BLAST_json*** for parsing a single raw BLAST output file
     provided in .json format. The function stores the parsed results in
@@ -67,8 +73,16 @@ browseVignettes("euPredictR")
 4.  ***gene_coverage_heatmap*** for visualizing gene coverage/prediction
     completeness of predicted coding sequences using a heatmap.
 
-5.  ***output_predictions*** for outputting the gene predictions in
-    FASTA format.
+5.  ***output_predictions_fasta*** for outputting the gene predictions
+    in FASTA format.
+
+6.  ***output_predictions_df*** for outputting the gene predictions in a
+    data frame format.
+
+7.  ***display_phylogeny*** for constructing and displaying phylogenies
+    based on the predicted sequences. This feature is designed to
+    provide a quick visual depiction of sequence similarity sequence
+    across species.
 
 The package also contains a raw blast output dataset in RawBlastList
 format, called sample_raw_blast_list. Refer to documentation in data.R
@@ -78,14 +92,11 @@ section).
 
 ![](./inst/extdata/euPredictR_workflow_revised.PNG)
 
-Planned for the future: A function that conducts phylogenetic analysis
-on the predicted coding sequences of the same gene for different
-species. This can be used as an additional validation step for predicted
-gene quality.
-
 ## Contributions
 
-The author of the package is Tony Xie.
+The author of the package is Tony Xie. Dr. Anjali Silva, Maryam
+Hasanzadehkiabi and Zhenghao Xiao made suggestions that helped inform
+the final version of this package.
 
 The `parse_BLAST_json()` function and associated helpers made use of
 various packages. `dplyr` helped with data frame manipulation,
@@ -111,9 +122,16 @@ to create heatmap plots of the gene coverage for the predicted coding
 sequences. Otherwise, the calculations of gene coverage and creation of
 the melted data frame were based on the author’s own logic.
 
-The `output_predictions()` function makes use of the purrr package for
+The `output_predictions()` functions make use of the purrr package for
 vector manipulation. The logic and code implementation is the author’s
 own.
+
+The `display_phylogeny()` function makes use of the msa package from
+Bioconductor to align sequences via the ClustalW algoirthm.
+Additionally, it utilizes the phangorn package for phylogenetic
+inference. Otherwise, the code implementation and general idea of
+creating phylogenies to validate the quality of and relationship between
+predicted sequences were solely based on the author.
 
 No generative AI was used in the creation of the package. All
 documentation was written by the author themselves.
@@ -125,9 +143,14 @@ documentation was written by the author themselves.
   Biology 215(3): 403-410.
   <https://doi.org/10.1016/S0022-2836(05)80360-2>
 
-- Bodenhofer U, Bonatesta E, Horejs-Kainrath C, and Hochreiter S.
+- Bodenhofer, U., Bonatesta, E., Horejs-Kainrath, C., and Hochreiter, S.
   (2015). msa: an R package for multiple sequence alignment.
   Bioinformatics 31(24):3997-9999. DOI: 10.1093/bioinformatics/btv176.
+
+- Chang, W., Cheng, J., Allaire, J., Sievert, C., Schloerke, B., Xie,
+  Y., Allen, J., McPherson, J., Dipert, A., Borges, B. (2024). shiny:
+  Web Application Framework for R. R package version 1.9.1,
+  <https://CRAN.R-project.org/package=shiny>.
 
 - Couture-Beil, A. (2024). rjson: JSON for R. R package version 0.2.23.
   <https://CRAN.R-project.org/package=rjson>.

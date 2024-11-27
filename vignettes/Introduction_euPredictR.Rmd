@@ -4,7 +4,7 @@ author: "Tony Xie"
 date: "`r format(Sys.time(), '%d %b %Y')`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Introduction_euPredictR}
+  %\VignetteIndexEntry{A tour of euPredictR}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,13 +16,6 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 ```
-
-```{r setup, message=FALSE, warning=FALSE}
-# Load the package
-library(euPredictR)
-library(dplyr)
-```
-
 
 ## Introduction
 
@@ -86,63 +79,145 @@ format.
 
 ## An Example
 
-*Note - I wasn't able to get the knitting to work (the vignette can't seem to find my package), so in the meantime I have just included the skeleton for what the vignette should look like before I successfully troubleshoot it. 
-
-Suppose that we have experimentally obtained protein-coding sequences from the bottlenose dolphin (T. truncatus) for 5 genes: IL10, IL6, TNF, RHO and SOX2. Let's suppose that we also _want_ to obtain the coding sequences of these 5 genes for four other species: the lamprey (P. marinus), mouse (M. musculus), orca (O. orca) and zebrafish (D. rerio). Unfortunately, in our fictitous example, no transcript sequences for them seem to be available anywhere. (Obviously, this isn't the case in reality, but it is useful for demonstrating the functionality of the package).
+Suppose that we have experimentally obtained protein-coding sequences from the bottlenose dolphin (*T. truncatus*) for 5 genes: *IL10*, *IL6*, *TNF*, *RHO* and *SOX2*. Let's suppose that we also _want_ to obtain the coding sequences of these 5 genes for four other species: the lamprey (*P. marinus*), mouse (*M. musculus*), orca (*O. orca*) and zebrafish (*D. rerio*). Unfortunately, in our fictitous example, no transcript sequences for them seem to be available anywhere. (Obviously, this isn't the case in reality, but it is useful for demonstrating the functionality of the package).
 
 Luckily, let's suppose we have access to the genome assemblies of each species. Then, even though we don't actually have access to the coding sequences, we can predict them via sequence homology and extract them from the genome assemblies via BLAST. Since we only have coding sequences for the dolphin, we use them as queries to BLAST each subject genome assembly separately, and obtain raw BLAST output files in .json format, one per species. We also decide to BLAST the dolphin query coding sequences against the dolphin genome as a control (theoretically, the predicted coding sequences should be exactly the same as the query). Each raw BLAST output file contains a ton of data though, with HSPs that might not be relevant. Here's where *euPredictR* comes to the rescue.
 
-Suppose all of our raw BLAST output files are in one directory. First, we want to name each file based on the species that the data represents. As a result, we get an identical directory to the "example_raw_output_directory" directory in the `./inst/extdata` folder. (See details in the documentation of data.R). Then, we can run the `parse_multiple_blast_json()` via the following:
+Given that the euPredictR package has been downloaded, let's attach it:
+```{r, }
+library(euPredictR)
+``` 
 
-```r
-dir_path <- "/path/to/blast/output/dir"
-parsed_output <- euPredictR::parse_multiple_blast_json(dir_path = dir_path, 
+Suppose all of our raw BLAST output files are in one directory. First, we want to name each file based on the species that the data represents. As a result, we get an directory identical to the "example_raw_output_directory" directory in the `./inst/extdata` folder. (See details in the documentation of data.R). Then, we can run the `parse_multiple_BLAST_json()` function via the following:
+
+```{r, }
+# Get the path of the directory containing BLAST .json files for T. truncatus,
+# O. orca, M. musculus, P. marinus and D. rerio when dolphin coding sequences 
+# for IL10, IL6, TNF, RHO, and SOX2 are used as queries. Here, the data is 
+# predownloaded in the ./inst/extdata folder of the package. 
+dir_path <- system.file("extdata", "example_raw_output_directory",
+                        package="euPredictR")
+                        
+parsed_output <- euPredictR::parse_multiple_BLAST_json(dir_path = dir_path, 
                                                        raw_blast_list = NULL)
 ```
 
 We used `parse_multiple_blast_json` because there were multiple BLAST output files to parse, and all were contained in one directory. The `raw_blast_list` parameter takes in a previously parsed output to concatenate with. Since this is the first BLAST .json file that we have parsed, we leave it empty. (see the help documentation for more).
 
-Checking the type of our parsed output, we see:
-```r
+Let's take a took at the type of our parsed output:
+```{r, }
 class(parsed_output)
 ```
-that it is of type "RawBlastList". Each RawBlastList object is a nested list in key-value format, in which the outer list's keys are species and the values are 'gene lists' that are also lists in key-value format. The keys of 'gene lists' are gene names, while the values are lists of size 2 that contain the length of the query sequence used, as well as the HSP table produced for the query (and particular genomic assembly from one species). To find the HSP table for the RHO gene for the Orca reference genome, we see:
-```r
-parsed_output$O_orca$RHO$hsp_data
+More specifically, it's an S3 object of type "RawBlastList". Each RawBlastList 
+object is a nested list in key-value format, in which the outer list's keys are 
+species and the values are 'gene lists' that are also lists in key-value format. The keys of 'gene lists' are gene names, while the values are lists of size 2 that contain the length of the query sequence used, as well as the HSP table produced for the query (and particular genomic assembly from one species). To access the HSP table for the RHO gene for the Orca reference genome:
+```{r, }
+# Get the HSP table
+hsp_table <- parsed_output$O_orca$RHO$hsp_data
 ```
-and to find the length of the query used to obtain the data, we see:
-```r
+To reiterate, the first layer of keys in a RawBlastList are species names (`O_orca` in the above), 
+followed by the gene name (`RHO`) in the second layer. Finally, we specify the attribute 
+`hsp_data` to access the HSP table.
+
+Each HSP table has 9 columns. To see the data for the first HSP in the table:
+```{r, }
+# get the first HSP in the table
+first_HSP <- hsp_table[1,]
+
+# E-value of the high-scoring pair (HSP):
+first_HSP$e_val
+
+# Length of Match
+first_HSP$seq_len
+
+# starting index of the HSP segment on the query side
+first_HSP$q_start
+
+# ending index of the HSP segment on the query side
+first_HSP$q_end
+
+# sequence of the HSP segment on the query side
+first_HSP$q_seq
+
+# starting and ending indices of the HSP on the subject side
+first_HSP$s_start
+first_HSP$s_end
+
+# sequence of the HSP segment on the subject side
+first_HSP$s_seq
+
+# Strand of subject segment (Plus/Minus)
+first_HSP$s_strand
+
+```
+The above HSP, with a very low E-value of around 1e-180, is possibly a 
+biologically significant match between the query dolphin *RHO* coding sequence and the subject orca genome. The HSP ranges from index 1 to 363 on the query side, suggesting that the sequence stored in `first_HSP$s_seq` might be the *first* exon in the RHO gene of the Orca. Note that BLAST often identifies a large number of spurious HSP matches. Manually selecting relevant from irrelvant HSPs is a tedious endeavor, and must factor in the relative position of each of the HSPs in the subject genome. The package has a function that builds predictions automatically, which we will cover soon. 
+
+To find the length of the query used to obtain the data, we use:
+```{r, }
 parsed_output$O_orca$RHO$query_len
 ```
+This means that the RHO sequence for *T. truncatus* is 1047 bps in length. 
+
 Now, with our parsed output, we can create gene predictions with the following:
-```{r message = FALSE}
-predictions <- euPredictR::build_predictions(raw_blast_list = sample_raw_blast_list,
+```{r, message = FALSE}
+predictions <- euPredictR::build_predictions(raw_blast_list = parsed_output,
                                              max_overlap = 30,
                                              max_intron_length = 50000)
-predictions
 ```
 The `max_overlap` attribute is the maximum possible overlap between the query segments of two compatible HSPs, whereas the `max_intron_length` attribute is the maximum distance between the subject segments of two compatible HSPs. Read the help documentation of `build_predictions` for more. Checking the type of our predictions, we see:
-```r
+```{r, }
 class(predictions)
 ```
-that it is of type GenePredictions. See more details about the GenePredictions class by visiting the help documentation of `build_predictions`. To access the predicted sequence for Orca rhodopsin now, we see:
-```r
+that it is of type GenePredictions. See more details about the GenePredictions class by visiting the help documentation of `build_predictions`. As a broad overview, the GenePredictions class has a similar structure to RawBlastList, with the first layer of keys corresponding to species names and the second layer being gene names. However, instead of storing HSP tables and query lengths, each entry stores the entire predicted coding sequence for a given species-gene combination. For instance, to access the predicted sequence for *O. orca* rhodopsin, we use the following:
+```{r, }
 predictions$O_orca$RHO
 ```
-is a sequence. As it turns out, it is exactly the predicted sequence. We can visualize how much of the coding sequence for each gene-species combination we were able to predict (ie. the gene coverage) by the following:
-```r
+We can do the same for the *SOX2* gene of *P. marinus*:
+```{r, }
+predictions$P_marinus$SOX2
+```
+Note the large number of gaps at the beginning and end of the above 
+*P. marinus* sequence. Unfortunately, these were sections of the gene that were 
+unable to be pulled out with BLAST. As the dolphin and lamprey are evolutionarily divergent, their sequences are likely to be dissimilar, and the above occurs very frequently. For accurate and complete predictions based on sequence homology, it is imperative that query-subject species evolutionary divergence is minimized. 
+
+We can visualize how much of the coding sequence for each gene-species combination we were able to predict (ie. the gene coverage) by the following:
+```{r, fig.dim= c(4.25,3.25)}
 euPredictR::gene_coverage_heatmap(predictions)
 ```
-which produces the following output:
 
-(issue preventing this fron loading, for now)
+The darker the colour, the greater the predicted sequence coverage (ie. fewer gaps) for a species-gene combination. From the above, it appears *O. orca* and *T. truncatus* have the most complete gene predictions, followed by *M. musculus*, *D. rerio*, lastly *P. marinus*. Given that *T. truncatus* coding sequences were used as queries, this result is unsurprising.
+
+We can also visualize the similarity between predicted sequences for a given gene with a phylogeny, as follows:
+```{r, fig.dim=c(6, 3.25)}
+# construct and visualize phylogeny based on predicted rhodopsin sequences
+phylogeny <- euPredictR::display_phylogeny(predictions, "RHO")
+```
+
+The above phylogeny closely follows the phylogenetic relationship between the
+species in existing literature. Note that the Unweighted Pair Group Method by 
+Arithmetic Mean (UPGMA) was used for phylogenetic inference. The method is fast, but others are more accurate. Therefore, treat the phylogenies displayed by the package as a 
+tool for quick visualization of predicted sequence similarity between different 
+organisms, rather than for accurate phylogenetic analysis.
 
 Finally, we can output the gene predictions in fasta format to the R console by calling the following function:
-
 ```r
-euPredictR::output_predictions(predictions)
+# print fasta to console (very long, not executed in this vignette)
+euPredictR::output_predictions_fasta(predictions)
 ```
-which also takes in a `GenePredictions` object produced by `build_predictions`. 
+which also takes in a `GenePredictions` object produced by `build_predictions`.
+The user can additionally specify a filepath and redirect the fasta output
+there:
+```r
+save_path <- "/file/to/save/fasta"
+euPredictR::output_predictions_fasta(predictions, output_file = save_path)
+```
+
+Or, we can save the results in a data frame:
+```{r,}
+predictions_df <- euPredictR::output_predictions_df(predictions)
+
+```
 
 That's it for examples for now! I've deliberately chosen well-annotated and researched species in this example. However, for less-studied organisms, only their (unannotated) genomes are available a lot of the time, and tools just like euPredictR must be used to predict gene sequences from them. 
 
@@ -160,11 +235,11 @@ Bioinformatics 19: e189. https://doi.org/10.1186/s12859-018-2203-5
 * She, R., Chu, J.S., Uyar, B., Wang, J., Wang, K., Chen, N.S. (2011). genBlastG: using BLAST
 searches to build homologous gene models. https://doi.org/10.1093/bioinformatics/btz714
 
+* Sokal, R., Michener, C.D. (1958). A Statistical Method for Evaluating Systematic Relationships. University of Kansas Scientific Bulletin 28:1409-1438.
+
 * Wheeler, D. and Bhagwat, M. Blast QuickStart: Example-Driven Web-Based BLAST Tutorial. In:
 Bergman NH, editor. Comparative Genomics: Volumes 1 and 2. Totowa (NJ): Humana Press; 2007. Chapter 9. https://www.ncbi.nlm.nih.gov/books/NBK1734/
 
-
-
-
-
-
+```{r}
+sessionInfo()
+```

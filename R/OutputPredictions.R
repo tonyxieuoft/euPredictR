@@ -116,8 +116,8 @@ output_predictions_fasta <- function(predictions, output_file = NULL){
 #' @returns Returns a data frame containing the predicted coding sequences. The
 #' data frame has three string-containing columns: 'Gene', 'Species' and
 #' 'Sequence', corresponding to the gene name, species and sequence for a given
-#' prediction. If no coding sequence prediction is available for a gene of a
-#' particular species, no row for the gene-species combination is present.
+#' prediction. If no coding sequence prediction is available for a gene-species
+#' combination, no row for it is present.
 #'
 #' @examples
 #'
@@ -129,7 +129,7 @@ output_predictions_fasta <- function(predictions, output_file = NULL){
 #'
 #' # Convert the output to a data frame containing the predicted coding
 #' # sequences
-#' output_predictions_data <- output_predictions_df(predictions)
+#' output_predictions_data <- output_predictions_df(gene_predictions)
 #'
 #' @import purrr
 #' @export
@@ -144,9 +144,12 @@ output_predictions_df <- function(predictions){
          produced by the build_predictions function in the package")
   }
 
-  total_gene_names <- purrr::reduce(lapply(predictions, names), base::union)
+  # get all gene names and species names
+  total_gene_names <- purrr::reduce(base::lapply(predictions, names),
+                                    base::union)
   species_names <- names(predictions)
 
+  # prepare an empty data frame to store all sequences
   num_sequences <- length(total_gene_names) * length(species_names)
   seq_dataframe <- data.frame("Gene" = character(length=num_sequences),
                               "Species" = character(length=num_sequences),
@@ -159,7 +162,7 @@ output_predictions_df <- function(predictions){
       # get the gene prediction for the species/gene combination
       seq <- predictions[[species]][[gene_name]]
 
-      # if it exists
+      # if it exists, populate the next row in the dataframe
       if (!is.null(seq)){
 
         seq_dataframe$Gene[j] <- gene_name
@@ -170,6 +173,7 @@ output_predictions_df <- function(predictions){
     }
   }
 
+  # remove empty columns and return dataframe
   return(seq_dataframe[seq_dataframe$Sequence != "",])
 }
 
