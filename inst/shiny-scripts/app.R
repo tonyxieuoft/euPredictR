@@ -7,7 +7,6 @@ library(shinycssloaders)
 library(shinyFiles)
 
 
-
 # Define UI for random distribution app ----
 ui <- fluidPage(
 
@@ -157,7 +156,7 @@ ui <- fluidPage(
   )
 )
 
-# Define server logic for random distribution app ----
+
 server <- function(input, output, session) {
 
   # get the root directory
@@ -216,25 +215,33 @@ server <- function(input, output, session) {
   # available gene options in 'Phylogeny Display'
   observeEvent(input$run_button, {
     if (!is.null(start_prediction) & rv$valid_input){
-      total_gene_names <- reduce(lapply(start_prediction(), names), dplyr::union)
 
+      # get available genes
+      total_gene_names <- purrr::reduce(base::lapply(start_prediction(), names),
+                                        base::union)
+
+      # update the gene selection input in 'Phylogeny Display
       updateSelectInput(session, inputId = "gene_selection",
                         label = "Select a gene",
                         choices = total_gene_names)
     }
   })
 
+  # create the gene coverage heatmap of the predictions, given valid input
   output$gene_coverage_heatmap <- renderPlot({
     if (! is.null(start_prediction) & rv$valid_input)
       euPredictR::gene_coverage_heatmap(predictions = start_prediction())
   })
 
+  # Create the phylogeny display of each predicted gene, given valid input
+  # Do so only when the gene selection is changed
   output$phylogeny_display <- bindEvent(renderPlot({
     if (! is.null(start_prediction) & rv$valid_input)
       euPredictR::display_phylogeny(predictions = start_prediction(),
                                     gene_name = input$gene_selection)
   }), input$gene_selection)
 
+  # output a table of the predicted sequences
   output$predicted_seqs <- renderTable({
     if (! is.null(start_prediction) & rv$valid_input)
       euPredictR::output_predictions_df(predictions = start_prediction())
