@@ -31,10 +31,10 @@ BLAST output as a nested R list, as follows:
  species name and the corresponding value is a "gene list" for the species
  \item Each "gene list" is also in key-value format, where each key is a
  gene name and the  corresponding value is a list containing two attributes:
- 1) \emph{hsp_data}, a data frame of high-scoring pairs identified by BLAST
- between the query coding sequence for the gene and subject genomic sequences
- and 2) \emph{query_len}, the length of the query coding sequence for the
- gene.
+ 1) \emph{hsp_data}, a data frame of high-scoring pairs (HSPs) identified by
+ BLAST between the query coding sequence for the gene and subject genomic
+ sequences and 2) \emph{query_len}, the length of the query coding sequence
+ for the gene.
  \item Each row in \emph{hsp_data} corresponds to a single high-scoring pair,
  in which the columns are as follows:
  \itemize{

@@ -2,11 +2,13 @@
 #' Sample BLAST Output Data in RawBlastList Format
 #'
 #' Results obtained when query coding sequences from the common
-#' bottlenose dolphin (T. truncatus) for the genes IL10, Il6, TNF, SOX2,
-#' and RHO were used to blast all subject genomic sequences from a lamprey
-#' (P. marinus), zebrafish (D. rerio), common mouse (M. musculus), orca
-#' (O. orca) and the bottlenose dolphin itself as a control. NCBI's blastn was
-#' the type of BLAST used, along with the default parameters.
+#' bottlenose dolphin (\emph{T. truncatus}) for the genes \emph{IL10},
+#' \emph{IL6}, \emph{TNF}, \emph{SOX2},
+#' and \emph{RHO} were used to BLAST all subject genomic sequences from a
+#' lamprey (\emph{P. marinus}), zebrafish (\emph{D. rerio}), common mouse
+#' (\emph{M. musculus}), orca (\emph{O. orca}) and the bottlenose dolphin
+#' itself as a control. NCBI's blastn was the type of BLAST used, along with
+#' the default parameters.
 #'
 #' @source NCBI resources. The transcript codes for the query coding sequences
 #' are XM_004312229.3, XM_004330286, NM_001280615.1, XM_004311784.3 and
@@ -18,7 +20,8 @@
 #' Fasick, J.I and Robsinson, O.R. (1998). Mechanism of spectral tuning in the
 #' dolphin visual pigments. Biochemistry 37(2): 433-438.
 #'
-#' Maloney, B., Clayton, L., Arnold, J., et al. (2020). Tursiops truncatus
+#' Maloney, B., Clayton, L., Arnold, J., et al. (2020).
+#' \emph{Tursiops truncatus}
 #' (bottlenose dolphin) genome, mTurTru1, maternal haplotype with Y.
 #' Unpublished.
 #'
@@ -27,17 +30,19 @@
 #' Unpublished.
 #'
 #' Sitt, T., Bowen, L., Blanchard, M.T., et al. (2008). Molecular cloning and
-#' functional characterization of bottlenose dolphin (Tursiops truncatus) tumor
+#' functional characterization of bottlenose dolphin (\emph{Tursiops truncatus})
+#'tumor
 #' necrosis factor alpha. Vet Immunol Immunopathol 82(3-4): 183-192.
 #'
-#' Smith, J., Fedrigo, O., Timoshevskaya, N., et al. (2020). Petromyzon marinus
-#' (Sea Lamprey) genome, kPetMar1, primary haplotype. Unpublished.
+#' Smith, J., Fedrigo, O., Timoshevskaya, N., et al. (2020).
+#' \emph{Petromyzon marinus} (Sea Lamprey) genome, kPetMar1, primary haplotype.
+#' Unpublished.
 #'
 #' NCBI. (2024). Gnomon: The NCBI eukaryotic gene prediction tool.
 #' https://www.ncbi.nlm.nih.gov/refseq/annotation_euk/gnomon/
 #'
-#' Wellcome Sanger Tree of Life Programme. (2022). Orcinus orca, whole genome
-#' shotgun sequencing project. Unpublished.
+#' Wellcome Sanger Tree of Life Programme. (2022). \emph{Orcinus orca}, whole
+#' genome shotgun sequencing project. Unpublished.
 #'
 #'
 #' @format An S3 object in RawBlastList format, as follows:
@@ -49,7 +54,8 @@
 #'  \item Each 'gene list' is also in key-value format, where each key is a gene
 #'  name (one of IL10, IL6, TNF, SOX2 and RHO) and each value is a list
 #'  containing the length of the query coding sequence (in this case, from the
-#'  bottlenose dolphin), and the HSP table produced by blasting the query
+#'  bottlenose dolphin), and the high-scoring pair (HSP) table produced by
+#'  blasting the query
 #'  sequence against the subject genome.
 #'  \item Each HSP table is a data frame, with rows corresponding to single HSP
 #'  entries and columns representing attributes of the HSPs. There are 9
@@ -69,7 +75,13 @@
 #'
 #' @examples
 #' \dontrun{
+#'
+#'  # display contents
 #'  sample_raw_blast_list
+#'
+#'  # use it as input for the build_predictions() function
+#'  predictions <- build_predictions(raw_blast_list = sample_raw_blast_list)
+#'
 #' }
 "sample_raw_blast_list"
 

@@ -24,8 +24,9 @@ compatible HSPs (boundary on allowed intron size)}
 Return True iff HSPs i and j are compatible.
 }
 \description{
-Determines if two HSPs are compatible, based on the assumptions laid out in
-build_predictions. Specifically, assumes that relevant HSPs correspond
+Determines if two high-scoring pairs (HSPs) are compatible, based on the
+assumptions laid out in build_predictions. Specifically, assumes that
+relevant HSPs correspond
 loosely to exons, and therefore must roughly have the same relative
 attributes that exons do. Loosely inspired by the Splign algorithm by
 Kapustin et. al.

@@ -15,9 +15,7 @@ ui <- fluidPage(
   # App title ----
   titlePanel(tags$h1(tags$b("euPredictR: "), "Protein-coding gene sequence
              prediction for novel eukaryotic organisms"),
-
              ),
-
   hr(),
 
   tags$h4(tags$b("Introduction and Biological Context:")),
@@ -144,11 +142,8 @@ ui <- fluidPage(
                        value = 30,
                        min = 0
           ),
-
           br(),
-
           tags$p("Now, click on", tags$b("Step 3.")),
-
         ),
 
         tabPanel(
@@ -167,15 +162,11 @@ ui <- fluidPage(
             withSpinner(color="#0dc5c1",
                         size = 0.5),
 
-
           br(),
 
-          tags$p("Otherwise, the program will display the predicted
-                 sequences only in a panel to the right."),
-
+          tags$p("Otherwise, the program will only display the predicted
+                 sequences in a panel to the right."),
           br(),
-
-
           tags$p(tags$b("Finally, click the button to run the prediction
                         algorithm.")),
 
@@ -183,13 +174,9 @@ ui <- fluidPage(
                        label = "Run"),
 
           br(),
-
           verbatimTextOutput("fasta_success")
-
         )
-
       )
-
     ),
 
     # Main panel for displaying outputs ----
@@ -199,23 +186,66 @@ ui <- fluidPage(
       tabsetPanel(type = "tabs",
                   tabPanel("Predicted sequence display",
 
+                           br(),
 
+                           tags$h4(tags$b("Table of Predicted Coding
+                                          Sequences")),
+
+                           tags$p("Instructions: Enter required input in panels
+                                  on the left hand size. Then, click",
+                                  em('Run'),
+                                  "on bottom of the third panel."),
 
                            tableOutput("predicted_seqs") %>%
-                             withSpinner(color="#0dc5c1"))
-                    ,
+                             withSpinner(color="#0dc5c1")
+
+                           ),
 
                   tabPanel("Gene Coverage Heatmap",
 
+                           br(),
 
+                           tags$h4(tags$b("Coverage Heatmap of Predicted
+                                          Genes")),
+
+                           tags$p("Instructions: Enter required input in panels
+                                  on the left hand size. Then, click",
+                                  em('Run'),
+                                  "on bottom of the third panel."),
+
+                           tags$p("Colours of the heatmap represent the
+                                  proportion of each coding sequence that was
+                                  successfully pulled out with BLAST and
+                                  predicted by the algorithm. See legend for
+                                  precise correspondances."),
 
                            plotOutput("gene_coverage_heatmap") %>%
-                             withSpinner(color="#0dc5c1")),
+                             withSpinner(color="#0dc5c1")
+
+                  ),
 
                   tabPanel("Phylogeny Display",
 
                            br(),
 
+                           tags$h4(tags$b("Phylogenies Based on Predicted
+                                          Genes")),
+
+                           tags$p("Instructions: Enter required input in panels
+                                  on the left hand size. Then, click",
+                                  em('Run'),
+                                  "on bottom of the third panel."),
+
+                           tags$p("Phylogenies are based on the predicted
+                                  coding sequences for a single gene.
+                                  Relationships are inferred by the
+                                  Unweighted Pair Group Method with
+                                  Arithmetic Mean (UPGMA). Users should treat
+                                  phylogenies as visual displays of predicted
+                                  sequence similarity across species, rather
+                                  than accurate phylogenetic relationships."),
+
+                           br(),
                            selectInput("gene_selection",
                                        "Select a gene",
                                        choices = c("None detected")),
@@ -371,14 +401,14 @@ server <- function(input, output, session) {
   })
 
   # generate a URL to the example dataset
-  url1 <- a("Example Dataset 1 (GitHub)", href="https://github.com/tonyxieuoft/euPredictR/blob/master/inst/extdata/example_BLAST_raw_output.zip")
+  url1 <- a("Example Dataset (GitHub)", href="https://github.com/tonyxieuoft/euPredictR/blob/master/inst/extdata/example_BLAST_raw_output.zip")
   output$example1 <- renderUI({
     tagList("Here is an example that can be downloaded:", url1)
   })
 
   # generate another URL (this time to the same file but
   # stored in Google Drive)
-  url2 <- a("Example Dataset 2 (Google Drive)", href="https://drive.google.com/file/d/1tdlDX_c1ksVwon42ircb3dCEH-k3uGmy/view?usp=sharing")
+  url2 <- a("Example Dataset (Google Drive)", href="https://drive.google.com/file/d/1tdlDX_c1ksVwon42ircb3dCEH-k3uGmy/view?usp=sharing")
   output$example1_drive <- renderUI({
     tagList("If the above link doesn't work, try clicking here:", url2)
   })

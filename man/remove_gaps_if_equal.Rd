@@ -2,13 +2,13 @@
 % Please edit documentation in R/ParseInput.R
 \name{remove_gaps_if_equal}
 \alias{remove_gaps_if_equal}
-\title{Remove Gaps in HSP Segment (Helper for parse_BLAST_json)}
+\title{Remove Gaps in High Scoring Pair (HSP) Segment (Helper for parse_BLAST_json)}
 \usage{
 remove_gaps_if_equal(hsp_data)
 }
 \arguments{
-\item{hsp_data}{Data frame containing HSP data. Each row is an HSP, and the
-columns are HSP attributes.}
+\item{hsp_data}{Data frame containing high-scoring pair (HSP) data. Each row
+is an HSP, and the columns are HSP attributes.}
 }
 \value{
 Returns the altered HSP data frame, now with gaps removed if both

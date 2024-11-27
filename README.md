@@ -40,7 +40,7 @@ To install the latest version of the package:
 install.packages("devtools")
 library("devtools")
 devtools::install_github("tonyxieuoft/euPredictR", build_vignettes = TRUE)
-library("euPredictT")
+library("euPredictR")
 ```
 
 ## Overview
@@ -76,7 +76,7 @@ for more details. An overview of the package is illustrated below. (User
 input requirements are elaborated more in the biological context
 section).
 
-![](./inst/extdata/euPredictR_workflow.PNG)
+![](./inst/extdata/euPredictR_workflow_revised.PNG)
 
 Planned for the future: A function that conducts phylogenetic analysis
 on the predicted coding sequences of the same gene for different

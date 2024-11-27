@@ -36,10 +36,10 @@
 #'  species name and the corresponding value is a "gene list" for the species
 #'  \item Each "gene list" is also in key-value format, where each key is a
 #'  gene name and the  corresponding value is a list containing two attributes:
-#'  1) \emph{hsp_data}, a data frame of high-scoring pairs identified by BLAST
-#'  between the query coding sequence for the gene and subject genomic sequences
-#'  and 2) \emph{query_len}, the length of the query coding sequence for the
-#'  gene.
+#'  1) \emph{hsp_data}, a data frame of high-scoring pairs (HSPs) identified by
+#'  BLAST between the query coding sequence for the gene and subject genomic
+#'  sequences and 2) \emph{query_len}, the length of the query coding sequence
+#'  for the gene.
 #'  \item Each row in \emph{hsp_data} corresponds to a single high-scoring pair,
 #'  in which the columns are as follows:
 #'  \itemize{
@@ -337,7 +337,7 @@ validate_BLAST_JSON_file <- function(filename){
 }
 
 
-#' Remove Gaps in HSP Segment (Helper for parse_BLAST_json)
+#' Remove Gaps in High Scoring Pair (HSP) Segment (Helper for parse_BLAST_json)
 #'
 #' Sometimes, high-scoring pairs (composed of a query segment and a subject
 #' segment) contain gaps from alignment. When conducting predictions, it is
@@ -347,8 +347,8 @@ validate_BLAST_JSON_file <- function(filename){
 #' aren't any "missing" or "extra" nucleotides), and helps remove any
 #' frameshifting that might otherwise occur in the final gene prediction.
 #'
-#' @param hsp_data Data frame containing HSP data. Each row is an HSP, and the
-#' columns are HSP attributes.
+#' @param hsp_data Data frame containing high-scoring pair (HSP) data. Each row
+#' is an HSP, and the columns are HSP attributes.
 #'
 #' @return Returns the altered HSP data frame, now with gaps removed if both
 #' both the query and subject have an equal number of them.
@@ -453,10 +453,15 @@ parse_multiple_BLAST_json <- function(dir_path, raw_blast_list=NULL){
   # get the list of files in the directory
   all_files <- list.files(path = dir_path, full.names = TRUE)
 
+  if (length(all_files) == 0){
+    stop("Invalid input: Input directory is empty.")
+  }
+  else{}
+
   for (filename in all_files){
 
     # cannot have subdirectories in the parent directory
-    if (dir.exists(filename)){
+    if (base::dir.exists(filename)){
       stop("Invalid input: Input directory must only contain .json files. ")
     }
     else{

@@ -56,7 +56,7 @@ output_predictions_fasta <- function(predictions, output_file = NULL){
 
   if (!is.null(output_file) & !is.character(output_file)){
     stop("Incorrect input. Output file path must specified in string format.
-         PLEASE NOTE that any information in the file (iif it exists) will be
+         PLEASE NOTE that any information in the file (if it exists) will be
          overwritten by this function.")
   }
 

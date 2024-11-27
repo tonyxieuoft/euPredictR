@@ -2,7 +2,7 @@
 % Please edit documentation in R/BuildPredictions.R
 \name{handle_overlap}
 \alias{handle_overlap}
-\title{HSP Overlap Merger (Helper for recursive_create)}
+\title{High-Scoring Pair (HSP) Overlap Merger (Helper for recursive_create)}
 \usage{
 handle_overlap(hsps, seq, p, i)
 }

@@ -22,9 +22,10 @@ segment distance between compatible HSPs}
 Returns the predicted sequence. Missing areas are denoted by "-".
 }
 \description{
-Given a data frame of HSPs, length of the query, and various parameters,
+Given a data frame of high-scoring pairs (HSPs), length of the query, and
+various parameters,
 predict the coding sequence of a gene for a particular species. On a broad
-level, implements the dynamic programming algorithm (details are in comments)
+level, implements a dynamic programming algorithm (details are in comments)
 and has the same assumptions as stated in build_predictions.
 }
 \references{

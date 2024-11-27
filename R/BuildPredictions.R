@@ -1,19 +1,21 @@
 
 #' Build Gene Predictions from BLAST output data.
 #'
-#' Given that BLAST output data has been pre-processed by the parse_BLAST_json
+#' Given that Basic Local Alignment Search Tool (BLAST) output data has been
+#' pre-processed by the parse_BLAST_json
 #' or parse_multiple_BLAST_json functions, this function takes in data in
 #' RawBlastList format, predicts protein-coding sequences via a dynamic
 #' programming algorithm and outputs their sequences in a nested list
 #' (elaborated further in the results section). On a high level, for each gene,
-#' the prediction algorithm identifies compatible HSPs with the greatest
-#' gene coverage, sorts out overlaps between them, and finally stitches them
+#' the prediction algorithm identifies compatible high-scoring pairs (HSPs)
+#' with the greatest gene coverage, sorts out overlaps between them, and
+#' finally stitches them
 #' together to create a new coding sequence (complete or incomplete). Any
 #' missing sections of the coding sequence that are unable to be predicted are
 #' notated with gaps ("-"). Note that
 #' previous assumptions stated for the BLAST-parsing functions hold here as
-#' well (the one that states all relevant HSPs are on the same genomic subject
-#' sequence is especially relevant).
+#' well (the one that states all relevant high-scoring pairs (HSPs) are on the
+#' same genomic subject sequence is especially relevant).
 #' HSP compatibility (whether two HSPs can fit into the same gene
 #' model) is based on the additional assumption that relevant HSPs each loosely
 #' correspond to an exon in the gene. From this, we draw the following
@@ -148,9 +150,10 @@ build_predictions <- function(raw_blast_list,
 
 #' Predict a Single Coding Sequence (helper for build_predictions)
 #'
-#' Given a data frame of HSPs, length of the query, and various parameters,
+#' Given a data frame of high-scoring pairs (HSPs), length of the query, and
+#' various parameters,
 #' predict the coding sequence of a gene for a particular species. On a broad
-#' level, implements the dynamic programming algorithm (details are in comments)
+#' level, implements a dynamic programming algorithm (details are in comments)
 #' and has the same assumptions as stated in build_predictions.
 #'
 #' @param hsp_table Data frame, where each row corresponds to an HSP and each
@@ -258,8 +261,9 @@ build_prediction <- function(query_len,
 
 #' Determines Compatibility Between Two HSPs (helper for build_prediction)
 #'
-#' Determines if two HSPs are compatible, based on the assumptions laid out in
-#' build_predictions. Specifically, assumes that relevant HSPs correspond
+#' Determines if two high-scoring pairs (HSPs) are compatible, based on the
+#' assumptions laid out in build_predictions. Specifically, assumes that
+#' relevant HSPs correspond
 #' loosely to exons, and therefore must roughly have the same relative
 #' attributes that exons do. Loosely inspired by the Splign algorithm by
 #' Kapustin et. al.
@@ -319,7 +323,8 @@ is_compatibile <- function(hsp_table, j, i, max_overlap, max_intron_length){
 #'
 #' Creates a predicted sequence based on the dynamic programming table produced
 #' earlier. Essentially, the DP table identifies optimal 'sets' of compatible
-#' HSPs, and links the optimal HSPs to each other by the 'parent' attribute to
+#' high-scoring pairs (HSPs), and links the optimal HSPs to each other by the
+#' 'parent' attribute to
 #' get their predecessor. See the comments on the the build_prediction
 #' function for more detail. To create the predicted sequence, this function
 #' identifies the best "last" HSP in an optimal prediction, then traverses
@@ -409,7 +414,7 @@ recursive_create <- function(dp, hsps, i){
 }
 
 
-#' HSP Overlap Merger (Helper for recursive_create)
+#' High-Scoring Pair (HSP) Overlap Merger (Helper for recursive_create)
 #'
 #' Minimal algorithm for merging together two overlapping HSPs. If insertions
 #' or deletions are present in one of the two overlapping segments, use the

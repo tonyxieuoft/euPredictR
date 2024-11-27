@@ -6,7 +6,7 @@
 #' relevant coding sequences for the gene from the
 #' GenePredictions object, the sequences are then aligned with ClustalW,
 #' a multiple-sequence alignment algorithm. Finally, a phylogeny is
-#' inferred via the unweighted pair group method with arithmetic mean (UPGMA)
+#' inferred via the Unweighted Pair Group Method with Arithmetic Mean (UPGMA)
 #' algorithm. UPGMA assumes that:
 #' \itemize{
 #' \item all taxa evolve at a constant rate, and that
