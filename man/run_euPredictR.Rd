@@ -27,4 +27,12 @@ euPredictR::run_euPredictR()
 Chang W, Cheng J, Allaire J, Sievert C, Schloerke B, Xie Y, Allen J,
 McPherson J, Dipert A, Borges B. (2024). shiny: Web Application Framework
 for R. R package version 1.9.1, https://CRAN.R-project.org/package=shiny.
+
+Attali, D., Sali, A. (2024). shinycssloaders: Add Loading Animations to a
+'shiny' Output While It's Recalculating. R package version 1.1.0,
+https://CRAN.R-project.org/package=shinycssloaders.
+
+Pedersen, T., Nijs, V., Schaffner, T., Nantz, E. (2022). shinyFiles: A
+Server-Side File System Viewer for Shiny. R package version 0.9.3,
+https://CRAN.R-project.org/package=shinyFiles.
 }
