@@ -1,3 +1,8 @@
+# Purpose: Parse Raw BLAST Output
+# Author: Tony Xie
+# Date: 2024-11-27
+# Version: 0.1.0
+# Bugs and Issues: None
 
 #' Parse JSON-format BLAST output data
 #'

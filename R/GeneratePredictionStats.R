@@ -1,3 +1,8 @@
+# Purpose: Generate and Plot Predicted Gene Coverage Data
+# Author: Tony Xie
+# Date: 2024-11-27
+# Version: 0.1.0
+# Bugs and Issues: None
 
 #'
 #' Create Gene Coverage Heatmap for Prediction Completeness

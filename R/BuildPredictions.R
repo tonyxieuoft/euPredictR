@@ -1,3 +1,8 @@
+# Purpose: Build Gene Predictions from parsed BLAST output
+# Author: Tony Xie
+# Date: 2024-11-27
+# Version: 0.1.0
+# Bugs and Issues: None
 
 #' Build Gene Predictions from BLAST output data.
 #'

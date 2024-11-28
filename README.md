@@ -94,9 +94,10 @@ section).
 
 ## Contributions
 
-The author of the package is Tony Xie. Dr. Anjali Silva, Maryam
-Hasanzadehkiabi and Zhenghao Xiao made suggestions that helped inform
-the final version of this package.
+The author of the package is Tony Xie.
+
+Dr. Anjali Silva, Maryam Hasanzadehkiabi and Zhenghao Xiao made
+suggestions that helped inform the final version of this package.
 
 The `parse_BLAST_json()` function and associated helpers made use of
 various packages. `dplyr` helped with data frame manipulation,
@@ -143,6 +144,14 @@ documentation was written by the author themselves.
   Biology 215(3): 403-410.
   <https://doi.org/10.1016/S0022-2836(05)80360-2>
 
+- Attali, D., Edwards, T. (2024). shinyalert: Easily Create Pretty Popup
+  Messages (Modals) in ‘Shiny’. R package version 3.1.0,
+  <https://CRAN.R-project.org/package=shinyalert>
+
+- Attali, D., Sali, A. (2024). shinycssloaders: Add Loading Animations
+  to a ‘shiny’ Output While It’s Recalculating. R package version 1.1.0,
+  <https://CRAN.R-project.org/package=shinycssloaders>.
+
 - Bodenhofer, U., Bonatesta, E., Horejs-Kainrath, C., and Hochreiter, S.
   (2015). msa: an R package for multiple sequence alignment.
   Bioinformatics 31(24):3997-9999. DOI: 10.1093/bioinformatics/btv176.
@@ -167,6 +176,10 @@ documentation was written by the author themselves.
   Efficient manipulation of biological strings.
   <doi:10.18129/B9.bioc.Biostrings>.
 
+- Pedersen, T., Nijs, V., Schaffner, T., Nantz, E. (2022). shinyFiles: A
+  Server-Side File System Viewer for Shiny. R package version 0.9.3,
+  <https://CRAN.R-project.org/package=shinyFiles>.
+
 - R Core Team (2024). R: A Language and Environment for Statistical
   Computing. R Foundation for Statistical Computing, Vienna, Austria.
   <https://www.R-project.org/>.
@@ -178,6 +191,9 @@ documentation was written by the author themselves.
 - Schlie K, Potts AJ, Morrison DA, Grimm, GW. (2017), Intertwining
   phylogenetic trees and networks. Methods in Ecology and Evolution, 8:
   1212–1220. <doi:10.1111/2041-210X.12760>
+
+- Shiny. (2024). Tabsets.
+  <https://shiny.posit.co/r/articles/build/tabsets/>
 
 - Sokal, R., Michener, C.D. (1958). A Statistical Method for Evaluating
   Systematic Relationships. University of Kansas Scientific Bulletin

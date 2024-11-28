@@ -1,4 +1,19 @@
-
+# The layout of the app is based on the following Tabsets sample:
+# Shiny. (2024). Tabsets. https://shiny.posit.co/r/articles/build/tabsets/
+#
+# In addition to Shiny, other packages used are cited below:
+#
+# Attali, D., Edwards, T. (2024). shinyalert: Easily Create Pretty Popup
+# Messages (Modals) in 'Shiny'. R package version 3.1.0,
+# https://CRAN.R-project.org/package=shinyalert.
+#
+# Attali, D., Sali, A. (2024). shinycssloaders: Add Loading Animations to a
+# 'shiny' Output While It's Recalculating. R package version 1.1.0,
+# https://CRAN.R-project.org/package=shinycssloaders.
+#
+# Pedersen, T., Nijs, V., Schaffner, T., Nantz, E. (2022). shinyFiles: A
+# Server-Side File System Viewer for Shiny. R package version 0.9.3,
+# https://CRAN.R-project.org/package=shinyFiles.
 
 library(shiny)
 library(shinyalert)
@@ -6,10 +21,9 @@ library(purrr) # used in this script for its reduce function
 library(dplyr) # misc. tools
 library(shinycssloaders) # adds a loading button for plots that take longer to
 # load
-library(shinyFiles) # so that users can select directories instead of files
+library(shinyFiles) # so that users can select directories and save files
 
-
-# Define UI for random distribution app ----
+# Define UI for ePredictR
 ui <- fluidPage(
 
   # App title ----
@@ -50,7 +64,6 @@ ui <- fluidPage(
          left sidebar below.")),
 
   hr(),
-
 
   # Sidebar layout with input and output definitions ----
   sidebarLayout(
@@ -105,8 +118,8 @@ ui <- fluidPage(
                          style="background-color:powderblue"),
 
           verbatimTextOutput("selected_directory") %>%
-            withSpinner(color="#0dc5c1",
-                        size = 0.5),
+            shinycssloaders::withSpinner(color="#0dc5c1",
+                             size = 0.5),
 
           br(),
 
@@ -159,8 +172,8 @@ ui <- fluidPage(
                           filetype=list(fasta=c("fasta", "fas"), text="txt")),
 
           verbatimTextOutput("output_path") %>%
-            withSpinner(color="#0dc5c1",
-                        size = 0.5),
+            shinycssloaders::withSpinner(color="#0dc5c1",
+                                         size = 0.5),
 
           br(),
 
@@ -197,7 +210,7 @@ ui <- fluidPage(
                                   "on bottom of the third panel."),
 
                            tableOutput("predicted_seqs") %>%
-                             withSpinner(color="#0dc5c1")
+                             shinycssloaders::withSpinner(color="#0dc5c1")
 
                            ),
 
@@ -220,7 +233,7 @@ ui <- fluidPage(
                                   precise correspondances."),
 
                            plotOutput("gene_coverage_heatmap") %>%
-                             withSpinner(color="#0dc5c1")
+                             shinycssloaders::withSpinner(color="#0dc5c1")
 
                   ),
 
@@ -252,7 +265,7 @@ ui <- fluidPage(
 
 
                            plotOutput("phylogeny_display") %>%
-                             withSpinner(color="#0dc5c1")
+                             shinycssloaders::withSpinner(color="#0dc5c1")
 
                            )
       )

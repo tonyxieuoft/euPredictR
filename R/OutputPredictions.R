@@ -1,3 +1,8 @@
+# Purpose: Output Gene Predictions in FASTA or Data Frame Format
+# Author: Tony Xie
+# Date: 2024-11-27
+# Version: 0.1.0
+# Bugs and Issues: None
 
 #' Output BLAST predictions in FASTA format
 #'

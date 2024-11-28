@@ -1,3 +1,8 @@
+# Purpose: Run the shiny app for euPredictR
+# Author: Tony Xie
+# Date: 2024-11-27
+# Version: 0.1.0
+# Bugs and Issues: None
 
 #' Launch Shiny App for euPredictR
 #'
