@@ -46,7 +46,7 @@ library("euPredictR")
 To run the Shiny app:
 
 ``` r
-runEuPredictR()
+run_euPredictR()
 ```
 
 ## Overview

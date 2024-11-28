@@ -60,7 +60,7 @@ sequences, `euPredictR` determines relevant high-scoring pairs, sort out overlap
 ## General Functionality Overview
 
 
-`euPredictR` currently contains 5 functions available to the user.
+`euPredictR` currently contains 7 functions available to the user.
 
 1.   `parse_BLAST_json` parses a single raw BLAST output file provided 
 in .json format. The function stores the parsed results in a nested list and data frame format for ease of access.
@@ -73,8 +73,15 @@ in .json format. The function stores the parsed results in a nested list and dat
 4.   `gene_coverage_heatmap` for visualizing gene coverage/prediction 
 completeness of predicted coding sequences using a heatmap. 
 
-5.   `output_predictions` for outputting the gene predictions in FASTA 
+5.   `output_predictions_fasta` for outputting the gene predictions in FASTA 
 format.
+
+6.    `output_predictions_df` for outputting the gene predictions in a data
+frame format. 
+
+7.   `display_phylogeny` for constructing and displaying phylogenies based
+on the predicted sequences. This feature is designed to provide a quick visual
+depiction of sequence similarity sequence across species.
 
 
 ## An Example
